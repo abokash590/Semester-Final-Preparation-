@@ -1201,39 +1201,25 @@ class CodexApp {
   }
 
   /**
-   * Initializes Mermaid with custom college-exam color theme
+   * Initializes Mermaid with custom Forest Green theme matching site aesthetics
    */
   initMermaid() {
     if (!window.mermaid) return;
     try {
-      const isDark = document.documentElement.getAttribute("data-theme") === "dark" ||
-        (document.documentElement.getAttribute("data-theme") === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-
       window.mermaid.initialize({
         startOnLoad: false,
-        theme: isDark ? "dark" : "base",
-        themeVariables: isDark ? {
-          darkMode: true,
-          background: "#161B22",
-          primaryColor: "#1E293B",
-          primaryTextColor: "#F1F5F9",
-          primaryBorderColor: "#388BFD",
-          lineColor: "#94A3B8",
-          secondaryColor: "#334155",
-          tertiaryColor: "#1E293B",
-          fontSize: "14px",
-          edgeLabelBackground: "#21262D"
-        } : {
+        theme: "base",
+        themeVariables: {
           darkMode: false,
           background: "#FFFFFF",
-          primaryColor: "#EEF2FF",
-          primaryTextColor: "#1E293B",
-          primaryBorderColor: "#3B82F6",
-          lineColor: "#475569",
+          primaryColor: "#F4F8F5",
+          primaryTextColor: "#104535",
+          primaryBorderColor: "#104535",
+          lineColor: "#104535",
           secondaryColor: "#FEF3C7",
           tertiaryColor: "#DCFCE7",
           fontSize: "14px",
-          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          fontFamily: "'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           edgeLabelBackground: "#FFFFFF"
         },
         flowchart: {
@@ -1248,28 +1234,18 @@ class CodexApp {
   }
 
   /**
-   * Enhances Mermaid code with high-contrast, beautiful node and edge color styling
+   * Enhances Mermaid code with high-contrast Forest Green node and edge color styling
    */
   enhanceMermaidCode(rawCode) {
     let code = rawCode.trim();
     if ((code.startsWith("graph TD") || code.startsWith("graph LR") || code.startsWith("flowchart TD")) && !code.includes("classDef")) {
-      const isDark = document.documentElement.getAttribute("data-theme") === "dark" ||
-        (document.documentElement.getAttribute("data-theme") === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-      const styleDef = isDark ? `
-    classDef default fill:#1E293B,stroke:#388BFD,stroke-width:2px,color:#F8FAFC,font-weight:bold;
-    classDef goal fill:#064E3B,stroke:#10B981,stroke-width:2.5px,color:#D1FAE5,font-weight:bold;
-    classDef start fill:#312E81,stroke:#818CF8,stroke-width:2.5px,color:#E0E7FF,font-weight:bold;
-    classDef minNode fill:#451A03,stroke:#F59E0B,stroke-width:2px,color:#FEF3C7;
-    classDef maxNode fill:#1E293B,stroke:#388BFD,stroke-width:2px,color:#F8FAFC;
-    classDef leafNode fill:#0F172A,stroke:#64748B,stroke-width:1.5px,color:#E2E8F0,font-weight:bold;
-` : `
-    classDef default fill:#EEF2FF,stroke:#3B82F6,stroke-width:2px,color:#1E1B4B,font-weight:bold;
-    classDef goal fill:#DCFCE7,stroke:#16A34A,stroke-width:2.5px,color:#14532D,font-weight:bold;
-    classDef start fill:#F3E8FF,stroke:#7C3AED,stroke-width:2.5px,color:#4C1D95,font-weight:bold;
-    classDef minNode fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#78350F;
-    classDef maxNode fill:#EEF2FF,stroke:#3B82F6,stroke-width:2px,color:#1E3A8A;
-    classDef leafNode fill:#F8FAFC,stroke:#64748B,stroke-width:1.5px,color:#0F172A,font-weight:bold;
+      const styleDef = `
+    classDef default fill:#F4F8F5,stroke:#104535,stroke-width:2px,color:#104535,font-weight:bold;
+    classDef goal fill:#DCFCE7,stroke:#104535,stroke-width:2.5px,color:#064E3B,font-weight:bold;
+    classDef start fill:#FEF3C7,stroke:#104535,stroke-width:2.5px,color:#78350F,font-weight:bold;
+    classDef minNode fill:#FEF9C3,stroke:#A16207,stroke-width:2px,color:#713F12;
+    classDef maxNode fill:#ECFDF5,stroke:#104535,stroke-width:2px,color:#064E3B;
+    classDef leafNode fill:#FFFFFF,stroke:#104535,stroke-width:1.5px,color:#104535,font-weight:bold;
 `;
 
       code += "\n" + styleDef;
@@ -1521,11 +1497,19 @@ class CodexApp {
           <span>Reveal Solution for ${q.qno}</span>
         </button>
         <div class="solution-drawer-body" id="sol-${q.id}">
-          <div class="solution-drawer-heading">
-            <h4>Solutions for ${q.qno}</h4>
-            <span class="solution-drawer-sub">Detailed derivations with question prompts</span>
+          <div class="solution-pending-box">
+            <div class="pending-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="pending-text">
+              <p class="pending-title">Solution will be added later.</p>
+              <p class="pending-subtitle">Stay connected.</p>
+            </div>
           </div>
-          ${subpartsSolutionsHtml}
         </div>
       </div>
     `;
