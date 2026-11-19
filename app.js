@@ -853,8 +853,12 @@ class CodexApp {
     const container = this.dom.questionsContainer;
     if (!container) return;
     container.innerHTML = "";
+    if (this.dom.scrollSentinel) {
+      this.dom.scrollSentinel.style.display = "none";
+    }
 
     const list = Array.isArray(questions) ? questions : this.rawQuestions;
+    this.renderedCount = list.length;
     const years = [2023, 2024]; // 2023 first, then 2024
     let totalRendered = 0;
 
@@ -1142,41 +1146,14 @@ class CodexApp {
   }
 
   /**
-   * Chunked Infinite Scroll: Appends next 15 questions to DOM
+   * Chunked Infinite Scroll: Disabled in structured Year-Section view
    */
   renderNextChunk() {
-    if (this.renderedCount >= this.filteredQuestions.length) {
+    // All questions are rendered directly inside structured Year sections (2023, 2024, Term Test)
+    if (this.dom.scrollSentinel) {
       this.dom.scrollSentinel.style.display = "none";
-      return;
     }
-
-    this.dom.scrollSentinel.style.display = "block";
-    const nextBatch = this.filteredQuestions.slice(
-      this.renderedCount,
-      this.renderedCount + this.CHUNK_SIZE
-    );
-
-    const fragment = document.createDocumentFragment();
-    const createdCards = [];
-
-    nextBatch.forEach(q => {
-      const card = this.createQuestionCard(q);
-      fragment.appendChild(card);
-      createdCards.push(card);
-    });
-
-    this.dom.questionsContainer.appendChild(fragment);
-    this.renderedCount += nextBatch.length;
-
-    // Render KaTeX math ONLY on the newly added cards that contain math notation
-    createdCards.forEach(card => {
-      if (card.innerHTML.includes("$") || card.innerHTML.includes("\\(") || card.innerHTML.includes("\\[")) {
-        this.renderMathOnContainer(card);
-      }
-      if (card.querySelector(".mermaid-raw-source")) {
-        this.renderDiagramsOnContainer(card);
-      }
-    });
+    return;
   }
 
   /**
@@ -1497,22 +1474,29 @@ class CodexApp {
           <span>Reveal Solution for ${q.qno}</span>
         </button>
         <div class="solution-drawer-body" id="sol-${q.id}">
-          <div class="solution-pending-box">
-            <div class="pending-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-              </svg>
+          <div class="solution-chat-bubble-container">
+            <div class="chat-avatar-wrapper">
+              <img src="assets/avatar_clean.png" alt="Abokash" class="chat-sender-avatar">
+              <span class="chat-online-badge" title="Active now"></span>
             </div>
-            <div class="pending-text">
-              <p class="pending-title">Solution still cooking...</p>
-              <p class="pending-subtitle">In a desperate rush? Go spam Abokash's inbox.</p>
+            <div class="chat-speech-bubble">
+              <div class="chat-bubble-header">
+                <span class="chat-sender-name">Abokash</span>
+                <span class="chat-author-pill">Author</span>
+              </div>
+              <div class="chat-bubble-content">
+                <p class="chat-msg-title">Solution still cooking...</p>
+                <p class="chat-msg-text">In a desperate rush? Go spam Abokash's inbox.</p>
+              </div>
+              <div class="chat-bubble-footer">
+                <a href="https://www.facebook.com/abokash89/" target="_blank" rel="noopener noreferrer" class="bother-abokash-btn" title="Send a message to Abokash on Facebook (Opens in new tab)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Bother Abokash</span>
+                </a>
+              </div>
             </div>
-            <a href="https://www.facebook.com/abokash89/" target="_blank" rel="noopener noreferrer" class="bother-abokash-btn" title="Send a message to Abokash on Facebook (Opens in new tab)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              </svg>
-              <span>Bother Abokash</span>
-            </a>
           </div>
         </div>
       </div>
@@ -1577,11 +1561,6 @@ class CodexApp {
     // Reset filters to reveal target
     this.resetFilters();
 
-    // Render all items up to target index + CHUNK_SIZE
-    while (this.renderedCount <= targetIndex && this.renderedCount < this.filteredQuestions.length) {
-      this.renderNextChunk();
-    }
-
     // Immediately scroll to target and flash highlight
     const targetCard = document.getElementById(`card-${targetId}`);
     if (targetCard) {
@@ -1592,30 +1571,21 @@ class CodexApp {
   }
 
   /**
-   * Infinite Scroll Observer Initialization
+   * Infinite Scroll Observer Initialization (Disabled in Year-Section layout)
    */
   initObserver() {
-    this.observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !this.isPrinting) {
-        this.renderNextChunk();
-      }
-    }, { rootMargin: "300px" });
-
-    this.observer.observe(this.dom.scrollSentinel);
+    if (this.dom.scrollSentinel) {
+      this.dom.scrollSentinel.style.display = "none";
+    }
   }
 
   /**
    * Print View Lifecycle Hook:
-   * On beforeprint, renders ALL filtered questions with solutions expanded.
-   * On afterprint, restores chunked rendering.
+   * On beforeprint, expands all solutions.
    */
   bindPrintEvents() {
     window.addEventListener("beforeprint", () => {
       this.isPrinting = true;
-      // Render all remaining filtered questions immediately
-      while (this.renderedCount < this.filteredQuestions.length) {
-        this.renderNextChunk();
-      }
       // Expand all solutions
       document.querySelectorAll(".solution-drawer-body").forEach(el => {
         el.classList.add("expanded");
