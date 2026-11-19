@@ -824,8 +824,9 @@ body.is-home-view .app-header,
 /* Radial Orbital Ring System */
 .orbital-ring-system {
   position: relative;
-  width: clamp(310px, min(75vw, 48vh), 450px);
-  height: clamp(310px, min(75vw, 48vh), 450px);
+  --orbit-size: clamp(340px, min(80vw, 54vh), 460px);
+  width: var(--orbit-size);
+  height: var(--orbit-size);
   margin: clamp(14px, 2.5vh, 26px) auto 12px;
   display: flex;
   align-items: center;
@@ -936,7 +937,7 @@ body.is-home-view .app-header,
   position: absolute;
   top: 50%;
   left: 50%;
-  --r: clamp(144px, min(27vw, 23vh), 205px);
+  --r: calc(var(--orbit-size) * 0.40);
   transform: translate(
     calc(-50% + cos(var(--angle)) * var(--r)),
     calc(-50% + sin(var(--angle)) * var(--r))
@@ -1192,8 +1193,7 @@ body.is-home-view .app-header,
   }
 
   .orbital-ring-system {
-    width: 320px;
-    height: 320px;
+    --orbit-size: 320px;
     margin: 8px auto 14px;
   }
 
@@ -1205,10 +1205,6 @@ body.is-home-view .app-header,
 
   .portal-core-avatar-img {
     height: 68px;
-  }
-
-  .orbital-satellite-node {
-    --r: 122px;
   }
 
   .nest-wrapper {
