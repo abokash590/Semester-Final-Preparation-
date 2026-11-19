@@ -420,7 +420,7 @@ class CodexApp {
     if (this.dom.homePortalSection) this.dom.homePortalSection.hidden = false;
     if (this.dom.appLayout) this.dom.appLayout.hidden = true;
     if (this.dom.activeCourseLabel) this.dom.activeCourseLabel.innerText = "DU CSE 4-1";
-    document.title = "Semester Final — DU CSE 4-1";
+    document.title = "Ronaldo is the GOAT";
     this.renderCourseNavbar();
     if (updateHistory && window.location.hash && window.location.hash !== "#home" && window.location.hash !== "#") {
       history.pushState(null, "", window.location.pathname + "#home");
@@ -475,7 +475,7 @@ class CodexApp {
       this.activeCourse = course;
       if(this.dom.courseSelect) this.dom.courseSelect.value = course.code;
     if (this.dom.activeCourseLabel) this.dom.activeCourseLabel.innerText = "with Abokash";
-    document.title = `${course.code}: ${course.name} — Semester Final`;
+    document.title = `${course.code} — Ronaldo is the GOAT`;
     this.renderCourseNavbar();
 
     // Default to recent year (2024) - exactly 2023 and 2024 toggles
