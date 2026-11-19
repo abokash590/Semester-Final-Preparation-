@@ -1500,15 +1500,19 @@ class CodexApp {
           <div class="solution-pending-box">
             <div class="pending-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
               </svg>
             </div>
             <div class="pending-text">
-              <p class="pending-title">Solution will be added later.</p>
-              <p class="pending-subtitle">Stay connected.</p>
+              <p class="pending-title">Solution still cooking...</p>
+              <p class="pending-subtitle">In a desperate rush? Go spam Abokash's inbox.</p>
             </div>
+            <a href="https://www.facebook.com/abokash89/" target="_blank" rel="noopener noreferrer" class="bother-abokash-btn" title="Send a message to Abokash on Facebook (Opens in new tab)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Bother Abokash</span>
+            </a>
           </div>
         </div>
       </div>
