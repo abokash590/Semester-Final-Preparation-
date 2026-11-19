@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
+  <rect width='32' height='32' fill='#EFF4EA'/>
+  <rect x='2' y='4' width='4' height='4' fill='#E2EAE0'/>
+  <rect x='18' y='6' width='4' height='4' fill='#D8E2D4'/>
+  <rect x='10' y='16' width='4' height='4' fill='#E2EAE0'/>
+  <rect x='26' y='20' width='4' height='4' fill='#D5DFD1'/>
+  <rect x='6' y='24' width='4' height='4' fill='#E2EAE0'/>
+  <rect x='20' y='26' width='4' height='4' fill='#DCE5D8'/>
+  <!-- Subtle Diamond & Iron ore flecks -->
+  <rect x='12' y='8' width='2' height='2' fill='#68BDE8' opacity='0.75'/>
+  <rect x='24' y='14' width='2' height='2' fill='#DEB887' opacity='0.75'/>
+  <rect x='4' y='18' width='2' height='2' fill='#68BDE8' opacity='0.6'/>
+</svg>

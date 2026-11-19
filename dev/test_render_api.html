@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div id="target"></div>
+  <script>
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#EEF2FF',
+        primaryTextColor: '#1E1B4B',
+        primaryBorderColor: '#4F46E5',
+        lineColor: '#475569',
+        fontSize: '14px'
+      }
+    });
+
+    async function run() {
+      const graphDef = `graph TD
+        A((A)) -->|5| B((B))
+        A -->|4| C((C))
+        A -->|3| D((D))
+        B -->|2| E((E))
+        B -->|2| F((F))
+        C -->|1| G((G))
+        D -->|4| H((H))
+        D -->|2| K((K))
+        G -->|3| I((I - Goal))
+        H -->|4| J((J))
+        classDef default fill:#EEF2FF,stroke:#4F46E5,stroke-width:2px,color:#1E1B4B,font-weight:bold;
+        classDef goal fill:#DCFCE7,stroke:#16A34A,stroke-width:3px,color:#14532D,font-weight:bold;
+        class I goal;`;
+      
+      const res = await mermaid.render('mermaid-diag-1', graphDef);
+      document.getElementById('target').innerHTML = res.svg;
+      window.renderDone = true;
+    }
+    run();
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+import os
+from playwright.sync_api import sync_playwright
+
+html_content = """<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mermaid Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8fafc; padding: 30px; }
+    .card { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 24px; max-width: 720px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .diagram-wrapper {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 16px 0;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+    }
+    .diagram-title { font-weight: 700; font-size: 14px; color: #1e293b; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Question 1(c) Search Tree</h2>
+    <p>For the following tree, show the order of nodes visited for BFS, DFS, UCS, and IDS...</p>
+    
+    <div class="diagram-title">📊 Search Tree Diagram (Question Paper Spec):</div>
+    <div class="diagram-wrapper">
+      <div class="mermaid">
+graph TD
+    A((A)) -->|5| B((B))
+    A -->|4| C((C))
+    A -->|3| D((D))
+    B -->|2| E((E))
+    B -->|2| F((F))
+    C -->|1| G((G))
+    D -->|4| H((H))
+    D -->|2| K((K))
+    G -->|3| I((I - Goal))
+    H -->|4| J((J))
+
+    classDef default fill:#EEF2FF,stroke:#4F46E5,stroke-width:2px,color:#1E1B4B,font-weight:bold;
+    classDef goal fill:#DCFCE7,stroke:#16A34A,stroke-width:3px,color:#14532D,font-weight:bold;
+    class I goal;
+      </div>
+    </div>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#EEF2FF',
+        primaryTextColor: '#1E1B4B',
+        primaryBorderColor: '#4F46E5',
+        lineColor: '#475569',
+        fontSize: '14px',
+        edgeLabelBackground: '#FFFFFF'
+      }
+    });
+  </script>
+</body>
+</html>
+"""
+
+test_html_path = r"t:\Project\7th Semester\dev\test_mermaid.html"
+with open(test_html_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True, channel="chrome")
+    page = browser.new_page(viewport={"width": 1000, "height": 800})
+    page.goto(f"file:///{test_html_path.replace(os.sep, '/')}", wait_until="networkidle")
+    page.wait_for_timeout(1000)
+    
+    screenshot_path = r"C:\Users\ahmed\.gemini\antigravity\brain\4fc4ec37-d310-498f-9ecb-cf74490ff70a\screenshots\test_mermaid_rendered.png"
+    page.screenshot(path=screenshot_path)
+    print(f"Captured: {screenshot_path}")
+    browser.close()

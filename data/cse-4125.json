@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "cse-4125-final-2023-set1",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 1,
+    "qno": "Question 1",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning",
+      "Neural Networks & Deep Learning",
+      "Model Evaluation & Overfitting"
+    ],
+    "question": "(a) What do you mean by machine learning? **[2]**  \n(b) Differentiate among machine learning, deep learning and artificial intelligence. **[5]**  \n(c) Describe about the different data processing steps. **[5]**  \n(d) What is bias and variance? **[2]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q1a",
+        "qno": "1(a)",
+        "label": "(a)",
+        "marks": 2,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What do you mean by machine learning?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(a) (2 Marks).",
+            "Define core technical terms and theoretical background relevant to: What do you mean by machine learning?...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(a).",
+          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q1b",
+        "qno": "1(b)",
+        "label": "(b)",
+        "marks": 5,
+        "topics": [
+          "Neural Networks & Deep Learning"
+        ],
+        "question": "Differentiate among machine learning, deep learning and artificial intelligence.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(b) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: Differentiate among machine learning, deep learning and artificial intelligence....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(b).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q1c",
+        "qno": "1(c)",
+        "label": "(c)",
+        "marks": 5,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "Describe about the different data processing steps.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(c) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: Describe about the different data processing steps....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(c).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q1d",
+        "qno": "1(d)",
+        "label": "(d)",
+        "marks": 2,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What is bias and variance? **[2]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(d) (2 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is bias and variance? **[2]**...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(d).",
+          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 1 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2023-set2",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 2,
+    "qno": "Question 2",
+    "marks": 14,
+    "topics": [
+      "Linear & Logistic Regression",
+      "Clustering (K-Means, Hierarchical)"
+    ],
+    "question": "(a) Define logistic regression. How can logistic regression be extended or adapted for multiclass classification problems? **[3]**  \n(b) What are some common linkage criteria used in hierarchical clustering? How do you determine the optimal number of clusters in k-means clustering? **[5]**  \n(c) Explain the concept of sigmoid function. Let's say you have a dataset with 6 points in a 2D space : A(1,2), B(1,4), C(1,0), D(4,2), E(4,4), F(4,0). Imagine you cluster these points into two clusters : Cluster 1 : A, B, C and Cluster 2 : D, E, F. Calculate the Within-Cluster Sum of Squares (WCSS) for this clustering. **[6]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q2a",
+        "qno": "2(a)",
+        "label": "(a)",
+        "marks": 3,
+        "topics": [
+          "Linear & Logistic Regression"
+        ],
+        "question": "Define logistic regression. How can logistic regression be extended or adapted for multiclass classification problems?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 2(a) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define logistic regression. How can logistic regression be extended or adapted f...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 2(a).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q2b",
+        "qno": "2(b)",
+        "label": "(b)",
+        "marks": 5,
+        "topics": [
+          "Clustering (K-Means, Hierarchical)"
+        ],
+        "question": "What are some common linkage criteria used in hierarchical clustering? How do you determine the optimal number of clusters in k-means clustering?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 2(b) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: What are some common linkage criteria used in hierarchical clustering? How do yo...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 2(b).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q2c",
+        "qno": "2(c)",
+        "label": "(c)",
+        "marks": 6,
+        "topics": [
+          "Clustering (K-Means, Hierarchical)"
+        ],
+        "question": "Explain the concept of sigmoid function. Let's say you have a dataset with 6 points in a 2D space : A(1,2), B(1,4), C(1,0), D(4,2), E(4,4), F(4,0). Imagine you cluster these points into two clusters : Cluster 1 : A, B, C and Cluster 2 : D, E, F. Calculate the Within-Cluster Sum of Squares (WCSS) for this clustering. **[6]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 2(c) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: Explain the concept of sigmoid function. Let's say you have a dataset with 6 poi...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 2(c).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 2 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2023-set3",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 3,
+    "qno": "Question 3",
+    "marks": 14,
+    "topics": [
+      "Decision Trees & Random Forests",
+      "Model Evaluation & Overfitting",
+      "Support Vector Machines (SVM)",
+      "Supervised vs Unsupervised Learning"
+    ],
+    "question": "(a) Assume a classification problem for 14 random data points. Calculate the binary cross entropy.  \n$x = [-2.2, -1.6, -1.4, -1.2, -0.8, 0.2, 0.4, 0.8, 1.2, 1.4, 2.2, 2.9, 3.2, 4.6]$ **[5]**  \n(b) What is confusion matrix and ROC curve? **[2]**  \n(c) Explain the support vector machine (SVM) algorithm for binary classification. **[4]**  \n(d) Explain the concept of feature extraction and how it differs from feature selection. **[3]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q3a",
+        "qno": "3(a)",
+        "label": "(a)",
+        "marks": 5,
+        "topics": [
+          "Decision Trees & Random Forests"
+        ],
+        "question": "Assume a classification problem for 14 random data points. Calculate the binary cross entropy.  \n$x = [-2.2, -1.6, -1.4, -1.2, -0.8, 0.2, 0.4, 0.8, 1.2, 1.4, 2.2, 2.9, 3.2, 4.6]$",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(a) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: Assume a classification problem for 14 random data points. Calculate the binary ...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(a).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q3b",
+        "qno": "3(b)",
+        "label": "(b)",
+        "marks": 2,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "What is confusion matrix and ROC curve?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(b) (2 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is confusion matrix and ROC curve?...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(b).",
+          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q3c",
+        "qno": "3(c)",
+        "label": "(c)",
+        "marks": 4,
+        "topics": [
+          "Support Vector Machines (SVM)"
+        ],
+        "question": "Explain the support vector machine (SVM) algorithm for binary classification.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(c) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Explain the support vector machine (SVM) algorithm for binary classification....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(c).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q3d",
+        "qno": "3(d)",
+        "label": "(d)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Explain the concept of feature extraction and how it differs from feature selection. **[3]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(d) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Explain the concept of feature extraction and how it differs from feature select...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(d).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 3 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2023-set4",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 4,
+    "qno": "Question 4",
+    "marks": 14,
+    "topics": [
+      "Dimensionality Reduction & PCA",
+      "Decision Trees & Random Forests",
+      "Model Evaluation & Overfitting"
+    ],
+    "question": "(a) What is curse of dimensionality? Explain principal component analysis (PCA) and how it helps in dimensionality reduction. **[3]**  \n(b) Define entropy and information gain. Explain how decision tree works. **[5]**  \n(c) Explain the concept of stratified k-fold cross-validation. Why is it preferred in classification tasks, especially when dealing with imbalanced datasets? **[3]**  \n(d) Define and differentiate between precision, recall, and F1 score. **[3]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q4a",
+        "qno": "4(a)",
+        "label": "(a)",
+        "marks": 3,
+        "topics": [
+          "Dimensionality Reduction & PCA"
+        ],
+        "question": "What is curse of dimensionality? Explain principal component analysis (PCA) and how it helps in dimensionality reduction.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(a) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is curse of dimensionality? Explain principal component analysis (PCA) and ...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(a).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q4b",
+        "qno": "4(b)",
+        "label": "(b)",
+        "marks": 5,
+        "topics": [
+          "Decision Trees & Random Forests"
+        ],
+        "question": "Define entropy and information gain. Explain how decision tree works.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(b) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define entropy and information gain. Explain how decision tree works....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(b).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q4c",
+        "qno": "4(c)",
+        "label": "(c)",
+        "marks": 3,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "Explain the concept of stratified k-fold cross-validation. Why is it preferred in classification tasks, especially when dealing with imbalanced datasets?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(c) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Explain the concept of stratified k-fold cross-validation. Why is it preferred i...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(c).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q4d",
+        "qno": "4(d)",
+        "label": "(d)",
+        "marks": 3,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "Define and differentiate between precision, recall, and F1 score. **[3]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(d) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define and differentiate between precision, recall, and F1 score. **[3]**...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(d).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 4 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2023-set5",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 5,
+    "qno": "Question 5",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning"
+    ],
+    "question": "(a) Define the Expectation Maximization Algorithm. Discuss convergence properties of the Expectation Maximization Algorithm. **[3]**  \n(b) Define imbalanced dataset. Explain any two techniques to handle imbalanced dataset. **[3]**  \n(c) What is markov property? Consider a Markov model with three states Sunny, Rainy, and Cloudy. The transition probability matrix is given by: **[5]**\n\n| | Sunny | Rainy | Cloudy |\n|---|---|---|---|\n| **Sunny** | 0.8 | 0.15 | 0.05 |\n| **Rainy** | 0.38 | 0.6 | 0.02 |\n| **Cloudy** | 0.75 | 0.05 | 0.3 |\n\nGiven that, the weather is Sunny today. What is the probability that tomorrow is Sunny and day after tomorrow is Rainy?  \n(d) Define feature engineering and explain its importance in machine learning. **[3]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q5a",
+        "qno": "5(a)",
+        "label": "(a)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define the Expectation Maximization Algorithm. Discuss convergence properties of the Expectation Maximization Algorithm.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(a) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define the Expectation Maximization Algorithm. Discuss convergence properties of...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(a).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q5b",
+        "qno": "5(b)",
+        "label": "(b)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define imbalanced dataset. Explain any two techniques to handle imbalanced dataset.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(b) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define imbalanced dataset. Explain any two techniques to handle imbalanced datas...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(b).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q5c",
+        "qno": "5(c)",
+        "label": "(c)",
+        "marks": 5,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What is markov property? Consider a Markov model with three states Sunny, Rainy, and Cloudy. The transition probability matrix is given by: **[5]**\n\n| | Sunny | Rainy | Cloudy |\n|---|---|---|---|\n| **Sunny** | 0.8 | 0.15 | 0.05 |\n| **Rainy** | 0.38 | 0.6 | 0.02 |\n| **Cloudy** | 0.75 | 0.05 | 0.3 |\n\nGiven that, the weather is Sunny today. What is the probability that tomorrow is Sunny and day after tomorrow is Rainy?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(c) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is markov property? Consider a Markov model with three states Sunny, Rainy,...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(c).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q5d",
+        "qno": "5(d)",
+        "label": "(d)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define feature engineering and explain its importance in machine learning. **[3]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(d) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define feature engineering and explain its importance in machine learning. **[3]...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(d).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 5 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2023-set6",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 6,
+    "qno": "Question 6",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning",
+      "Model Evaluation & Overfitting"
+    ],
+    "question": "(a) Define feature engineering and explain its importance in machine learning. **[3]**  \n(b) Describe about the working procedure of principal component analysis. **[6]**  \n(c) Explain about the expectation maximization algorithm. **[5]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q6a",
+        "qno": "6(a)",
+        "label": "(a)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define feature engineering and explain its importance in machine learning.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 6(a) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define feature engineering and explain its importance in machine learning....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 6(a).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q6b",
+        "qno": "6(b)",
+        "label": "(b)",
+        "marks": 6,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "Describe about the working procedure of principal component analysis.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 6(b) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: Describe about the working procedure of principal component analysis....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 6(b).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q6c",
+        "qno": "6(c)",
+        "label": "(c)",
+        "marks": 5,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Explain about the expectation maximization algorithm. **[5]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 6(c) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: Explain about the expectation maximization algorithm. **[5]**...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 6(c).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 6 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2023-set7",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2023,
+    "set_no": 7,
+    "qno": "Question 7",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning",
+      "k-Nearest Neighbors (k-NN)"
+    ],
+    "question": "(a) Discuss details about probability density function. **[6]**  \n(b) Using k-nearest neighbors algorithm find the class(?) where $k = 5$. **[8]**\n\n**Training Set:**\n| Brightness | Saturation | Class |\n|:---:|:---:|:---:|\n| 40 | 20 | Red |\n| 50 | 50 | Blue |\n| 60 | 90 | Blue |\n| 10 | 25 | Red |\n| 70 | 70 | Blue |\n| 60 | 10 | Red |\n| 25 | 80 | Blue |\n\n**Query Point:**\n| Brightness | Saturation | Class |\n|:---:|:---:|:---:|\n| 20 | 35 | ? |\n\n---",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2023-q7a",
+        "qno": "7(a)",
+        "label": "(a)",
+        "marks": 6,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Discuss details about probability density function.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 7(a) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: Discuss details about probability density function....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 7(a).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2023-q7b",
+        "qno": "7(b)",
+        "label": "(b)",
+        "marks": 8,
+        "topics": [
+          "k-Nearest Neighbors (k-NN)"
+        ],
+        "question": "Using k-nearest neighbors algorithm find the class(?) where $k = 5$. **[8]**\n\n**Training Set:**\n| Brightness | Saturation | Class |\n|:---:|:---:|:---:|\n| 40 | 20 | Red |\n| 50 | 50 | Blue |\n| 60 | 90 | Blue |\n| 10 | 25 | Red |\n| 70 | 70 | Blue |\n| 60 | 10 | Red |\n| 25 | 80 | Blue |\n\n**Query Point:**\n| Brightness | Saturation | Class |\n|:---:|:---:|:---:|\n| 20 | 35 | ? |\n\n---\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 7(b) (8 Marks).",
+            "Define core technical terms and theoretical background relevant to: Using k-nearest neighbors algorithm find the class(?) where $k = 5$. **[8]**...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 7(b).",
+          "marking_hint": "Full marks (8 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 7 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set1",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 1,
+    "qno": "Question 1",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning",
+      "Model Evaluation & Overfitting"
+    ],
+    "question": "(a) Define machine learning. Briefly explain the differences between supervised, unsupervised, and reinforcement learning. **[3]**  \n(b) Define overfitting and underfitting. How does it impact model performance? **[4]**  \n(c) Describe in detail applications of machine learning in any three different knowledge domains. **[3]**  \n(d) Why encoding is necessary in machine learning? Explain one hot encoding technique with proper example. **[4]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q1a",
+        "qno": "1(a)",
+        "label": "(a)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define machine learning. Briefly explain the differences between supervised, unsupervised, and reinforcement learning.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(a) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define machine learning. Briefly explain the differences between supervised, uns...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(a).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q1b",
+        "qno": "1(b)",
+        "label": "(b)",
+        "marks": 4,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "Define overfitting and underfitting. How does it impact model performance?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(b) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define overfitting and underfitting. How does it impact model performance?...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(b).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q1c",
+        "qno": "1(c)",
+        "label": "(c)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Describe in detail applications of machine learning in any three different knowledge domains.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(c) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Describe in detail applications of machine learning in any three different knowl...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(c).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q1d",
+        "qno": "1(d)",
+        "label": "(d)",
+        "marks": 4,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Why encoding is necessary in machine learning? Explain one hot encoding technique with proper example. **[4]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 1(d) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Why encoding is necessary in machine learning? Explain one hot encoding techniqu...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 1(d).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 1 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set2",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 2,
+    "qno": "Question 2",
+    "marks": 14,
+    "topics": [
+      "Linear & Logistic Regression",
+      "Dimensionality Reduction & PCA",
+      "Clustering (K-Means, Hierarchical)"
+    ],
+    "question": "(a) Explain linear regression with its cost function and describe how gradient descent is used to optimize the model parameters. **[4]**  \n(b) What do you mean by dimensionality reduction? Discuss about linear discriminant analysis (LDA). **[4]**  \n(c) Let's assume a dataset with 6 points in a 2D space: $A(1,2), B(1,4), C(1,0), D(4,2), E(4,4)$, and $F(4,0)$. Assume these points are assigned to two clusters: **[6]**  \n    • Cluster 1: $\\{A, B, C\\}$  \n    • Cluster 2: $\\{D, E, F\\}$  \n    Calculate the within-cluster sum of squares for this clustering.",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q2a",
+        "qno": "2(a)",
+        "label": "(a)",
+        "marks": 4,
+        "topics": [
+          "Linear & Logistic Regression"
+        ],
+        "question": "Explain linear regression with its cost function and describe how gradient descent is used to optimize the model parameters.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 2(a) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Explain linear regression with its cost function and describe how gradient desce...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 2(a).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q2b",
+        "qno": "2(b)",
+        "label": "(b)",
+        "marks": 4,
+        "topics": [
+          "Dimensionality Reduction & PCA"
+        ],
+        "question": "What do you mean by dimensionality reduction? Discuss about linear discriminant analysis (LDA).",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 2(b) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: What do you mean by dimensionality reduction? Discuss about linear discriminant ...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 2(b).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q2c",
+        "qno": "2(c)",
+        "label": "(c)",
+        "marks": 6,
+        "topics": [
+          "Clustering (K-Means, Hierarchical)"
+        ],
+        "question": "Let's assume a dataset with 6 points in a 2D space: $A(1,2), B(1,4), C(1,0), D(4,2), E(4,4)$, and $F(4,0)$. Assume these points are assigned to two clusters: **[6]**  \n    • Cluster 1: $\\{A, B, C\\}$  \n    • Cluster 2: $\\{D, E, F\\}$  \n    Calculate the within-cluster sum of squares for this clustering.\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 2(c) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: Let's assume a dataset with 6 points in a 2D space: $A(1,2), B(1,4), C(1,0), D(4...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 2(c).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 2 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set3",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 3,
+    "qno": "Question 3",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning"
+    ],
+    "question": "(a) Discuss shortly sigmoid function and feature vector in machine learning. **[4]**  \n(b) Define bias and variance, and discuss the bias-variance trade-off in supervised learning. **[4]**  \n(c) What is a Markov Chain? Consider a Weather Model with two states: $S = \\text{Sunny}, R = \\text{Rainy}$. **[6]**  \n    $$\\text{Transition Matrix: } P = \\begin{bmatrix} 0.8 & 0.2 \\\\ 0.4 & 0.6 \\end{bmatrix}$$  \n    $$\\text{Initial State Distribution: } \\pi = [P(X_1 = S) = 0.6, \\; P(X_1 = R) = 0.4]$$  \n    If today is Sunny ($X_1 = S$), find the probability that the day after tomorrow is Rainy.",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q3a",
+        "qno": "3(a)",
+        "label": "(a)",
+        "marks": 4,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Discuss shortly sigmoid function and feature vector in machine learning.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(a) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Discuss shortly sigmoid function and feature vector in machine learning....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(a).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q3b",
+        "qno": "3(b)",
+        "label": "(b)",
+        "marks": 4,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define bias and variance, and discuss the bias-variance trade-off in supervised learning.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(b) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define bias and variance, and discuss the bias-variance trade-off in supervised ...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(b).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q3c",
+        "qno": "3(c)",
+        "label": "(c)",
+        "marks": 6,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What is a Markov Chain? Consider a Weather Model with two states: $S = \\text{Sunny}, R = \\text{Rainy}$. **[6]**  \n    $$\\text{Transition Matrix: } P = \\begin{bmatrix} 0.8 & 0.2 \\\\ 0.4 & 0.6 \\end{bmatrix}$$  \n    $$\\text{Initial State Distribution: } \\pi = [P(X_1 = S) = 0.6, \\; P(X_1 = R) = 0.4]$$  \n    If today is Sunny ($X_1 = S$), find the probability that the day after tomorrow is Rainy.\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 3(c) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is a Markov Chain? Consider a Weather Model with two states: $S = \\text{Sun...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 3(c).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 3 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set4",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 4,
+    "qno": "Question 4",
+    "marks": 14,
+    "topics": [
+      "Linear & Logistic Regression",
+      "Clustering (K-Means, Hierarchical)",
+      "Supervised vs Unsupervised Learning"
+    ],
+    "question": "(a) Briefly describe logistic regression and its role in classification tasks. **[3]**  \n(b) What is clustering? For the given dataset: $A = (1, 1), B = (1.5, 2), C = (5, 5), D = (6, 5)$, perform k-means clustering with $K = 2$. (Show all numeric steps in 2D). **[5]**  \n(c) Describe the probability density function and provide a proper example illustrating its use. **[6]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q4a",
+        "qno": "4(a)",
+        "label": "(a)",
+        "marks": 3,
+        "topics": [
+          "Linear & Logistic Regression"
+        ],
+        "question": "Briefly describe logistic regression and its role in classification tasks.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(a) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Briefly describe logistic regression and its role in classification tasks....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(a).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q4b",
+        "qno": "4(b)",
+        "label": "(b)",
+        "marks": 5,
+        "topics": [
+          "Clustering (K-Means, Hierarchical)"
+        ],
+        "question": "What is clustering? For the given dataset: $A = (1, 1), B = (1.5, 2), C = (5, 5), D = (6, 5)$, perform k-means clustering with $K = 2$. (Show all numeric steps in 2D).",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(b) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is clustering? For the given dataset: $A = (1, 1), B = (1.5, 2), C = (5, 5)...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(b).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q4c",
+        "qno": "4(c)",
+        "label": "(c)",
+        "marks": 6,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Describe the probability density function and provide a proper example illustrating its use. **[6]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 4(c) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: Describe the probability density function and provide a proper example illustrat...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 4(c).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 4 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set5",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 5,
+    "qno": "Question 5",
+    "marks": 14,
+    "topics": [
+      "Supervised vs Unsupervised Learning",
+      "Model Evaluation & Overfitting"
+    ],
+    "question": "(a) What is meant by maximum margin hyperplane? **[2]**  \n(b) What is a linearly separable dataset? What is a kernel function? Give an example. **[3]**  \n(c) Describe EM algorithm for Gaussian mixtures. **[4]**  \n(d) What is a confusion matrix? Suppose 10000 patients get tested for flu; out of them, 9000 are actually healthy and 1000 are actually sick. For the sick people, a test was positive for 620 and negative for 380. For the healthy people, the same test was positive for 180 and negative for 8820. Construct a confusion matrix for the data and compute the accuracy, precision and recall for the data. **[5]**",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q5a",
+        "qno": "5(a)",
+        "label": "(a)",
+        "marks": 2,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What is meant by maximum margin hyperplane?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(a) (2 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is meant by maximum margin hyperplane?...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(a).",
+          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q5b",
+        "qno": "5(b)",
+        "label": "(b)",
+        "marks": 3,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What is a linearly separable dataset? What is a kernel function? Give an example.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(b) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is a linearly separable dataset? What is a kernel function? Give an example...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(b).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q5c",
+        "qno": "5(c)",
+        "label": "(c)",
+        "marks": 4,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Describe EM algorithm for Gaussian mixtures.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(c) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Describe EM algorithm for Gaussian mixtures....",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(c).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q5d",
+        "qno": "5(d)",
+        "label": "(d)",
+        "marks": 5,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "What is a confusion matrix? Suppose 10000 patients get tested for flu; out of them, 9000 are actually healthy and 1000 are actually sick. For the sick people, a test was positive for 620 and negative for 380. For the healthy people, the same test was positive for 180 and negative for 8820. Construct a confusion matrix for the data and compute the accuracy, precision and recall for the data. **[5]**\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 5(d) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is a confusion matrix? Suppose 10000 patients get tested for flu; out of th...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 5(d).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 5 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set6",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 6,
+    "qno": "Question 6",
+    "marks": 14,
+    "topics": [
+      "Model Evaluation & Overfitting",
+      "Decision Trees & Random Forests",
+      "Linear & Logistic Regression",
+      "k-Nearest Neighbors (k-NN)"
+    ],
+    "question": "(a) What is cross-validation in machine learning? Explain the k-fold cross-validation technique and its purpose. **[5]**  \n(b) Define binary cross-entropy and the concept of a best fit line in regression applications. **[3]**  \n(c) Consider the following dataset: **[6]**\n\n| Brightness | Saturation | Class |\n|:---:|:---:|:---:|\n| 40 | 20 | Red |\n| 50 | 50 | Blue |\n| 60 | 90 | Blue |\n| 10 | 25 | Red |\n| 70 | 70 | Blue |\n| 60 | 10 | Red |\n| 25 | 80 | Blue |\n\nAssume the k-nearest neighbors' classifier is used with: $k = 5$  \nA new data point is given as: $x_q = (45, 30)$.  \nUsing Euclidean distance, compute the distance between the new data point $x_q$ and each point in the dataset.",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q6a",
+        "qno": "6(a)",
+        "label": "(a)",
+        "marks": 5,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "What is cross-validation in machine learning? Explain the k-fold cross-validation technique and its purpose.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 6(a) (5 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is cross-validation in machine learning? Explain the k-fold cross-validatio...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 6(a).",
+          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q6b",
+        "qno": "6(b)",
+        "label": "(b)",
+        "marks": 3,
+        "topics": [
+          "Decision Trees & Random Forests",
+          "Linear & Logistic Regression"
+        ],
+        "question": "Define binary cross-entropy and the concept of a best fit line in regression applications.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 6(b) (3 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define binary cross-entropy and the concept of a best fit line in regression app...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 6(b).",
+          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q6c",
+        "qno": "6(c)",
+        "label": "(c)",
+        "marks": 6,
+        "topics": [
+          "k-Nearest Neighbors (k-NN)"
+        ],
+        "question": "Consider the following dataset: **[6]**\n\n| Brightness | Saturation | Class |\n|:---:|:---:|:---:|\n| 40 | 20 | Red |\n| 50 | 50 | Blue |\n| 60 | 90 | Blue |\n| 10 | 25 | Red |\n| 70 | 70 | Blue |\n| 60 | 10 | Red |\n| 25 | 80 | Blue |\n\nAssume the k-nearest neighbors' classifier is used with: $k = 5$  \nA new data point is given as: $x_q = (45, 30)$.  \nUsing Euclidean distance, compute the distance between the new data point $x_q$ and each point in the dataset.\n\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 6(c) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: Consider the following dataset: **[6]**...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 6(c).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 6 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-final-2024-set7",
+    "course": "CSE-4125",
+    "exam": "final",
+    "year": 2024,
+    "set_no": 7,
+    "qno": "Question 7",
+    "marks": 14,
+    "topics": [
+      "Dimensionality Reduction & PCA",
+      "Supervised vs Unsupervised Learning"
+    ],
+    "question": "(a) What is the curse of dimensionality in machine learning? Discuss how principal component analysis can be used to address this problem. **[6]**  \n(b) What is regularization? Suppose you have a dataset with 10 predictors, and some of them are irrelevant. Which regularization method—Ridge or Lasso—would you prefer, and why? **[4]**  \n(c) Define feature engineering. Describe the difference between normalization and standardization in feature scaling. **[4]**\n\n---",
+    "subparts": [
+      {
+        "id": "cse-4125-final-2024-q7a",
+        "qno": "7(a)",
+        "label": "(a)",
+        "marks": 6,
+        "topics": [
+          "Dimensionality Reduction & PCA"
+        ],
+        "question": "What is the curse of dimensionality in machine learning? Discuss how principal component analysis can be used to address this problem.",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 7(a) (6 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is the curse of dimensionality in machine learning? Discuss how principal c...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 7(a).",
+          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q7b",
+        "qno": "7(b)",
+        "label": "(b)",
+        "marks": 4,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "What is regularization? Suppose you have a dataset with 10 predictors, and some of them are irrelevant. Which regularization method—Ridge or Lasso—would you prefer, and why?",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 7(b) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: What is regularization? Suppose you have a dataset with 10 predictors, and some ...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 7(b).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      },
+      {
+        "id": "cse-4125-final-2024-q7c",
+        "qno": "7(c)",
+        "label": "(c)",
+        "marks": 4,
+        "topics": [
+          "Supervised vs Unsupervised Learning"
+        ],
+        "question": "Define feature engineering. Describe the difference between normalization and standardization in feature scaling. **[4]**\n\n---\n---",
+        "solution": {
+          "steps": [
+            "Understand the requirements of question 7(c) (4 Marks).",
+            "Define core technical terms and theoretical background relevant to: Define feature engineering. Describe the difference between normalization and st...",
+            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
+            "Summarize the final solution clearly with relevant engineering examples."
+          ],
+          "answer": "Complete detailed answer and derivations for question 7(c).",
+          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for Question 7 (14 Marks total).",
+      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  }
+]

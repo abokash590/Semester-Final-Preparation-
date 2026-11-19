@@ -1,0 +1,150 @@
+{
+  "courses": [
+    {
+      "code": "CSE-4101",
+      "name": "Artificial Intelligence",
+      "short_name": "AI",
+      "credits": 3.0,
+      "file": "cse-4101.json",
+      "exams": [
+        "final",
+        "term"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "topics": [
+        "AI Foundations",
+        "PEAS & Task Environment",
+        "Turing Test",
+        "Informed vs Uninformed Search",
+        "A* Search & Heuristics",
+        "Hill Climbing Search",
+        "Constraint Satisfaction Problems",
+        "Adversarial Search & Min-Max",
+        "Alpha-Beta Pruning",
+        "Genetic Algorithms",
+        "First-Order Logic",
+        "Natural Language Processing",
+        "Machine Learning in AI",
+        "Neural Networks & Backpropagation",
+        "Decision Trees",
+        "Knowledge Representation & Ontology",
+        "Robotics & Applications"
+      ]
+    },
+    {
+      "code": "CSE-4102",
+      "name": "Mathematical and Statistical Analysis for Engineers",
+      "short_name": "MSA",
+      "credits": 3.0,
+      "file": "cse-4102.json",
+      "exams": [
+        "final",
+        "term"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "topics": [
+        "Correlation & Covariance",
+        "Hypothesis Testing & Errors",
+        "Linear & Multiple Regression",
+        "Laplace Transforms",
+        "Inverse Laplace & ODEs",
+        "Stochastic & Stationary Processes",
+        "Markov Chains & Transition Matrices",
+        "Poisson & Exponential Processes",
+        "Queueing Theory & Little's Law",
+        "Linear Programming & Optimization",
+        "Duality Theory & Simplex",
+        "Fourier Transforms & Parseval Identity",
+        "Eigenvalues & Eigenvectors"
+      ]
+    },
+    {
+      "code": "SS-4103",
+      "name": "Entrepreneurship for IT Business",
+      "short_name": "ENT",
+      "credits": 2.0,
+      "file": "ss-4103.json",
+      "exams": [
+        "final",
+        "term"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "topics": [
+        "Entrepreneurship Foundations",
+        "Business Models & Canvas",
+        "Idea Generation & Market Opportunity",
+        "Feasibility & Market Analysis",
+        "Financial Planning & Valuation",
+        "Intellectual Property & Patents",
+        "Startup Funding & Venture Capital",
+        "Marketing Strategy & Growth",
+        "IT Business Ethics & Legal Issues",
+        "Team Building & Operations"
+      ]
+    },
+    {
+      "code": "CSE-4125",
+      "name": "Introduction to Machine Learning",
+      "short_name": "ML",
+      "credits": 3.0,
+      "file": "cse-4125.json",
+      "exams": [
+        "final",
+        "term"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "topics": [
+        "Supervised vs Unsupervised Learning",
+        "Linear & Logistic Regression",
+        "Decision Trees & Random Forests",
+        "Support Vector Machines (SVM)",
+        "Naive Bayes & Bayesian Learning",
+        "k-Nearest Neighbors (k-NN)",
+        "Clustering (K-Means, Hierarchical)",
+        "Dimensionality Reduction & PCA",
+        "Neural Networks & Deep Learning",
+        "Model Evaluation & Overfitting",
+        "Ensemble Methods & Boosting"
+      ]
+    },
+    {
+      "code": "CSE-4126",
+      "name": "Introduction to Data Science",
+      "short_name": "DS",
+      "credits": 3.0,
+      "file": "cse-4126.json",
+      "exams": [
+        "final",
+        "term"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "topics": [
+        "Data Science Lifecycle & Pipelines",
+        "Data Collection & Web Scraping",
+        "Data Cleaning & Preprocessing",
+        "Exploratory Data Analysis (EDA)",
+        "Data Visualization & Plotting",
+        "Statistical Inference & Distributions",
+        "Feature Engineering & Selection",
+        "Big Data & Hadoop/Spark",
+        "Ethics & Privacy in Data Science",
+        "Predictive Modeling & Applications"
+      ]
+    }
+  ]
+}

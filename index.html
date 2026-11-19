@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="University of Dhaka 4th Year 1st Semester CSE Final Exam Question Bank & Practice Solutions">
+  <title>Semester Final Codex — DU CSE 4-1</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="assets/avatar_clean.png">
+
+  <!-- Preconnect and Resource Hints -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Product Sans & Google Sans Fonts -->
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+  <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@600;700&family=Space+Grotesk:wght@700;800&family=MedievalSharp&family=Carter+One&display=swap" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/88ab5e9510bcfe27031d652730e5952f?family=Quanta+Grotesk+Pro" rel="stylesheet">
+
+  <!-- KaTeX for High-Performance Math Equations (CDN with defer) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+
+  <!-- MiniSearch for High-Speed Client-Side Search (CDN with defer) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js" crossorigin="anonymous"></script>
+
+  <!-- Mermaid for University Exam Vector Diagrams (CDN with defer) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <!-- Cache Control to prevent browser caching stale styles -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Core App Stylesheet (Mobile-First, System Fonts) -->
+  <link rel="stylesheet" href="style.css?v=4.6">
+</head>
+<body class="is-home-view">
+
+  <!-- Accessible Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Question Feed</a>
+
+  <!-- Sticky Application Header with Courses Navbar -->
+  <header class="app-header" id="appHeader">
+    <div class="header-inner">
+      <!-- 1. Left: Brand Mark & Title -->
+      <div class="brand-group" onclick="app.showHomePortal()" style="cursor: pointer;" title="Back to Home Hub (Press [H] or [Esc])">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/avatar_clean.png" alt="Semester Final" class="brand-avatar-img" width="38" height="38">
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">Semester Final</h1>
+          <span class="brand-sub" id="activeCourseLabel">with Abokash</span>
+        </div>
+      </div>
+
+      <!-- 2. Center: Centered Pill Navigation Strip -->
+      <nav class="course-navbar-strip" id="courseNavbarStrip" aria-label="Course selection"></nav>
+
+      <!-- 3. Right: Exam Countdown Chip & Schedule Popover -->
+      <div class="header-right-action">
+        <div class="exam-countdown-wrapper">
+          <button type="button" class="exam-countdown-btn" id="examCountdownBtn" aria-label="Upcoming Exam Schedule" title="Click to view full exam routine">
+            <span class="exam-pulse-dot" aria-hidden="true"></span>
+            <span class="exam-chip-tag">Next</span>
+            <span class="exam-chip-course" id="nextExamCourse">AI</span>
+            <span class="exam-chip-sep">·</span>
+            <span class="exam-chip-date" id="nextExamDate">29 Nov</span>
+            <span class="exam-chip-sep">·</span>
+            <span class="exam-chip-countdown" id="nextExamCountdown">9d 21h</span>
+          </button>
+
+          <!-- Dropdown Schedule Popover -->
+          <div class="exam-schedule-popover" id="examSchedulePopover" hidden>
+            <div class="popover-header">
+              <div class="popover-title-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="popover-title">Semester Final Routine</span>
+              </div>
+              <span class="popover-badge">10:00 AM</span>
+            </div>
+            <div class="popover-schedule-list" id="popoverScheduleList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       NATURE CATALOG HOME SCREEN / CIRCULAR COURSE HUB
+       Theme: Seamless Cream Dot-Grid Background, Lush Foliage Framing, Center Avatar,
+       Surrounding Circular Course Orbit (AI, MSA, ENT, ML, DS)
+       ========================================================================= -->
+  <section class="home-portal-section" id="homePortalSection" aria-label="Course Selector Hub">
+    <!-- Botanical Foliage Framing Overlays (Fully visible true alpha foliage) -->
+    <div class="foliage-frame foliage-tl" aria-hidden="true">
+      <img src="assets/tree_top_left_clean.png" alt="" class="foliage-img">
+    </div>
+    <div class="foliage-frame foliage-tr" aria-hidden="true">
+      <img src="assets/tree_top_right_clean.png" alt="" class="foliage-img">
+    </div>
+    <div class="foliage-frame foliage-bottom" aria-hidden="true">
+      <img src="assets/bushes_bottom_clean.png?v=3.0" alt="" class="foliage-img">
+    </div>
+
+    <!-- Center Stage with Radial Orbit -->
+    <div class="home-portal-stage">
+      <h2 class="portal-title jungle-title">
+        <span class="jungle-eyebrow">4-1</span>
+        <span class="jungle-main">Semester Final Preparation</span>
+      </h2>
+      <p class="portal-subtitle">Explore 2023 &amp; 2024 Exam Questions, Solutions &amp; Term Tests</p>
+      
+      <!-- Radial Orbit Container -->
+      <div class="orbital-ring-system" id="orbitalRingSystem">
+        <!-- SVG Connecting Orbital Guides -->
+        <svg class="orbital-guide-svg" viewBox="0 0 540 540" aria-hidden="true">
+          <circle cx="270" cy="270" r="200" fill="none" stroke="#2D4A22" stroke-width="2" stroke-dasharray="6 6" opacity="0.35"/>
+          <circle cx="270" cy="270" r="125" fill="none" stroke="#2D4A22" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.2"/>
+        </svg>
+
+        <!-- Center Avatar Core -->
+        <a href="https://www.facebook.com/abokash89/" target="_blank" rel="noopener noreferrer" class="portal-avatar-core" title="Visit Abokash on Facebook (Opens in new tab)" aria-label="Visit Abokash on Facebook">
+          <div class="avatar-glow-ring"></div>
+          <img src="assets/avatar_clean.png" alt="Abokash" class="portal-core-avatar-img">
+          <div class="core-avatar-badge">Abokash</div>
+        </a>
+
+        <!-- 5 Orbital Satellite Course Cards (Angles: -90°, -18°, 54°, 126°, 198°) -->
+        <div class="orbital-satellites-group" id="orbitalSatellitesGroup">
+          <!-- Populated dynamically via app.renderOrbitalCourses() -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Clean Content Layout (Hidden by default when on Home Portal, or toggled) -->
+  <div class="app-layout" id="appLayout" hidden>
+
+    <!-- Left Side Middle Sticky Scrollspy Navigation Rail (Desktop) -->
+    <aside class="year-sidebar" id="yearSidebar" aria-label="Exam Year Navigation">
+      <nav class="year-scrollspy-nav" id="yearScrollspyNav" role="navigation" aria-label="Years and Question Sets">
+        <!-- Rendered dynamically with animated horizontal indicator lines -->
+      </nav>
+    </aside>
+
+    <main class="main-content" id="main-content" tabindex="-1">
+      
+      <!-- Mobile Scrollspy Bar (<900px) -->
+      <nav class="mobile-scrollspy-bar" id="mobileScrollspyBar" aria-label="Mobile Year Navigation"></nav>
+
+      <!-- Results Subheader Bar (Hidden per request) -->
+      <div class="results-header-bar" style="display: none !important;">
+        <div class="results-count-group">
+          <span class="results-count" id="resultsCountLabel"></span>
+        </div>
+      </div>
+
+      <!-- Question Cards Container -->
+      <section class="questions-feed" id="questionsContainer" aria-label="Question List"></section>
+
+      <!-- Infinite Scroll Trigger Sentinel -->
+      <div id="scrollSentinel" class="scroll-sentinel" aria-hidden="true"></div>
+
+      <!-- Loading / End-of-List Indicator -->
+      <div id="feedStatus" class="feed-status" aria-live="polite"></div>
+
+      <!-- Accessible Empty State -->
+      <div id="emptyState" class="empty-state" hidden>
+        <div class="empty-icon" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3 class="empty-title">No Matching Questions Found</h3>
+        <p class="empty-desc">No questions match your current search query or year filter.</p>
+        <button type="button" class="primary-btn" onclick="app.setYearFilter('2024')">Switch to 2024 Final</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Offline Bundled Dataset for Zero-Config file:/// and Localhost Access -->
+  <script src="data/codex_data.js"></script>
+
+  <!-- Main Vanilla Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
