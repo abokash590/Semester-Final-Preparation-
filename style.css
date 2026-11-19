@@ -11,6 +11,9 @@
 [data-theme="light"],
 [data-theme="dark"],
 [data-theme="system"] {
+  /* Strict Light Scheme Lockdown */
+  color-scheme: light only !important;
+
   /* System Font Stacks */
   --font-sans: 'Product Sans', 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
