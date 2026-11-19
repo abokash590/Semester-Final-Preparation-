@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="University of Dhaka 4th Year 1st Semester CSE Final Exam Question Bank & Practice Solutions">
+  <meta name="description"
+    content="University of Dhaka 4th Year 1st Semester CSE Final Exam Question Bank & Practice Solutions">
   <title>Semester Final Codex — DU CSE 4-1</title>
 
   <!-- Enforce Strict Light Theme Only & Lock against Browser Inversion / Dark Reader Extensions -->
   <meta name="color-scheme" content="light only">
   <meta name="darkreader-lock">
+
+  <!-- Active Extension Immunity Guard: Blocks Dark Reader, Night Eye & Force-Dark Extensions -->
+  <script>
+    (function () {
+      function neutralize() {
+        document.querySelectorAll('style.darkreader, style[class*="darkreader"], link[class*="darkreader"], style[class*="sdm"]').forEach(function (el) {
+          try { el.remove(); } catch (e) {}
+        });
+        ['data-darkreader-mode', 'data-darkreader-scheme', 'data-darkreader-proxy'].forEach(function (attr) {
+          if (document.documentElement.hasAttribute(attr)) {
+            document.documentElement.removeAttribute(attr);
+          }
+        });
+        if (document.documentElement.style.filter || (document.body && document.body.style.filter)) {
+          document.documentElement.style.filter = 'none';
+          if (document.body) document.body.style.filter = 'none';
+        }
+      }
+      neutralize();
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', neutralize);
+      }
+      try {
+        var obs = new MutationObserver(function (mutations) {
+          for (var i = 0; i < mutations.length; i++) {
+            var m = mutations[i];
+            for (var j = 0; j < m.addedNodes.length; j++) {
+              var n = m.addedNodes[j];
+              if (n.nodeType === 1) {
+                var tag = n.tagName;
+                if (tag === 'STYLE' || tag === 'LINK') {
+                  var cls = (n.className && typeof n.className === 'string') ? n.className.toLowerCase() : '';
+                  var nid = (n.id && typeof n.id === 'string') ? n.id.toLowerCase() : '';
+                  if (cls.indexOf('darkreader') !== -1 || nid.indexOf('darkreader') !== -1 || cls.indexOf('sdm') !== -1) {
+                    try { n.remove(); } catch (e) {}
+                  }
+                }
+              }
+            }
+            if (m.type === 'attributes') {
+              if (m.attributeName && m.attributeName.indexOf('darkreader') !== -1) {
+                document.documentElement.removeAttribute(m.attributeName);
+              }
+              if (m.attributeName === 'style') {
+                if (document.documentElement.style.filter) document.documentElement.style.filter = 'none';
+                if (document.body && document.body.style.filter) document.body.style.filter = 'none';
+              }
+            }
+          }
+        });
+        obs.observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+          attributeFilter: ['data-darkreader-mode', 'data-darkreader-scheme', 'style', 'class']
+        });
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -26,16 +87,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@600;700&family=Space+Grotesk:wght@700;800&family=MedievalSharp&family=Carter+One&display=swap" rel="stylesheet">
-  <link href="https://db.onlinewebfonts.com/c/88ab5e9510bcfe27031d652730e5952f?family=Quanta+Grotesk+Pro" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@600;700&family=Space+Grotesk:wght@700;800&family=MedievalSharp&family=Carter+One&display=swap"
+    rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/88ab5e9510bcfe27031d652730e5952f?family=Quanta+Grotesk+Pro"
+    rel="stylesheet">
 
   <!-- KaTeX for High-Performance Math Equations (CDN with defer) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    crossorigin="anonymous"></script>
 
   <!-- MiniSearch for High-Speed Client-Side Search (CDN with defer) -->
-  <script defer src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"
+    crossorigin="anonymous"></script>
 
   <!-- Mermaid for University Exam Vector Diagrams (CDN with defer) -->
   <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
@@ -46,8 +112,10 @@
   <meta http-equiv="Expires" content="0">
 
   <!-- Core App Stylesheet (Mobile-First, System Fonts) -->
+  <link rel="stylesheet" href="style.css?v=5.0">
   <link rel="stylesheet" href="style.css?v=4.9">
 </head>
+
 <body class="is-home-view">
 
   <!-- Accessible Skip to Content Link -->
@@ -57,7 +125,8 @@
   <header class="app-header" id="appHeader">
     <div class="header-inner">
       <!-- 1. Left: Brand Mark & Title -->
-      <div class="brand-group" onclick="app.showHomePortal()" style="cursor: pointer;" title="Back to Home Hub (Press [H] or [Esc])">
+      <div class="brand-group" onclick="app.showHomePortal()" style="cursor: pointer;"
+        title="Back to Home Hub (Press [H] or [Esc])">
         <div class="brand-mark" aria-hidden="true">
           <img src="assets/avatar_clean.png" alt="Semester Final" class="brand-avatar-img" width="38" height="38">
         </div>
@@ -73,7 +142,8 @@
       <!-- 3. Right: Exam Countdown Chip & Schedule Popover -->
       <div class="header-right-action">
         <div class="exam-countdown-wrapper">
-          <button type="button" class="exam-countdown-btn" id="examCountdownBtn" aria-label="Upcoming Exam Schedule" title="Click to view full exam routine">
+          <button type="button" class="exam-countdown-btn" id="examCountdownBtn" aria-label="Upcoming Exam Schedule"
+            title="Click to view full exam routine">
             <span class="exam-pulse-dot" aria-hidden="true"></span>
             <span class="exam-chip-tag">Next</span>
             <span class="exam-chip-course" id="nextExamCourse">AI</span>
@@ -87,7 +157,8 @@
           <div class="exam-schedule-popover" id="examSchedulePopover" hidden>
             <div class="popover-header">
               <div class="popover-title-row">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="16" y1="2" x2="16" y2="6"></line>
                   <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -128,26 +199,35 @@
         <span class="jungle-main">Semester Final Preparation</span>
       </h2>
       <p class="portal-subtitle">Explore 2023 &amp; 2024 Exam Questions, Solutions &amp; Term Tests</p>
-      
+
       <!-- Radial Orbit Container -->
       <div class="orbital-ring-system" id="orbitalRingSystem">
         <!-- SVG Connecting Orbital Guides -->
         <svg class="orbital-guide-svg" viewBox="0 0 600 600" aria-hidden="true">
           <!-- 5 Connecting Radial Spokes from Center to Each Nest Center -->
-          <line class="orbital-spoke" x1="300" y1="300" x2="300" y2="60" stroke="#2D4A22" stroke-width="1.8" stroke-dasharray="5 5" opacity="0.32"/>
-          <line class="orbital-spoke" x1="300" y1="300" x2="528.25" y2="225.84" stroke="#2D4A22" stroke-width="1.8" stroke-dasharray="5 5" opacity="0.32"/>
-          <line class="orbital-spoke" x1="300" y1="300" x2="441.07" y2="494.16" stroke="#2D4A22" stroke-width="1.8" stroke-dasharray="5 5" opacity="0.32"/>
-          <line class="orbital-spoke" x1="300" y1="300" x2="158.93" y2="494.16" stroke="#2D4A22" stroke-width="1.8" stroke-dasharray="5 5" opacity="0.32"/>
-          <line class="orbital-spoke" x1="300" y1="300" x2="71.75" y2="225.84" stroke="#2D4A22" stroke-width="1.8" stroke-dasharray="5 5" opacity="0.32"/>
+          <line class="orbital-spoke" x1="300" y1="300" x2="300" y2="60" stroke="#2D4A22" stroke-width="1.8"
+            stroke-dasharray="5 5" opacity="0.32" />
+          <line class="orbital-spoke" x1="300" y1="300" x2="528.25" y2="225.84" stroke="#2D4A22" stroke-width="1.8"
+            stroke-dasharray="5 5" opacity="0.32" />
+          <line class="orbital-spoke" x1="300" y1="300" x2="441.07" y2="494.16" stroke="#2D4A22" stroke-width="1.8"
+            stroke-dasharray="5 5" opacity="0.32" />
+          <line class="orbital-spoke" x1="300" y1="300" x2="158.93" y2="494.16" stroke="#2D4A22" stroke-width="1.8"
+            stroke-dasharray="5 5" opacity="0.32" />
+          <line class="orbital-spoke" x1="300" y1="300" x2="71.75" y2="225.84" stroke="#2D4A22" stroke-width="1.8"
+            stroke-dasharray="5 5" opacity="0.32" />
 
           <!-- Primary Orbital Ring Track passing through Nest Centers -->
-          <circle class="orbital-main-track" cx="300" cy="300" r="240" fill="none" stroke="#2D4A22" stroke-width="2" stroke-dasharray="6 6" opacity="0.4"/>
+          <circle class="orbital-main-track" cx="300" cy="300" r="240" fill="none" stroke="#2D4A22" stroke-width="2"
+            stroke-dasharray="6 6" opacity="0.4" />
           <!-- Inner Concentric Orbit Guide framing Avatar Core -->
-          <circle class="orbital-inner-ring" cx="300" cy="300" r="82" fill="none" stroke="#2D4A22" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.22"/>
+          <circle class="orbital-inner-ring" cx="300" cy="300" r="82" fill="none" stroke="#2D4A22" stroke-width="1.5"
+            stroke-dasharray="4 4" opacity="0.22" />
         </svg>
 
         <!-- Center Avatar Core -->
-        <a href="https://www.facebook.com/abokash89/" target="_blank" rel="noopener noreferrer" class="portal-avatar-core" title="Visit Abokash on Facebook (Opens in new tab)" aria-label="Visit Abokash on Facebook">
+        <a href="https://www.facebook.com/abokash89/" target="_blank" rel="noopener noreferrer"
+          class="portal-avatar-core" title="Visit Abokash on Facebook (Opens in new tab)"
+          aria-label="Visit Abokash on Facebook">
           <div class="avatar-glow-ring"></div>
           <img src="assets/avatar_clean.png" alt="Abokash" class="portal-core-avatar-img">
           <div class="core-avatar-badge">Abokash</div>
@@ -172,7 +252,7 @@
     </aside>
 
     <main class="main-content" id="main-content" tabindex="-1">
-      
+
       <!-- Mobile Scrollspy Bar (<900px) -->
       <nav class="mobile-scrollspy-bar" id="mobileScrollspyBar" aria-label="Mobile Year Navigation"></nav>
 
@@ -195,7 +275,11 @@
       <!-- Accessible Empty State -->
       <div id="emptyState" class="empty-state" hidden>
         <div class="empty-icon" aria-hidden="true">
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
         </div>
         <h3 class="empty-title">No Matching Questions Found</h3>
         <p class="empty-desc">No questions match your current search query or year filter.</p>
@@ -210,4 +294,5 @@
   <!-- Main Vanilla Application Script -->
   <script src="app.js"></script>
 </body>
+
 </html>

@@ -109,16 +109,21 @@ html {
   font-size: 16px;
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
-  color-scheme: light;
+  color-scheme: light only !important;
   scroll-behavior: smooth;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 body {
-  background-color: #FAFAFA;
-  background-image: radial-gradient(circle, rgba(16, 69, 53, 0.28) 1.2px, transparent 1.2px);
-  background-size: 24px 24px;
-  background-position: 0 0;
-  color: var(--text-primary);
+  background-color: #FAFAFA !important;
+  background-image: radial-gradient(circle, rgba(16, 69, 53, 0.28) 1.2px, transparent 1.2px) !important;
+  background-size: 24px 24px !important;
+  background-position: 0 0 !important;
+  color: var(--text-primary) !important;
+  color-scheme: light only !important;
+  filter: none !important;
+  -webkit-filter: none !important;
   min-height: 100dvh;
   width: 100%;
   display: flex;
@@ -691,10 +696,13 @@ body.is-home-view .app-header,
   width: 100%;
   min-height: 100dvh;
   height: 100dvh;
-  background-color: #FAFAFA;
-  background-image: radial-gradient(circle, rgba(16, 69, 53, 0.28) 1.2px, transparent 1.2px);
-  background-size: 24px 24px;
-  background-position: 0 0;
+  background-color: #FAFAFA !important;
+  background-image: radial-gradient(circle, rgba(16, 69, 53, 0.28) 1.2px, transparent 1.2px) !important;
+  background-size: 24px 24px !important;
+  background-position: 0 0 !important;
+  color-scheme: light only !important;
+  filter: none !important;
+  -webkit-filter: none !important;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -794,7 +802,7 @@ body.is-home-view .app-header,
   font-family: 'Calistoga', Georgia, serif;
   font-size: clamp(1.35rem, 1.1rem + 1.1vw, 2.1rem);
   font-weight: 700;
-  color: #104535;
+  color: #104535 !important;
   margin: 0 0 6px 0;
   line-height: 1.16;
   letter-spacing: -0.01em;
@@ -806,7 +814,7 @@ body.is-home-view .app-header,
   font-size: clamp(1.65rem, 1.35rem + 1.3vw, 2.5rem);
   font-weight: 700;
   font-style: normal;
-  color: #104535;
+  color: #104535 !important;
   letter-spacing: 0.02em;
   margin-bottom: 2px;
 }
@@ -815,12 +823,13 @@ body.is-home-view .app-header,
   display: block;
   font-style: normal;
   font-weight: 700;
+  color: #104535 !important;
 }
 
 .portal-subtitle {
   font-family: var(--font-sans);
   font-size: clamp(0.82rem, 0.78rem + 0.3vw, 0.95rem);
-  color: #4B6342;
+  color: #4B6342 !important;
   margin: 0 0 clamp(24px, 4vh, 40px) 0;
 }
 
