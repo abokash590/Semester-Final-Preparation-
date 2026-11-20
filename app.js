@@ -1340,7 +1340,7 @@ class CodexApp {
     // Clean redundant '(Mermaid)' text from titles
     out = out.replace(/\s*\(Mermaid\)/gi, "");
 
-    // Extract Mermaid diagrams FIRST before HTML escaping so diagram syntax is preserved
+    // 1. Extract Mermaid diagrams FIRST so diagram syntax is preserved
     const mermaidPlaceholders = [];
     out = out.replace(/```mermaid\n([\s\S]*?)```/gi, (match, code) => {
       const idx = mermaidPlaceholders.length;
@@ -1348,7 +1348,30 @@ class CodexApp {
       return `@@MERMAID_DIAGRAM_${idx}@@`;
     });
 
-    // Escape raw HTML characters
+    // 2. Extract SVG and custom diagram HTML blocks so they are not entity-escaped
+    const svgPlaceholders = [];
+    out = out.replace(/<div class="svg-diagram-wrapper"[\s\S]*?<\/div>|<svg[\s\S]*?<\/svg>/gi, (match) => {
+      const idx = svgPlaceholders.length;
+      svgPlaceholders.push(match);
+      return `@@SVG_PLACEHOLDER_${idx}@@`;
+    });
+
+    // 3. Extract Math blocks so internal '&', '\\' and newlines are not corrupted by HTML escaping or <br>
+    const mathPlaceholders = [];
+    // Display math ($$...$$ or \[...\])
+    out = out.replace(/\$\$([\s\S]*?)\$\$|\\\[([\s\S]*?)\\\]/g, (match) => {
+      const idx = mathPlaceholders.length;
+      mathPlaceholders.push(match);
+      return `@@MATH_PLACEHOLDER_${idx}@@`;
+    });
+    // Inline math ($...$ or \(...\))
+    out = out.replace(/(?<!\\)\$([^\$\n]+?)(?<!\\)\$|\\\(([^\)]+?)\\\)/g, (match) => {
+      const idx = mathPlaceholders.length;
+      mathPlaceholders.push(match);
+      return `@@MATH_PLACEHOLDER_${idx}@@`;
+    });
+
+    // 4. Escape raw HTML characters on remaining prose
     out = out
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
@@ -1377,7 +1400,7 @@ class CodexApp {
     // Strip standalone markdown horizontal rules ---
     out = out.replace(/^\s*---\s*$/gm, '');
 
-    // Subpart paragraph breaks
+    // Subpart paragraph breaks and line breaks on prose
     out = out.replace(/\n\n+/g, '<div class="set-subpart-gap"></div>');
     out = out.replace(/\n(?!\s*<)/g, '<br>');
 
@@ -1402,7 +1425,17 @@ class CodexApp {
       `;
     });
 
-    // Restore Mermaid diagrams at the VERY END so newlines remain pure \n
+    // 5. Restore Math placeholders
+    mathPlaceholders.forEach((math, idx) => {
+      out = out.replace(`@@MATH_PLACEHOLDER_${idx}@@`, math);
+    });
+
+    // 6. Restore SVG / Diagram HTML placeholders
+    svgPlaceholders.forEach((svg, idx) => {
+      out = out.replace(`@@SVG_PLACEHOLDER_${idx}@@`, svg);
+    });
+
+    // 7. Restore Mermaid diagrams at the VERY END so newlines remain pure \n
     mermaidPlaceholders.forEach((code, idx) => {
       const diagId = `diagram-target-${Math.random().toString(36).substr(2, 9)}`;
       const replacement = `
