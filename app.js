@@ -1249,7 +1249,7 @@ class CodexApp {
           secondaryColor: "#FEF3C7",
           tertiaryColor: "#DCFCE7",
           fontSize: "14px",
-          fontFamily: "'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           edgeLabelBackground: "#FFFFFF"
         },
         flowchart: {

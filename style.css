@@ -15,7 +15,7 @@
   color-scheme: light only !important;
 
   /* System Font Stacks */
-  --font-sans: 'Product Sans', 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
 
   /* Typography Scale via clamp() */
@@ -1366,7 +1366,7 @@ body.is-home-view .app-header,
 .scrollspy-item.active .scrollspy-label {
   color: var(--accent-primary) !important;
   font-weight: 900 !important;
-  font-family: 'Product Sans Black', 'Product Sans', 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: 0.08em;
 }
 
@@ -1601,7 +1601,7 @@ body.is-home-view .app-header,
   .mobile-scrollspy-item.active .scrollspy-label {
     color: var(--accent-primary) !important;
     font-weight: 900 !important;
-    font-family: 'Product Sans Black', 'Product Sans', 'Google Sans', -apple-system, sans-serif !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
     letter-spacing: 0.07em;
   }
 }
