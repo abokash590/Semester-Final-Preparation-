@@ -1440,12 +1440,20 @@ class CodexApp {
       const rows = match.trim().split("\n");
       if (rows.length < 2) return match;
       let html = '<div class="table-scroll-wrapper"><table class="data-table">';
+      let tbodyOpen = false;
       rows.forEach((row, idx) => {
         if (row.includes("---")) return; // skip separator row
         const cells = row.split("|").filter((c, i, arr) => i > 0 && i < arr.length - 1);
-        const tag = idx === 0 ? "th" : "td";
-        html += "<tr>" + cells.map(c => `<${tag}>${c.trim()}</${tag}>`).join("") + "</tr>";
+        if (idx === 0) {
+          html += "<thead><tr>" + cells.map(c => `<th>${c.trim()}</th>`).join("") + "</tr></thead><tbody>";
+          tbodyOpen = true;
+        } else {
+          html += "<tr>" + cells.map(c => `<td>${c.trim()}</td>`).join("") + "</tr>";
+        }
       });
+      if (tbodyOpen) {
+        html += "</tbody>";
+      }
       html += "</table></div>";
       return html;
     });
@@ -1575,7 +1583,7 @@ class CodexApp {
       <div class="solution-section">
         <button type="button" class="solution-toggle-btn" aria-expanded="false" onclick="app.toggleSolution('${q.id}')">
           <svg class="toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          <span>Reveal Solution for ${q.qno}</span>
+          <span>Reveal Solution</span>
         </button>
         <div class="solution-drawer-body" id="sol-${q.id}">
           <div class="solution-chat-bubble-container">

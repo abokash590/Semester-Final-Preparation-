@@ -1983,25 +1983,65 @@ body.is-home-view .app-header,
   margin-top: 0.25rem !important;
 }
 
-.data-table {
+.data-table,
+.q-body-text table {
   width: 100%;
   border-collapse: collapse;
   font-size: var(--text-sm);
-  background-color: var(--bg-subtle);
+  background-color: #FFFFFF;
   border-radius: var(--radius-sm);
   overflow: hidden;
+  border: 1px solid var(--border-light);
+  margin: var(--space-sm) 0;
 }
 
 .data-table th,
-.data-table td {
-  padding: 8px 12px;
+.data-table td,
+.q-body-text table th,
+.q-body-text table td {
+  padding: 10px 14px;
   border: 1px solid var(--border-light);
   text-align: center;
 }
 
-.data-table th {
-  background-color: var(--bg-hover);
+.data-table thead th,
+.data-table th,
+.q-body-text table thead th,
+.q-body-text table th {
+  background-color: #F1F5F9;
+  color: var(--text-primary);
   font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Alternate row styling (Zebra striping) */
+.data-table tbody tr:nth-child(odd),
+.data-table tr:nth-child(odd),
+.q-body-text table tbody tr:nth-child(odd),
+.q-body-text table tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+.data-table tbody tr:nth-child(even),
+.data-table tr:nth-child(even),
+.q-body-text table tbody tr:nth-child(even),
+.q-body-text table tr:nth-child(even) {
+  background-color: #F8FAFC;
+}
+
+/* Row Hovering Effect */
+.data-table tbody tr,
+.data-table tr,
+.q-body-text table tbody tr,
+.q-body-text table tr {
+  transition: background-color 0.15s ease;
+}
+
+.data-table tbody tr:hover,
+.data-table tr:hover:not(:first-child),
+.q-body-text table tbody tr:hover,
+.q-body-text table tr:hover:not(:first-child) {
+  background-color: #F0FDF4 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -2051,6 +2091,13 @@ body.is-home-view .app-header,
   background: transparent;
   border: none;
   overflow: visible;
+}
+
+.puzzle-states-horizontal .data-table tr,
+.puzzle-states-horizontal .data-table tbody tr,
+.puzzle-states-horizontal .data-table tr:hover,
+.puzzle-states-horizontal .data-table tbody tr:hover {
+  background: transparent !important;
 }
 
 .puzzle-states-horizontal .data-table th,
