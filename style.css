@@ -1919,7 +1919,12 @@ body.is-home-view .app-header,
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 6px 0;
+  margin: 0.5rem 0 !important;
+  padding: 4px 0;
+}
+
+.katex-display + .katex-display {
+  margin-top: 0.25rem !important;
 }
 
 .data-table {

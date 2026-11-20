@@ -25,12 +25,12 @@ graph TD
     A -->|4| C((C))
     A -->|3| D((D))
     B -->|2| E((E))
-    B -->|2| F((F))
+    C -->|2| F((F))
     C -->|1| G((G))
-    D -->|4| H((H))
-    D -->|2| K((K))
     G -->|3| I((I - Goal))
+    D -->|4| H((H))
     H -->|4| J((J))
+    H -->|2| K((K))
 ```
 
 ---
@@ -53,11 +53,11 @@ graph TD
 ### Question 4
 (a) Explain the components of the A* evaluation function $f(n) = g(n) + h(n)$. Write down the application of A* search. **[4]**  
 (b) Convert the following English statement into FOL: **[5]**  
-    i. Every man respects his parent  
-    ii. There is somebody whom everybody loves  
-    iii. Not all students like both Mathematics and Science  
-    iv. Mahmud has never sent an e-mail message to Abdullah  
-    v. Everybody loves somebody  
+    i. **Every man respects his parent**  
+    ii. **There is somebody whom everybody loves**  
+    iii. **Not all students like both Mathematics and Science**  
+    iv. **Mahmud has never sent an e-mail message to Abdullah**  
+    v. **Everybody loves somebody**  
 (c) Write short note on two types of quantifiers in FOL with example? **[3]**  
 (d) Write down the application of AI in robotics. **[2]**
 
@@ -97,12 +97,14 @@ graph TD
 (a) A disease affects 1% of the population. A test is 95% accurate for both positive and negative results. If a person tests positive, what's the probability they have the disease? **[4]**  
 (b) Write down the equation for Conditional Probability and Bayes Theorem. **[3]**  
 (c) Consider a single neuron with the following parameters: **[7]**  
-$$\text{Inputs: } x_1 = 1.0, \; x_2 = 0.5$$  
-$$\text{Weights: } w_1 = 0.4, \; w_2 = -0.6$$  
-$$\text{Bias: } b = 0.1$$  
-$$\text{Activation function: Sigmoid}$$  
-$$\text{Target output: } t = 1$$  
-$$\text{Learning rate: } \eta = 0.2$$  
+$$\begin{aligned}
+\text{Inputs: } & x_1 = 1.0, \; x_2 = 0.5 \\
+\text{Weights: } & w_1 = 0.4, \; w_2 = -0.6 \\
+\text{Bias: } & b = 0.1 \\
+\text{Activation function: } & \text{Sigmoid} \\
+\text{Target output: } & t = 1 \\
+\text{Learning rate: } & \eta = 0.2
+\end{aligned}$$  
 
 Now,  
 a) Compute the **net input** and the **output of the neuron**.  
@@ -126,7 +128,7 @@ graph TD
     C --> F((F))
     C --> G((G - Goal))
     D --> H((H))
-    D --> I((I))
+    E --> I((I))
 ```
 
 (d) What is an ontology? How does it differ from a taxonomy or a database schema? **[2]**
