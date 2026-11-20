@@ -781,7 +781,7 @@ class CodexApp {
     // 1. Final Exam Years (Chronological: 2023 first, then 2024)
     const years = [2023, 2024];
     const navHtml = years.map((yr, idx) => {
-      const yrQuestions = this.rawQuestions.filter(q => q.year == yr);
+      const yrQuestions = this.rawQuestions.filter(q => q.year == yr && q.exam !== 'term' && !String(q.qno || '').toUpperCase().includes('TERM'));
       const isActive = idx === 0;
 
       const qNodes = yrQuestions.map(q => {
@@ -806,7 +806,22 @@ class CodexApp {
     const colleges = ["MEC", "FEC", "NITER", "ShEC", "SIMT"];
     const collegeNodes = colleges.map(col => {
       const isColActive = this.activeTermCollege === col;
-      return `<button type="button" class="scrollspy-thread-node college-thread-node college-dot ${isColActive ? 'active-college' : ''}" data-college="${col}" onclick="event.stopPropagation(); app.selectTermTestCollege('${col}')">${col}</button>`;
+      
+      const colTermTests = isColActive
+        ? this.rawQuestions.filter(q => q.exam === 'term' && (q.college === col || (!q.college && col === 'MEC')))
+        : [];
+      
+      const subNodesHtml = colTermTests.map(tt => {
+        const num = String(tt.term_no || 1).padStart(2, "0");
+        return `<button type="button" class="scrollspy-thread-node scrollspy-sub-tt-node scrollspy-q-dot" data-qid="${tt.id}" onclick="event.stopPropagation(); app.scrollToQuestion('${tt.id}')" title="${tt.qno}">Term Test ${num}</button>`;
+      }).join("");
+
+      return `
+        <div class="college-node-group">
+          <button type="button" class="scrollspy-thread-node college-thread-node college-dot ${isColActive ? 'active-college' : ''}" data-college="${col}" onclick="event.stopPropagation(); app.selectTermTestCollege('${col}')">${col}</button>
+          ${subNodesHtml ? `<div class="college-subthread">${subNodesHtml}</div>` : ''}
+        </div>
+      `;
     }).join("");
 
     const termTestHtml = `
@@ -1024,6 +1039,13 @@ class CodexApp {
           this.renderDiagramsOnContainer(card);
         }
       });
+
+      // Re-observe cards for scrollspy active-q indicator
+      if (this.qCardObserver) {
+        listEl.querySelectorAll(".question-set-card").forEach(card => {
+          this.qCardObserver.observe(card);
+        });
+      }
     } else {
       container.innerHTML = `
         <div class="term-test-placeholder-card">
@@ -1053,9 +1075,10 @@ class CodexApp {
   selectTermTestCollege(college) {
     this.activeTermCollege = college;
 
-    // Update left rail college dots
-    document.querySelectorAll(".college-dot").forEach(dot => {
-      dot.classList.toggle("active-college", dot.dataset.college === college);
+    // Re-render left rail scrollspy navigation so the active college's subthread expands
+    this.renderScrollspyNav();
+    document.querySelectorAll(".scrollspy-item").forEach(item => {
+      item.classList.toggle("active", item.dataset.year === "term-test");
     });
 
     // Update main section pills

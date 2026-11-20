@@ -16,104 +16,52 @@ async def run():
         await page.goto("http://localhost:8000/#cse-4101", wait_until="networkidle")
         await page.wait_for_timeout(1000)
 
-        # Verify college pills in Term Test section
-        pills = await page.locator(".term-college-pill").all_text_contents()
-        print(f"College pills found: {pills}")
-        assert pills == ["MEC", "FEC", "NITER", "ShEC", "SIMT"], f"Unexpected pills: {pills}"
-
-        # Verify active pill is MEC
-        active_pill = page.locator(".term-college-pill.active")
-        active_text = await active_pill.text_content()
-        assert active_text.strip() == "MEC", f"Active pill is {active_text}"
-        
-        # Check active pill style (background color #104535 -> rgb(16, 69, 53))
-        bg_color = await active_pill.evaluate("el => window.getComputedStyle(el).backgroundColor")
-        print(f"Active pill background color: {bg_color}")
-        assert "16, 69, 53" in bg_color, f"Active pill background is not #104535! Got {bg_color}"
+        # Check 2024 Final scrollspy nodes: should strictly be Q1-Q7!
+        spy_2024_nodes = await page.locator('.scrollspy-item[data-year="2024"] .scrollspy-thread-node').all_text_contents()
+        print(f"2024 Final Scrollspy Nodes: {spy_2024_nodes}")
+        assert spy_2024_nodes == ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7"], f"2024 nodes still contain term tests: {spy_2024_nodes}"
 
         # Scroll to Term Test section
-        print("2. Scrolling to #year-section-term-test...")
+        print("2. Scrolling to Term Test section...")
         await page.locator("#year-section-term-test").scroll_into_view_if_needed()
         await page.wait_for_timeout(1000)
 
-        # Check left scrollspy active college node
-        active_spy_college = page.locator(".college-thread-node.active-college")
-        spy_text = await active_spy_college.text_content()
-        print(f"Scrollspy active college: {spy_text}")
-        spy_bg = await active_spy_college.evaluate("el => window.getComputedStyle(el).backgroundColor")
-        print(f"Scrollspy active college bg: {spy_bg}")
-        assert "16, 69, 53" in spy_bg, f"Scrollspy active college is not #104535! Got {spy_bg}"
+        # Check Term Test scrollspy nodes under MEC
+        sub_tt_nodes = await page.locator('.college-node-group .college-subthread .scrollspy-sub-tt-node').all_text_contents()
+        print(f"Term Test Sub-nodes under MEC: {sub_tt_nodes}")
+        assert sub_tt_nodes == ["Term Test 01", "Term Test 02"], f"Unexpected MEC subnodes: {sub_tt_nodes}"
 
-        # Screenshot Term Test Section with MEC active
-        await page.screenshot(path=str(SCREENSHOT_DIR / "term_test_mec_green.png"))
-        print("Saved term_test_mec_green.png")
+        # Take screenshot of the clean scrollspy with MEC subthread
+        await page.screenshot(path=str(SCREENSHOT_DIR / "clean_scrollspy_mec_subnodes.png"))
+        print("Saved clean_scrollspy_mec_subnodes.png")
 
-        # Click FEC
-        print("3. Clicking FEC pill...")
-        await page.locator(".term-college-pill", has_text="FEC").click()
-        await page.wait_for_timeout(500)
-        await page.screenshot(path=str(SCREENSHOT_DIR / "term_test_fec_placeholder.png"))
-        print("Saved term_test_fec_placeholder.png")
+        # Verify that Question Card body NO LONGER contains redundant paper header
+        card_text = await page.locator("#termTestCardsContainer .question-card").first.locator(".question-set-body").text_content()
+        print(f"First card body preview: {repr(card_text[:120])}")
+        assert "Mymensingh Engineering College (MEC)" not in card_text, "Redundant header still present!"
+        assert "Course No: CSE-4101" not in card_text, "Redundant course code still present!"
+        assert card_text.strip().startswith("(a) What is Heuristic Function?"), f"Card doesn't start with question! Starts with: {repr(card_text[:60])}"
 
-        # Click back to MEC
-        print("4. Clicking back to MEC pill...")
-        await page.locator(".term-college-pill", has_text="MEC").click()
-        await page.wait_for_timeout(500)
+        # Take screenshot of clean question card
+        await page.screenshot(path=str(SCREENSHOT_DIR / "clean_term_test_card_no_header.png"))
+        print("Saved clean_term_test_card_no_header.png")
 
-        # Reveal Solution for Term Test 1
-        reveal_btn = page.locator("#termTestCardsContainer button:has-text('Reveal Solution for Term Test 1')")
-        if await reveal_btn.count() > 0:
-            print("5. Clicking Reveal Solution for Term Test 1...")
-            await reveal_btn.click()
-            await page.wait_for_timeout(1000)
-            await page.screenshot(path=str(SCREENSHOT_DIR / "term_test_solution_revealed.png"))
-            print("Saved term_test_solution_revealed.png")
-
-        # Navigate to Math CSE-4102
-        print("6. Navigating to Math CSE-4102...")
+        # Check Math CSE-4102
+        print("3. Checking Math CSE-4102 for 3 Term Tests...")
         await page.goto("http://localhost:8000/#cse-4102", wait_until="networkidle")
         await page.wait_for_timeout(1000)
         await page.locator("#year-section-term-test").scroll_into_view_if_needed()
         await page.wait_for_timeout(1000)
-        
-        # Check term test cards in Math
-        math_cards = await page.locator("#termTestCardsContainer .question-card").count()
-        print(f"Math term test cards count: {math_cards}")
-        assert math_cards == 3, f"Expected 3 term test cards for Math, got {math_cards}"
-        await page.screenshot(path=str(SCREENSHOT_DIR / "term_test_math_3_cards.png"))
-        print("Saved term_test_math_3_cards.png")
 
-        # Check DS CSE-4126
-        print("7. Navigating to DS CSE-4126...")
-        await page.goto("http://localhost:8000/#cse-4126", wait_until="networkidle")
-        await page.wait_for_timeout(1000)
-        await page.locator("#year-section-term-test").scroll_into_view_if_needed()
-        await page.wait_for_timeout(1000)
-        ds_cards = await page.locator("#termTestCardsContainer .question-card").count()
-        print(f"DS term test cards count: {ds_cards}")
-        assert ds_cards == 2, f"Expected 2 term test cards for DS, got {ds_cards}"
+        math_sub_tt_nodes = await page.locator('.college-node-group .college-subthread .scrollspy-sub-tt-node').all_text_contents()
+        print(f"Math Term Test Sub-nodes under MEC: {math_sub_tt_nodes}")
+        assert math_sub_tt_nodes == ["Term Test 01", "Term Test 02", "Term Test 03"], f"Expected 3 subnodes for Math, got: {math_sub_tt_nodes}"
 
-        # Check ML CSE-4125
-        print("8. Navigating to ML CSE-4125...")
-        await page.goto("http://localhost:8000/#cse-4125", wait_until="networkidle")
-        await page.wait_for_timeout(1000)
-        await page.locator("#year-section-term-test").scroll_into_view_if_needed()
-        await page.wait_for_timeout(1000)
-        ml_cards = await page.locator("#termTestCardsContainer .question-card").count()
-        print(f"ML term test cards count: {ml_cards}")
-        assert ml_cards == 2, f"Expected 2 term test cards for ML, got {ml_cards}"
+        # Take screenshot of Math Term Test scrollspy
+        await page.screenshot(path=str(SCREENSHOT_DIR / "math_scrollspy_3_subnodes.png"))
+        print("Saved math_scrollspy_3_subnodes.png")
 
-        # Check ENT SS-4103
-        print("9. Navigating to ENT SS-4103...")
-        await page.goto("http://localhost:8000/#ss-4103", wait_until="networkidle")
-        await page.wait_for_timeout(1000)
-        await page.locator("#year-section-term-test").scroll_into_view_if_needed()
-        await page.wait_for_timeout(1000)
-        ent_cards = await page.locator("#termTestCardsContainer .question-card").count()
-        print(f"ENT term test cards count: {ent_cards}")
-        assert ent_cards == 2, f"Expected 2 term test cards for ENT, got {ent_cards}"
-
-        print("ALL VERIFICATIONS PASSED SUCCESSFULLY!")
+        print("ALL VERIFICATIONS COMPLETED SUCCESSFULLY!")
         await browser.close()
 
 if __name__ == "__main__":

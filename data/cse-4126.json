@@ -1343,7 +1343,7 @@
       "Data Collection & Web Scraping",
       "Exploratory Data Analysis (EDA)"
     ],
-    "question": "**Incourse-1 • CSE-4126**  \n**4th Year 1st Semester (2021-22)**  \n**Time:** 45 mins • **Marks:** 20\n\n---\n\n1. Define Data Science. Write down the key differences between Qualitative & Quantitative data. **[4]**  \n2. Discuss the types of Questionnaire Method. **[3]**  \n3. Mention some challenges in data collection method. **[3]**  \n4. Explain KNN algorithm with an example. **[5]**  \n5. Identify if there are any outliers in the following dataset with IQR:  \n$X = \\{40, 45, 50, 52, 55, 58, 60, 62, 68, 90\\}$. **[5]**",
+    "question": "1. Define Data Science. Write down the key differences between Qualitative & Quantitative data. **[4]**  \n2. Discuss the types of Questionnaire Method. **[3]**  \n3. Mention some challenges in data collection method. **[3]**  \n4. Explain KNN algorithm with an example. **[5]**  \n5. Identify if there are any outliers in the following dataset with IQR:  \n$X = \\{40, 45, 50, 52, 55, 58, 60, 62, 68, 90\\}$. **[5]**",
     "subparts": [
       {
         "id": "cse-4126-term-mec-tt1-q1",
@@ -1472,7 +1472,7 @@
       "Statistical Inference & Distributions",
       "Data Visualization & Plotting"
     ],
-    "question": "**Incourse-2 • CSE-4126, Session: 21-22**  \n**Subject: Introduction to Data Science**  \n**Time:** 45 mins • **Marks:** 15\n\n---\n\n1. How Redundant attributes are detected in Data Integration? **[2]**  \n2. Calculate the Correlation coefficient of given data:  \n$X = \\{41, 42, 43, 44, 45\\}$ & $Y = \\{3.2, 3.3, 3.4, 3.5, 3.6\\}$. **[3]**  \n3. Define Data reduction. Mention Data reduction strategies. **[2]**  \n4. Explain Wavelet transforms with example. **[3]**  \n5. Mention data visualization techniques. **[2]**  \n6. Explain Data discretization mapping with an example. **[3]**",
+    "question": "1. How Redundant attributes are detected in Data Integration? **[2]**  \n2. Calculate the Correlation coefficient of given data:  \n$X = \\{41, 42, 43, 44, 45\\}$ & $Y = \\{3.2, 3.3, 3.4, 3.5, 3.6\\}$. **[3]**  \n3. Define Data reduction. Mention Data reduction strategies. **[2]**  \n4. Explain Wavelet transforms with example. **[3]**  \n5. Mention data visualization techniques. **[2]**  \n6. Explain Data discretization mapping with an example. **[3]**",
     "subparts": [
       {
         "id": "cse-4126-term-mec-tt2-q1",

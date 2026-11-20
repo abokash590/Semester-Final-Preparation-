@@ -23,15 +23,7 @@ cse4101_term_tests = [
             "A* Search & Heuristics",
             "Adversarial Search & Min-Max"
         ],
-        "question": """**Mymensingh Engineering College (MEC)**  
-**Department of Computer Science and Engineering**  
-**4th Year 1st Semester • Term Test-01**  
-**Course No:** CSE-4101 • **Course Title:** Artificial Intelligence  
-**Time:** 20 min • **Full Marks:** 15
-
----
-
-(a) What is Heuristic Function? What do you understand by Informed search and Uninformed search? **[1+4]**  
+        "question": """(a) What is Heuristic Function? What do you understand by Informed search and Uninformed search? **[1+4]**  
 (b) Consider the search space below where S is the starting state and G satisfies the goal test. Show the steps if we want to find G using A* Search algorithm. (Arcs are labeled with the cost of traversing them and the estimated cost to reach goal is reported inside nodes). **[6]**
 
 ```mermaid
@@ -165,15 +157,7 @@ graph TD
             "AI Foundations",
             "PEAS & Task Environment"
         ],
-        "question": """**Mymensingh Engineering College (MEC)**  
-**Department of Computer Science and Engineering**  
-**4th Year 1st Semester • Term Test-02**  
-**Course No:** CSE-4101 • **Course Title:** Artificial Intelligence  
-**Time:** 20 min • **Full Marks:** 15
-
----
-
-(a) What are Universal Quantification and Existential Quantification? Write following expression using quantifier: **[2+4]**  
+        "question": """(a) What are Universal Quantification and Existential Quantification? Write following expression using quantifier: **[2+4]**  
     i. **Everybody loves CSE**  
     ii. **Somebody loves EEE**  
 (b) What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. **[1+4]**  
@@ -261,14 +245,7 @@ cse4102_term_tests = [
             "Hypothesis Testing & Errors",
             "Correlation & Covariance"
         ],
-        "question": """**Mymensingh Engineering College (MEC)**  
-**Computer Science and Engineering**  
-**In course Examination-1 • CSE 4102 (Mathematical and Statistical Analysis for Engineers)**  
-**Time:** 40 min • **Full Marks:** 20
-
----
-
-1. If $\\mathcal{L}\\{f(t)\\} = F(s)$, then prove that $\\mathcal{L}\\{\\frac{f(t)}{t}\\} = \\int_s^\\infty F(u) \\, du$. **[4]**  
+        "question": """1. If $\\mathcal{L}\\{f(t)\\} = F(s)$, then prove that $\\mathcal{L}\\{\\frac{f(t)}{t}\\} = \\int_s^\\infty F(u) \\, du$. **[4]**  
 2. Perform the inverse Laplace transform of the following expression: $\\frac{s}{(s^2 + a^2)^2}$. **[3]**  
 3. It is found that 250 errors in the randomly selected 1000 lines of code from Team A and 300 errors in 800 lines of code from Team B. Can we assume that team B's performance is superior to that of A? **[4]**  
 4. It's a Boy Genetic Labs claim to be able to increase the likelihood that a pregnancy will result in a boy being born. Statisticians want to test the claim. Suppose that the null hypothesis is: *It's a Boy Genetic Labs has no effect on gender outcome*. State the Type I and Type II errors. **[2]**  
@@ -403,14 +380,7 @@ cse4102_term_tests = [
         "topics": [
             "Fourier Transforms & Parseval Identity"
         ],
-        "question": """**Mymensingh Engineering College (MEC)**  
-**Computer Science and Engineering**  
-**In course Examination-2 • CSE-4102 (Mathematical and Statistical Analysis for Engineers)**  
-**Time:** 40 min • **Full Marks:** 20
-
----
-
-1. Why do we use Fourier transform? Perform the Fourier transform of function: find $\\mathcal{F}\\left\\{\\frac{1}{2}\\left[H\\left(t+\\frac{1}{2}\\right) - H\\left(t-\\frac{1}{2}\\right)\\right]\\right\\}$ where $\\mathcal{F}\\{H(t)\\} = F(\\omega) = \\frac{2i}{\\omega}$.  
+        "question": """1. Why do we use Fourier transform? Perform the Fourier transform of function: find $\\mathcal{F}\\left\\{\\frac{1}{2}\\left[H\\left(t+\\frac{1}{2}\\right) - H\\left(t-\\frac{1}{2}\\right)\\right]\\right\\}$ where $\\mathcal{F}\\{H(t)\\} = F(\\omega) = \\frac{2i}{\\omega}$.  
 2. Find Fourier transform of $f(x) = \\frac{e^{-ax}}{x}$.  
 3. Parseval's identity ensures energy conservation, relating time and frequency domain representations of signals. Using Parseval's identity if $f(x) = \\begin{cases} 1, & |x| < a \\\\ 0, & |x| > a \\end{cases}$ and $F(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin sa}{s}$, now find that $\\int_0^\\infty \\frac{\\sin^2 x}{x^2} \\, dx = ?$.  
 4. Find Fourier sine transform of $f(x) = \\begin{cases} x, & 0 < x < 1 \\\\ 2-x, & 1 < x < 2 \\\\ 0, & x > 2 \\end{cases}$.""",
@@ -510,14 +480,7 @@ cse4102_term_tests = [
             "Stochastic & Stationary Processes",
             "Queueing Theory & Little's Law"
         ],
-        "question": """**Mymensingh Engineering College (MEC)**  
-**Computer Science and Engineering**  
-**In course Examination-3 • CSE-4102 (Mathematical and Statistical Analysis for Engineers)**  
-**Time:** 40 min • **Full Marks:** 20 (8+4+8)
-
----
-
-1. Three boys A, B and C are throwing a ball to each other. A always throws the ball to B and B always throws the ball to C, but C is as likely to throw the ball to B as to A. If the initial probability distribution of three states A, B, C is 0.3, 0.4 and 0.3 respectively, Find: **[8]**  
+        "question": """1. Three boys A, B and C are throwing a ball to each other. A always throws the ball to B and B always throws the ball to C, but C is as likely to throw the ball to B as to A. If the initial probability distribution of three states A, B, C is 0.3, 0.4 and 0.3 respectively, Find: **[8]**  
    I. The transition matrix.  
    II. $P(X_2 = B)$  
    III. $P(X_3 = B, X_2 = C, X_1 = B, X_0 = A)$  
@@ -617,14 +580,7 @@ ss4103_term_tests = [
             "Idea Generation & Market Opportunity",
             "IT Business Ethics & Legal Issues"
         ],
-        "question": """**Computer Science and Engineering Department • MEC**  
-**SS 4103: Entrepreneurship for IT Business**  
-**In Course: 01 • Total Marks: 20**  
-*(Answer any four questions)*
-
----
-
-1. Write the Characteristics of Entrepreneurs and Nine Deadly Mistakes of Entrepreneurships. **[5]**  
+        "question": """1. Write the Characteristics of Entrepreneurs and Nine Deadly Mistakes of Entrepreneurships. **[5]**  
 2. Explain the differences among creativity, innovation, and entrepreneurship. **[5]**  
 3. What are the major driving forces behind the growth of small businesses? Explain in detail. **[5]**  
 4. Describe any three social responsibilities of an entrepreneur. **[5]**  
@@ -740,14 +696,7 @@ ss4103_term_tests = [
             "Marketing Strategy & Growth",
             "IT Business Ethics & Legal Issues"
         ],
-        "question": """**Computer Science and Engineering Department • MEC**  
-**SS 4103: Entrepreneurship for IT Business**  
-**In Course II • Total Marks: 20**  
-*(Answer any four questions)*
-
----
-
-1. Explain the major Forms of Business ownership. **[5]**  
+        "question": """1. Explain the major Forms of Business ownership. **[5]**  
 2. What is Supply Chain Management? Identify the major components of a supply chain. **[5]**  
 3. What is a cash-flow statement? Discuss the importance of preparing a cash-flow forecast. **[5]**  
 4. What is Creative Advertising? Write the Importance of Creativity in Advertising. **[5]**  
@@ -868,14 +817,7 @@ cse4125_term_tests = [
             "Clustering (K-Means, Hierarchical)",
             "Naive Bayes & Bayesian Learning"
         ],
-        "question": """**Mymensingh Engineering College (MEC)**  
-**CSE, 4th Year 1st Semester • Incourse 1**  
-**Course Title:** Machine Learning • **Course Code:** CSE-4125  
-**Duration:** 50 Minutes • **Full Marks:** 10
-
----
-
-(a) Apply $k(2)$-means algorithm over the data $(185,72), (170,56), (168,60), (179,68), (182,72), (188,77)$ up to two iterations and show the clusters. Initially choose first two objects as initial centroids. **[5]**  
+        "question": """(a) Apply $k(2)$-means algorithm over the data $(185,72), (170,56), (168,60), (179,68), (182,72), (188,77)$ up to two iterations and show the clusters. Initially choose first two objects as initial centroids. **[5]**  
 (b) Consider the given Dataset, Apply Naive Bayes Algorithm and Predict that if a fruit has the following properties then which type of the fruit it is:  
 **Fruit = {Yellow, Sweet, Long}** **[5]**
 
@@ -949,11 +891,7 @@ cse4125_term_tests = [
             "Model Evaluation & Overfitting",
             "Linear & Logistic Regression"
         ],
-        "question": """**MEC, CSE, Machine Learning, CT-2, 4th year 1st Semester**
-
----
-
-1. How does KNN Work? **[3]**  
+        "question": """1. How does KNN Work? **[3]**  
 2. Explain overfitting and underfitting. **[3]**  
 3. Explain Logistic Regression as a classification algorithm. **[4]**""",
         "subparts": [
@@ -1037,13 +975,7 @@ cse4126_term_tests = [
             "Data Collection & Web Scraping",
             "Exploratory Data Analysis (EDA)"
         ],
-        "question": """**Incourse-1 • CSE-4126**  
-**4th Year 1st Semester (2021-22)**  
-**Time:** 45 mins • **Marks:** 20
-
----
-
-1. Define Data Science. Write down the key differences between Qualitative & Quantitative data. **[4]**  
+        "question": """1. Define Data Science. Write down the key differences between Qualitative & Quantitative data. **[4]**  
 2. Discuss the types of Questionnaire Method. **[3]**  
 3. Mention some challenges in data collection method. **[3]**  
 4. Explain KNN algorithm with an example. **[5]**  
@@ -1165,13 +1097,7 @@ $X = \\{40, 45, 50, 52, 55, 58, 60, 62, 68, 90\\}$. **[5]**""",
             "Statistical Inference & Distributions",
             "Data Visualization & Plotting"
         ],
-        "question": """**Incourse-2 • CSE-4126, Session: 21-22**  
-**Subject: Introduction to Data Science**  
-**Time:** 45 mins • **Marks:** 15
-
----
-
-1. How Redundant attributes are detected in Data Integration? **[2]**  
+        "question": """1. How Redundant attributes are detected in Data Integration? **[2]**  
 2. Calculate the Correlation coefficient of given data:  
 $X = \\{41, 42, 43, 44, 45\\}$ & $Y = \\{3.2, 3.3, 3.4, 3.5, 3.6\\}$. **[3]**  
 3. Define Data reduction. Mention Data reduction strategies. **[2]**  
