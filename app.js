@@ -887,7 +887,7 @@ class CodexApp {
       section.dataset.year = yr;
 
       section.innerHTML = `
-        <div class="year-section-divider">
+        <div class="year-section-divider reveal-on-scroll">
           <span class="year-badge-lg">${yr} FINAL EXAMINATION</span>
           <span class="year-section-sub">${yrQuestions.length} Question Sets • Answer any 5</span>
         </div>
@@ -951,6 +951,7 @@ class CodexApp {
     // Update Scrollspy
     this.renderScrollspyNav();
     this.initScrollspy();
+    this.initScrollReveal();
   }
 
   /**
@@ -1000,6 +1001,36 @@ class CodexApp {
     cards.forEach(c => this.qCardObserver.observe(c));
   }
 
+  /**
+   * Initializes Gentle Scroll Reveal (Fade & Rise on Scroll)
+   */
+  initScrollReveal() {
+    if (this.scrollRevealObserver) {
+      this.scrollRevealObserver.disconnect();
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll(".reveal-on-scroll").forEach(el => el.classList.add("is-revealed"));
+      return;
+    }
+
+    this.scrollRevealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: "0px 0px -30px 0px",
+      threshold: 0.05
+    });
+
+    document.querySelectorAll(".reveal-on-scroll").forEach(el => {
+      this.scrollRevealObserver.observe(el);
+    });
+  }
+
   setActiveScrollspyYear(year) {
     document.querySelectorAll(".scrollspy-item").forEach(item => {
       const isActive = item.dataset.year == year;
@@ -1046,9 +1077,11 @@ class CodexApp {
           this.qCardObserver.observe(card);
         });
       }
+
+      this.initScrollReveal();
     } else {
       container.innerHTML = `
-        <div class="term-test-placeholder-card">
+        <div class="term-test-placeholder-card reveal-on-scroll">
           <div style="width:48px; height:48px; border-radius:12px; background:rgba(16,69,53,0.08); display:flex; align-items:center; justify-content:center; margin:0 auto 12px auto; color:#104535;" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
@@ -1524,7 +1557,7 @@ class CodexApp {
    */
   createQuestionCard(q) {
     const card = document.createElement("article");
-    card.className = "question-card question-set-card";
+    card.className = "question-card question-set-card reveal-on-scroll";
     card.id = `card-${q.id}`;
     card.dataset.id = q.id;
 

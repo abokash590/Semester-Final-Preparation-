@@ -1983,38 +1983,64 @@ body.is-home-view .app-header,
   margin-top: 0.25rem !important;
 }
 
+/* Table Container with Crisp Outer Border */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  margin: var(--space-md) 0;
+  border: 1px solid #D4D4D8;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
 .data-table,
 .q-body-text table {
   width: 100%;
   border-collapse: collapse;
   font-size: var(--text-sm);
   background-color: #FFFFFF;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--border-light);
-  margin: var(--space-sm) 0;
+  border: none;
+  margin: 0;
 }
 
 .data-table th,
 .data-table td,
 .q-body-text table th,
 .q-body-text table td {
-  padding: 10px 14px;
-  border: 1px solid var(--border-light);
+  padding: 11px 16px;
+  border-bottom: 1px solid #E4E4E7;
+  border-right: 1px solid #E4E4E7;
   text-align: center;
 }
 
+.data-table th:last-child,
+.data-table td:last-child,
+.q-body-text table th:last-child,
+.q-body-text table td:last-child {
+  border-right: none;
+}
+
+.data-table tbody tr:last-child td,
+.data-table tr:last-child td,
+.q-body-text table tbody tr:last-child td,
+.q-body-text table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 1st Row (Header): Green Accent Tune */
 .data-table thead th,
 .data-table th,
 .q-body-text table thead th,
 .q-body-text table th {
-  background-color: #F1F5F9;
-  color: var(--text-primary);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  background-color: #EBF4F0;
+  color: #104535;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid rgba(16, 69, 53, 0.25);
 }
 
-/* Alternate row styling (Zebra striping) */
+/* Alternate Rows: 1st White, 2nd Ash (Chai color) */
 .data-table tbody tr:nth-child(odd),
 .data-table tr:nth-child(odd),
 .q-body-text table tbody tr:nth-child(odd),
@@ -2026,7 +2052,7 @@ body.is-home-view .app-header,
 .data-table tr:nth-child(even),
 .q-body-text table tbody tr:nth-child(even),
 .q-body-text table tr:nth-child(even) {
-  background-color: #F8FAFC;
+  background-color: #F1F3F5;
 }
 
 /* Row Hovering Effect */
@@ -2041,7 +2067,31 @@ body.is-home-view .app-header,
 .data-table tr:hover:not(:first-child),
 .q-body-text table tbody tr:hover,
 .q-body-text table tr:hover:not(:first-child) {
-  background-color: #F0FDF4 !important;
+  background-color: #E2EFE9 !important;
+}
+
+/* --------------------------------------------------------------------------
+   GENTLE SCROLL REVEAL ANIMATION (Fade & Rise on Scroll)
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2081,6 +2131,9 @@ body.is-home-view .app-header,
   margin: 0;
   overflow: visible;
   padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 .puzzle-states-horizontal .data-table {
