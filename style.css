@@ -356,112 +356,13 @@ body.is-home-view .app-header,
   line-height: 1;
 }
 
-/* Right: Drive Links & Exam Countdown Chip & Schedule Popover */
+/* Right: Exam Countdown Chip & Schedule Popover */
 .header-right-action {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-shrink: 0;
   position: relative;
-  gap: 8px;
-}
-
-/* Drive Links Button & Popover */
-.drive-links-wrapper {
-  position: relative;
-}
-
-.drive-links-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 12px 5px 10px;
-  border-radius: 9999px;
-  background: rgba(16, 69, 53, 0.05);
-  border: 1px solid rgba(16, 69, 53, 0.16);
-  color: #104535;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.drive-links-btn:hover {
-  background: rgba(16, 69, 53, 0.1);
-  border-color: rgba(16, 69, 53, 0.3);
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(16, 69, 53, 0.12);
-}
-
-.drive-links-popover {
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
-  width: 300px;
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
-  z-index: 999;
-  padding: 14px;
-  animation: popover-in 0.18s ease-out;
-}
-
-.drive-popover-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.drive-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.drive-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 14px 10px;
-  border-radius: 10px;
-  background: #F9FAFB;
-  text-decoration: none;
-  transition: all 0.15s ease;
-  cursor: pointer;
-}
-
-.drive-card:hover {
-  background: #F0FDF4;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 69, 53, 0.1);
-}
-
-.drive-card-label {
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: #104535;
-  letter-spacing: 0.03em;
-}
-
-.drive-card-sub {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  white-space: nowrap;
 }
 
 .exam-countdown-wrapper {
@@ -768,18 +669,6 @@ body.is-home-view .app-header,
     padding: 4px 8px 4px 6px;
     font-size: 0.74rem;
     gap: 4px;
-  }
-  .drive-links-btn {
-    padding: 4px 8px 4px 6px;
-    font-size: 0.74rem;
-    gap: 4px;
-  }
-  .drive-links-btn span {
-    display: none;
-  }
-  .drive-links-popover {
-    width: 260px;
-    right: -10px;
   }
   .exam-chip-tag {
     font-size: 0.58rem;

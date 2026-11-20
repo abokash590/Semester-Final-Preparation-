@@ -310,30 +310,10 @@ class CodexApp {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
         popover.hidden = !popover.hidden;
-        // Close Drive popover if open
-        const drivePop = document.getElementById("driveLinksPopover");
-        if (drivePop) drivePop.hidden = true;
       });
       document.addEventListener("click", (e) => {
         if (!popover.contains(e.target) && !btn.contains(e.target)) {
           popover.hidden = true;
-        }
-      });
-    }
-
-    // Drive Links Popover toggle
-    const driveBtn = document.getElementById("driveLinksBtn");
-    const drivePop = document.getElementById("driveLinksPopover");
-    if (driveBtn && drivePop) {
-      driveBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        drivePop.hidden = !drivePop.hidden;
-        // Close Exam popover if open
-        if (popover) popover.hidden = true;
-      });
-      document.addEventListener("click", (e) => {
-        if (!drivePop.contains(e.target) && !driveBtn.contains(e.target)) {
-          drivePop.hidden = true;
         }
       });
     }
