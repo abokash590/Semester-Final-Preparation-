@@ -1295,5 +1295,158 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4125-term-mec-tt1",
+    "course": "CSE-4125",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2024,
+    "qno": "Term Test 1",
+    "marks": 10,
+    "topics": [
+      "Clustering (K-Means, Hierarchical)",
+      "Naive Bayes & Bayesian Learning"
+    ],
+    "question": "**Mymensingh Engineering College (MEC)**  \n**CSE, 4th Year 1st Semester • Incourse 1**  \n**Course Title:** Machine Learning • **Course Code:** CSE-4125  \n**Duration:** 50 Minutes • **Full Marks:** 10\n\n---\n\n(a) Apply $k(2)$-means algorithm over the data $(185,72), (170,56), (168,60), (179,68), (182,72), (188,77)$ up to two iterations and show the clusters. Initially choose first two objects as initial centroids. **[5]**  \n(b) Consider the given Dataset, Apply Naive Bayes Algorithm and Predict that if a fruit has the following properties then which type of the fruit it is:  \n**Fruit = {Yellow, Sweet, Long}** **[5]**\n\n**Frequency Table:**\n| Fruit | Yellow | Sweet | Long | Total |\n| :--- | :---: | :---: | :---: | :---: |\n| **Mango** | 350 | 450 | 0 | 650 |\n| **Banana** | 400 | 300 | 350 | 400 |\n| **Others** | 50 | 100 | 50 | 150 |\n| **Total** | 800 | 850 | 400 | 1200 |",
+    "subparts": [
+      {
+        "id": "cse-4125-term-mec-tt1-qa",
+        "qno": "1(a)",
+        "label": "(a)",
+        "marks": 5,
+        "topics": [
+          "Clustering (K-Means, Hierarchical)"
+        ],
+        "question": "Apply k(2)-means algorithm over the given data up to two iterations with initial centroids as first two objects.",
+        "solution": {
+          "steps": [
+            "1. Given 6 points: $P_1(185,72), P_2(170,56), P_3(168,60), P_4(179,68), P_5(182,72), P_6(188,77)$.",
+            "2. **Initial Centroids:** $C_1 = P_1(185, 72)$, $C_2 = P_2(170, 56)$.",
+            "3. **Iteration 1 - Euclidean Distances $d(P, C_i)$:**\n   - $P_1$: $d_1 = 0$, $d_2 = \\sqrt{15^2+16^2} = 21.9 \\implies C_1$\n   - $P_2$: $d_1 = 21.9$, $d_2 = 0 \\implies C_2$\n   - $P_3$: $d_1 = \\sqrt{17^2+12^2} = 20.8$, $d_2 = \\sqrt{2^2+4^2} = 4.5 \\implies C_2$\n   - $P_4$: $d_1 = \\sqrt{6^2+4^2} = 7.2$, $d_2 = \\sqrt{9^2+12^2} = 15 \\implies C_1$\n   - $P_5$: $d_1 = \\sqrt{3^2+0} = 3$, $d_2 = \\sqrt{12^2+16^2} = 20 \\implies C_1$\n   - $P_6$: $d_1 = \\sqrt{3^2+5^2} = 5.8$, $d_2 = \\sqrt{18^2+21^2} = 27.7 \\implies C_1$",
+            "4. **Clusters after Iteration 1:**\n   - Cluster 1: $\\{P_1, P_4, P_5, P_6\\}$\n   - Cluster 2: $\\{P_2, P_3\\}$",
+            "5. **Update Centroids:**\n   - $C_1' = \\left(\\frac{185+179+182+188}{4}, \\frac{72+68+72+77}{4}\\right) = (183.5, 72.25)$\n   - $C_2' = \\left(\\frac{170+168}{2}, \\frac{56+60}{2}\\right) = (169, 58)$",
+            "6. **Iteration 2 - Distances to $C_1'(183.5, 72.25)$ and $C_2'(169, 58)$:**\n   - All points retain identical cluster assignments. Cluster assignments have converged!"
+          ],
+          "answer": "Final Clusters: Cluster 1 = {P1, P4, P5, P6} with centroid (183.5, 72.25); Cluster 2 = {P2, P3} with centroid (169, 58).",
+          "marking_hint": "Award 2.5 marks for iteration 1 distance calculations, 2.5 marks for centroid updates and iteration 2 verification."
+        }
+      },
+      {
+        "id": "cse-4125-term-mec-tt1-qb",
+        "qno": "1(b)",
+        "label": "(b)",
+        "marks": 5,
+        "topics": [
+          "Naive Bayes & Bayesian Learning"
+        ],
+        "question": "Apply Naive Bayes Algorithm to predict fruit type for Fruit = {Yellow, Sweet, Long}.",
+        "solution": {
+          "steps": [
+            "1. **Class Prior Probabilities ($N = 1200$):**\n   - $P(\\text{Mango}) = 650/1200 = 0.5417$\n   - $P(\\text{Banana}) = 400/1200 = 0.3333$\n   - $P(\\text{Others}) = 150/1200 = 0.1250$",
+            "2. **Conditional Likelihoods:**\n   - For **Mango:** $P(\\text{Yellow}|M) = 350/650$, $P(\\text{Sweet}|M) = 450/650$, $P(\\text{Long}|M) = 0/650 = 0$ (or with Laplace smoothing $\\frac{0+1}{650+2} = \\frac{1}{652}$).\n     Without smoothing: $P(X|\\text{Mango}) = \\frac{350}{650} \\times \\frac{450}{650} \\times 0 = 0$.\n   - For **Banana:**\n     $P(\\text{Yellow}|B) = 400/400 = 1.0$\n     $P(\\text{Sweet}|B) = 300/400 = 0.75$\n     $P(\\text{Long}|B) = 350/400 = 0.875$\n     Posterior numerator: $P(B) \\times P(X|B) = 0.3333 \\times 1.0 \\times 0.75 \\times 0.875 = 0.21875$.\n   - For **Others:**\n     $P(\\text{Yellow}|O) = 50/150 = 0.3333$\n     $P(\\text{Sweet}|O) = 100/150 = 0.6667$\n     $P(\\text{Long}|O) = 50/150 = 0.3333$\n     Posterior numerator: $P(O) \\times P(X|O) = 0.1250 \\times 0.3333 \\times 0.6667 \\times 0.3333 \\approx 0.00926$.",
+            "3. **Comparison:** Posterior score for Banana ($0.21875$) is overwhelmingly higher than Others ($0.00926$) and Mango ($0$).",
+            "4. **Prediction:** The fruit is **Banana**."
+          ],
+          "answer": "Predicted Fruit: Banana (Posterior score = 0.21875 vs 0 for Mango and 0.00926 for Others).",
+          "marking_hint": "Award 2 marks for priors and likelihoods, 3 marks for posterior comparison and correct classification."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4125 Term Test 1 (10 Marks total).",
+      "marking_hint": "Full marks (10 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4125-term-mec-tt2",
+    "course": "CSE-4125",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 2,
+    "set_no": 2,
+    "year": 2024,
+    "qno": "Term Test 2",
+    "marks": 10,
+    "topics": [
+      "k-Nearest Neighbors (k-NN)",
+      "Model Evaluation & Overfitting",
+      "Linear & Logistic Regression"
+    ],
+    "question": "**MEC, CSE, Machine Learning, CT-2, 4th year 1st Semester**\n\n---\n\n1. How does KNN Work? **[3]**  \n2. Explain overfitting and underfitting. **[3]**  \n3. Explain Logistic Regression as a classification algorithm. **[4]**",
+    "subparts": [
+      {
+        "id": "cse-4125-term-mec-tt2-q1",
+        "qno": "1",
+        "label": "1",
+        "marks": 3,
+        "topics": [
+          "k-Nearest Neighbors (k-NN)"
+        ],
+        "question": "How does KNN Work?",
+        "solution": {
+          "steps": [
+            "1. **Non-parametric & Lazy Learner:** Stores all training instances without constructing an explicit mathematical model.",
+            "2. **Algorithm Steps:**\n   - For an unseen query point $x_q$, compute distance (Euclidean, Manhattan) to all training points.\n   - Identify the $k$ nearest training samples.\n   - **Classification:** Majority voting among the $k$ neighbors.\n   - **Regression:** Mean or median of the target values of the $k$ neighbors."
+          ],
+          "answer": "KNN calculates metric distances from the query point to all stored training samples and assigns the majority class among the top k neighbors.",
+          "marking_hint": "Award 1.5 marks for distance calculation, 1.5 marks for majority voting mechanism."
+        }
+      },
+      {
+        "id": "cse-4125-term-mec-tt2-q2",
+        "qno": "2",
+        "label": "2",
+        "marks": 3,
+        "topics": [
+          "Model Evaluation & Overfitting"
+        ],
+        "question": "Explain overfitting and underfitting.",
+        "solution": {
+          "steps": [
+            "1. **Overfitting (High Variance):** Model learns noise and idiosyncrasies of training data; performs excellently on training set but poorly on unseen test data. *Remedies:* L1/L2 regularization, dropout, pruning, gathering more data.",
+            "2. **Underfitting (High Bias):** Model is too simplistic to capture underlying patterns; performs poorly on both training and test data. *Remedies:* Increasing model capacity, adding polynomial/interaction features, decreasing regularization."
+          ],
+          "answer": "Overfitting captures noise (high variance); underfitting fails to capture underlying patterns (high bias).",
+          "marking_hint": "Award 1.5 marks for overfitting, 1.5 marks for underfitting with respective causes/remedies."
+        }
+      },
+      {
+        "id": "cse-4125-term-mec-tt2-q3",
+        "qno": "3",
+        "label": "3",
+        "marks": 4,
+        "topics": [
+          "Linear & Logistic Regression"
+        ],
+        "question": "Explain Logistic Regression as a classification algorithm.",
+        "solution": {
+          "steps": [
+            "1. **Concept:** Despite its name, Logistic Regression is a binary classification algorithm predicting the probability $P(Y=1|X)$.",
+            "2. **Sigmoid / Logistic Link Function:** Transforms real-valued linear score $z = w^T x + b$ into a valid probability in $[0, 1]$:\n$$\\sigma(z) = \\frac{1}{1 + e^{-z}}$$",
+            "3. **Cost Function (Binary Cross-Entropy / Log-Loss):**\n$$J(w) = -\\frac{1}{m}\\sum_{i=1}^m \\left[ y^{(i)} \\ln(\\hat{y}^{(i)}) + (1 - y^{(i)}) \\ln(1 - \\hat{y}^{(i)}) \\right]$$",
+            "4. **Decision Boundary:** Classifies as 1 if $\\sigma(z) \\ge 0.5$ (i.e. $z \\ge 0$), and 0 otherwise."
+          ],
+          "answer": "Logistic regression maps linear combinations of features through the sigmoid function to output calibrated probabilities optimized via log-loss.",
+          "marking_hint": "Award 1.5 marks for sigmoid function, 1.5 marks for loss function, 1 mark for decision boundary."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4125 Term Test 2 (10 Marks total).",
+      "marking_hint": "Full marks (10 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
   }
 ]

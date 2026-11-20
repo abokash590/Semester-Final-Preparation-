@@ -1327,5 +1327,276 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4126-term-mec-tt1",
+    "course": "CSE-4126",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2024,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "Data Science Lifecycle & Pipelines",
+      "Data Collection & Web Scraping",
+      "Exploratory Data Analysis (EDA)"
+    ],
+    "question": "**Incourse-1 • CSE-4126**  \n**4th Year 1st Semester (2021-22)**  \n**Time:** 45 mins • **Marks:** 20\n\n---\n\n1. Define Data Science. Write down the key differences between Qualitative & Quantitative data. **[4]**  \n2. Discuss the types of Questionnaire Method. **[3]**  \n3. Mention some challenges in data collection method. **[3]**  \n4. Explain KNN algorithm with an example. **[5]**  \n5. Identify if there are any outliers in the following dataset with IQR:  \n$X = \\{40, 45, 50, 52, 55, 58, 60, 62, 68, 90\\}$. **[5]**",
+    "subparts": [
+      {
+        "id": "cse-4126-term-mec-tt1-q1",
+        "qno": "1",
+        "label": "1",
+        "marks": 4,
+        "topics": [
+          "Data Science Lifecycle & Pipelines"
+        ],
+        "question": "Define Data Science. Write down the key differences between Qualitative & Quantitative data. [4]",
+        "solution": {
+          "steps": [
+            "1. **Definition:** An interdisciplinary field combining computer science, statistics, domain expertise, and machine learning to extract actionable knowledge from structured and unstructured data.",
+            "2. **Differences:**\n   - **Qualitative Data (Categorical):** Non-numerical, descriptive, subjective (e.g. sentiment, color, customer feedback). Measured on Nominal or Ordinal scales.\n   - **Quantitative Data (Numerical):** Numerical counts or measurements, objective, amenable to mathematical operations (e.g. salary, temperature, weight). Measured on Interval or Ratio scales."
+          ],
+          "answer": "Data Science synthesizes statistical algorithms and computing to extract insights. Qualitative is descriptive; Quantitative is numerical.",
+          "marking_hint": "Award 1.5 marks for definition, 2.5 marks for qualitative vs quantitative differences."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt1-q2",
+        "qno": "2",
+        "label": "2",
+        "marks": 3,
+        "topics": [
+          "Data Collection & Web Scraping"
+        ],
+        "question": "Discuss the types of Questionnaire Method. [3]",
+        "solution": {
+          "steps": [
+            "1. **Structured Questionnaire:** Standardized closed-ended questions with predetermined response options (multiple choice, Likert scale); easy to quantify.",
+            "2. **Unstructured Questionnaire:** Open-ended questions allowing respondents to express detailed personal perspectives; rich qualitative depth.",
+            "3. **Semi-structured Questionnaire:** Blends core structured baseline questions with open-ended probes."
+          ],
+          "answer": "Structured (closed-ended, quantitative), Unstructured (open-ended, qualitative), and Semi-structured (hybrid).",
+          "marking_hint": "Award 1 mark each for the three questionnaire categories."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt1-q3",
+        "qno": "3",
+        "label": "3",
+        "marks": 3,
+        "topics": [
+          "Data Collection & Web Scraping"
+        ],
+        "question": "Mention some challenges in data collection method. [3]",
+        "solution": {
+          "steps": [
+            "1. **Data Quality & Incompleteness:** Missing values, transcription errors, noisy sensors.",
+            "2. **Sampling Bias & Non-response:** Unrepresentative sample populations and high non-response rates.",
+            "3. **Privacy, Security & Ethics:** Regulatory restrictions (GDPR) and confidential user data.",
+            "4. **High Resource Cost & Latency:** Expensive manual surveys and slow data pipeline throughput."
+          ],
+          "answer": "Core challenges include sampling bias, missing data, privacy/regulatory barriers, and high acquisition costs.",
+          "marking_hint": "Award 1 mark each for three distinct collection challenges."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt1-q4",
+        "qno": "4",
+        "label": "4",
+        "marks": 5,
+        "topics": [
+          "Exploratory Data Analysis (EDA)"
+        ],
+        "question": "Explain KNN algorithm with an example. [5]",
+        "solution": {
+          "steps": [
+            "1. Compute Euclidean distance from target point to all dataset samples.",
+            "2. Rank samples by ascending distance and pick the $k$ nearest neighbors.",
+            "3. Majority vote determines the final classification.",
+            "4. **Concrete Example:** Classifying loan applicant with Income $X_1$ and Credit Score $X_2$."
+          ],
+          "answer": "Instance-based learning where unseen query point inherits dominant label of its k nearest distance neighbors.",
+          "marking_hint": "Award 2.5 marks for theoretical mechanics, 2.5 marks for worked numerical example."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt1-q5",
+        "qno": "5",
+        "label": "5",
+        "marks": 5,
+        "topics": [
+          "Exploratory Data Analysis (EDA)"
+        ],
+        "question": "Identify if there are any outliers in dataset X = {40, 45, 50, 52, 55, 58, 60, 62, 68, 90} with IQR. [5]",
+        "solution": {
+          "steps": [
+            "1. Dataset is sorted: $X = \\{40, 45, 50, 52, 55, 58, 60, 62, 68, 90\\}$, $n = 10$.",
+            "2. **Median ($Q_2$):** Average of 5th and 6th values: $\\frac{55 + 58}{2} = 56.5$.",
+            "3. **Lower Half:** $\\{40, 45, 50, 52, 55\\} \\implies Q_1 = 50$.",
+            "4. **Upper Half:** $\\{58, 60, 62, 68, 90\\} \\implies Q_3 = 62$.",
+            "5. **Interquartile Range (IQR):** $\\text{IQR} = Q_3 - Q_1 = 62 - 50 = 12$.",
+            "6. **Fences:**\n   - Lower Fence $= Q_1 - 1.5 \\times \\text{IQR} = 50 - 1.5(12) = 50 - 18 = 32$.\n   - Upper Fence $= Q_3 + 1.5 \\times \\text{IQR} = 62 + 1.5(12) = 62 + 18 = 80$.",
+            "7. **Outlier Check:** All values are $\\ge 32$. The value $90 > 80$.",
+            "8. **Conclusion:** **90** is the only outlier in the dataset."
+          ],
+          "answer": "IQR = 12; Fences = [32, 80]; Value 90 is an outlier.",
+          "marking_hint": "Award 1.5 marks for Q1, Q3, and IQR, 1.5 marks for fences, 2 marks for outlier detection."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4126 Term Test 1 (20 Marks total).",
+      "marking_hint": "Full marks (20 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4126-term-mec-tt2",
+    "course": "CSE-4126",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 2,
+    "set_no": 2,
+    "year": 2024,
+    "qno": "Term Test 2",
+    "marks": 15,
+    "topics": [
+      "Data Cleaning & Preprocessing",
+      "Statistical Inference & Distributions",
+      "Data Visualization & Plotting"
+    ],
+    "question": "**Incourse-2 • CSE-4126, Session: 21-22**  \n**Subject: Introduction to Data Science**  \n**Time:** 45 mins • **Marks:** 15\n\n---\n\n1. How Redundant attributes are detected in Data Integration? **[2]**  \n2. Calculate the Correlation coefficient of given data:  \n$X = \\{41, 42, 43, 44, 45\\}$ & $Y = \\{3.2, 3.3, 3.4, 3.5, 3.6\\}$. **[3]**  \n3. Define Data reduction. Mention Data reduction strategies. **[2]**  \n4. Explain Wavelet transforms with example. **[3]**  \n5. Mention data visualization techniques. **[2]**  \n6. Explain Data discretization mapping with an example. **[3]**",
+    "subparts": [
+      {
+        "id": "cse-4126-term-mec-tt2-q1",
+        "qno": "1",
+        "label": "1",
+        "marks": 2,
+        "topics": [
+          "Data Cleaning & Preprocessing"
+        ],
+        "question": "How Redundant attributes are detected in Data Integration? [2]",
+        "solution": {
+          "steps": [
+            "1. **Numerical Attributes:** Correlation coefficient test (Pearson's $r$) and Covariance analysis to detect linearly dependent collinear features.",
+            "2. **Categorical / Nominal Attributes:** Chi-square $(\\chi^2)$ test of independence to identify whether two categorical attributes are statistically associated."
+          ],
+          "answer": "Redundancy is detected using Pearson correlation / covariance for numerical attributes and Chi-square (chi^2) test for categorical attributes.",
+          "marking_hint": "Award 1 mark each for numerical correlation and categorical Chi-square test."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt2-q2",
+        "qno": "2",
+        "label": "2",
+        "marks": 3,
+        "topics": [
+          "Statistical Inference & Distributions"
+        ],
+        "question": "Calculate the Correlation coefficient of X = {41, 42, 43, 44, 45} & Y = {3.2, 3.3, 3.4, 3.5, 3.6}. [3]",
+        "solution": {
+          "steps": [
+            "1. Means: $\\bar{X} = \\frac{41+42+43+44+45}{5} = 43$, $\\bar{Y} = \\frac{3.2+3.3+3.4+3.5+3.6}{5} = 3.4$.",
+            "2. Deviations $(X - \\bar{X}) = \\{-2, -1, 0, 1, 2\\} \\implies \\sum (X - \\bar{X})^2 = 4 + 1 + 0 + 1 + 4 = 10$.",
+            "3. Deviations $(Y - \\bar{Y}) = \\{-0.2, -0.1, 0, 0.1, 0.2\\} \\implies \\sum (Y - \\bar{Y})^2 = 0.04 + 0.01 + 0 + 0.01 + 0.04 = 0.10$.",
+            "4. Cross-product: $\\sum (X - \\bar{X})(Y - \\bar{Y}) = (-2)(-0.2) + (-1)(-0.1) + 0 + (1)(0.1) + (2)(0.2) = 0.4 + 0.1 + 0.1 + 0.4 = 1.0$.",
+            "5. Correlation Coefficient:\n$$r = \\frac{\\sum (X - \\bar{X})(Y - \\bar{Y})}{\\sqrt{\\sum(X - \\bar{X})^2 \\sum(Y - \\bar{Y})^2}} = \\frac{1.0}{\\sqrt{10 \\times 0.10}} = \\frac{1.0}{\\sqrt{1.0}} = +1.0$$"
+          ],
+          "answer": "Correlation coefficient r = +1.0 (Perfect positive linear correlation).",
+          "marking_hint": "Award 1.5 marks for deviation tables and sums, 1.5 marks for final r = 1.0."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt2-q3",
+        "qno": "3",
+        "label": "3",
+        "marks": 2,
+        "topics": [
+          "Data Cleaning & Preprocessing"
+        ],
+        "question": "Define Data reduction. Mention Data reduction strategies. [2]",
+        "solution": {
+          "steps": [
+            "1. **Definition:** Techniques that obtain a reduced representation of the dataset that is much smaller in volume yet closely maintains the integrity of the original data.",
+            "2. **Strategies:** (1) Dimensionality Reduction (PCA, Wavelets), (2) Numerosity Reduction (Regression, Histograms, Clustering, Sampling), (3) Data Compression (Lossless & Lossy)."
+          ],
+          "answer": "Data reduction reduces data volume while preserving analytical utility via dimensionality reduction, numerosity reduction, and compression.",
+          "marking_hint": "Award 1 mark for definition, 1 mark for naming core strategies."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt2-q4",
+        "qno": "4",
+        "label": "4",
+        "marks": 3,
+        "topics": [
+          "Data Cleaning & Preprocessing"
+        ],
+        "question": "Explain Wavelet transforms with example. [3]",
+        "solution": {
+          "steps": [
+            "1. **Concept:** Discrete Wavelet Transform (DWT) decomposes an input signal or data vector into different frequency sub-bands (approximation and detail coefficients) at multiple resolution scales.",
+            "2. **Example:** Haar Wavelet Transform decomposes vector $[2, 4, 6, 8]$ into averages $[3, 7]$ and detail differences $[-1, -1]$, enabling lossy compression by retaining only dominant coefficients."
+          ],
+          "answer": "Wavelet transforms decompose data into multi-resolution frequency components, compressing data by retaining high-energy coefficients.",
+          "marking_hint": "Award 1.5 marks for theoretical mechanism, 1.5 marks for Haar wavelet example."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt2-q5",
+        "qno": "5",
+        "label": "5",
+        "marks": 2,
+        "topics": [
+          "Data Visualization & Plotting"
+        ],
+        "question": "Mention data visualization techniques. [2]",
+        "solution": {
+          "steps": [
+            "1. **Pixel-Oriented Techniques:** Space-filling curves (Hilbert, Morton) coloring each data value in a separate pixel.",
+            "2. **Geometric Projection Techniques:** Scatter plots, Scatter Plot Matrix (SPLOM), Parallel Coordinates.",
+            "3. **Icon-Based Techniques:** Chernoff faces, Stick figures.",
+            "4. **Hierarchical Techniques:** Treemaps, Sunburst charts, Dimensional Stacking."
+          ],
+          "answer": "Pixel-oriented, geometric projection (scatter, parallel coordinates), icon-based, and hierarchical (treemaps).",
+          "marking_hint": "Award 0.5 marks for each distinct visualization family."
+        }
+      },
+      {
+        "id": "cse-4126-term-mec-tt2-q6",
+        "qno": "6",
+        "label": "6",
+        "marks": 3,
+        "topics": [
+          "Data Cleaning & Preprocessing"
+        ],
+        "question": "Explain Data discretization mapping with an example. [3]",
+        "solution": {
+          "steps": [
+            "1. **Definition:** Transforming continuous numerical attributes into a finite set of discrete intervals or categorical bins.",
+            "2. **Mapping Methods:** Equal-width binning, Equal-frequency binning, or cluster-based discretization.",
+            "3. **Concrete Example:** Continuous `Age` attribute mapping:\n   - $[0 - 12] \\implies \\text{Child}$\n   - $[13 - 19] \\implies \\text{Teenager}$\n   - $[20 - 59] \\implies \\text{Adult}$\n   - $[60+] \\implies \\text{Senior}$"
+          ],
+          "answer": "Data discretization partitions continuous ranges into discrete categorical buckets (e.g. mapping age numbers to life stages).",
+          "marking_hint": "Award 1.5 marks for definition, 1.5 marks for concrete mapping example."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4126 Term Test 2 (15 Marks total).",
+      "marking_hint": "Full marks (15 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
   }
 ]

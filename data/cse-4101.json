@@ -1309,5 +1309,182 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4101-term-mec-tt1",
+    "course": "CSE-4101",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2024,
+    "qno": "Term Test 1",
+    "marks": 15,
+    "topics": [
+      "Informed vs Uninformed Search",
+      "A* Search & Heuristics",
+      "Adversarial Search & Min-Max"
+    ],
+    "question": "**Mymensingh Engineering College (MEC)**  \n**Department of Computer Science and Engineering**  \n**4th Year 1st Semester • Term Test-01**  \n**Course No:** CSE-4101 • **Course Title:** Artificial Intelligence  \n**Time:** 20 min • **Full Marks:** 15\n\n---\n\n(a) What is Heuristic Function? What do you understand by Informed search and Uninformed search? **[1+4]**  \n(b) Consider the search space below where S is the starting state and G satisfies the goal test. Show the steps if we want to find G using A* Search algorithm. (Arcs are labeled with the cost of traversing them and the estimated cost to reach goal is reported inside nodes). **[6]**\n\n```mermaid\ngraph LR\n    S((S: 9)) -->|1| A((A: 6))\n    S -->|2| D((D: 8))\n    A -->|4| Q((Q: 4))\n    A -->|5| E((E: 5))\n    Q -->|2| E\n    E -->|1| G((G: 0 - Goal))\n    D -->|7| G\n    D -->|3| P((P: 3))\n    P -->|2| G\n```\n\n(c) Consider the following Game Tree assuming first player as maximizing. Apply MiniMax Algorithm on the Tree. **[4]**\n\n```mermaid\ngraph TD\n    A[A - Max] --> B[B - Min]\n    A --> C[C - Min]\n    A --> D[D - Min]\n    B --> E[E - Max]\n    B --> F[F - Max]\n    B --> G[G - Max]\n    C --> H[H - Max]\n    C --> I[I - Max]\n    C --> J[J - Max]\n    D --> K[K - Max]\n    D --> L[L - Max]\n    D --> M[M - Max]\n    E --> E1[8]\n    E --> E2[5]\n    F --> F1[-2]\n    F --> F2[3]\n    G --> G1[10]\n    G --> G2[-2]\n    H --> H1[6]\n    H --> H2[2]\n    I --> I1[5]\n    I --> I2[4]\n    J --> J1[6]\n    J --> J2[2]\n    K --> K1[6]\n    K --> K2[7]\n    L --> L1[5]\n    L --> L2[1]\n    M --> M1[3]\n    M --> M2[9]\n```",
+    "subparts": [
+      {
+        "id": "cse-4101-term-mec-tt1-qa",
+        "qno": "1(a)",
+        "label": "(a)",
+        "marks": 5,
+        "topics": [
+          "Informed vs Uninformed Search"
+        ],
+        "question": "What is Heuristic Function? What do you understand by Informed search and Uninformed search? [1+4]",
+        "solution": {
+          "steps": [
+            "1. **Heuristic Function $h(n)$:** An evaluation function that estimates the cheapest cost from node $n$ to a target goal state. It incorporates problem-specific domain knowledge.",
+            "2. **Uninformed (Blind) Search:** Algorithms (BFS, DFS, Uniform Cost Search, Iterative Deepening) that systematically explore the state space relying strictly on the graph definition and path cost without any estimate of how close a state is to the goal.",
+            "3. **Informed (Heuristic) Search:** Algorithms (Greedy Best-First Search, A* Search) that utilize $h(n)$ to steer exploration towards the most promising paths, dramatically pruning the number of expanded states."
+          ],
+          "answer": "Heuristics estimate remaining distance to goal. Informed search utilizes heuristics to guide search direction; uninformed search operates blindly.",
+          "marking_hint": "Award 1 mark for heuristic function definition, 2 marks for uninformed search, 2 marks for informed search."
+        }
+      },
+      {
+        "id": "cse-4101-term-mec-tt1-qb",
+        "qno": "1(b)",
+        "label": "(b)",
+        "marks": 6,
+        "topics": [
+          "A* Search & Heuristics"
+        ],
+        "question": "Consider the search space where S is start and G is goal. Show steps to find G using A* Search algorithm.",
+        "solution": {
+          "steps": [
+            "1. **Evaluation Function:** $f(n) = g(n) + h(n)$, where $g(n)$ is actual cost from $S$ to $n$, and $h(n)$ is heuristic inside node.",
+            "2. **Initial Priority Queue (PQ):** Insert $S$: $g=0, h=9 \\implies f(S) = 9$. PQ: `[(S, f=9)]`.",
+            "3. **Step 1:** Expand $S$. Successors: $A$ ($g=1, h=6 \\implies f=7$), $D$ ($g=2, h=8 \\implies f=10$). PQ: `[(S-A, 7), (S-D, 10)]`.",
+            "4. **Step 2:** Expand $A$ ($f=7$). Successors: $Q$ ($g=1+4=5, h=4 \\implies f=9$), $E$ ($g=1+5=6, h=5 \\implies f=11$). PQ: `[(S-A-Q, 9), (S-D, 10), (S-A-E, 11)]`.",
+            "5. **Step 3:** Expand $Q$ ($f=9$). Successor: $E$ ($g=5+2=7, h=5 \\implies f=12$, dominated by existing path to $E$ of cost 6). PQ: `[(S-D, 10), (S-A-E, 11), (S-A-Q-E, 12)]`.",
+            "6. **Step 4:** Expand $D$ ($f=10$). Successors: $P$ ($g=2+3=5, h=3 \\implies f=8$), $G$ ($g=2+7=9, h=0 \\implies f=9$). PQ: `[(S-D-P, 8), (S-D-G, 9), (S-A-E, 11), (S-A-Q-E, 12)]`.",
+            "7. **Step 5:** Expand $P$ ($f=8$). Successor: $G$ ($g=5+2=7, h=0 \\implies f=7$). PQ: `[(S-D-P-G, 7), (S-D-G, 9), (S-A-E, 11)]`.",
+            "8. **Step 6:** Pop $G$ ($f=7$). Goal state reached!",
+            "9. **Optimal Path:** $S \\to D \\to P \\to G$ with optimal total cost $g^* = 7$."
+          ],
+          "answer": "A* finds optimal path S -> D -> P -> G with total cost = 7.",
+          "marking_hint": "Award 1 mark for each expansion step with correct f(n) calculation, 1 mark for final optimal path."
+        }
+      },
+      {
+        "id": "cse-4101-term-mec-tt1-qc",
+        "qno": "1(c)",
+        "label": "(c)",
+        "marks": 4,
+        "topics": [
+          "Adversarial Search & Min-Max"
+        ],
+        "question": "Apply MiniMax Algorithm on the given Game Tree assuming first player as maximizing.",
+        "solution": {
+          "steps": [
+            "1. **Level 2 (MAX Nodes):**\n   - $E = \\max(8, 5) = 8$\n   - $F = \\max(-2, 3) = 3$\n   - $G = \\max(10, -2) = 10$\n   - $H = \\max(6, 2) = 6$\n   - $I = \\max(5, 4) = 5$\n   - $J = \\max(6, 2) = 6$\n   - $K = \\max(6, 7) = 7$\n   - $L = \\max(5, 1) = 5$\n   - $M = \\max(3, 9) = 9$",
+            "2. **Level 1 (MIN Nodes):**\n   - $B = \\min(E, F, G) = \\min(8, 3, 10) = 3$\n   - $C = \\min(H, I, J) = \\min(6, 5, 6) = 5$\n   - $D = \\min(K, L, M) = \\min(7, 5, 9) = 5$",
+            "3. **Level 0 (Root A - MAX Node):**\n   - $A = \\max(B, C, D) = \\max(3, 5, 5) = 5$",
+            "4. **Minimax Decision:** Root player should choose branch $C$ or $D$, guaranteeing a payoff of 5."
+          ],
+          "answer": "Minimax Value at Root A = 5. Optimal choice is branch C or D.",
+          "marking_hint": "Award 1.5 marks for Level 2 values, 1.5 marks for Level 1 values, 1 mark for root decision."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4101 Term Test 1 (15 Marks total).",
+      "marking_hint": "Full marks (15 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4101-term-mec-tt2",
+    "course": "CSE-4101",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 2,
+    "set_no": 2,
+    "year": 2024,
+    "qno": "Term Test 2",
+    "marks": 15,
+    "topics": [
+      "First-Order Logic",
+      "AI Foundations",
+      "PEAS & Task Environment"
+    ],
+    "question": "**Mymensingh Engineering College (MEC)**  \n**Department of Computer Science and Engineering**  \n**4th Year 1st Semester • Term Test-02**  \n**Course No:** CSE-4101 • **Course Title:** Artificial Intelligence  \n**Time:** 20 min • **Full Marks:** 15\n\n---\n\n(a) What are Universal Quantification and Existential Quantification? Write following expression using quantifier: **[2+4]**  \n    i. **Everybody loves CSE**  \n    ii. **Somebody loves EEE**  \n(b) What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. **[1+4]**  \n(c) Determine Properties of the Environment (PEAS) for the following situation for an agent: **Chess**, **Online Shopping**, **Riding bi-cycle**, **Chat**. **[4]**",
+    "subparts": [
+      {
+        "id": "cse-4101-term-mec-tt2-qa",
+        "qno": "2(a)",
+        "label": "(a)",
+        "marks": 6,
+        "topics": [
+          "First-Order Logic"
+        ],
+        "question": "What are Universal Quantification and Existential Quantification? Write following expression using quantifier: i. Everybody loves CSE, ii. Somebody loves EEE. [2+4]",
+        "solution": {
+          "steps": [
+            "1. **Universal Quantifier ($\\forall$):** States that a proposition is true for all entities in the domain of discourse: $\\forall x \\, P(x)$.",
+            "2. **Existential Quantifier ($\\exists$):** States that a proposition is true for at least one entity in the domain: $\\exists x \\, P(x)$.",
+            "3. **Translations:**\n   - i. **Everybody loves CSE:** $\\forall x \\, (\\text{Person}(x) \\to \\text{Loves}(x, \\text{CSE}))$\n   - ii. **Somebody loves EEE:** $\\exists x \\, (\\text{Person}(x) \\land \\text{Loves}(x, \\text{EEE}))$"
+          ],
+          "answer": "Universal quantifier asserts universal validity across domain; Existential asserts existence of at least one instance.",
+          "marking_hint": "Award 2 marks for quantifier definitions, 2 marks for each formal predicate statement."
+        }
+      },
+      {
+        "id": "cse-4101-term-mec-tt2-qb",
+        "qno": "2(b)",
+        "label": "(b)",
+        "marks": 5,
+        "topics": [
+          "AI Foundations"
+        ],
+        "question": "What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. [1+4]",
+        "solution": {
+          "steps": [
+            "1. **Definition:** A simple reflex agent selects actions based solely on the current percept, completely ignoring percept history. It operates on condition-action rules: *if condition then action*.",
+            "2. **Schematic Architecture:**\n   - **Sensors:** Perceive environment &rarr; \"What the world is like now\".\n   - **Condition-Action Rules:** Maps percept to rule &rarr; \"What action I should do now\".\n   - **Actuators:** Execute action into the environment."
+          ],
+          "answer": "Simple reflex agents act strictly on current percept via condition-action rules without maintaining state memory.",
+          "marking_hint": "Award 1 mark for definition, 4 marks for complete schematic architecture diagram."
+        }
+      },
+      {
+        "id": "cse-4101-term-mec-tt2-qc",
+        "qno": "2(c)",
+        "label": "(c)",
+        "marks": 4,
+        "topics": [
+          "PEAS & Task Environment"
+        ],
+        "question": "Determine Properties of the Environment (PEAS) for: Chess, Online Shopping, Riding bi-cycle, Chat. [4]",
+        "solution": {
+          "steps": [
+            "1. **Chess:** Fully Observable, Deterministic, Static, Discrete, Multi-agent (Competitive).",
+            "2. **Online Shopping:** Partially Observable, Stochastic, Dynamic, Discrete, Single-agent (or Multi-agent).",
+            "3. **Riding bi-cycle:** Partially Observable, Stochastic, Dynamic, Continuous, Single-agent.",
+            "4. **Chat (Conversational AI):** Partially Observable, Stochastic, Dynamic, Discrete, Multi-agent."
+          ],
+          "answer": "Complete task environment characterizations across observability, determinism, dynamics, continuity, and agent count.",
+          "marking_hint": "Award 1 mark for each domain's complete property set."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4101 Term Test 2 (15 Marks total).",
+      "marking_hint": "Full marks (15 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
   }
 ]

@@ -41,7 +41,7 @@ class CodexApp {
 
     // Performance profiling timings
     this.profileMetrics = {};
-    this.activeTermCollege = "All Colleges";
+    this.activeTermCollege = "MEC";
 
     // User Progress from localStorage
     this.storageKey = "du_codex_progress_v1";
@@ -863,7 +863,7 @@ class CodexApp {
     let totalRendered = 0;
 
     years.forEach(yr => {
-      const yrQuestions = list.filter(q => q.year == yr);
+      const yrQuestions = list.filter(q => q.year == yr && q.exam !== 'term' && !String(q.qno || '').toUpperCase().includes('TERM'));
       if (yrQuestions.length === 0) return;
 
       const section = document.createElement("section");
@@ -895,8 +895,7 @@ class CodexApp {
     termSection.id = "year-section-term-test";
     termSection.dataset.year = "term-test";
 
-    const currentCollege = this.activeTermCollege || "All Colleges";
-    const courseTitle = this.activeCourse ? `${this.activeCourse.code}: ${this.activeCourse.name}` : "Core Course";
+    const currentCollege = this.activeTermCollege || "MEC";
 
     termSection.innerHTML = `
       <div class="year-section-divider">
@@ -904,36 +903,17 @@ class CodexApp {
         <span class="year-section-sub">Affiliated Engineering Colleges</span>
       </div>
       <div class="term-test-college-pills-bar">
-        <button type="button" class="term-college-pill ${currentCollege === 'All Colleges' ? 'active' : ''}" onclick="app.selectTermTestCollege('All Colleges')">All Colleges</button>
         <button type="button" class="term-college-pill ${currentCollege === 'MEC' ? 'active' : ''}" onclick="app.selectTermTestCollege('MEC')">MEC</button>
         <button type="button" class="term-college-pill ${currentCollege === 'FEC' ? 'active' : ''}" onclick="app.selectTermTestCollege('FEC')">FEC</button>
         <button type="button" class="term-college-pill ${currentCollege === 'NITER' ? 'active' : ''}" onclick="app.selectTermTestCollege('NITER')">NITER</button>
         <button type="button" class="term-college-pill ${currentCollege === 'ShEC' ? 'active' : ''}" onclick="app.selectTermTestCollege('ShEC')">ShEC</button>
         <button type="button" class="term-college-pill ${currentCollege === 'SIMT' ? 'active' : ''}" onclick="app.selectTermTestCollege('SIMT')">SIMT</button>
       </div>
-      <div class="term-test-placeholder-card">
-        <div style="width:48px; height:48px; border-radius:12px; background:rgba(30,64,175,0.08); display:flex; align-items:center; justify-content:center; margin:0 auto 12px auto; color:var(--accent-primary);" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-            <path d="M9 12h6"/>
-            <path d="M9 16h6"/>
-          </svg>
-        </div>
-        <h3 id="termTestHeading" style="margin:0 0 8px 0; font-size:var(--text-base); color:var(--text-primary); font-weight:800;">
-          ${currentCollege === 'All Colleges' ? 'College Term Test Repository' : `${currentCollege} Term Test Examination`}
-        </h3>
-        <p style="margin:0 0 12px 0; font-size:var(--text-sm); color:var(--text-muted); line-height:1.6; max-width:620px; margin-left:auto; margin-right:auto;">
-          Term Test questions for <strong>${courseTitle}</strong> across <em>MEC, FEC, NITER, ShEC, and SIMT</em> will be added here.
-        </p>
-        <span style="display:inline-flex; align-items:center; gap:6px; font-size:var(--text-xs); font-weight:700; color:var(--accent-primary); background:rgba(30,64,175,0.08); padding:5px 14px; border-radius:var(--radius-pill);">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-          Questions Ready for Upload
-        </span>
-      </div>
+      <div id="termTestCardsContainer" class="term-test-cards-wrapper"></div>
     `;
 
     container.appendChild(termSection);
+    this.renderTermTestCards(currentCollege);
 
     if (this.dom.emptyState) {
       this.dom.emptyState.hidden = totalRendered > 0;
@@ -1017,9 +997,61 @@ class CodexApp {
     });
   }
 
+  renderTermTestCards(college) {
+    const container = document.getElementById("termTestCardsContainer");
+    if (!container) return;
+    container.innerHTML = "";
+
+    const list = this.rawQuestions || [];
+    const termQuestions = list.filter(q => q.exam === "term" && (q.college === college || (!q.college && college === "MEC")));
+    const courseTitle = this.activeCourse ? `${this.activeCourse.code}: ${this.activeCourse.name}` : "Core Course";
+
+    if (termQuestions.length > 0) {
+      const listEl = document.createElement("div");
+      listEl.className = "year-cards-list term-cards-list";
+      termQuestions.forEach(q => {
+        const card = this.createQuestionCard(q);
+        listEl.appendChild(card);
+      });
+      container.appendChild(listEl);
+
+      // Render math and diagrams on newly injected cards
+      listEl.querySelectorAll(".question-set-card").forEach(card => {
+        if (card.innerHTML.includes("$") || card.innerHTML.includes("\\(") || card.innerHTML.includes("\\[")) {
+          this.renderMathOnContainer(card);
+        }
+        if (card.querySelector(".mermaid-raw-source")) {
+          this.renderDiagramsOnContainer(card);
+        }
+      });
+    } else {
+      container.innerHTML = `
+        <div class="term-test-placeholder-card">
+          <div style="width:48px; height:48px; border-radius:12px; background:rgba(16,69,53,0.08); display:flex; align-items:center; justify-content:center; margin:0 auto 12px auto; color:#104535;" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              <path d="M9 12h6"/>
+              <path d="M9 16h6"/>
+            </svg>
+          </div>
+          <h3 id="termTestHeading" style="margin:0 0 8px 0; font-size:var(--text-base); color:var(--text-primary); font-weight:800;">
+            ${college} Term Test Examination
+          </h3>
+          <p style="margin:0 0 12px 0; font-size:var(--text-sm); color:var(--text-muted); line-height:1.6; max-width:620px; margin-left:auto; margin-right:auto;">
+            Term Test questions for <strong>${courseTitle}</strong> for <em>${college}</em> will be added here.
+          </p>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:var(--text-xs); font-weight:700; color:#104535; background:rgba(16,69,53,0.08); padding:5px 14px; border-radius:var(--radius-pill);">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Questions Ready for Upload
+          </span>
+        </div>
+      `;
+    }
+  }
+
   selectTermTestCollege(college) {
     this.activeTermCollege = college;
-    this.scrollToSection("term-test");
 
     // Update left rail college dots
     document.querySelectorAll(".college-dot").forEach(dot => {
@@ -1031,10 +1063,8 @@ class CodexApp {
       pill.classList.toggle("active", pill.innerText.trim() === college);
     });
 
-    const heading = document.getElementById("termTestHeading");
-    if (heading) {
-      heading.innerText = college === "All Colleges" ? "College Term Test Repository" : `${college} Term Test Examination`;
-    }
+    this.renderTermTestCards(college);
+    this.scrollToSection("term-test");
   }
 
   scrollToSection(sectionId) {
@@ -1511,7 +1541,7 @@ class CodexApp {
         <div class="card-title-group">
           <span class="q-label">${q.qno}</span>
           <span class="marks-badge">${q.marks} Marks Total</span>
-          <span class="exam-year-badge">${q.exam.toUpperCase()} • ${q.year}</span>
+          <span class="exam-year-badge">${q.exam === 'term' ? `${q.college || 'MEC'} • TERM TEST ${q.term_no || ''}` : `${q.exam.toUpperCase()} • ${q.year}`}</span>
         </div>
       </div>
 

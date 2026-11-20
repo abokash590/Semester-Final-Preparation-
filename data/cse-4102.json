@@ -1449,5 +1449,349 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4102-term-mec-tt1",
+    "course": "CSE-4102",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2024,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "Laplace Transforms",
+      "Inverse Laplace & ODEs",
+      "Hypothesis Testing & Errors",
+      "Correlation & Covariance"
+    ],
+    "question": "**Mymensingh Engineering College (MEC)**  \n**Computer Science and Engineering**  \n**In course Examination-1 • CSE 4102 (Mathematical and Statistical Analysis for Engineers)**  \n**Time:** 40 min • **Full Marks:** 20\n\n---\n\n1. If $\\mathcal{L}\\{f(t)\\} = F(s)$, then prove that $\\mathcal{L}\\{\\frac{f(t)}{t}\\} = \\int_s^\\infty F(u) \\, du$. **[4]**  \n2. Perform the inverse Laplace transform of the following expression: $\\frac{s}{(s^2 + a^2)^2}$. **[3]**  \n3. It is found that 250 errors in the randomly selected 1000 lines of code from Team A and 300 errors in 800 lines of code from Team B. Can we assume that team B's performance is superior to that of A? **[4]**  \n4. It's a Boy Genetic Labs claim to be able to increase the likelihood that a pregnancy will result in a boy being born. Statisticians want to test the claim. Suppose that the null hypothesis is: *It's a Boy Genetic Labs has no effect on gender outcome*. State the Type I and Type II errors. **[2]**  \n5. Use Laplace transformation to solve the following initial value problem: $y'' - y' - 2y = 0$, with $y(0) = 1, y'(0) = 2$. **[4]**  \n6. What is Cross-correlation? Write the difference between covariance and correlation. **[3]**",
+    "subparts": [
+      {
+        "id": "cse-4102-term-mec-tt1-q1",
+        "qno": "1",
+        "label": "1",
+        "marks": 4,
+        "topics": [
+          "Laplace Transforms"
+        ],
+        "question": "If L{f(t)} = F(s), then prove that L{f(t)/t} = int_s^infty F(u) du.",
+        "solution": {
+          "steps": [
+            "1. By definition: $F(s) = \\int_0^\\infty e^{-st} f(t) \\, dt$.",
+            "2. Integrating both sides with respect to $s$ from $s$ to $\\infty$:\n$$\\int_s^\\infty F(u) \\, du = \\int_s^\\infty \\left( \\int_0^\\infty e^{-ut} f(t) \\, dt \\right) du$$",
+            "3. Interchanging order of integration:\n$$\\int_s^\\infty F(u) \\, du = \\int_0^\\infty f(t) \\left[ \\int_s^\\infty e^{-ut} \\, du \\right] dt = \\int_0^\\infty f(t) \\left[ \\frac{e^{-st}}{t} \\right] dt = \\int_0^\\infty e^{-st} \\frac{f(t)}{t} \\, dt$$",
+            "4. The right side is exactly $\\mathcal{L}\\{\\frac{f(t)}{t}\\}$. Hence proved."
+          ],
+          "answer": "L{f(t)/t} = int_s^infty F(u) du is rigorously proved via Fubini integral interchange.",
+          "marking_hint": "Full marks (4 M) for valid integral interchange and evaluating inner integral."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt1-q2",
+        "qno": "2",
+        "label": "2",
+        "marks": 3,
+        "topics": [
+          "Inverse Laplace & ODEs"
+        ],
+        "question": "Perform the inverse Laplace transform of: s / (s^2 + a^2)^2.",
+        "solution": {
+          "steps": [
+            "1. Recall that $\\frac{d}{ds}\\left(\\frac{1}{s^2+a^2}\\right) = -\\frac{2s}{(s^2+a^2)^2}$.",
+            "2. Therefore: $\\frac{s}{(s^2+a^2)^2} = -\\frac{1}{2} \\frac{d}{ds}\\left( \\frac{1}{s^2+a^2} \\right)$.",
+            "3. Using property $\\mathcal{L}\\{t \\cdot g(t)\\} = -\\frac{d}{ds}G(s)$ where $G(s) = \\frac{1}{s^2+a^2} = \\frac{1}{a} \\mathcal{L}\\{\\sin(at)\\}$:\n$$\\mathcal{L}^{-1}\\left\\{\\frac{s}{(s^2+a^2)^2}\\right\\} = \\frac{1}{2} \\cdot t \\cdot \\frac{\\sin(at)}{a} = \\frac{t \\sin(at)}{2a}$$"
+          ],
+          "answer": "L^-1{ s / (s^2 + a^2)^2 } = (t sin(at)) / (2a).",
+          "marking_hint": "Award 1.5 marks for frequency derivative recognition, 1.5 marks for final solution."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt1-q3",
+        "qno": "3",
+        "label": "3",
+        "marks": 4,
+        "topics": [
+          "Hypothesis Testing & Errors"
+        ],
+        "question": "250 errors in 1000 lines from Team A and 300 errors in 800 lines from Team B. Can we assume that team B's performance is superior to that of A?",
+        "solution": {
+          "steps": [
+            "1. Sample error rates: $p_1 = \\frac{250}{1000} = 0.25$, $p_2 = \\frac{300}{800} = 0.375$.",
+            "2. Note: A software team is superior if it produces FEWER errors per line of code. Team B's error rate (37.5%) is significantly HIGHER than Team A's (25%).",
+            "3. Hypothesis Test: $H_0: p_1 = p_2$ vs $H_1: p_2 < p_1$ (Team B superior).",
+            "4. Pooled proportion: $\\hat{p} = \\frac{250 + 300}{1000 + 800} = \\frac{550}{1800} \\approx 0.3056$, $\\hat{q} = 0.6944$.",
+            "5. Standard error: $SE = \\sqrt{\\hat{p}\\hat{q}\\left(\\frac{1}{1000} + \\frac{1}{800}\\right)} = \\sqrt{(0.3056)(0.6944)(0.00225)} \\approx 0.02185$.",
+            "6. Test statistic: $z = \\frac{p_2 - p_1}{SE} = \\frac{0.375 - 0.25}{0.02185} = +5.72$.",
+            "7. Conclusion: $z = +5.72$ is overwhelmingly positive (p-value < 0.0001). Team B has a statistically significantly higher defect rate. Therefore, Team B is NOT superior; Team A has clearly superior code quality."
+          ],
+          "answer": "No, Team B's performance is NOT superior (Team B has 37.5% error rate vs Team A's 25%, z = +5.72).",
+          "marking_hint": "Award 2 marks for proportions and SE calculation, 2 marks for test statistic and conclusion."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt1-q4",
+        "qno": "4",
+        "label": "4",
+        "marks": 2,
+        "topics": [
+          "Hypothesis Testing & Errors"
+        ],
+        "question": "State Type I and Type II errors for null hypothesis: It's a Boy Genetic Labs has no effect on gender outcome.",
+        "solution": {
+          "steps": [
+            "1. **Type I Error (False Positive, $\\alpha$):** Rejecting $H_0$ when it is true. Concluding that the Genetic Lab DOES increase the likelihood of a boy, when in reality the lab has NO effect.",
+            "2. **Type II Error (False Negative, $\\beta$):** Failing to reject $H_0$ when it is false. Concluding that the Genetic Lab has NO effect, when in reality the lab DOES genuinely increase the likelihood of a boy."
+          ],
+          "answer": "Type I: Claiming the lab is effective when it is not. Type II: Failing to recognize that the lab is effective.",
+          "marking_hint": "Award 1 mark each for correct domain-specific Type I and Type II statements."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt1-q5",
+        "qno": "5",
+        "label": "5",
+        "marks": 4,
+        "topics": [
+          "Inverse Laplace & ODEs"
+        ],
+        "question": "Use Laplace transformation to solve: y'' - y' - 2y = 0, y(0) = 1, y'(0) = 2.",
+        "solution": {
+          "steps": [
+            "1. Taking Laplace transform of both sides:\n$$[s^2 Y(s) - s y(0) - y'(0)] - [s Y(s) - y(0)] - 2 Y(s) = 0$$",
+            "2. Substituting initial conditions $y(0)=1, y'(0)=2$:\n$$[s^2 Y(s) - s - 2] - [s Y(s) - 1] - 2 Y(s) = 0$$\n$$(s^2 - s - 2) Y(s) - s - 1 = 0$$\n$$(s^2 - s - 2) Y(s) = s + 1$$",
+            "3. Factoring $s^2 - s - 2 = (s - 2)(s + 1)$:\n$$Y(s) = \\frac{s + 1}{(s - 2)(s + 1)} = \\frac{1}{s - 2}$$",
+            "4. Taking inverse Laplace transform:\n$$y(t) = \\mathcal{L}^{-1}\\left\\{\\frac{1}{s - 2}\\right\\} = e^{2t}$$"
+          ],
+          "answer": "y(t) = e^(2t).",
+          "marking_hint": "Award 2 marks for algebraic substitution and cancellation, 2 marks for inverse Laplace."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt1-q6",
+        "qno": "6",
+        "label": "6",
+        "marks": 3,
+        "topics": [
+          "Correlation & Covariance"
+        ],
+        "question": "What is Cross-correlation? Write the difference between covariance and correlation.",
+        "solution": {
+          "steps": [
+            "1. **Cross-correlation:** A mathematical measure of similarity between two signals or series as a function of the displacement (time lag $\\tau$) of one relative to the other: $R_{xy}(\\tau) = \\int_{-\\infty}^\\infty x(t) y(t+\\tau) \\, dt$.",
+            "2. **Difference between Covariance and Correlation:**\n   - **Covariance $\\text{Cov}(X,Y)$:** Measures directional linear association in dimensional units ($-\\infty < \\text{Cov} < \\infty$). Highly sensitive to scale of measurement.\n   - **Correlation coefficient $r$:** Normalized, dimensionless measure of linear dependence obtained by dividing covariance by standard deviations: $r = \\frac{\\text{Cov}(X,Y)}{\\sigma_X \\sigma_Y}$, bounded strictly between $-1 \\le r \\le +1$."
+          ],
+          "answer": "Cross-correlation measures time-lagged waveform similarity. Covariance indicates directional co-movement with units; correlation standardizes it to [-1, +1].",
+          "marking_hint": "Award 1 mark for cross-correlation, 2 marks for covariance vs correlation distinction."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4102 Term Test 1 (20 Marks total).",
+      "marking_hint": "Full marks (20 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4102-term-mec-tt2",
+    "course": "CSE-4102",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 2,
+    "set_no": 2,
+    "year": 2024,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "Fourier Transforms & Parseval Identity"
+    ],
+    "question": "**Mymensingh Engineering College (MEC)**  \n**Computer Science and Engineering**  \n**In course Examination-2 • CSE-4102 (Mathematical and Statistical Analysis for Engineers)**  \n**Time:** 40 min • **Full Marks:** 20\n\n---\n\n1. Why do we use Fourier transform? Perform the Fourier transform of function: find $\\mathcal{F}\\left\\{\\frac{1}{2}\\left[H\\left(t+\\frac{1}{2}\\right) - H\\left(t-\\frac{1}{2}\\right)\\right]\\right\\}$ where $\\mathcal{F}\\{H(t)\\} = F(\\omega) = \\frac{2i}{\\omega}$.  \n2. Find Fourier transform of $f(x) = \\frac{e^{-ax}}{x}$.  \n3. Parseval's identity ensures energy conservation, relating time and frequency domain representations of signals. Using Parseval's identity if $f(x) = \\begin{cases} 1, & |x| < a \\\\ 0, & |x| > a \\end{cases}$ and $F(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin sa}{s}$, now find that $\\int_0^\\infty \\frac{\\sin^2 x}{x^2} \\, dx = ?$.  \n4. Find Fourier sine transform of $f(x) = \\begin{cases} x, & 0 < x < 1 \\\\ 2-x, & 1 < x < 2 \\\\ 0, & x > 2 \\end{cases}$.",
+    "subparts": [
+      {
+        "id": "cse-4102-term-mec-tt2-q1",
+        "qno": "1",
+        "label": "1",
+        "marks": 5,
+        "topics": [
+          "Fourier Transforms & Parseval Identity"
+        ],
+        "question": "Why do we use Fourier transform? Find F{ 1/2 [H(t+1/2) - H(t-1/2)] }.",
+        "solution": {
+          "steps": [
+            "1. **Purpose:** Fourier transform decomposes a time-domain signal into its constituent frequency spectrum, essential for spectral analysis, filter design, and solving PDEs.",
+            "2. Notice $g(t) = \\frac{1}{2}\\left[H\\left(t+\\frac{1}{2}\\right) - H\\left(t-\\frac{1}{2}\\right)\\right]$ is a symmetric rectangular pulse of width 1 and height 1/2 centered at $t=0$.",
+            "3. Direct evaluation:\n$$\\mathcal{F}\\{g(t)\\} = \\int_{-1/2}^{1/2} \\frac{1}{2} e^{-i\\omega t} \\, dt = \\frac{1}{2} \\left[ \\frac{e^{-i\\omega t}}{-i\\omega} \\right]_{-1/2}^{1/2} = \\frac{e^{i\\omega/2} - e^{-i\\omega/2}}{2i\\omega} = \\frac{\\sin(\\omega/2)}{\\omega}$$"
+          ],
+          "answer": "F{g(t)} = sin(omega/2) / omega = 1/2 sinc(omega / (2pi)).",
+          "marking_hint": "Award 2 marks for explanation, 3 marks for evaluating transform."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt2-q2",
+        "qno": "2",
+        "label": "2",
+        "marks": 5,
+        "topics": [
+          "Fourier Transforms & Parseval Identity"
+        ],
+        "question": "Find Fourier transform of f(x) = e^(-ax) / x.",
+        "solution": {
+          "steps": [
+            "1. Let $I(\\omega) = \\mathcal{F}\\left\\{\\frac{e^{-ax}}{x}\\right\\} = \\int_0^\\infty \\frac{e^{-ax}}{x} e^{-i\\omega x} \\, dx = \\int_0^\\infty \\frac{e^{-(a+i\\omega)x}}{x} \\, dx$.",
+            "2. Differentiating with respect to $\\omega$ under integral sign:\n$$\\frac{d I}{d\\omega} = \\int_0^\\infty -i e^{-(a+i\\omega)x} \\, dx = -i \\left[ \\frac{e^{-(a+i\\omega)x}}{-(a+i\\omega)} \\right]_0^\\infty = \\frac{-i}{a + i\\omega}$$",
+            "3. Integrating with respect to $\\omega$:\n$$I(\\omega) = -i \\int \\frac{d\\omega}{a + i\\omega} = -\\ln(a + i\\omega) + C = -\\ln\\sqrt{a^2+\\omega^2} - i \\tan^{-1}\\left(\\frac{\\omega}{a}\\right) + C$$"
+          ],
+          "answer": "Fourier transform evaluated via parameter differentiation yields -ln(a + i omega).",
+          "marking_hint": "Award 2.5 marks for differentiation under integral sign, 2.5 marks for integration."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt2-q3",
+        "qno": "3",
+        "label": "3",
+        "marks": 5,
+        "topics": [
+          "Fourier Transforms & Parseval Identity"
+        ],
+        "question": "Using Parseval's identity evaluate int_0^infty (sin^2 x) / x^2 dx.",
+        "solution": {
+          "steps": [
+            "1. Parseval's identity states: $\\int_{-\\infty}^\\infty |f(x)|^2 \\, dx = \\int_{-\\infty}^\\infty |F(s)|^2 \\, ds$.",
+            "2. Left side: $f(x) = 1$ for $-a < x < a$, so $\\int_{-a}^a (1)^2 \\, dx = 2a$.",
+            "3. Right side: $F(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin(sa)}{s}$, so:\n$$\\int_{-\\infty}^\\infty \\left(\\sqrt{\\frac{2}{\\pi}} \\frac{\\sin(sa)}{s}\\right)^2 ds = \\frac{2}{\\pi} \\int_{-\\infty}^\\infty \\frac{\\sin^2(sa)}{s^2} \\, ds = \\frac{4}{\\pi} \\int_0^\\infty \\frac{\\sin^2(sa)}{s^2} \\, ds$$",
+            "4. Equating both sides:\n$$\\frac{4}{\\pi} \\int_0^\\infty \\frac{\\sin^2(sa)}{s^2} \\, ds = 2a \\implies \\int_0^\\infty \\frac{\\sin^2(sa)}{s^2} \\, ds = \\frac{\\pi a}{2}$$",
+            "5. Setting $a = 1$:\n$$\\int_0^\\infty \\frac{\\sin^2 x}{x^2} \\, dx = \\frac{\\pi}{2}$$"
+          ],
+          "answer": "int_0^infty (sin^2 x)/x^2 dx = pi / 2.",
+          "marking_hint": "Full marks (5 M) for applying Parseval's identity and evaluating limit to pi/2."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt2-q4",
+        "qno": "4",
+        "label": "4",
+        "marks": 5,
+        "topics": [
+          "Fourier Transforms & Parseval Identity"
+        ],
+        "question": "Find Fourier sine transform of triangular pulse f(x).",
+        "solution": {
+          "steps": [
+            "1. Formula: $F_s(\\omega) = \\int_0^\\infty f(x) \\sin(\\omega x) \\, dx = \\int_0^1 x \\sin(\\omega x) \\, dx + \\int_1^2 (2-x) \\sin(\\omega x) \\, dx$.",
+            "2. First integral: $\\left[ -x\\frac{\\cos(\\omega x)}{\\omega} + \\frac{\\sin(\\omega x)}{\\omega^2} \\right]_0^1 = -\\frac{\\cos\\omega}{\\omega} + \\frac{\\sin\\omega}{\\omega^2}$.",
+            "3. Second integral: $\\left[ -(2-x)\\frac{\\cos(\\omega x)}{\\omega} - \\frac{\\sin(\\omega x)}{\\omega^2} \\right]_1^2 = 0 - \\left( -\\frac{\\cos\\omega}{\\omega} - \\frac{\\sin\\omega}{\\omega^2} \\right) = \\frac{\\cos\\omega}{\\omega} + \\frac{\\sin\\omega}{\\omega^2} - \\frac{\\sin(2\\omega)}{\\omega^2}$.",
+            "4. Summing both: $F_s(\\omega) = \\frac{2\\sin\\omega - \\sin(2\\omega)}{\\omega^2} = \\frac{2\\sin\\omega(1 - \\cos\\omega)}{\\omega^2}$."
+          ],
+          "answer": "F_s(omega) = (2 sin(omega) - sin(2 omega)) / omega^2.",
+          "marking_hint": "Award 2.5 marks for integration by parts, 2.5 marks for final expression."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4102 Term Test 2 (20 Marks total).",
+      "marking_hint": "Full marks (20 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
+  },
+  {
+    "id": "cse-4102-term-mec-tt3",
+    "course": "CSE-4102",
+    "exam": "term",
+    "college": "MEC",
+    "term_no": 3,
+    "set_no": 3,
+    "year": 2024,
+    "qno": "Term Test 3",
+    "marks": 20,
+    "topics": [
+      "Markov Chains & Transition Matrices",
+      "Stochastic & Stationary Processes",
+      "Queueing Theory & Little's Law"
+    ],
+    "question": "**Mymensingh Engineering College (MEC)**  \n**Computer Science and Engineering**  \n**In course Examination-3 • CSE-4102 (Mathematical and Statistical Analysis for Engineers)**  \n**Time:** 40 min • **Full Marks:** 20 (8+4+8)\n\n---\n\n1. Three boys A, B and C are throwing a ball to each other. A always throws the ball to B and B always throws the ball to C, but C is as likely to throw the ball to B as to A. If the initial probability distribution of three states A, B, C is 0.3, 0.4 and 0.3 respectively, Find: **[8]**  \n   I. The transition matrix.  \n   II. $P(X_2 = B)$  \n   III. $P(X_3 = B, X_2 = C, X_1 = B, X_0 = A)$  \n   IV. The distribution of the ball after two rounds.  \n2. Billy and Dilly decide to flip two fair coins. If they get at least one head from a flip, then Billy is decided winner of that flip. Otherwise, Dilly is declared winner. After each flip, the winner receives $20 from the loser. If Billy starts with $40 and Dilly with $120, then what is the probability that Billy will wipe Dilly out? **[4]**  \n3. A Commercial bank has 1 cash paying assistant. Customers are found to arrive in a Poisson fashion at an average rate of 6/hr for business transaction. The service time is found to have an Exponential Distribution with a mean of 6 mins ($\\mu = 10$/hr). The customers are processed on FCFS basis. Calculate: **[8]**  \n   I. Average number of customers in the system ($L$)  \n   II. Average time a customer spends in the system ($W$)  \n   III. Average queue length ($L_q$)  \n   IV. How many hours a week (assuming 40-hr week) can a cash paying assistant spend with the customers.",
+    "subparts": [
+      {
+        "id": "cse-4102-term-mec-tt3-q1",
+        "qno": "1",
+        "label": "1",
+        "marks": 8,
+        "topics": [
+          "Markov Chains & Transition Matrices"
+        ],
+        "question": "Three boys A, B, C ball throwing Markov Chain transition matrix, state probabilities, and 2-step distribution.",
+        "solution": {
+          "steps": [
+            "1. **Transition Probability Matrix P:**\n   - A throws to B with prob 1: row A = `[0, 1, 0]`\n   - B throws to C with prob 1: row B = `[0, 0, 1]`\n   - C throws to A or B equally: row C = `[0.5, 0.5, 0]`\n$$P = \\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 0.5 & 0.5 & 0 \\end{pmatrix}$$",
+            "2. **Distribution after 1 round:** $\\pi^{(0)} = [0.3, 0.4, 0.3]$.\n$$\\pi^{(1)} = \\pi^{(0)} P = [0.3(0) + 0.4(0) + 0.3(0.5), \\; 0.3(1) + 0.4(0) + 0.3(0.5), \\; 0.3(0) + 0.4(1) + 0.3(0)] = [0.15, 0.45, 0.40]$$",
+            "3. **Distribution after 2 rounds:**\n$$\\pi^{(2)} = \\pi^{(1)} P = [0.40(0.5), \\; 0.15(1) + 0.40(0.5), \\; 0.45(1)] = [0.20, 0.35, 0.45]$$",
+            "4. **Answers:**\n   - I. Matrix $P$ as above.\n   - II. $P(X_2 = B) = \\pi^{(2)}_B = 0.35$.\n   - III. $P(X_3=B, X_2=C, X_1=B, X_0=A) = P(X_0=A) \\cdot P_{AB} \\cdot P_{BC} \\cdot P_{CB} = 0.3 \\times 1 \\times 1 \\times 0.5 = 0.15$.\n   - IV. Distribution after two rounds: $[P(A)=0.20, P(B)=0.35, P(C)=0.45]$."
+          ],
+          "answer": "P(X2=B) = 0.35; Path probability = 0.15; Two-round distribution = [0.20, 0.35, 0.45].",
+          "marking_hint": "Award 2 marks each for Transition matrix, P(X2=B), joint chain probability, and 2-step distribution."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt3-q2",
+        "qno": "2",
+        "label": "2",
+        "marks": 4,
+        "topics": [
+          "Stochastic & Stationary Processes"
+        ],
+        "question": "Gambler's Ruin: Billy starts with $40, Dilly with $120. Find probability Billy wipes Dilly out.",
+        "solution": {
+          "steps": [
+            "1. Two fair coins: sample space $S = \\{HH, HT, TH, TT\\}$.",
+            "2. Billy wins if at least one Head: $p = P(\\text{at least 1 H}) = 1 - P(TT) = 1 - 1/4 = 3/4 = 0.75$.",
+            "3. Dilly wins otherwise: $q = 1/4 = 0.25$.",
+            "4. Ratio: $\\frac{q}{p} = \\frac{1/4}{3/4} = \\frac{1}{3}$.",
+            "5. Total units: Step size = $20. Total fortune $N = \\frac{40 + 120}{20} = 8$ units. Billy initial fortune $i = \\frac{40}{20} = 2$ units.",
+            "6. Gambler's ruin ruin formula (Probability of reaching $N$ from $i$ when $p \\ne q$):\n$$P_i = \\frac{1 - (q/p)^i}{1 - (q/p)^N} = \\frac{1 - (1/3)^2}{1 - (1/3)^8} = \\frac{1 - 1/9}{1 - 1/6561} = \\frac{8/9}{6560/6561} = \\frac{8 \\times 729}{6560} = \\frac{5832}{6560} \\approx 0.8890$$"
+          ],
+          "answer": "Probability that Billy wipes Dilly out is 5832/6560 ≈ 88.90%.",
+          "marking_hint": "Award 1.5 marks for p and q determination, 2.5 marks for applying gambler's ruin formula."
+        }
+      },
+      {
+        "id": "cse-4102-term-mec-tt3-q3",
+        "qno": "3",
+        "label": "3",
+        "marks": 8,
+        "topics": [
+          "Queueing Theory & Little's Law"
+        ],
+        "question": "M/M/1 Queueing System: arrival lambda = 6/hr, mean service time = 6 min (mu = 10/hr). Calculate L, W, Lq, and weekly busy hours.",
+        "solution": {
+          "steps": [
+            "1. **Parameters:** Arrival rate $\\lambda = 6$ customers/hour. Service rate $\\mu = \\frac{60}{6} = 10$ customers/hour.",
+            "2. **Utilization factor (Traffic Intensity):** $\\rho = \\frac{\\lambda}{\\mu} = \\frac{6}{10} = 0.60$ (System is stable since $\\rho < 1$).",
+            "3. **I. Average number of customers in system ($L$):**\n$$L = \\frac{\\rho}{1 - \\rho} = \\frac{0.6}{1 - 0.6} = \\frac{0.6}{0.4} = 1.5 \\text{ customers}$$",
+            "4. **II. Average time a customer spends in system ($W$):**\n$$W = \\frac{1}{\\mu - \\lambda} = \\frac{1}{10 - 6} = \\frac{1}{4} \\text{ hour} = 15 \\text{ minutes}$$",
+            "5. **III. Average queue length ($L_q$):**\n$$L_q = L - \\rho = 1.5 - 0.6 = 0.9 \\text{ customers}$$",
+            "6. **IV. Hours per week spent with customers:**\n$$\\text{Busy hours} = \\rho \\times 40 \\text{ hours/week} = 0.60 \\times 40 = 24 \\text{ hours/week}$$"
+          ],
+          "answer": "L = 1.5 customers; W = 15 minutes; Lq = 0.9 customers; Assistant spends 24 hours/week serving customers.",
+          "marking_hint": "Award 2 marks each for L, W, Lq, and weekly busy hours."
+        }
+      }
+    ],
+    "solution": {
+      "steps": [
+        "See detailed solution breakdowns for sub-questions below."
+      ],
+      "answer": "Complete solutions for MEC CSE-4102 Term Test 3 (20 Marks total).",
+      "marking_hint": "Full marks (20 M): Answer all sub-parts completely."
+    },
+    "similar_to": [],
+    "verified": false
   }
 ]

@@ -1486,13 +1486,13 @@ body.is-home-view .app-header,
 
 .college-thread-node.active-college {
   color: #FFFFFF;
-  background-color: #18181B;
-  border-color: #18181B;
-  box-shadow: 0 2px 6px rgba(24, 24, 27, 0.25);
+  background-color: #104535;
+  border-color: #104535;
+  box-shadow: 0 2px 6px rgba(16, 69, 53, 0.25);
 }
 
 .college-thread-node.active-college::before {
-  background-color: #18181B;
+  background-color: #104535;
   width: 13px;
 }
 
@@ -1637,16 +1637,16 @@ body.is-home-view .app-header,
 }
 
 .term-college-pill:hover {
-  background: #F4F4F5;
-  border-color: #18181B;
-  color: #18181B;
+  background: #F4F8F5;
+  border-color: #104535;
+  color: #104535;
 }
 
 .term-college-pill.active {
-  background: #18181B;
+  background: #104535;
   color: #FFFFFF;
-  border-color: #18181B;
-  box-shadow: 0 2px 6px rgba(24, 24, 27, 0.18);
+  border-color: #104535;
+  box-shadow: 0 2px 8px rgba(16, 69, 53, 0.25);
 }
 
 /* --------------------------------------------------------------------------
