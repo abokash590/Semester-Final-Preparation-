@@ -1384,6 +1384,24 @@ class CodexApp {
     // Bold text **word**
     out = out.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
+    // Horizontally align adjacent Initial State and Final State tables (e.g. 8-puzzle problems)
+    const puzzlePattern = /(?:<strong>\s*Initial State:?\s*<\/strong>|Initial State:?)\s*(?:<br>|\s)*<div class="table-scroll-wrapper"><table class="data-table">([\s\S]*?)<\/table><\/div>\s*(?:<div class="set-subpart-gap"><\/div>|<br>|\s)*(?:<strong>\s*Final State:?\s*<\/strong>|Final State:?)\s*(?:<br>|\s)*<div class="table-scroll-wrapper"><table class="data-table">([\s\S]*?)<\/table><\/div>/gi;
+    out = out.replace(puzzlePattern, (match, table1, table2) => {
+      return `
+        <div class="puzzle-states-horizontal">
+          <div class="puzzle-state-col">
+            <span class="puzzle-state-title">Initial State:</span>
+            <div class="table-scroll-wrapper"><table class="data-table">${table1}</table></div>
+          </div>
+          <div class="puzzle-state-arrow">&rarr;</div>
+          <div class="puzzle-state-col">
+            <span class="puzzle-state-title">Final State:</span>
+            <div class="table-scroll-wrapper"><table class="data-table">${table2}</table></div>
+          </div>
+        </div>
+      `;
+    });
+
     // Restore Mermaid diagrams at the VERY END so newlines remain pure \n
     mermaidPlaceholders.forEach((code, idx) => {
       const diagId = `diagram-target-${Math.random().toString(36).substr(2, 9)}`;

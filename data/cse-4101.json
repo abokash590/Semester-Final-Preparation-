@@ -159,7 +159,7 @@
         "topics": [
           "A* Search & Heuristics"
         ],
-        "question": "Given an initial state of 8 puzzle problem and final state to be reached:\n\n<div class=\"scroll-container\"><table class=\"data-table\"><thead><tr><th colspan=\"3\">Initial State</th><th></th><th colspan=\"3\">Final State</th></tr></thead><tbody><tr><td>2</td><td>5</td><td>4</td><td></td><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>6</td><td>8</td><td>&rarr;</td><td>8</td><td> </td><td>4</td></tr><tr><td>3</td><td> </td><td>7</td><td></td><td>7</td><td>6</td><td>5</td></tr></tbody></table></div>\n\nFind the most cost effective path to reach the final state from initial state using A* search algorithm.",
+        "question": "Given an initial state of 8 puzzle problem and final state to be reached:\n\n**Initial State:**\n| 2 | 5 | 4 |\n|---|---|---|\n| 1 | 6 | 8 |\n| 3 |   | 7 |\n\n**Final State:**\n| 1 | 2 | 3 |\n|---|---|---|\n| 8 |   | 4 |\n| 7 | 6 | 5 |\n\nFind the most cost effective path to reach the final state from initial state using A* search algorithm.",
         "solution": {
           "steps": [
             "1. Formulate A* evaluation function: f(n) = g(n) + h(n), where g(n) is depth and h(n) is Manhattan distance sum.",
