@@ -85,6 +85,19 @@
     })();
   </script>
 
+  <!-- Instant Route Detection: Prevents Home Portal Flash on Course Reload -->
+  <script>
+    (function () {
+      try {
+        var h = (window.location.hash || "").replace("#", "").toLowerCase();
+        var validCourses = ["cse-4101", "cse-4102", "ss-4103", "cse-4125", "cse-4126"];
+        if (validCourses.indexOf(h) !== -1) {
+          document.documentElement.classList.add("direct-course-route");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">

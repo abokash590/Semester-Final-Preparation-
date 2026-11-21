@@ -94,10 +94,17 @@ class CodexApp {
       if (this.manifest && this.manifest.courses.length > 0) {
         this.populateCourseSelect();
         this.renderOrbitalCourses();
-        const initialCourse = this.manifest.courses[0];
-        await this.loadCourse(initialCourse.code);
-        // Route based on URL hash or default to Home Portal
-        this.handleRoute();
+        const rawHash = (window.location.hash || "").replace("#", "").toLowerCase();
+        const matchedCourse = this.manifest.courses.find(c => c.code.toLowerCase() === rawHash);
+
+        if (matchedCourse) {
+          await this.loadCourse(matchedCourse.code);
+          this.enterCourse(matchedCourse.code, false);
+        } else {
+          const initialCourse = this.manifest.courses[0];
+          await this.loadCourse(initialCourse.code);
+          this.showHomePortal(false);
+        }
       }
     } catch (err) {
       console.error("Initialization error:", err);
@@ -415,6 +422,7 @@ class CodexApp {
    */
   showHomePortal(updateHistory = true) {
     this.isHomeActive = true;
+    document.documentElement.classList.remove("direct-course-route");
     document.body.classList.add("is-home-view");
     if (this.dom.appHeader) this.dom.appHeader.hidden = true;
     if (this.dom.homePortalSection) this.dom.homePortalSection.hidden = false;
@@ -433,6 +441,7 @@ class CodexApp {
    */
   enterCourse(courseCode, updateHistory = true) {
     this.isHomeActive = false;
+    document.documentElement.classList.add("direct-course-route");
     document.body.classList.remove("is-home-view");
     if (this.dom.appHeader) this.dom.appHeader.hidden = false;
     if (this.dom.homePortalSection) this.dom.homePortalSection.hidden = true;
@@ -1654,8 +1663,6 @@ class CodexApp {
       <div class="card-header-row">
         <div class="card-title-group">
           <span class="q-label">${q.qno}</span>
-          <span class="marks-badge">${q.marks} Marks Total</span>
-          <span class="exam-year-badge">${q.exam === 'term' ? `${q.college || 'MEC'} • TERM TEST ${q.term_no || ''}` : `${q.exam.toUpperCase()} • ${q.year}`}</span>
         </div>
       </div>
 

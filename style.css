@@ -3290,3 +3290,16 @@ body.is-home-view .app-header,
 .subpart-step-item {
   line-height: 1.65;
 }
+
+/* Instant Direct Course Route: Prevents Home Portal Flash on Reload */
+html.direct-course-route #homePortalSection {
+  display: none !important;
+}
+
+html.direct-course-route #appLayout {
+  display: flex !important;
+}
+
+html.direct-course-route #appHeader {
+  display: flex !important;
+}
