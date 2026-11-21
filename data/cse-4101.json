@@ -25,8 +25,12 @@
         "question": "Write down the goals of Artificial Intelligence.",
         "solution": {
           "steps": [
-            "1. **Build Rational Systems:** To create autonomous hardware/software systems capable of thinking and acting rationally to solve complex tasks.",
-            "2. **Automate Intellectual Tasks:** To automate functions requiring human-like cognitive capabilities, such as learning, perception, reasoning, and decision-making."
+            "The primary goals of Artificial Intelligence (as emphasized in class lecture):",
+            "1. **Simulate Human Intelligence:** Replicate human cognitive abilities (perception, reasoning, language understanding) in machines.",
+            "2. **Learn from Experience:** Enable systems to automatically learn and improve from data without being explicitly reprogrammed.",
+            "3. **Solve Problems Efficiently:** Design algorithms to find optimal or heuristic solutions for complex computational problems.",
+            "4. **Make Intelligent Decisions:** Enable autonomous agents to analyze environments and make rational choices under uncertainty.",
+            "5. **Automate Repetitive & Complex Tasks:** Automate tasks that require high cognitive effort, speed, or hazard tolerance."
           ]
         }
       },
@@ -41,7 +45,7 @@
         "question": "Differentiate between strong AI and weak AI.",
         "solution": {
           "steps": [
-            "| Feature | Weak AI (Narrow AI) | Strong AI (AGI) |\n| :--- | :--- | :--- |\n| **Goal** | Solves **one specific, dedicated task** within a predefined domain. | Exhibits generalized, human-level intelligence across **any intellectual task**. |\n| **Consciousness** | Simulates rational behavior **without genuine consciousness** or self-awareness. | Possesses true consciousness, self-awareness, and subjective intentionality. |\n| **Current Status** | Fully practical and prevalent today (e.g., Siri, AlphaGo, ChatGPT). | Purely theoretical today (no true Strong AI exists yet). |"
+            "| Feature / Dimension | Weak AI (Narrow AI) | Strong AI (General AI / AGI) |\n| :--- | :--- | :--- |\n| **Scope & Definition** | Designed and trained to perform **a specific task** or a limited set of tasks. | Capable of performing **any intellectual task** like a human (generalized intelligence). |\n| **Cognitive Capabilities** | Operates strictly within predefined domain rules; cannot adapt outside its domain. | Can learn new languages, write code, solve math problems, and transfer knowledge across domains. |\n| **Consciousness** | Simulates intelligent behavior **without true consciousness** or self-awareness. | Possesses true consciousness, subjective awareness, and intentionality (hypothetical). |\n| **Examples (from Class Notes)** | Email spam detection, Face recognition, Google Maps, Chess-playing AI. | Purely theoretical today (no true Strong AI exists yet). |"
           ]
         }
       },
@@ -73,7 +77,7 @@
         "question": "Briefly describe about Turing Test.",
         "solution": {
           "steps": [
-            "**Turing Test (Alan Turing, 1950):** An operational test designed to evaluate whether a machine can exhibit intelligent, human-indistinguishable conversational behavior.\n\n* **Experimental Setup:** Three entities placed in separate, isolated rooms:\n  * **Interrogator (Judge $):** A human evaluator.\n  * **Human ($)** and **AI System ($)**\n* **Communication Channel:** Restricted strictly to text-only terminal interface (to eliminate visual/voice bias).\n* **Process & Passing Criterion:** The interrogator asks arbitrary questions. If the judge cannot reliably tell which respondent is the machine and which is the human (misled $\\ge 30\\%$ of the time), the machine passes the test."
+            "**Turing Test (Alan Turing, 1950):** An operational benchmark designed to determine whether a machine can exhibit intelligent behavior indistinguishable from a human (the *Imitation Game*).\n\n* **Experimental Setup:** Three entities placed in separate, isolated rooms:\n  * **Interrogator (Judge C):** A human evaluator.\n  * **Human Respondent (B):** A human participant.\n  * **AI System (A):** The computer machine being evaluated.\n* **Communication Channel:** Restricted strictly to text-only terminal interaction to eliminate physical, visual, and audio bias.\n* **Passing Criterion:** The interrogator asks arbitrary questions to both respondents. If the evaluator cannot reliably distinguish the machine from the human (machine misleads the judge at least $30\\%$ to $50\\%$ of the time), the machine **passes the Turing Test**."
           ]
         }
       }
