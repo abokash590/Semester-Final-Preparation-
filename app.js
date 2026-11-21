@@ -1568,7 +1568,7 @@ class CodexApp {
     if (Array.isArray(q.subparts) && q.subparts.length > 0) {
       subpartsSolutionsHtml = q.subparts.map(sub => {
         const subSteps = (sub.solution?.steps || [])
-          .map(s => `<li>${this.formatMarkdownText(s)}</li>`)
+          .map(s => `<div class="subpart-step-item">${this.formatMarkdownText(s)}</div>`)
           .join("");
 
         return `
@@ -1582,29 +1582,41 @@ class CodexApp {
               <div class="q-prompt-text">${this.formatMarkdownText(sub.question)}</div>
             </div>
             <div class="subpart-derivation">
-              <strong class="solution-heading">Step-by-Step Solution:</strong>
-              <ol class="solution-steps-list">${subSteps}</ol>
-              ${sub.solution?.answer ? `<div class="solution-answer-box"><strong>Final Answer:</strong> ${this.formatMarkdownText(sub.solution.answer)}</div>` : ""}
-              ${sub.solution?.marking_hint ? `<div class="solution-marking-hint"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span><strong>Marking Guide:</strong> ${this.formatMarkdownText(sub.solution.marking_hint)}</span></div>` : ""}
+              <strong class="solution-heading">Solution:</strong>
+              <div class="subpart-steps-content">${subSteps}</div>
+              ${sub.solution?.answer ? `<div class="solution-answer-box"><strong>Final Result:</strong> ${this.formatMarkdownText(sub.solution.answer)}</div>` : ""}
             </div>
           </div>
         `;
       }).join("<hr class='subpart-solution-divider'>");
     } else {
       const stepsHtml = (q.solution?.steps || [])
-        .map(s => `<li>${this.formatMarkdownText(s)}</li>`)
+        .map(s => `<div class="subpart-step-item">${this.formatMarkdownText(s)}</div>`)
         .join("");
       subpartsSolutionsHtml = `
-        <ol class="solution-steps-list">${stepsHtml}</ol>
-        <div><strong>Final Summary:</strong> ${this.formatMarkdownText(q.solution?.answer || "")}</div>
+        <div class="subpart-steps-content">${stepsHtml}</div>
+        ${q.solution?.answer ? `<div class="solution-answer-box"><strong>Final Result:</strong> ${this.formatMarkdownText(q.solution.answer)}</div>` : ""}
       `;
     }
+
+    const endMarkerHtml = `
+      <div class="solution-set-end-tag" aria-hidden="true">
+        <span class="end-tag-line"></span>
+        <span class="end-tag-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>End of Solution</span>
+        </span>
+        <span class="end-tag-line"></span>
+      </div>
+    `;
 
     const hasValidSolution = (Array.isArray(q.subparts) && q.subparts.some(s => s.solution?.steps?.length > 0)) ||
                              (q.solution?.steps?.length > 0);
 
     const solutionContentHtml = hasValidSolution
-      ? `<div class="subparts-solutions-wrapper">${subpartsSolutionsHtml}</div>`
+      ? `<div class="subparts-solutions-wrapper">${subpartsSolutionsHtml}${endMarkerHtml}</div>`
       : `
           <div class="solution-chat-bubble-container">
             <div class="chat-avatar-wrapper">
