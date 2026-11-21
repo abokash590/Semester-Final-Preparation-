@@ -1189,15 +1189,7 @@
         "topics": [
           "Entrepreneurship Foundations"
         ],
-        "question": "Write the Characteristics of Entrepreneurs and Nine Deadly Mistakes of Entrepreneurships.",
-        "solution": {
-          "steps": [
-            "1. **Characteristics:** Vision, passion, calculated risk-taking, resilience, adaptability, leadership, and persistent locus of control.",
-            "2. **Nine Deadly Mistakes:** (1) Management incompetence, (2) Lack of experience, (3) Poor financial control, (4) Inadequate strategic planning, (5) Uncontrolled growth, (6) Poor location, (7) Improper inventory control, (8) Incorrect pricing, (9) Inability to transition to professional management."
-          ],
-          "answer": "Entrepreneurs combine visionary passion with disciplined risk management; avoiding the nine classic managerial pitfalls is essential for business longevity.",
-          "marking_hint": "Award 2 marks for characteristics, 3 marks for nine deadly mistakes."
-        }
+        "question": "Write the Characteristics of Entrepreneurs and Nine Deadly Mistakes of Entrepreneurships."
       },
       {
         "id": "ss-4103-term-mec-tt1-q2",
@@ -1207,16 +1199,7 @@
         "topics": [
           "Idea Generation & Market Opportunity"
         ],
-        "question": "Explain the differences among creativity, innovation, and entrepreneurship.",
-        "solution": {
-          "steps": [
-            "1. **Creativity:** Thinking new things (ideation, conceptualizing novel connections).",
-            "2. **Innovation:** Doing new things (practical transformation of creative ideas into viable products, services, or processes).",
-            "3. **Entrepreneurship:** Creating commercial value (assembling resources, assuming risk, and building a sustainable business around an innovation)."
-          ],
-          "answer": "Creativity generates ideas, innovation develops them into workable solutions, and entrepreneurship monetizes them into viable market ventures.",
-          "marking_hint": "Award 1.67 marks each for creativity, innovation, and entrepreneurship definitions and comparative differences."
-        }
+        "question": "Explain the differences among creativity, innovation, and entrepreneurship."
       },
       {
         "id": "ss-4103-term-mec-tt1-q3",
@@ -1226,18 +1209,7 @@
         "topics": [
           "Entrepreneurship Foundations"
         ],
-        "question": "What are the major driving forces behind the growth of small businesses?",
-        "solution": {
-          "steps": [
-            "1. **Technological Advancements:** Cloud computing, AI, open-source tools lowering market entry barriers.",
-            "2. **Changing Market Demographics:** Niche specialization, personalized customer preferences.",
-            "3. **E-Commerce & Digital Globalization:** Instant global reach via marketplaces and digital payments.",
-            "4. **Entrepreneurial Culture & Education:** Incubators, venture ecosystems, and startup culture.",
-            "5. **Outsourcing & Corporate Downsizing:** Demand for specialized third-party B2B IT contractors."
-          ],
-          "answer": "Technology, market customization, digital infrastructure, and global connectivity fuel small business expansion.",
-          "marking_hint": "Award 1 mark each for five distinct growth drivers."
-        }
+        "question": "What are the major driving forces behind the growth of small businesses?"
       },
       {
         "id": "ss-4103-term-mec-tt1-q4",
@@ -1247,16 +1219,7 @@
         "topics": [
           "IT Business Ethics & Legal Issues"
         ],
-        "question": "Describe any three social responsibilities of an entrepreneur.",
-        "solution": {
-          "steps": [
-            "1. **Ethical Treatment of Employees:** Fair living wages, safe inclusive workplace, career growth opportunities.",
-            "2. **Consumer Protection & Privacy:** Transparent pricing, high product quality, strict adherence to user data security.",
-            "3. **Environmental Sustainability & Community Impact:** Minimizing carbon footprint, e-waste recycling, and investing in local community upliftment."
-          ],
-          "answer": "Entrepreneurs bear responsibilities towards employees, customers, and ecological/community welfare.",
-          "marking_hint": "Award 1.67 marks for each well-elaborated social responsibility."
-        }
+        "question": "Describe any three social responsibilities of an entrepreneur."
       },
       {
         "id": "ss-4103-term-mec-tt1-q5",
@@ -1266,24 +1229,9 @@
         "topics": [
           "Entrepreneurship Foundations"
         ],
-        "question": "Write 5 rewards and challenges of entrepreneurship.",
-        "solution": {
-          "steps": [
-            "1. **5 Rewards:** (1) Autonomy & independence, (2) Unlimited financial upside, (3) Personal fulfillment & passion realization, (4) Direct community impact & job creation, (5) Creative freedom.",
-            "2. **5 Challenges:** (1) High financial uncertainty and income variability, (2) Intense stress and long working hours, (3) High risk of startup failure, (4) Complete accountability and lonely decision-making, (5) Fierce competitive pressure."
-          ],
-          "answer": "Autonomy and wealth creation reward entrepreneurs, balanced by financial risk, stress, and uncertainty.",
-          "marking_hint": "Award 2.5 marks for rewards, 2.5 marks for challenges."
-        }
+        "question": "Write 5 rewards and challenges of entrepreneurship."
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for MEC SS-4103 Term Test 1 (20 Marks total).",
-      "marking_hint": "Full marks (20 M): Answer any 4 questions completely (5 marks each)."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1313,17 +1261,7 @@
         "topics": [
           "Business Models & Canvas"
         ],
-        "question": "Explain the major Forms of Business ownership.",
-        "solution": {
-          "steps": [
-            "1. **Sole Proprietorship:** Owned and operated by one individual; easiest to establish, complete control, but unlimited personal liability.",
-            "2. **Partnership:** Two or more owners pooling capital and expertise; shared risk, but joint and several liability unless structured as LLP.",
-            "3. **Corporation (C-Corp/S-Corp):** Separate legal entity owned by shareholders; limited liability, easy capital raising via equity, but double taxation and extensive regulation.",
-            "4. **Limited Liability Company (LLC):** Hybrid structure offering corporate limited liability with partnership pass-through taxation."
-          ],
-          "answer": "Sole proprietorships, partnerships, corporations, and LLCs balance management flexibility, liability protection, and tax structures.",
-          "marking_hint": "Award 1.25 marks for each ownership form."
-        }
+        "question": "Explain the major Forms of Business ownership."
       },
       {
         "id": "ss-4103-term-mec-tt2-q2",
@@ -1333,15 +1271,7 @@
         "topics": [
           "Business Models & Canvas"
         ],
-        "question": "What is Supply Chain Management? Identify the major components of a supply chain.",
-        "solution": {
-          "steps": [
-            "1. **Supply Chain Management (SCM):** The active management of supply chain activities to maximize customer value and achieve a sustainable competitive advantage.",
-            "2. **Major Components:** (1) Planning (demand forecasting), (2) Sourcing (vendor selection), (3) Making (production/assembly), (4) Delivering (logistics and distribution), (5) Returning (reverse logistics and customer support)."
-          ],
-          "answer": "SCM coordinates end-to-end material, financial, and informational flows across suppliers, manufacturers, and customers.",
-          "marking_hint": "Award 2 marks for SCM definition, 3 marks for identifying and detailing 5 core components."
-        }
+        "question": "What is Supply Chain Management? Identify the major components of a supply chain."
       },
       {
         "id": "ss-4103-term-mec-tt2-q3",
@@ -1351,15 +1281,7 @@
         "topics": [
           "Financial Planning & Valuation"
         ],
-        "question": "What is a cash-flow statement? Discuss the importance of preparing a cash-flow forecast.",
-        "solution": {
-          "steps": [
-            "1. **Cash-Flow Statement:** Financial statement reporting cash inflows and outflows across operating, investing, and financing activities over a specific period.",
-            "2. **Importance of Cash-Flow Forecast:**\n   - Prevents insolvency (cash shortage is primary killer of profitable startups).\n   - Facilitates working capital planning and payroll certainty.\n   - Identifies capital expenditure funding needs well in advance.\n   - Enhances investor and lender confidence during credit evaluations."
-          ],
-          "answer": "Cash flow measures true operational liquidity; forecasting ensures solvency and timely working capital management.",
-          "marking_hint": "Award 2 marks for definition, 3 marks for four distinct reasons for forecasting importance."
-        }
+        "question": "What is a cash-flow statement? Discuss the importance of preparing a cash-flow forecast."
       },
       {
         "id": "ss-4103-term-mec-tt2-q4",
@@ -1369,15 +1291,7 @@
         "topics": [
           "Marketing Strategy & Growth"
         ],
-        "question": "What is Creative Advertising? Write the Importance of Creativity in Advertising.",
-        "solution": {
-          "steps": [
-            "1. **Creative Advertising:** The conceptual crafting of marketing communications that combine unexpected originality with brand message relevance to evoke emotional resonance.",
-            "2. **Importance:**\n   - **Cuts Through Noise:** Captures fleeting audience attention in ad-saturated environments.\n   - **Memorability & Recall:** Emotionally engaging campaigns achieve substantially higher recall.\n   - **Viral Amplification:** Creative digital ads trigger organic user shares and word-of-mouth.\n   - **Cost Efficiency:** Higher engagement lowers cost-per-acquisition (CPA)."
-          ],
-          "answer": "Creative advertising combines novelty and relevance to boost brand recall, cut through media clutter, and drive viral engagement.",
-          "marking_hint": "Award 2 marks for definition, 3 marks for explaining key benefits."
-        }
+        "question": "What is Creative Advertising? Write the Importance of Creativity in Advertising."
       },
       {
         "id": "ss-4103-term-mec-tt2-q5",
@@ -1387,28 +1301,9 @@
         "topics": [
           "IT Business Ethics & Legal Issues"
         ],
-        "question": "Write the Major Legal Requirements for Establishing a Small Business.",
-        "solution": {
-          "steps": [
-            "1. **Business Registration & Entity Selection:** Registering trade name and articles of incorporation/partnership.",
-            "2. **Trade License:** Municipal or city corporation trade license acquisition.",
-            "3. **Taxation & TIN/BIN:** Obtaining Taxpayer Identification Number (TIN) and Value Added Tax registration (BIN).",
-            "4. **Intellectual Property Protection:** Registering trademarks, patents, and software copyrights.",
-            "5. **Labor & Employment Law Compliance:** Worker compensation, workplace safety, and formal employment contracts.",
-            "6. **Industry-Specific IT Permits:** Data privacy compliance, cybersecurity standards, and digital commerce licenses."
-          ],
-          "answer": "Establishing a business requires entity incorporation, trade licenses, tax registration (TIN/BIN), IP protection, and statutory labor compliance.",
-          "marking_hint": "Award 1 mark each for five core legal requirements."
-        }
+        "question": "Write the Major Legal Requirements for Establishing a Small Business."
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for MEC SS-4103 Term Test 2 (20 Marks total).",
-      "marking_hint": "Full marks (20 M): Answer any 4 questions completely (5 marks each)."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1439,23 +1334,7 @@
         "topics": [
           "Economic & Social Factors in Entrepreneurship"
         ],
-        "question": "Discuss Economic and Social factors affecting entrepreneurship development.",
-        "solution": {
-          "steps": [
-            "1. **Economic Factors Affecting Entrepreneurship:**",
-            "- **Capital Availability:** Access to seed funding, venture capital, angel investors, and favorable bank credit drives venture birth and expansion.",
-            "- **Market Demand & Purchasing Power:** Growing disposable income and expanding digital markets create commercial viability for innovative IT products.",
-            "- **Infrastructure & Connectivity:** High-speed internet, reliable cloud hosting, electricity, and transportation lower operational costs.",
-            "- **Labor & Technical Talent:** Availability of skilled software engineers, data analysts, and agile managers at competitive wage rates.",
-            "2. **Social and Cultural Factors Affecting Entrepreneurship:**",
-            "- **Cultural Attitude Toward Risk & Failure:** Societies celebrating risk-taking and viewing failure as learning cultivate higher startup density compared to risk-averse cultures.",
-            "- **Social Support & Recognition:** Societal respect and family backing for founders as prestigious career paths motivate youth toward venture creation.",
-            "- **Education & Entrepreneurial Training:** University curricula incorporating startup incubators, coding hackathons, and IP commercialization.",
-            "- **Role Models & Networking:** Thriving tech ecosystems and mentorship networks providing aspiring founders with accessible playbooks."
-          ],
-          "answer": "Economic factors supply capital, market demand, and infrastructure; social factors foster risk tolerance, societal backing, and an entrepreneurial innovation culture.",
-          "marking_hint": "2.5 marks for economic factors; 2.5 marks for social factors."
-        }
+        "question": "Discuss Economic and Social factors affecting entrepreneurship development."
       },
       {
         "id": "ss-4103-term-niter-tt2-q2",
@@ -1465,25 +1344,7 @@
         "topics": [
           "Schumpeter's Theory of Entrepreneurship"
         ],
-        "question": "Elaborate Schumpeter Theory of Entrepreneurship.",
-        "solution": {
-          "steps": [
-            "1. **Core Premise of Schumpeterian Theory:**",
-            "- Formulated by economist Joseph Schumpeter, this theory asserts that the entrepreneur is the central dynamic driver of economic development through **innovation**.",
-            "- Economic progress is not a gradual circular flow, but a discontinuous disruptive process termed **Creative Destruction** (*gale of creative destruction*), where innovative products replace antiquated industrial models.",
-            "2. **Five Types of Schumpeterian Innovations (New Combinations):**",
-            "- **Introduction of a New Good:** Launching a product consumers are unfamiliar with or of superior qualitative utility (e.g., Apple iPhone).",
-            "- **Introduction of a New Method of Production:** Developing novel manufacturing or software deployment techniques (e.g., Cloud SaaS pipelines).",
-            "- **Opening of a New Market:** Entering an untapped geographic or consumer segment.",
-            "- **Conquest of a New Source of Supply:** Securing novel raw materials or components.",
-            "- **Carrying out New Organization of an Industry:** Creating a monopoly position or disrupting established industry structures (e.g., Uber disrupting taxis).",
-            "3. **Distinction Between Manager and Entrepreneur:**",
-            "- A manager merely allocates resources within existing operational routines.",
-            "- An entrepreneur undertakes proactive risk, initiates new combinations, and transforms economic equilibria."
-          ],
-          "answer": "Schumpeter posits the entrepreneur as the prime innovator driving economic growth through 'Creative Destruction' by introducing five new industrial combinations.",
-          "marking_hint": "2 marks for core innovation & creative destruction concept; 2.5 marks for detailing the 5 types of innovation; 0.5 mark for manager vs. entrepreneur distinction."
-        }
+        "question": "Elaborate Schumpeter Theory of Entrepreneurship."
       },
       {
         "id": "ss-4103-term-niter-tt2-q3",
@@ -1493,24 +1354,7 @@
         "topics": [
           "SWOT Analysis for IT Venture"
         ],
-        "question": "Discuss with an example how SWOT analysis is conducted?",
-        "solution": {
-          "steps": [
-            "1. **SWOT Analysis Framework:**",
-            "A strategic planning tool that evaluates Internal factors (**Strengths, Weaknesses**) and External factors (**Opportunities, Threats**) to align business capabilities with competitive market conditions.",
-            "2. **Real-World IT Example: AI-Powered Telehealth SaaS Startup:**",
-            "| Category | Internal Factors | Strategic Action |",
-            "| :--- | :--- | :--- |",
-            "| **Strengths (S)** | Proprietary low-latency diagnostic AI, HIPAA-compliant cloud architecture, experienced engineering team. | Leverage technical superiority to secure hospital enterprise contracts. |",
-            "| **Weaknesses (W)** | Limited brand awareness, modest marketing budget, reliance on third-party cloud GPUs. | Outsource digital marketing and partner with established medical clinics. |",
-            "| **Category** | **External Factors** | **Strategic Action** |",
-            "| **Opportunities (O)** | Surging demand for remote patient consultations, government digital health subsidies, underserved rural areas. | Expand product to bilingual rural clinics and capture subsidized tenders. |",
-            "| **Threats (T)** | Stringent healthcare data privacy regulations, aggressive competition from big tech, cybersecurity ransomware risks. | Implement end-to-end zero-trust encryption and retain specialized healthcare legal counsel. |",
-            "3. **Strategic Synthesis:** Combine Strengths with Opportunities (SO strategies) to drive market penetration while mitigating Weaknesses and Threats (WT strategies)."
-          ],
-          "answer": "SWOT evaluates internal Strengths/Weaknesses and external Opportunities/Threats. Illustrated via an AI Telehealth SaaS matrix driving targeted strategic actions.",
-          "marking_hint": "2 marks for explaining the SWOT methodology; 3 marks for a detailed, realistic IT business example matrix."
-        }
+        "question": "Discuss with an example how SWOT analysis is conducted?"
       },
       {
         "id": "ss-4103-term-niter-tt2-q4",
@@ -1520,25 +1364,7 @@
         "topics": [
           "Starting from Scratch Considerations"
         ],
-        "question": "Explain the key considerations to start from the scratch.",
-        "solution": {
-          "steps": [
-            "1. **Problem Validation & Product-Market Fit (PMF):**",
-            "- Identify a genuine, high-friction pain point that customers are actively willing to pay to solve.",
-            "- Conduct customer interviews and build a Minimum Viable Product (MVP) to validate core hypotheses before investing capital.",
-            "2. **Founding Team & Skill Complementarity:**",
-            "- Assemble a core team balancing technical execution, product design, and business/sales development (Hacker, Hipster, Hustler).",
-            "3. **Financial Runway & Unit Economics:**",
-            "- Calculate the initial burn rate, customer acquisition cost (CAC), and customer lifetime value (LTV).",
-            "- Ensure at least 12–18 months of financial runway through bootstrapping, personal savings, or angel investment.",
-            "4. **Legal, Regulatory & Intellectual Property Foundation:**",
-            "- Choose appropriate corporate registration (Pvt. Ltd. / LLC), founder equity vesting schedules, trademark protection, and regulatory licenses.",
-            "5. **Go-To-Market (GTM) Strategy & Distribution:**",
-            "- Define clear customer acquisition channels (SEO, content, direct B2B sales, viral referral loops) rather than relying solely on product novelty."
-          ],
-          "answer": "Starting from scratch requires customer-validated PMF, a complementary founding team, clear unit economics/runway, a sound legal foundation, and an effective GTM strategy.",
-          "marking_hint": "1 mark each for discussing five fundamental pillars: validation/MVP, team, finance/runway, legal/IP, and GTM."
-        }
+        "question": "Explain the key considerations to start from the scratch."
       },
       {
         "id": "ss-4103-term-niter-tt2-q5",
@@ -1548,23 +1374,7 @@
         "topics": [
           "Business Plan Importance"
         ],
-        "question": "Discuss the importance of business plan for any entrepreneurial initiative.",
-        "solution": {
-          "steps": [
-            "1. **Strategic Roadmap & Vision Alignment:**",
-            "- Serves as an operational blueprint translating abstract entrepreneurial ideas into concrete milestones, resource schedules, and quarterly objectives.",
-            "2. **Fundraising & Investor Confidence:**",
-            "- Venture capitalists, angel investors, and banks demand a rigorous business plan demonstrating market size (TAM/SAM/SOM), revenue models, and projected ROI before committing capital.",
-            "3. **Risk Identification & Mitigation:**",
-            "- Forces founders to perform thorough competitor benchmarking, regulatory risk assessments, and financial sensitivity analyses before encountering critical failures.",
-            "4. **Resource Allocation & Budgetary Discipline:**",
-            "- Provides structured oversight on cash flow projections, operational expenditures, hiring timelines, and working capital needs.",
-            "5. **Performance Measurement Benchmark:**",
-            "- Establishes Key Performance Indicators (KPIs) against which real progress, customer traction, and product timelines are objectively evaluated."
-          ],
-          "answer": "A business plan is indispensable as an operational roadmap, an essential investor fundraising tool, a proactive risk mitigation instrument, and a KPI performance benchmark.",
-          "marking_hint": "1 mark each for discussing five core benefits: operational roadmap, fundraising, risk mitigation, resource discipline, and progress benchmarking."
-        }
+        "question": "Discuss the importance of business plan for any entrepreneurial initiative."
       }
     ]
   },
@@ -1595,23 +1405,7 @@
           "Creativity and Innovation Interconnection",
           "Enhancing Organizational Creativity"
         ],
-        "question": "a) How Creativity and Innovation are interconnected? Explain. b) How to enhance creativity? Briefly describe.",
-        "solution": {
-          "steps": [
-            "**(a) Interconnection Between Creativity and Innovation:**",
-            "- **Creativity:** The cognitive generation of novel, imaginative, and unconventional ideas or concepts.",
-            "- **Innovation:** The practical application, execution, and commercialization of creative ideas to create tangible business value or resolve market needs.",
-            "- *Interconnection:* Creativity is the **necessary seed and starting point**; Innovation is the **harvest and realization**. Without creativity, innovation lacks novel substance; without innovation, creativity remains mere unexploited imagination ('Creativity is thinking up new things; innovation is doing new things').",
-            "**(b) Strategies to Enhance Creativity:**",
-            "1. **Psychological Safety & Open Culture:** Establish a blameless organizational culture where failure is regarded as a natural learning vector, encouraging calculated risk-taking.",
-            "2. **Diverse & Cross-Disciplinary Teams:** Assemble multidisciplinary talent (engineers, designers, marketers) to synthesize contrasting perspectives.",
-            "3. **Structured Brainstorming & Lateral Thinking:** Utilize creative ideation frameworks (SCAMPER, mind-mapping, Edward de Bono's Six Thinking Hats) deferring premature criticism.",
-            "4. **Dedicated Incubation & Hack Time:** Allocate unstructured exploration time (e.g., Google's 20% time policy) allowing subconscious incubation.",
-            "5. **Continuous Exposure to External Stimuli:** Engage in competitor audits, customer ethnography, design sprints, and cross-industry benchmarking."
-          ],
-          "answer": "Creativity is the intellectual catalyst; Innovation is its commercial execution. Creativity is enhanced via psychological safety, diverse teams, structured brainstorming, and dedicated incubation.",
-          "marking_hint": "4 marks for creativity vs innovation synergy; 6 marks for discussing at least 5 distinct creativity enhancement strategies."
-        }
+        "question": "a) How Creativity and Innovation are interconnected? Explain. b) How to enhance creativity? Briefly describe."
       },
       {
         "id": "ss-4103-term-fec-tt1-q2",
@@ -1622,24 +1416,7 @@
           "Challenges of Entrepreneurship",
           "Ethical Concerns in Entrepreneurship"
         ],
-        "question": "a) What are the challenges of entrepreneurship? Shortly describe. b) Briefly describe the key concerns of ethical entrepreneurship.",
-        "solution": {
-          "steps": [
-            "**(a) Core Challenges of Entrepreneurship:**",
-            "1. **Cash Flow & Capital Constraints:** Navigating the early-stage 'Valley of Death' before achieving unit economic profitability.",
-            "2. **Product-Market Fit (PMF) Uncertainty:** Validating customer demand before burning finite financial runway on unwanted features.",
-            "3. **Talent Acquisition & Retention:** Attracting top technical and operational talent to high-risk early ventures competing with high-paying tech giants.",
-            "4. **Founder Burnout & Solitary Burden:** Managing extreme stress, prolonged working hours, and sole accountability for venture survival.",
-            "**(b) Key Concerns of Ethical Entrepreneurship:**",
-            "1. **Consumer Data Privacy & AI Ethics:** Respecting user consent, ensuring robust encryption, and preventing algorithmic bias or deceptive dark patterns.",
-            "2. **Fair Labor Practices & Equity:** Providing fair living wages, safe working environments, and transparent equity sharing without worker exploitation.",
-            "3. **Honest Marketing & Transparency:** Avoiding fraudulent hype, exaggerated product capabilities, or deceptive investor pitches.",
-            "4. **Environmental Sustainability:** Mitigating corporate carbon footprint, electronic waste, and adopting green cloud architectures.",
-            "5. **Fair Competition & Anti-Corruption:** Refraining from predatory price dumping, IP theft, bribery, or monopolistic collusion."
-          ],
-          "answer": "Entrepreneurial challenges center on capital, PMF, hiring, and burnout. Ethical concerns mandate data privacy, fair labor, transparent marketing, environmental care, and fair competition.",
-          "marking_hint": "4 marks for 4 key startup challenges; 6 marks for detailing 5 foundational dimensions of ethical entrepreneurship."
-        }
+        "question": "a) What are the challenges of entrepreneurship? Shortly describe. b) Briefly describe the key concerns of ethical entrepreneurship."
       }
     ]
   },
@@ -1671,23 +1448,7 @@
           "Strategic Management Process",
           "The Three V's Marketing Approach"
         ],
-        "question": "a) What are the steps of strategic management process? Very shortly describe each step. b) What are the three V's approaches of marketing? Write down the core business processes of marketing.",
-        "solution": {
-          "steps": [
-            "**(a) Steps of the Strategic Management Process:**",
-            "1. **Environmental Scanning (Analysis):** Gathering internal and external intelligence using SWOT and PESTEL frameworks to identify competitive advantages and threats.",
-            "2. **Strategy Formulation:** Defining long-term vision, mission statements, corporate objectives, and crafting competitive strategies (e.g., Porter's Cost Leadership vs. Differentiation).",
-            "3. **Strategy Implementation:** Translating strategies into actionable initiatives by allocating financial budgets, assigning organizational responsibilities, and establishing agile workflows.",
-            "4. **Strategy Evaluation & Control:** Continuously monitoring performance metrics (KPIs) against targets and initiating corrective pivots when variances emerge.",
-            "**(b) The Three V's Marketing Approach (Nirmalya Kumar):**",
-            "1. **Value Customer:** Defining which customer segments to serve and which to deliberately ignore.",
-            "2. **Value Proposition:** Articulating the distinct, differentiated bundle of benefits that compellingly solves customer pain points.",
-            "3. **Value Network:** Structuring partner networks, suppliers, digital channels, and supply chains to deliver the value proposition profitably.",
-            "- **Core Business Processes of Marketing:** Market Research & Customer Discovery, New Product Development, Lead Generation & Customer Acquisition, Customer Retention & Loyalty Management."
-          ],
-          "answer": "Strategic management spans scanning, formulation, implementation, and evaluation. Marketing's 3 V's are Value Customer, Value Proposition, and Value Network.",
-          "marking_hint": "7 marks for the 4 strategic management steps with explanations; 3 marks for the 3 V's and core marketing processes."
-        }
+        "question": "a) What are the steps of strategic management process? Very shortly describe each step. b) What are the three V's approaches of marketing? Write down the core business processes of marketing."
       },
       {
         "id": "ss-4103-term-fec-tt2-q2",
@@ -1699,32 +1460,7 @@
           "Developing a Strategic Plan",
           "Key Components of Business Strategic Plan"
         ],
-        "question": "a) Difference between Strategic Planning and Tactical Planning. b) How to Develop a Strategic Plan? c) Key Components of a Business Strategic Plan.",
-        "solution": {
-          "steps": [
-            "**(a) Strategic Planning vs. Tactical Planning:**",
-            "| Criterion | Strategic Planning | Tactical Planning |",
-            "| :--- | :--- | :--- |",
-            "| **Time Horizon** | Long-term (3 to 5+ years). | Short to medium-term (quarterly to 1 year). |",
-            "| **Organizational Scope** | Entire enterprise / corporate level. | Departmental / functional units. |",
-            "| **Core Focus** | Defines 'What' and 'Why' (direction). | Defines 'How' and 'When' (execution). |",
-            "| **Leadership Level** | Board of Directors, C-suite executives. | Middle management, team leads. |",
-            "**(b) How to Develop a Strategic Plan:**",
-            "1. Identify current organizational baseline, core values, and founding vision.",
-            "2. Perform rigorous external competitive benchmarking and internal capability auditing.",
-            "3. Formulate Specific, Measurable, Achievable, Relevant, Time-bound (SMART) strategic goals.",
-            "4. Construct detailed functional roadmaps, budget allocation, and risk contingency plans.",
-            "5. Establish executive review rhythms and real-time dashboard scorecards (OKRs/KPIs).",
-            "**(c) Key Components of a Business Strategic Plan:**",
-            "1. **Executive Summary & Mission Statement:** Clear definition of organizational purpose and long-term ambition.",
-            "2. **Market & Competitor Analysis:** Thorough audit of target customer personas, TAM/SAM/SOM, and competitive moats.",
-            "3. **Strategic Objectives & Milestones:** Quantifiable quarterly and annual performance targets.",
-            "4. **Go-To-Market & Operational Strategy:** Sales acquisition funnel, pricing strategy, and resource deployment.",
-            "5. **Financial Projections & Risk Matrix:** Pro-forma P&L statements, burn rate, and scenario sensitivity modeling."
-          ],
-          "answer": "Strategic planning sets long-term vision; tactical planning governs short-term execution. Strategic plans integrate executive vision, market analysis, SMART goals, operational roadmaps, and financial forecasts.",
-          "marking_hint": "3 marks for strategic vs tactical comparison; 3 marks for developing a plan; 4 marks for detailing key strategic plan components."
-        }
+        "question": "a) Difference between Strategic Planning and Tactical Planning. b) How to Develop a Strategic Plan? c) Key Components of a Business Strategic Plan."
       }
     ]
   }

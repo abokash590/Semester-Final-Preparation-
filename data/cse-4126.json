@@ -1353,15 +1353,7 @@
         "topics": [
           "Data Science Lifecycle & Pipelines"
         ],
-        "question": "Define Data Science. Write down the key differences between Qualitative & Quantitative data. [4]",
-        "solution": {
-          "steps": [
-            "1. **Definition:** An interdisciplinary field combining computer science, statistics, domain expertise, and machine learning to extract actionable knowledge from structured and unstructured data.",
-            "2. **Differences:**\n   - **Qualitative Data (Categorical):** Non-numerical, descriptive, subjective (e.g. sentiment, color, customer feedback). Measured on Nominal or Ordinal scales.\n   - **Quantitative Data (Numerical):** Numerical counts or measurements, objective, amenable to mathematical operations (e.g. salary, temperature, weight). Measured on Interval or Ratio scales."
-          ],
-          "answer": "Data Science synthesizes statistical algorithms and computing to extract insights. Qualitative is descriptive; Quantitative is numerical.",
-          "marking_hint": "Award 1.5 marks for definition, 2.5 marks for qualitative vs quantitative differences."
-        }
+        "question": "Define Data Science. Write down the key differences between Qualitative & Quantitative data. [4]"
       },
       {
         "id": "cse-4126-term-mec-tt1-q2",
@@ -1371,16 +1363,7 @@
         "topics": [
           "Data Collection & Web Scraping"
         ],
-        "question": "Discuss the types of Questionnaire Method. [3]",
-        "solution": {
-          "steps": [
-            "1. **Structured Questionnaire:** Standardized closed-ended questions with predetermined response options (multiple choice, Likert scale); easy to quantify.",
-            "2. **Unstructured Questionnaire:** Open-ended questions allowing respondents to express detailed personal perspectives; rich qualitative depth.",
-            "3. **Semi-structured Questionnaire:** Blends core structured baseline questions with open-ended probes."
-          ],
-          "answer": "Structured (closed-ended, quantitative), Unstructured (open-ended, qualitative), and Semi-structured (hybrid).",
-          "marking_hint": "Award 1 mark each for the three questionnaire categories."
-        }
+        "question": "Discuss the types of Questionnaire Method. [3]"
       },
       {
         "id": "cse-4126-term-mec-tt1-q3",
@@ -1390,17 +1373,7 @@
         "topics": [
           "Data Collection & Web Scraping"
         ],
-        "question": "Mention some challenges in data collection method. [3]",
-        "solution": {
-          "steps": [
-            "1. **Data Quality & Incompleteness:** Missing values, transcription errors, noisy sensors.",
-            "2. **Sampling Bias & Non-response:** Unrepresentative sample populations and high non-response rates.",
-            "3. **Privacy, Security & Ethics:** Regulatory restrictions (GDPR) and confidential user data.",
-            "4. **High Resource Cost & Latency:** Expensive manual surveys and slow data pipeline throughput."
-          ],
-          "answer": "Core challenges include sampling bias, missing data, privacy/regulatory barriers, and high acquisition costs.",
-          "marking_hint": "Award 1 mark each for three distinct collection challenges."
-        }
+        "question": "Mention some challenges in data collection method. [3]"
       },
       {
         "id": "cse-4126-term-mec-tt1-q4",
@@ -1410,17 +1383,7 @@
         "topics": [
           "Exploratory Data Analysis (EDA)"
         ],
-        "question": "Explain KNN algorithm with an example. [5]",
-        "solution": {
-          "steps": [
-            "1. Compute Euclidean distance from target point to all dataset samples.",
-            "2. Rank samples by ascending distance and pick the $k$ nearest neighbors.",
-            "3. Majority vote determines the final classification.",
-            "4. **Concrete Example:** Classifying loan applicant with Income $X_1$ and Credit Score $X_2$."
-          ],
-          "answer": "Instance-based learning where unseen query point inherits dominant label of its k nearest distance neighbors.",
-          "marking_hint": "Award 2.5 marks for theoretical mechanics, 2.5 marks for worked numerical example."
-        }
+        "question": "Explain KNN algorithm with an example. [5]"
       },
       {
         "id": "cse-4126-term-mec-tt1-q5",
@@ -1430,30 +1393,9 @@
         "topics": [
           "Exploratory Data Analysis (EDA)"
         ],
-        "question": "Identify if there are any outliers in dataset X = {40, 45, 50, 52, 55, 58, 60, 62, 68, 90} with IQR. [5]",
-        "solution": {
-          "steps": [
-            "1. Dataset is sorted: $X = \\{40, 45, 50, 52, 55, 58, 60, 62, 68, 90\\}$, $n = 10$.",
-            "2. **Median ($Q_2$):** Average of 5th and 6th values: $\\frac{55 + 58}{2} = 56.5$.",
-            "3. **Lower Half:** $\\{40, 45, 50, 52, 55\\} \\implies Q_1 = 50$.",
-            "4. **Upper Half:** $\\{58, 60, 62, 68, 90\\} \\implies Q_3 = 62$.",
-            "5. **Interquartile Range (IQR):** $\\text{IQR} = Q_3 - Q_1 = 62 - 50 = 12$.",
-            "6. **Fences:**\n   - Lower Fence $= Q_1 - 1.5 \\times \\text{IQR} = 50 - 1.5(12) = 50 - 18 = 32$.\n   - Upper Fence $= Q_3 + 1.5 \\times \\text{IQR} = 62 + 1.5(12) = 62 + 18 = 80$.",
-            "7. **Outlier Check:** All values are $\\ge 32$. The value $90 > 80$.",
-            "8. **Conclusion:** **90** is the only outlier in the dataset."
-          ],
-          "answer": "IQR = 12; Fences = [32, 80]; Value 90 is an outlier.",
-          "marking_hint": "Award 1.5 marks for Q1, Q3, and IQR, 1.5 marks for fences, 2 marks for outlier detection."
-        }
+        "question": "Identify if there are any outliers in dataset X = {40, 45, 50, 52, 55, 58, 60, 62, 68, 90} with IQR. [5]"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for MEC CSE-4126 Term Test 1 (20 Marks total).",
-      "marking_hint": "Full marks (20 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1482,15 +1424,7 @@
         "topics": [
           "Data Cleaning & Preprocessing"
         ],
-        "question": "How Redundant attributes are detected in Data Integration? [2]",
-        "solution": {
-          "steps": [
-            "1. **Numerical Attributes:** Correlation coefficient test (Pearson's $r$) and Covariance analysis to detect linearly dependent collinear features.",
-            "2. **Categorical / Nominal Attributes:** Chi-square $(\\chi^2)$ test of independence to identify whether two categorical attributes are statistically associated."
-          ],
-          "answer": "Redundancy is detected using Pearson correlation / covariance for numerical attributes and Chi-square (chi^2) test for categorical attributes.",
-          "marking_hint": "Award 1 mark each for numerical correlation and categorical Chi-square test."
-        }
+        "question": "How Redundant attributes are detected in Data Integration? [2]"
       },
       {
         "id": "cse-4126-term-mec-tt2-q2",
@@ -1500,18 +1434,7 @@
         "topics": [
           "Statistical Inference & Distributions"
         ],
-        "question": "Calculate the Correlation coefficient of X = {41, 42, 43, 44, 45} & Y = {3.2, 3.3, 3.4, 3.5, 3.6}. [3]",
-        "solution": {
-          "steps": [
-            "1. Means: $\\bar{X} = \\frac{41+42+43+44+45}{5} = 43$, $\\bar{Y} = \\frac{3.2+3.3+3.4+3.5+3.6}{5} = 3.4$.",
-            "2. Deviations $(X - \\bar{X}) = \\{-2, -1, 0, 1, 2\\} \\implies \\sum (X - \\bar{X})^2 = 4 + 1 + 0 + 1 + 4 = 10$.",
-            "3. Deviations $(Y - \\bar{Y}) = \\{-0.2, -0.1, 0, 0.1, 0.2\\} \\implies \\sum (Y - \\bar{Y})^2 = 0.04 + 0.01 + 0 + 0.01 + 0.04 = 0.10$.",
-            "4. Cross-product: $\\sum (X - \\bar{X})(Y - \\bar{Y}) = (-2)(-0.2) + (-1)(-0.1) + 0 + (1)(0.1) + (2)(0.2) = 0.4 + 0.1 + 0.1 + 0.4 = 1.0$.",
-            "5. Correlation Coefficient:\n$$r = \\frac{\\sum (X - \\bar{X})(Y - \\bar{Y})}{\\sqrt{\\sum(X - \\bar{X})^2 \\sum(Y - \\bar{Y})^2}} = \\frac{1.0}{\\sqrt{10 \\times 0.10}} = \\frac{1.0}{\\sqrt{1.0}} = +1.0$$"
-          ],
-          "answer": "Correlation coefficient r = +1.0 (Perfect positive linear correlation).",
-          "marking_hint": "Award 1.5 marks for deviation tables and sums, 1.5 marks for final r = 1.0."
-        }
+        "question": "Calculate the Correlation coefficient of X = {41, 42, 43, 44, 45} & Y = {3.2, 3.3, 3.4, 3.5, 3.6}. [3]"
       },
       {
         "id": "cse-4126-term-mec-tt2-q3",
@@ -1521,15 +1444,7 @@
         "topics": [
           "Data Cleaning & Preprocessing"
         ],
-        "question": "Define Data reduction. Mention Data reduction strategies. [2]",
-        "solution": {
-          "steps": [
-            "1. **Definition:** Techniques that obtain a reduced representation of the dataset that is much smaller in volume yet closely maintains the integrity of the original data.",
-            "2. **Strategies:** (1) Dimensionality Reduction (PCA, Wavelets), (2) Numerosity Reduction (Regression, Histograms, Clustering, Sampling), (3) Data Compression (Lossless & Lossy)."
-          ],
-          "answer": "Data reduction reduces data volume while preserving analytical utility via dimensionality reduction, numerosity reduction, and compression.",
-          "marking_hint": "Award 1 mark for definition, 1 mark for naming core strategies."
-        }
+        "question": "Define Data reduction. Mention Data reduction strategies. [2]"
       },
       {
         "id": "cse-4126-term-mec-tt2-q4",
@@ -1539,15 +1454,7 @@
         "topics": [
           "Data Cleaning & Preprocessing"
         ],
-        "question": "Explain Wavelet transforms with example. [3]",
-        "solution": {
-          "steps": [
-            "1. **Concept:** Discrete Wavelet Transform (DWT) decomposes an input signal or data vector into different frequency sub-bands (approximation and detail coefficients) at multiple resolution scales.",
-            "2. **Example:** Haar Wavelet Transform decomposes vector $[2, 4, 6, 8]$ into averages $[3, 7]$ and detail differences $[-1, -1]$, enabling lossy compression by retaining only dominant coefficients."
-          ],
-          "answer": "Wavelet transforms decompose data into multi-resolution frequency components, compressing data by retaining high-energy coefficients.",
-          "marking_hint": "Award 1.5 marks for theoretical mechanism, 1.5 marks for Haar wavelet example."
-        }
+        "question": "Explain Wavelet transforms with example. [3]"
       },
       {
         "id": "cse-4126-term-mec-tt2-q5",
@@ -1557,17 +1464,7 @@
         "topics": [
           "Data Visualization & Plotting"
         ],
-        "question": "Mention data visualization techniques. [2]",
-        "solution": {
-          "steps": [
-            "1. **Pixel-Oriented Techniques:** Space-filling curves (Hilbert, Morton) coloring each data value in a separate pixel.",
-            "2. **Geometric Projection Techniques:** Scatter plots, Scatter Plot Matrix (SPLOM), Parallel Coordinates.",
-            "3. **Icon-Based Techniques:** Chernoff faces, Stick figures.",
-            "4. **Hierarchical Techniques:** Treemaps, Sunburst charts, Dimensional Stacking."
-          ],
-          "answer": "Pixel-oriented, geometric projection (scatter, parallel coordinates), icon-based, and hierarchical (treemaps).",
-          "marking_hint": "Award 0.5 marks for each distinct visualization family."
-        }
+        "question": "Mention data visualization techniques. [2]"
       },
       {
         "id": "cse-4126-term-mec-tt2-q6",
@@ -1577,25 +1474,9 @@
         "topics": [
           "Data Cleaning & Preprocessing"
         ],
-        "question": "Explain Data discretization mapping with an example. [3]",
-        "solution": {
-          "steps": [
-            "1. **Definition:** Transforming continuous numerical attributes into a finite set of discrete intervals or categorical bins.",
-            "2. **Mapping Methods:** Equal-width binning, Equal-frequency binning, or cluster-based discretization.",
-            "3. **Concrete Example:** Continuous `Age` attribute mapping:\n   - $[0 - 12] \\implies \\text{Child}$\n   - $[13 - 19] \\implies \\text{Teenager}$\n   - $[20 - 59] \\implies \\text{Adult}$\n   - $[60+] \\implies \\text{Senior}$"
-          ],
-          "answer": "Data discretization partitions continuous ranges into discrete categorical buckets (e.g. mapping age numbers to life stages).",
-          "marking_hint": "Award 1.5 marks for definition, 1.5 marks for concrete mapping example."
-        }
+        "question": "Explain Data discretization mapping with an example. [3]"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for MEC CSE-4126 Term Test 2 (15 Marks total).",
-      "marking_hint": "Full marks (15 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1627,19 +1508,7 @@
         "topics": [
           "Data Science Challenges"
         ],
-        "question": "Define Data Science. What are the common challenges in Data collection, briefly describe.",
-        "solution": {
-          "steps": [
-            "1. **Data Science Definition:** Data Science is an interdisciplinary field integrating statistics, computer science, domain knowledge, and machine learning to extract actionable insights and meaningful knowledge from structured and unstructured data.",
-            "2. **Common Challenges in Data Collection:**",
-            "- **Missing & Incomplete Data:** Unrecorded values, non-response bias, or communication dropouts during logging.",
-            "- **Data Quality & Noise:** Transcription typos, duplicate records, sensor drift, and transmission errors.",
-            "- **Sampling Bias:** Non-representative sample distributions skewing predictive validity.",
-            "- **Privacy & Regulatory Compliance:** Navigating GDPR, ethical consent, and sensitive PII anonymization."
-          ],
-          "answer": "Data Science extracts knowledge from data. Key collection bottlenecks include missing data, noisy records, sampling bias, and regulatory privacy constraints.",
-          "marking_hint": "1 mark for definition; 2 marks for discussing at least 3 distinct collection challenges."
-        }
+        "question": "Define Data Science. What are the common challenges in Data collection, briefly describe."
       },
       {
         "id": "cse-4126-term-niter-tt1-q2",
@@ -1649,18 +1518,7 @@
         "topics": [
           "Data Collection Methodology"
         ],
-        "question": "Which method will you apply to collect customer satisfaction data? Explain with proper justification.",
-        "solution": {
-          "steps": [
-            "1. **Recommended Method:** A hybrid approach combining **In-App Automated Micro-Surveys (CSAT / Net Promoter Score - NPS)** immediately post-purchase or post-service with optional free-form feedback.",
-            "2. **Justification:**",
-            "- **High Response Rate & Immediate Context:** Capturing sentiment right after key user interactions yields authentic, high-fidelity feedback before memory fades.",
-            "- **Quantifiable & Standardized:** Standard 1-5 star CSAT or 0-10 NPS scales enable clear statistical tracking over time.",
-            "- **Minimal Friction:** Takes less than 10 seconds, avoiding respondent fatigue associated with lengthy email forms."
-          ],
-          "answer": "In-app CSAT / NPS micro-surveys offer minimal user friction, immediate contextual validity, and clean standardized quantitative metrics.",
-          "marking_hint": "1.5 marks for selecting an appropriate method; 1.5 marks for justified reasoning."
-        }
+        "question": "Which method will you apply to collect customer satisfaction data? Explain with proper justification."
       },
       {
         "id": "cse-4126-term-niter-tt1-q3",
@@ -1670,23 +1528,7 @@
         "topics": [
           "Salaries & Skewness Analysis"
         ],
-        "question": "Salaries of 11 employees: 25, 28, 30, 32, 35, 36, 38, 40, 42, 45, 180 (thousand taka). Calculate mean, mode, and skewness.",
-        "solution": {
-          "steps": [
-            "1. **Calculate Mean:**",
-            "$$\\text{Sum} = 25 + 28 + 30 + 32 + 35 + 36 + 38 + 40 + 42 + 45 + 180 = 531$$",
-            "$$\\text{Mean } \\bar{x} = \\frac{531}{11} \\approx \\mathbf{48.27} \\text{ thousand taka}$$",
-            "2. **Calculate Mode:**",
-            "All 11 salary values appear exactly once. Hence, there is **no unique mode** (multimodal / uniform frequency).",
-            "3. **Calculate Median & Determine Skewness:**",
-            "- Sorted dataset ($N = 11$): 25, 28, 30, 32, 35, **36**, 38, 40, 42, 45, 180.",
-            "- Median is the 6th value: **36 thousand taka**.",
-            "- Comparison: $\\text{Mean } (48.27) > \\text{Median } (36.00)$.",
-            "- Because the mean is substantially pulled to the right by the extreme outlier salary of 180k, the distribution is **Positively Skewed (Right-Skewed)**."
-          ],
-          "answer": "Mean = 48.27k, Mode = None (no repeating values), Median = 36k. The dataset is Positively Skewed.",
-          "marking_hint": "1 mark for mean; 1 mark for mode; 1 mark for median comparison and correct skewness deduction."
-        }
+        "question": "Salaries of 11 employees: 25, 28, 30, 32, 35, 36, 38, 40, 42, 45, 180 (thousand taka). Calculate mean, mode, and skewness."
       },
       {
         "id": "cse-4126-term-niter-tt1-q4",
@@ -1696,29 +1538,7 @@
         "topics": [
           "Five Number Summary & Quantile Plot"
         ],
-        "question": "Age dataset with frequencies: 1(2), 2(2), 3(1), 4(3), 5(2), 6(3). a) Quartiles & Five-number summary. b) IQR and outliers. c) Quantile plot description.",
-        "solution": {
-          "steps": [
-            "1. **Expanded Ordered Data ($N = 13$):**",
-            "$$1, \\; 1, \\; 2, \\; 2, \\; 3, \\; 4, \\; 4, \\; 4, \\; 5, \\; 5, \\; 6, \\; 6, \\; 6$$",
-            "2. **Five-Number Summary:**",
-            "- **Minimum:** 1",
-            "- **Q1 (First Quartile):** Position $0.25 \\times (13 + 1) = 3.5$ -> average of 3rd (2) and 4th (2) value = **2**",
-            "- **Median (Q2):** Position $\\frac{13+1}{2} = 7^{\\text{th}}$ value = **4**",
-            "- **Q3 (Third Quartile):** Position $0.75 \\times (13 + 1) = 10.5$ -> average of 10th (5) and 11th (6) value = **5.5**",
-            "- **Maximum:** 6",
-            "- Five-number summary: **[1, 2, 4, 5.5, 6]**",
-            "3. **Interquartile Range (IQR) & Outlier Detection:**",
-            "- $\\text{IQR} = Q_3 - Q_1 = 5.5 - 2 = \\mathbf{3.5}$",
-            "- Lower Outer Fence: $Q_1 - 1.5 \\times \\text{IQR} = 2 - 1.5(3.5) = 2 - 5.25 = -3.25$",
-            "- Upper Outer Fence: $Q_3 + 1.5 \\times \\text{IQR} = 5.5 + 1.5(3.5) = 5.5 + 5.25 = 10.75$",
-            "- Since all observations lie well within $[-3.25, 10.75]$, there are **no outliers**.",
-            "4. **Quantile Plot:**",
-            "Pairs each ordered value $x_{(i)}$ against its percentile fraction $f_i = \\frac{i - 0.5}{N}$, plotting points $(f_i, x_{(i)})$."
-          ],
-          "answer": "Five Number Summary: Min=1, Q1=2, Median=4, Q3=5.5, Max=6. IQR = 3.5. Outliers: None detected.",
-          "marking_hint": "1 mark for five-number summary; 1 mark for IQR and outlier boundaries; 1 mark for quantile plot."
-        }
+        "question": "Age dataset with frequencies: 1(2), 2(2), 3(1), 4(3), 5(2), 6(3). a) Quartiles & Five-number summary. b) IQR and outliers. c) Quantile plot description."
       },
       {
         "id": "cse-4126-term-niter-tt1-q5",
@@ -1728,30 +1548,7 @@
         "topics": [
           "Frequency Table & Histogram"
         ],
-        "question": "20 exam scores. Intervals: [40-49], [50-59], [60-69], [70-79], [80-89], [90-99]. a) Frequency table. b) Histogram. c) Highest frequency interval. d) Distribution description.",
-        "solution": {
-          "steps": [
-            "**(a) Frequency Table Construction:**",
-            "Scores: 42, 45, 47, 48, 51, 53, 55, 56, 57, 61, 63, 65, 66, 68, 72, 75, 78, 81, 85, 90 ($N = 20$).",
-            "| Interval | Tally | Frequency | Relative Frequency |",
-            "| :---: | :---: | :---: | :---: |",
-            "| [40–49] | 42, 45, 47, 48 | 4 | 20% |",
-            "| [50–59] | 51, 53, 55, 56, 57 | 5 | 25% |",
-            "| [60–69] | 61, 63, 65, 66, 68 | 5 | 25% |",
-            "| [70–79] | 72, 75, 78 | 3 | 15% |",
-            "| [80–89] | 81, 85 | 2 | 10% |",
-            "| [90–99] | 90 | 1 | 5% |",
-            "| **Total** | | **20** | **100%** |",
-            "**(b) Histogram Visualization:**",
-            "Bar heights corresponding to frequencies: [40-49]: 4, [50-59]: 5, [60-69]: 5, [70-79]: 3, [80-89]: 2, [90-99]: 1.",
-            "**(c) Interval with Highest Frequency:**",
-            "The intervals **[50–59]** and **[60–69]** share the highest frequency of **5 students each**.",
-            "**(d) Overall Distribution Description:**",
-            "The histogram exhibits a unimodal/bimodal center around 50–69 marks, tapering off smoothly toward higher score ranges with a mild **positive skew**."
-          ],
-          "answer": "Constructed frequency distribution table; highest frequency intervals are [50-59] and [60-69] (5 each); distribution is mildly right-skewed.",
-          "marking_hint": "1.5 marks for frequency table; 1 mark for histogram description; 0.5 mark for modal intervals; 1 mark for distribution analysis."
-        }
+        "question": "20 exam scores. Intervals: [40-49], [50-59], [60-69], [70-79], [80-89], [90-99]. a) Frequency table. b) Histogram. c) Highest frequency interval. d) Distribution description."
       },
       {
         "id": "cse-4126-term-niter-tt1-q6",
@@ -1761,25 +1558,7 @@
         "topics": [
           "Mean, Variance & Correlation"
         ],
-        "question": "Study hours X and marks Y of 7 students. a) Calculate Mean, Variance, Standard Deviation of marks Y. b) Scatter plot and correlation type.",
-        "solution": {
-          "steps": [
-            "**(a) Mean, Variance, and Standard Deviation of Marks (Y):**",
-            "Marks $Y$: 45, 50, 56, 62, 67, 73, 80 ($n = 7$).",
-            "- Sum $\\sum Y = 45 + 50 + 56 + 62 + 67 + 73 + 80 = 433$.",
-            "- Mean: $\\bar{Y} = \\frac{433}{7} \\approx \\mathbf{61.857}$.",
-            "- Deviations $(Y_i - \\bar{Y})$: -16.857, -11.857, -5.857, 0.143, 5.143, 11.143, 18.143.",
-            "- Squared deviations $\\sum (Y_i - \\bar{Y})^2 = 284.16 + 140.59 + 34.30 + 0.02 + 26.45 + 124.17 + 329.17 = 898.86$.",
-            "- Sample Variance: $s^2 = \\frac{898.86}{n - 1} = \\frac{898.86}{6} \\approx \\mathbf{149.81}$. (Population variance $\\sigma^2 \\approx 128.41$).",
-            "- Sample Standard Deviation: $s = \\sqrt{149.81} \\approx \\mathbf{12.24}$.",
-            "- *Observation:* The marks are spread around an average of ~62 marks with a standard deviation of ~12.2 marks.",
-            "**(b) Scatter Plot & Correlation:**",
-            "- For every 1-hour increase in study time $X$, marks $Y$ increase steadily by roughly 5.8 marks.",
-            "- Pearson correlation $r \\approx +0.999$, indicating an **exceptionally strong positive linear correlation**."
-          ],
-          "answer": "Mean Marks = 61.86, Sample Variance = 149.81, Standard Deviation = 12.24. Strong positive linear correlation exists between study hours and marks.",
-          "marking_hint": "2 marks for mean, variance, and standard deviation calculations; 2 marks for scatter plot and correlation determination."
-        }
+        "question": "Study hours X and marks Y of 7 students. a) Calculate Mean, Variance, Standard Deviation of marks Y. b) Scatter plot and correlation type."
       }
     ]
   },
@@ -1809,23 +1588,7 @@
         "topics": [
           "Exploratory Data Analysis (EDA)"
         ],
-        "question": "Define Exploratory Data Analysis (EDA) with its variants. Select the most appropriate visualization technique from Histogram, Box Plot, and Bar Chart for the given dataset with proper justification.",
-        "solution": {
-          "steps": [
-            "1. **Exploratory Data Analysis (EDA) Definition:**",
-            "An analytical approach invented by John Tukey to analyze and summarize datasets' main characteristics, often with visual methods, before applying formal statistical modeling or machine learning.",
-            "2. **Variants of EDA:**",
-            "- **Univariate EDA:** Examines one variable at a time (e.g., summary statistics, histogram of Marks).",
-            "- **Bivariate EDA:** Explores pairwise relationships between two variables (e.g., scatter plot of Study Hours vs. Marks).",
-            "- **Multivariate EDA:** Evaluates interactions among three or more variables simultaneously (e.g., correlation heatmaps, pairplots).",
-            "3. **Visualization Technique Selection for Dataset:**",
-            "- **Bar Chart:** *Best for the categorical variable `Language`.* Compares frequencies of programming languages (Python: 2, C++: 1, C: 1, Java: 1).",
-            "- **Histogram:** *Best for continuous variables with large samples.* Given the small sample ($N=5$), a histogram provides limited density resolution, but displays score distribution.",
-            "- **Box Plot:** *Best for displaying median, quartiles, and detecting outliers in `Marks` or `Study Hours`.* Summarizes range ($45$ to $98$) and median ($75$) cleanly without sample size distortion."
-          ],
-          "answer": "EDA explores datasets visually and statistically. For this dataset, a Bar Chart is optimal for categorical Language, while a Box Plot effectively captures Marks and Study Hours distribution.",
-          "marking_hint": "3 marks for EDA definition and univariate/bivariate/multivariate variants; 3 marks for evaluating and justifying Histogram, Box Plot, and Bar Chart."
-        }
+        "question": "Define Exploratory Data Analysis (EDA) with its variants. Select the most appropriate visualization technique from Histogram, Box Plot, and Bar Chart for the given dataset with proper justification."
       },
       {
         "id": "cse-4126-term-niter-tt2-q2",
@@ -1835,46 +1598,7 @@
         "topics": [
           "Pandas Data Preprocessing"
         ],
-        "question": "Perform pandas data preprocessing: A) Delete NULL from Customer. B) Replace NULL with Mean in Order. C) Remove Duplicates. D) Inner Join Customer and Order tables.",
-        "solution": {
-          "steps": [
-            "**A) Delete NULL values from Customer table:**",
-            "```python",
-            "df_cust_clean = df_customer.dropna()",
-            "```",
-            "Row with Customer_ID 102 (Name: None) is dropped:",
-            "| Customer_ID | Age | Name |",
-            "| :---: | :---: | :---: |",
-            "| 101 | 24 | John |",
-            "| 102 | '22' | Alex |",
-            "**B) Replace NULL with Mean Values in Order table:**",
-            "Existing non-null amounts are 7000 and 7000, so Mean = 7000.0.",
-            "```python",
-            "df_order['Amount'] = df_order['Amount'].fillna(df_order['Amount'].mean())",
-            "```",
-            "| Order_ID | Cust_ID | Amount |",
-            "| :---: | :---: | :---: |",
-            "| 1 | 101 | 7000.0 |",
-            "| 2 | 102 | 7000.0 |",
-            "| 2 | 102 | 7000.0 |",
-            "**C) Remove Duplicates from both tables:**",
-            "```python",
-            "df_cust_dedup = df_customer.drop_duplicates()",
-            "df_order_dedup = df_order.drop_duplicates()",
-            "```",
-            "Order table drops duplicate row 2 (leaving 2 unique orders).",
-            "**D) Inner Join between Customer and Order Table:**",
-            "```python",
-            "merged_df = pd.merge(df_cust_clean, df_order_dedup, left_on='Customer_ID', right_on='Cust_ID', how='inner')",
-            "```",
-            "| Customer_ID | Age | Name | Order_ID | Cust_ID | Amount |",
-            "| :---: | :---: | :---: | :---: | :---: | :---: |",
-            "| 101 | 24 | John | 1 | 101 | 7000.0 |",
-            "| 102 | '22' | Alex | 2 | 102 | 7000.0 |"
-          ],
-          "answer": "Accurately demonstrated pandas commands and tabular outputs for dropna(), fillna(mean), drop_duplicates(), and pd.merge() inner join.",
-          "marking_hint": "1 mark each for parts A, B, C, and D with python code and resultant table."
-        }
+        "question": "Perform pandas data preprocessing: A) Delete NULL from Customer. B) Replace NULL with Mean in Order. C) Remove Duplicates. D) Inner Join Customer and Order tables."
       },
       {
         "id": "cse-4126-term-niter-tt2-q3",
@@ -1884,36 +1608,7 @@
         "topics": [
           "Chi-Square Test of Independence"
         ],
-        "question": "Retail shop customer occupation vs buying premium membership. Perform Chi-square test on critical value chi^2_{0.05, 2} = 5.991.",
-        "solution": {
-          "steps": [
-            "1. **Observed Frequencies ($O$) & Marginals:**",
-            "| Occupation | Bought | Not Bought | Total |",
-            "| :--- | :---: | :---: | :---: |",
-            "| **Student** | 18 | 22 | **40** |",
-            "| **Employee** | 31 | 9 | **40** |",
-            "| **Business** | 17 | 23 | **40** |",
-            "| **Total** | **66** | **54** | **N = 120** |",
-            "2. **Calculate Expected Frequencies ($E = \\frac{\\text{Row Total} \\times \\text{Col Total}}{N}$):**",
-            "- $E(\\text{Student, Bought}) = \\frac{40 \\times 66}{120} = 22.0$",
-            "- $E(\\text{Student, Not Bought}) = \\frac{40 \\times 54}{120} = 18.0$",
-            "- $E(\\text{Employee, Bought}) = \\frac{40 \\times 66}{120} = 22.0$",
-            "- $E(\\text{Employee, Not Bought}) = \\frac{40 \\times 54}{120} = 18.0$",
-            "- $E(\\text{Business, Bought}) = \\frac{40 \\times 66}{120} = 22.0$",
-            "- $E(\\text{Business, Not Bought}) = \\frac{40 \\times 54}{120} = 18.0$",
-            "3. **Compute $\\chi^2 = \\sum \\frac{(O - E)^2}{E}$:**",
-            "- Student: $\\frac{(18-22)^2}{22} + \\frac{(22-18)^2}{18} = \\frac{16}{22} + \\frac{16}{18} \\approx 0.727 + 0.889 = 1.616$",
-            "- Employee: $\\frac{(31-22)^2}{22} + \\frac{(9-18)^2}{18} = \\frac{81}{22} + \\frac{81}{18} \\approx 3.682 + 4.500 = 8.182$",
-            "- Business: $\\frac{(17-22)^2}{22} + \\frac{(23-18)^2}{18} = \\frac{25}{22} + \\frac{25}{18} \\approx 1.136 + 1.389 = 2.525$",
-            "$$\\chi^2_{\\text{calc}} = 1.616 + 8.182 + 2.525 = \\mathbf{12.323}$$",
-            "4. **Statistical Decision:**",
-            "- Degrees of freedom: $df = (r - 1)(c - 1) = (3 - 1)(2 - 1) = 2$.",
-            "- Critical value at $\\alpha = 0.05$: $\\chi^2_{\\text{crit}} = 5.991$.",
-            "- Since $\\chi^2_{\\text{calc}} (12.323) > \\chi^2_{\\text{crit}} (5.991)$, we **reject the null hypothesis ($H_0$)**."
-          ],
-          "answer": "Calculated Chi-Square = 12.323 > 5.991. We reject H0, concluding customer occupation significantly affects whether they buy premium membership.",
-          "marking_hint": "1 mark for expected frequency matrix; 2 marks for chi-square computation; 1 mark for critical value comparison and statistical inference."
-        }
+        "question": "Retail shop customer occupation vs buying premium membership. Perform Chi-square test on critical value chi^2_{0.05, 2} = 5.991."
       },
       {
         "id": "cse-4126-term-niter-tt2-q4",
@@ -1923,37 +1618,7 @@
         "topics": [
           "Pearson Correlation Coefficient Matrix"
         ],
-        "question": "Find the Pearson Correlation Coefficient matrix for Height(cm), Weight(kg), and Exercise(H) for Persons A, B, C. Answer: A) Strongest positive relationship. B) Negative relationship. C) Weakly correlated pair.",
-        "solution": {
-          "steps": [
-            "1. **Summary Statistics ($N = 3$):**",
-            "- Height $H = [160, 170, 180] \\implies \\bar{H} = 170$, $h' = H - \\bar{H} = [-10, 0, 10]$, $\\sum h'^2 = 100 + 0 + 100 = 200$.",
-            "- Weight $W = [55, 68, 72] \\implies \\bar{W} = \\frac{195}{3} = 65$, $w' = W - \\bar{W} = [-10, 3, 7]$, $\\sum w'^2 = 100 + 9 + 49 = 158$.",
-            "- Exercise $E = [3, 5, 2] \\implies \\bar{E} = \\frac{10}{3} \\approx 3.333$, $e' = E - \\bar{E} = [-0.333, 1.667, -1.333]$, $\\sum e'^2 = 0.111 + 2.778 + 1.778 = 4.667$.",
-            "2. **Calculate Pairwise Pearson Correlation $r = \\frac{\\sum x' y'}{\\sqrt{\\sum x'^2 \\sum y'^2}}$:**",
-            "- **Height and Weight ($r_{H, W}$):**",
-            "  $\\sum h' w' = (-10)(-10) + (0)(3) + (10)(7) = 100 + 0 + 70 = 170$.",
-            "  $$r_{H, W} = \\frac{170}{\\sqrt{200 \\times 158}} = \\frac{170}{\\sqrt{31600}} = \\frac{170}{177.76} \\approx \\mathbf{+0.9563}$$",
-            "- **Height and Exercise ($r_{H, E}$):**",
-            "  $\\sum h' e' = (-10)(-0.333) + (0)(1.667) + (10)(-1.333) = 3.333 - 13.333 = -10.0$.",
-            "  $$r_{H, E} = \\frac{-10.0}{\\sqrt{200 \\times 4.667}} = \\frac{-10.0}{\\sqrt{933.33}} = \\frac{-10.0}{30.55} \\approx \\mathbf{-0.3273}$$",
-            "- **Weight and Exercise ($r_{W, E}$):**",
-            "  $\\sum w' e' = (-10)(-0.333) + (3)(1.667) + (7)(-1.333) = 3.333 + 5.001 - 9.331 = -0.997 \\approx -1.0$.",
-            "  $$r_{W, E} = \\frac{-1.0}{\\sqrt{158 \\times 4.667}} = \\frac{-1.0}{\\sqrt{737.33}} = \\frac{-1.0}{27.15} \\approx \\mathbf{-0.0368}$$",
-            "3. **Pearson Correlation Coefficient Matrix:**",
-            "| | Height | Weight | Exercise |",
-            "| :--- | :---: | :---: | :---: |",
-            "| **Height** | 1.000 | 0.956 | -0.327 |",
-            "| **Weight** | 0.956 | 1.000 | -0.037 |",
-            "| **Exercise** | -0.327 | -0.037 | 1.000 |",
-            "4. **Question Answers:**",
-            "- **A) Strongest Positive Relationship:** **Height and Weight** ($r = +0.956$).",
-            "- **B) Negative Relationship:** **Height and Exercise** ($r = -0.327$).",
-            "- **C) Weakly Correlated / Almost Uncorrelated:** **Weight and Exercise** ($r = -0.037 \\approx 0$)."
-          ],
-          "answer": "Correlation Matrix computed. Height & Weight is strongest positive (0.956); Height & Exercise is negative (-0.327); Weight & Exercise is almost uncorrelated (-0.037).",
-          "marking_hint": "3 marks for computing pairwise correlation coefficients and matrix; 1 mark each for answering A, B, and C."
-        }
+        "question": "Find the Pearson Correlation Coefficient matrix for Height(cm), Weight(kg), and Exercise(H) for Persons A, B, C. Answer: A) Strongest positive relationship. B) Negative relationship. C) Weakly correlated pair."
       }
     ]
   },
@@ -1984,22 +1649,7 @@
         "topics": [
           "IQR & Outlier Detection"
         ],
-        "question": "What is IQR. How we can find out Outliers using IQR?",
-        "solution": {
-          "steps": [
-            "1. **Interquartile Range (IQR) Definition:**",
-            "The Interquartile Range is a robust measure of statistical dispersion representing the spread of the middle 50% of an ordered dataset: $\\text{IQR} = Q_3 - Q_1$, where $Q_3$ is the 75th percentile and $Q_1$ is the 25th percentile.",
-            "2. **Outlier Detection via Tukey's Fences:**",
-            "- **Step 1:** Calculate first quartile $Q_1$ and third quartile $Q_3$.",
-            "- **Step 2:** Compute $\\text{IQR} = Q_3 - Q_1$.",
-            "- **Step 3:** Establish outlier boundaries (fences):",
-            "  - **Lower Fence:** $\\text{LF} = Q_1 - 1.5 \\times \\text{IQR}$",
-            "  - **Upper Fence:** $\\text{UF} = Q_3 + 1.5 \\times \\text{IQR}$",
-            "- **Step 4:** Any observation $x$ where $x < \\text{LF}$ or $x > \\text{UF}$ is classified as an **outlier**."
-          ],
-          "answer": "IQR = Q3 - Q1 measures middle 50% spread. Values outside [Q1 - 1.5*IQR, Q3 + 1.5*IQR] are identified as outliers.",
-          "marking_hint": "1.5 marks for IQR definition; 1.5 marks for lower/upper fence formulas and identification rule."
-        }
+        "question": "What is IQR. How we can find out Outliers using IQR?"
       },
       {
         "id": "cse-4126-term-fec-tt1-q2",
@@ -2009,32 +1659,7 @@
         "topics": [
           "KNN Missing Value Imputation"
         ],
-        "question": "Handle missing values in the 3x3 dataset using KNN Imputation with K = 2.",
-        "solution": {
-          "steps": [
-            "1. **Dataset Review:**",
-            "- Row 1: $(X_1=20, X_2=30, X_3=40)$ [Complete]",
-            "- Row 2: $(X_1=25, X_2=?, X_3=45)$ [Missing $X_2$]",
-            "- Row 3: $(X_1=?, X_2=40, X_3=50)$ [Missing $X_1$]",
-            "2. **Imputing Missing $X_2$ in Row 2 ($K = 2$):**",
-            "- For Row 2, available features are $X_1 = 25$ and $X_3 = 45$.",
-            "- Distance to Row 1 (using available overlapping features $X_1, X_3$):",
-            "  $$d(\\text{R2}, \\text{R1}) = \\sqrt{(25 - 20)^2 + (45 - 40)^2} = \\sqrt{25 + 25} = \\sqrt{50} \\approx 7.07$$",
-            "- Distance to Row 3 (overlapping available feature is $X_3$):",
-            "  $$d(\\text{R2}, \\text{R3}) = |45 - 50| = 5$$",
-            "- Both Row 1 and Row 3 serve as the $K=2$ nearest neighbors.",
-            "- Impute $X_2$ as the average of $X_2$ in Row 1 ($30$) and Row 3 ($40$):",
-            "  $$X_2^{\\text{imputed}} = \\frac{30 + 40}{2} = \\mathbf{35}$$",
-            "3. **Imputing Missing $X_1$ in Row 3 ($K = 2$):**",
-            "- For Row 3, available features are $X_2 = 40$ and $X_3 = 50$.",
-            "- Distance to Row 1: $d(\\text{R3}, \\text{R1}) = \\sqrt{(40 - 30)^2 + (50 - 40)^2} = \\sqrt{100 + 100} = \\sqrt{200} \\approx 14.14$.",
-            "- Distance to Row 2 (using newly imputed $X_2 = 35$): $d(\\text{R3}, \\text{R2}) = \\sqrt{(40 - 35)^2 + (50 - 45)^2} = \\sqrt{25 + 25} = \\sqrt{50} \\approx 7.07$.",
-            "- Impute $X_1$ as the average of $X_1$ in Row 1 ($20$) and Row 2 ($25$):",
-            "  $$X_1^{\\text{imputed}} = \\frac{20 + 25}{2} = \\mathbf{22.5}$$"
-          ],
-          "answer": "Imputed values: X2 for Row 2 = 35, and X1 for Row 3 = 22.5.",
-          "marking_hint": "1.5 marks for distance calculations and imputing X2=35; 1.5 marks for distance calculations and imputing X1=22.5."
-        }
+        "question": "Handle missing values in the 3x3 dataset using KNN Imputation with K = 2."
       },
       {
         "id": "cse-4126-term-fec-tt1-q3",
@@ -2044,21 +1669,7 @@
         "topics": [
           "Normalization vs Standardization"
         ],
-        "question": "Describe the difference between normalization and standardization in feature scaling.",
-        "solution": {
-          "steps": [
-            "1. **Comparative Framework:**",
-            "| Characteristic | Normalization (Min-Max Scaling) | Standardization (Z-Score Scaling) |",
-            "| :--- | :--- | :--- |",
-            "| **Mathematical Formula** | $$x' = \\frac{x - x_{\\min}}{x_{\\max} - x_{\\min}}$$ | $$z = \\frac{x - \\mu}{\\sigma}$$ |",
-            "| **Output Range** | Strictly bounded, usually $[0, 1]$ (or $[-1, 1]$). | Unbounded; centered at mean $\\mu = 0$ with variance $\\sigma^2 = 1$. |",
-            "| **Outlier Sensitivity** | **High** (outliers compress typical values into a narrow range). | **Low / Robust** (outliers do not restrict the scaling of other points). |",
-            "| **Distribution Assumption**| Does not assume any specific probability distribution. | Assumes features roughly follow a Gaussian (normal) distribution. |",
-            "| **Typical Algorithms** | Neural Networks, Image Processing, KNN. | Linear Regression, Logistic Regression, SVM, PCA. |"
-          ],
-          "answer": "Normalization bounds data to [0, 1] and is sensitive to outliers. Standardization centers data at zero mean with unit variance and is robust against outliers.",
-          "marking_hint": "1.5 marks for formulas and value ranges; 1.5 marks for outlier sensitivity and algorithmic use cases."
-        }
+        "question": "Describe the difference between normalization and standardization in feature scaling."
       },
       {
         "id": "cse-4126-term-fec-tt1-q4",
@@ -2068,29 +1679,7 @@
         "topics": [
           "Pearson Correlation Coefficient"
         ],
-        "question": "Calculate the correlation coefficient between Hours Studied (X) and Test Score (Y) for 5 students.",
-        "solution": {
-          "steps": [
-            "1. **Given Data Points ($n = 5$):**",
-            "$(2, 50), \\; (3, 60), \\; (4, 65), \\; (5, 75), \\; (6, 85)$.",
-            "2. **Compute Means:**",
-            "- $\\bar{X} = \\frac{2 + 3 + 4 + 5 + 6}{5} = \\frac{20}{5} = \\mathbf{4.0}$",
-            "- $\\bar{Y} = \\frac{50 + 60 + 65 + 75 + 85}{5} = \\frac{335}{5} = \\mathbf{67.0}$",
-            "3. **Compute Deviations & Products:**",
-            "| Student | $x_i$ | $y_i$ | $x' = x_i - \\bar{X}$ | $y' = y_i - \\bar{Y}$ | $x'^2$ | $y'^2$ | $x' y'$ |",
-            "| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |",
-            "| 1 | 2 | 50 | -2 | -17 | 4 | 289 | +34 |",
-            "| 2 | 3 | 60 | -1 | -7 | 1 | 49 | +7 |",
-            "| 3 | 4 | 65 | 0 | -2 | 0 | 4 | 0 |",
-            "| 4 | 5 | 75 | +1 | +8 | 1 | 64 | +8 |",
-            "| 5 | 6 | 85 | +2 | +18 | 4 | 324 | +36 |",
-            "| **Total** | | | **0** | **0** | **10** | **730** | **85** |",
-            "4. **Compute Pearson Correlation Coefficient $r$:**",
-            "$$r = \\frac{\\sum x' y'}{\\sqrt{\\sum x'^2 \\cdot \\sum y'^2}} = \\frac{85}{\\sqrt{10 \\times 730}} = \\frac{85}{\\sqrt{7300}} = \\frac{85}{85.440} \\approx \\mathbf{+0.9949}$$"
-          ],
-          "answer": "Pearson correlation coefficient r = +0.9949, indicating an almost perfect positive linear relationship between hours studied and test scores.",
-          "marking_hint": "1.5 marks for means and deviations; 2 marks for covariance and variance sums; 1.5 marks for final correlation r = 0.995."
-        }
+        "question": "Calculate the correlation coefficient between Hours Studied (X) and Test Score (Y) for 5 students."
       },
       {
         "id": "cse-4126-term-fec-tt1-q5",
@@ -2100,42 +1689,7 @@
         "topics": [
           "Chi-Square Test of Independence"
         ],
-        "question": "Chi-Square Test of Independence on Gender vs Learning Method at alpha = 0.05. Critical value = 5.991 (df=2). Reject or Fail to Reject H0?",
-        "solution": {
-          "steps": [
-            "1. **Observed Frequencies ($O$) & Marginal Totals ($N = 100$):**",
-            "| Gender | Online | Offline | Hybrid | Row Total |",
-            "| :--- | :---: | :---: | :---: | :---: |",
-            "| **Male** | 30 | 10 | 10 | **50** |",
-            "| **Female** | 10 | 20 | 20 | **50** |",
-            "| **Col Total** | **40** | **30** | **30** | **N = 100** |",
-            "2. **Calculate Expected Frequencies ($E = \\frac{\\text{Row Total} \\times \\text{Col Total}}{N}$):**",
-            "- $E(\\text{Male, Online}) = \\frac{50 \\times 40}{100} = 20.0$",
-            "- $E(\\text{Male, Offline}) = \\frac{50 \\times 30}{100} = 15.0$",
-            "- $E(\\text{Male, Hybrid}) = \\frac{50 \\times 30}{100} = 15.0$",
-            "- $E(\\text{Female, Online}) = \\frac{50 \\times 40}{100} = 20.0$",
-            "- $E(\\text{Female, Offline}) = \\frac{50 \\times 30}{100} = 15.0$",
-            "- $E(\\text{Female, Hybrid}) = \\frac{50 \\times 30}{100} = 15.0$",
-            "3. **Compute $\\chi^2 = \\sum \\frac{(O - E)^2}{E}$:**",
-            "- Male cells:",
-            "  - Online: $\\frac{(30 - 20)^2}{20} = \\frac{100}{20} = 5.0$",
-            "  - Offline: $\\frac{(10 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
-            "  - Hybrid: $\\frac{(10 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
-            "- Female cells:",
-            "  - Online: $\\frac{(10 - 20)^2}{20} = \\frac{100}{20} = 5.0$",
-            "  - Offline: $\\frac{(20 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
-            "  - Hybrid: $\\frac{(20 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
-            "$$\\chi^2_{\\text{calc}} = 5.0 + 1.667 + 1.667 + 5.0 + 1.667 + 1.667 = \\mathbf{16.667}$$",
-            "4. **Statistical Decision:**",
-            "- Degrees of freedom: $df = (r - 1)(c - 1) = (2 - 1)(3 - 1) = 2$.",
-            "- Critical value at $\\alpha = 0.05$: $\\chi^2_{\\text{crit}} = 5.991$.",
-            "- Comparison: $\\chi^2_{\\text{calc}} (16.667) > \\chi^2_{\\text{crit}} (5.991)$.",
-            "- Decision: **Reject the Null Hypothesis ($H_0$)**.",
-            "- Conclusion: There is a statistically significant association between students' gender and their preferred learning method."
-          ],
-          "answer": "Calculated Chi-Square = 16.667 > 5.991. Reject H0; there is a significant association between gender and preferred learning method.",
-          "marking_hint": "2 marks for expected frequency matrix; 2.5 marks for chi-square computation; 1.5 marks for comparison with critical value and statistical inference."
-        }
+        "question": "Chi-Square Test of Independence on Gender vs Learning Method at alpha = 0.05. Critical value = 5.991 (df=2). Reject or Fail to Reject H0?"
       }
     ]
   }

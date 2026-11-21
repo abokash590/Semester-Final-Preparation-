@@ -1335,16 +1335,7 @@
         "topics": [
           "Informed vs Uninformed Search"
         ],
-        "question": "What is Heuristic Function? What do you understand by Informed search and Uninformed search? [1+4]",
-        "solution": {
-          "steps": [
-            "1. **Heuristic Function $h(n)$:** An evaluation function that estimates the cheapest cost from node $n$ to a target goal state. It incorporates problem-specific domain knowledge.",
-            "2. **Uninformed (Blind) Search:** Algorithms (BFS, DFS, Uniform Cost Search, Iterative Deepening) that systematically explore the state space relying strictly on the graph definition and path cost without any estimate of how close a state is to the goal.",
-            "3. **Informed (Heuristic) Search:** Algorithms (Greedy Best-First Search, A* Search) that utilize $h(n)$ to steer exploration towards the most promising paths, dramatically pruning the number of expanded states."
-          ],
-          "answer": "Heuristics estimate remaining distance to goal. Informed search utilizes heuristics to guide search direction; uninformed search operates blindly.",
-          "marking_hint": "Award 1 mark for heuristic function definition, 2 marks for uninformed search, 2 marks for informed search."
-        }
+        "question": "What is Heuristic Function? What do you understand by Informed search and Uninformed search? [1+4]"
       },
       {
         "id": "cse-4101-term-mec-tt1-qb",
@@ -1354,22 +1345,7 @@
         "topics": [
           "A* Search & Heuristics"
         ],
-        "question": "Consider the search space where S is start and G is goal. Show steps to find G using A* Search algorithm.",
-        "solution": {
-          "steps": [
-            "1. **Evaluation Function:** $f(n) = g(n) + h(n)$, where $g(n)$ is actual cost from $S$ to $n$, and $h(n)$ is heuristic inside node.",
-            "2. **Initial Priority Queue (PQ):** Insert $S$: $g=0, h=9 \\implies f(S) = 9$. PQ: `[(S, f=9)]`.",
-            "3. **Step 1:** Expand $S$. Successors: $A$ ($g=1, h=6 \\implies f=7$), $D$ ($g=2, h=8 \\implies f=10$). PQ: `[(S-A, 7), (S-D, 10)]`.",
-            "4. **Step 2:** Expand $A$ ($f=7$). Successors: $Q$ ($g=1+4=5, h=4 \\implies f=9$), $E$ ($g=1+5=6, h=5 \\implies f=11$). PQ: `[(S-A-Q, 9), (S-D, 10), (S-A-E, 11)]`.",
-            "5. **Step 3:** Expand $Q$ ($f=9$). Successor: $E$ ($g=5+2=7, h=5 \\implies f=12$, dominated by existing path to $E$ of cost 6). PQ: `[(S-D, 10), (S-A-E, 11), (S-A-Q-E, 12)]`.",
-            "6. **Step 4:** Expand $D$ ($f=10$). Successors: $P$ ($g=2+3=5, h=3 \\implies f=8$), $G$ ($g=2+7=9, h=0 \\implies f=9$). PQ: `[(S-D-P, 8), (S-D-G, 9), (S-A-E, 11), (S-A-Q-E, 12)]`.",
-            "7. **Step 5:** Expand $P$ ($f=8$). Successor: $G$ ($g=5+2=7, h=0 \\implies f=7$). PQ: `[(S-D-P-G, 7), (S-D-G, 9), (S-A-E, 11)]`.",
-            "8. **Step 6:** Pop $G$ ($f=7$). Goal state reached!",
-            "9. **Optimal Path:** $S \\to D \\to P \\to G$ with optimal total cost $g^* = 7$."
-          ],
-          "answer": "A* finds optimal path S -> D -> P -> G with total cost = 7.",
-          "marking_hint": "Award 1 mark for each expansion step with correct f(n) calculation, 1 mark for final optimal path."
-        }
+        "question": "Consider the search space where S is start and G is goal. Show steps to find G using A* Search algorithm."
       },
       {
         "id": "cse-4101-term-mec-tt1-qc",
@@ -1379,26 +1355,9 @@
         "topics": [
           "Adversarial Search & Min-Max"
         ],
-        "question": "Apply MiniMax Algorithm on the given Game Tree assuming first player as maximizing.",
-        "solution": {
-          "steps": [
-            "1. **Level 2 (MAX Nodes):**\n   - $E = \\max(8, 5) = 8$\n   - $F = \\max(-2, 3) = 3$\n   - $G = \\max(10, -2) = 10$\n   - $H = \\max(6, 2) = 6$\n   - $I = \\max(5, 4) = 5$\n   - $J = \\max(6, 2) = 6$\n   - $K = \\max(6, 7) = 7$\n   - $L = \\max(5, 1) = 5$\n   - $M = \\max(3, 9) = 9$",
-            "2. **Level 1 (MIN Nodes):**\n   - $B = \\min(E, F, G) = \\min(8, 3, 10) = 3$\n   - $C = \\min(H, I, J) = \\min(6, 5, 6) = 5$\n   - $D = \\min(K, L, M) = \\min(7, 5, 9) = 5$",
-            "3. **Level 0 (Root A - MAX Node):**\n   - $A = \\max(B, C, D) = \\max(3, 5, 5) = 5$",
-            "4. **Minimax Decision:** Root player should choose branch $C$ or $D$, guaranteeing a payoff of 5."
-          ],
-          "answer": "Minimax Value at Root A = 5. Optimal choice is branch C or D.",
-          "marking_hint": "Award 1.5 marks for Level 2 values, 1.5 marks for Level 1 values, 1 mark for root decision."
-        }
+        "question": "Apply MiniMax Algorithm on the given Game Tree assuming first player as maximizing."
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for MEC CSE-4101 Term Test 1 (15 Marks total).",
-      "marking_hint": "Full marks (15 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1427,16 +1386,7 @@
         "topics": [
           "First-Order Logic"
         ],
-        "question": "What are Universal Quantification and Existential Quantification? Write following expression using quantifier: i. Everybody loves CSE, ii. Somebody loves EEE. [2+4]",
-        "solution": {
-          "steps": [
-            "1. **Universal Quantifier ($\\forall$):** States that a proposition is true for all entities in the domain of discourse: $\\forall x \\, P(x)$.",
-            "2. **Existential Quantifier ($\\exists$):** States that a proposition is true for at least one entity in the domain: $\\exists x \\, P(x)$.",
-            "3. **Translations:**\n   - i. **Everybody loves CSE:** $\\forall x \\, (\\text{Person}(x) \\to \\text{Loves}(x, \\text{CSE}))$\n   - ii. **Somebody loves EEE:** $\\exists x \\, (\\text{Person}(x) \\land \\text{Loves}(x, \\text{EEE}))$"
-          ],
-          "answer": "Universal quantifier asserts universal validity across domain; Existential asserts existence of at least one instance.",
-          "marking_hint": "Award 2 marks for quantifier definitions, 2 marks for each formal predicate statement."
-        }
+        "question": "What are Universal Quantification and Existential Quantification? Write following expression using quantifier: i. Everybody loves CSE, ii. Somebody loves EEE. [2+4]"
       },
       {
         "id": "cse-4101-term-mec-tt2-qb",
@@ -1446,15 +1396,7 @@
         "topics": [
           "AI Foundations"
         ],
-        "question": "What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. [1+4]",
-        "solution": {
-          "steps": [
-            "1. **Definition:** A simple reflex agent selects actions based solely on the current percept, completely ignoring percept history. It operates on condition-action rules: *if condition then action*.",
-            "2. **Schematic Architecture:**\n   - **Sensors:** Perceive environment &rarr; \"What the world is like now\".\n   - **Condition-Action Rules:** Maps percept to rule &rarr; \"What action I should do now\".\n   - **Actuators:** Execute action into the environment."
-          ],
-          "answer": "Simple reflex agents act strictly on current percept via condition-action rules without maintaining state memory.",
-          "marking_hint": "Award 1 mark for definition, 4 marks for complete schematic architecture diagram."
-        }
+        "question": "What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. [1+4]"
       },
       {
         "id": "cse-4101-term-mec-tt2-qc",
@@ -1464,26 +1406,9 @@
         "topics": [
           "PEAS & Task Environment"
         ],
-        "question": "Determine Properties of the Environment (PEAS) for: Chess, Online Shopping, Riding bi-cycle, Chat. [4]",
-        "solution": {
-          "steps": [
-            "1. **Chess:** Fully Observable, Deterministic, Static, Discrete, Multi-agent (Competitive).",
-            "2. **Online Shopping:** Partially Observable, Stochastic, Dynamic, Discrete, Single-agent (or Multi-agent).",
-            "3. **Riding bi-cycle:** Partially Observable, Stochastic, Dynamic, Continuous, Single-agent.",
-            "4. **Chat (Conversational AI):** Partially Observable, Stochastic, Dynamic, Discrete, Multi-agent."
-          ],
-          "answer": "Complete task environment characterizations across observability, determinism, dynamics, continuity, and agent count.",
-          "marking_hint": "Award 1 mark for each domain's complete property set."
-        }
+        "question": "Determine Properties of the Environment (PEAS) for: Chess, Online Shopping, Riding bi-cycle, Chat. [4]"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for MEC CSE-4101 Term Test 2 (15 Marks total).",
-      "marking_hint": "Full marks (15 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1513,23 +1438,7 @@
         "topics": [
           "Uniform Cost Search (UCS)"
         ],
-        "question": "Define Uninformed search. Apply Uniform-Cost Search (UCS) to find the minimum cost path from node A to G. Show the cumulative path cost of each expanded node, and determine the least-cost path and its total cost.",
-        "solution": {
-          "steps": [
-            "1. **Uninformed Search Definition:** An uninformed (blind) search strategy navigates the state space relying strictly on the graph structure and edge costs without any problem-specific heuristic estimates regarding the remaining distance to the goal.",
-            "2. **Uniform-Cost Search (UCS) Principle:** UCS systematically expands the node with the lowest cumulative path cost $g(n)$ from the start node $A$ using a priority queue (min-heap).",
-            "3. **Expansion Trace:**",
-            "- **Step 1:** Queue: `[(A, path=[A], cost=0)]`. Expand `A` (cost 0). Generated: `(D, [A,D], 3)`, `(B, [A,B], 5)`.",
-            "- **Step 2:** Queue: `[D:3, B:5]`. Expand `D` (cost 3). Generated from D: `(E, [A,D,E], 3+2=5)`, `(F, [A,D,F], 3+2=5)`.",
-            "- **Step 3:** Queue: `[B:5, E:5, F:5]`. Expand `B` (cost 5). Generated from B: `(C, [A,B,C], 5+1=6)`.",
-            "- **Step 4:** Queue: `[E:5, F:5, C:6]`. Expand `E` (cost 5). Generated from E: `(B, cost 5+4=9, discarded as B already explored with 5)`, `(G, [A,D,E,G], 5+4=9)`.",
-            "- **Step 5:** Queue: `[F:5, C:6, G:9]`. Expand `F` (cost 5). Generated from F: `(G, [A,D,F,G], 5+3=8)`. Queue updates with cheaper path to G: `[C:6, G:8]`.",
-            "- **Step 6:** Queue: `[C:6, G:8]`. Expand `C` (cost 6). Generated from C: `(E, cost 6+6=12, discarded)`, `(G, cost 6+8=14, discarded)`.",
-            "- **Step 7:** Queue: `[G:8]`. Node `G` is removed from queue and passes goal test with minimal cost 8."
-          ],
-          "answer": "Least-cost Path: A -> D -> F -> G with Total Cost = 8.",
-          "marking_hint": "1 mark for definition; 3 marks for step-by-step priority queue expansion trace; 1 mark for correct path and total cost."
-        }
+        "question": "Define Uninformed search. Apply Uniform-Cost Search (UCS) to find the minimum cost path from node A to G. Show the cumulative path cost of each expanded node, and determine the least-cost path and its total cost."
       },
       {
         "id": "cse-4101-term-niter-tt1-q2",
@@ -1539,29 +1448,7 @@
         "topics": [
           "8-Puzzle & A* Search"
         ],
-        "question": "Define Informed search. Given an initial state of 8 puzzle problem and final state to be reached. Find the most cost-effective path to reach the final state from initial state using A* search algorithm.",
-        "solution": {
-          "steps": [
-            "1. **Informed Search Definition:** An informed (heuristic) search strategy uses domain-specific knowledge represented by a heuristic evaluation function $h(n)$ to estimate the cost from state $n$ to the goal, prioritizing exploration toward the most promising directions.",
-            "2. **A* Search Evaluation Function:** $f(n) = g(n) + h(n)$, where $g(n)$ is the exact cost (depth) from start state to node $n$, and $h(n)$ is an admissible heuristic (e.g., Manhattan distance: $h(n) = \\sum |x_i - x_g| + |y_i - y_g|$).",
-            "3. **Heuristic Calculation at Initial State:**",
-            "- Tile 1: at (2,1), goal (1,1) -> dist = 1",
-            "- Tile 2: at (1,1), goal (1,2) -> dist = 1",
-            "- Tile 3: at (3,1), goal (1,3) -> dist = 4",
-            "- Tile 4: at (1,3), goal (2,3) -> dist = 1",
-            "- Tile 5: at (1,2), goal (3,3) -> dist = 3",
-            "- Tile 6: at (2,2), goal (3,2) -> dist = 1",
-            "- Tile 7: at (3,3), goal (3,1) -> dist = 2",
-            "- Tile 8: at (2,3), goal (2,1) -> dist = 2",
-            "- Total Manhattan Distance $h(\\text{Start}) = 1+1+4+1+3+1+2+2 = 15$.",
-            "4. **A* Node Expansion Steps:**",
-            "From initial state (blank at (3,2)), legal moves are UP (swap with 6), LEFT (swap with 3), RIGHT (swap with 7).",
-            "- Moving UP (swap blank with 6): Blank goes to (2,2), 6 moves to (3,2) (its exact goal location!). $h$ drops by 1 -> $f = 1 + 14 = 15$. Selected as optimal branch.",
-            "- Continued systematic evaluation following minimum $f(n)$ until the goal board configuration is reached."
-          ],
-          "answer": "A* search evaluates $f(n) = g(n) + h(n)$ at each step, consistently expanding minimum $f(n)$ nodes to guarantee the optimal path to the goal state.",
-          "marking_hint": "1 mark for informed search definition; 2 marks for heuristic formula and initial calculation; 2 marks for valid A* search tree expansions."
-        }
+        "question": "Define Informed search. Given an initial state of 8 puzzle problem and final state to be reached. Find the most cost-effective path to reach the final state from initial state using A* search algorithm."
       },
       {
         "id": "cse-4101-term-niter-tt1-q3",
@@ -1571,32 +1458,7 @@
         "topics": [
           "Genetic Algorithms"
         ],
-        "question": "A genetic algorithm maximizes the number of 1s in a 6-bit chromosome. The fitness function is: f(x) = number of 1's in chromosome x. Initial population: P1=101100, P2=011011, P3=110010, P4=001111. (a) Calculate fitness & select best two parents. (b) One-point crossover after 3rd bit. (c) Mutation on 5th bit of first offspring. (d) Determine if mutated offspring is better than parent.",
-        "solution": {
-          "steps": [
-            "**(a) Fitness Calculation & Parent Selection:**",
-            "- $f(P_1 = 101100) = 3$ (three 1s)",
-            "- $f(P_2 = 011011) = 4$ (four 1s)",
-            "- $f(P_3 = 110010) = 3$ (three 1s)",
-            "- $f(P_4 = 001111) = 4$ (four 1s)",
-            "- The two highest fitness chromosomes are selected as parents: **$P_2$** and **$P_4$** (both have fitness 4).",
-            "**(b) One-Point Crossover after 3rd Bit:**",
-            "- Parent 1 ($P_2$): `011 | 011`",
-            "- Parent 2 ($P_4$): `001 | 111`",
-            "- Offspring 1 ($O_1$): `011` (from $P_2$) + `111` (from $P_4$) = **`011111`** (fitness = 5).",
-            "- Offspring 2 ($O_2$): `001` (from $P_4$) + `011` (from $P_2$) = **`001011`** (fitness = 3).",
-            "**(c) Mutation by Flipping the 5th Bit of First Offspring:**",
-            "- Offspring 1 ($O_1$): `0 1 1 1 1 1` (bits 1 through 6).",
-            "- The $5^{\\text{th}}$ bit is `1`.",
-            "- Flipping the $5^{\\text{th}}$ bit (`1 -> 0`) produces mutated offspring: **$O_1' = 011101$**.",
-            "**(d) Fitness Evaluation of Mutated Offspring:**",
-            "- $f(O_1') = f(011101) = 4$ (four 1s: bits 2, 3, 4, 6).",
-            "- Parent fitness: $f(P_2) = 4$ and $f(P_4) = 4$.",
-            "- Comparison: $f(O_1') = 4 = f(\\text{Parents})$. The mutated offspring is **equally fit** to its parents, but **not strictly better**."
-          ],
-          "answer": "Selected Parents: P2 and P4 (fitness 4). Offspring: O1 = 011111, O2 = 001011. Mutated Offspring: O1' = 011101 (fitness = 4). It is not strictly better than its parents.",
-          "marking_hint": "1.5 marks for part (a); 1.5 marks for part (b); 1.5 marks for part (c); 1.5 marks for part (d) with correct comparison."
-        }
+        "question": "A genetic algorithm maximizes the number of 1s in a 6-bit chromosome. The fitness function is: f(x) = number of 1's in chromosome x. Initial population: P1=101100, P2=011011, P3=110010, P4=001111. (a) Calculate fitness & select best two parents. (b) One-point crossover after 3rd bit. (c) Mutation on 5th bit of first offspring. (d) Determine if mutated offspring is better than parent."
       },
       {
         "id": "cse-4101-term-niter-tt1-q4",
@@ -1606,24 +1468,7 @@
         "topics": [
           "Machine Learning Terminology"
         ],
-        "question": "Illustrate the following Terms: i. Supervised and Unsupervised Learning, ii. Reinforcement Learning, iii. Overfitting and Underfitting, iv. Regression and Classification.",
-        "solution": {
-          "steps": [
-            "**i. Supervised vs. Unsupervised Learning:**",
-            "- *Supervised Learning:* Learns a mapping function from labeled training data pairs $(x, y)$ to predict targets for unseen inputs (e.g., spam detection, price prediction).",
-            "- *Unsupervised Learning:* Discovers hidden patterns, clusters, or intrinsic groupings in unlabeled input data $x$ without external ground truth (e.g., K-Means customer segmentation, PCA).",
-            "**ii. Reinforcement Learning (RL):**",
-            "- A framework where an autonomous agent learns optimal decision-making policies through trial-and-error interactions with a dynamic environment, receiving rewards for favorable actions and penalties for sub-optimal actions (e.g., Q-learning, AlphaGo).",
-            "**iii. Overfitting vs. Underfitting:**",
-            "- *Overfitting (High Variance):* The model fits the training data too closely including noise and outliers, yielding exceptionally low training error but poor generalization on test data.",
-            "- *Underfitting (High Bias):* The model is overly simplistic and cannot capture underlying data trends, resulting in poor performance on both training and test data.",
-            "**iv. Regression vs. Classification:**",
-            "- *Regression:* Predicts continuous numerical quantitative values (e.g., predicting temperature, house price, stock market index).",
-            "- *Classification:* Predicts discrete qualitative categorical class labels (e.g., predicting disease diagnosis: Yes/No, image digit: 0-9)."
-          ],
-          "answer": "Crisp distinctions across supervised/unsupervised learning, reinforcement learning policies, bias-variance fit dilemmas, and continuous vs. categorical prediction tasks.",
-          "marking_hint": "1 mark for each of the four conceptual comparisons with appropriate examples."
-        }
+        "question": "Illustrate the following Terms: i. Supervised and Unsupervised Learning, ii. Reinforcement Learning, iii. Overfitting and Underfitting, iv. Regression and Classification."
       }
     ]
   },
@@ -1653,37 +1498,7 @@
         "topics": [
           "Minimax & Alpha-Beta Pruning"
         ],
-        "question": "a) Explain the limitations of the Minimax algorithm in adversarial search. b) Apply the Alpha-Beta Pruning algorithm to the given game tree. Clearly illustrate the evaluation process, identify pruned branches, and determine the optimal root value.",
-        "solution": {
-          "steps": [
-            "**(a) Limitations of Minimax Algorithm:**",
-            "- **Exponential Time Complexity:** Exhaustive Minimax expands $O(b^m)$ states, where $b$ is the branching factor and $m$ is maximum search depth. For complex games (e.g., Chess where $b \\approx 35, m \\ge 80$), searching to terminal depth is completely intractable.",
-            "- **Space Complexity:** Deep search trees demand substantial stack memory $O(bm)$ for recursive traversal.",
-            "- **Real-time Deadline Failure:** Practical game agents must decide moves within seconds, making full minimax search impossible without heuristic depth cutoff and pruning.",
-            "**(b) Alpha-Beta Pruning Trace on Game Tree:**",
-            "Initialization: Root $A$ (MAX) has $\\alpha = -\\infty, \\beta = +\\infty$.",
-            "1. **Explore Left Subtree (Node B - MIN):** Inherits $\\alpha = -\\infty, \\beta = +\\infty$.",
-            "   - **Node D (MAX):** Visits leaf 3 ($v=3, \\alpha=3$). Visits leaf 5 ($v=5, \\alpha=5$). Returns $v=5$.",
-            "   - **Node B (MIN):** Updates $\\beta = \\min(+\\infty, 5) = 5$.",
-            "   - **Node E (MAX):** Inherits $\\alpha = -\\infty, \\beta = 5$. Visits first leaf **6** ($v=6, \\alpha=6$).",
-            "   - **Pruning Check at E:** Since $\\alpha \\ge \\beta$ ($6 \\ge 5$), a cutoff occurs! Leaf **9** is **PRUNED**.",
-            "   - Node B receives $v = \\min(5, 6) = 5$.",
-            "2. **Update Root A (MAX):** $\\alpha = \\max(-\\infty, 5) = 5$. Root now guarantees at least 5.",
-            "3. **Explore Right Subtree (Node C - MIN):** Inherits $\\alpha = 5, \\beta = +\\infty$.",
-            "   - **Node F (MAX):** Inherits $\\alpha = 5, \\beta = +\\infty$.",
-            "     - Visits first leaf **1** ($v=1$).",
-            "     - Visits second leaf **2** ($v=2$).",
-            "     - Node F returns $v = \\max(1, 2) = 2$.",
-            "   - **Node C (MIN):** Updates $\\beta = \\min(+\\infty, 2) = 2$.",
-            "   - **Pruning Check at C:** We compare C's $\\beta = 2$ against root's $\\alpha = 5$.",
-            "     - Since $\\alpha \\ge \\beta$ ($5 \\ge 2$), a **beta cutoff occurs**!",
-            "     - **Subtree G** (and both its leaves **0** and **1**) is completely **PRUNED** without evaluation.",
-            "   - Node C returns $v = 2$.",
-            "4. **Root A Decision:** $\\max(5, 2) = 5$."
-          ],
-          "answer": "Optimal value at Root A = 5. Optimal move for Max: Move to Node B. Pruned branches: Leaf 9 (under E) and Subtree G (leaves 0 and 1).",
-          "marking_hint": "2 marks for Minimax limitations; 3 marks for step-by-step alpha-beta bound tracking and identified prunings; 1 mark for optimal root value and move."
-        }
+        "question": "a) Explain the limitations of the Minimax algorithm in adversarial search. b) Apply the Alpha-Beta Pruning algorithm to the given game tree. Clearly illustrate the evaluation process, identify pruned branches, and determine the optimal root value."
       },
       {
         "id": "cse-4101-term-niter-tt2-q2",
@@ -1693,31 +1508,7 @@
         "topics": [
           "Artificial Neural Networks & Backprop"
         ],
-        "question": "Single artificial neuron with inputs x1=1.0, x2=0.5, weights w1=0.4, w2=-0.6, bias b=0.1, sigmoid activation, target t=1, learning rate eta=0.2. (a) Calculate net input and output. (b) Compute prediction error using MSE. (c) Compute weight and bias updates for one training step using backpropagation.",
-        "solution": {
-          "steps": [
-            "**(a) Net Input and Output:**",
-            "- Net input $z = w_1 x_1 + w_2 x_2 + b = (0.4)(1.0) + (-0.6)(0.5) + 0.1 = 0.4 - 0.3 + 0.1 = 0.2$.",
-            "- Output $y = \\sigma(z) = \\frac{1}{1 + e^{-z}} = \\frac{1}{1 + e^{-0.2}} = \\frac{1}{1 + 0.81873} = \\frac{1}{1.81873} \\approx 0.54983$.",
-            "**(b) Prediction Error (MSE):**",
-            "- Mean Squared Error loss: $E = \\frac{1}{2}(t - y)^2 = \\frac{1}{2}(1 - 0.54983)^2 = \\frac{1}{2}(0.45017)^2 \\approx 0.10133$.",
-            "- (Note: If using standard $(t - y)^2$, error is $(0.45017)^2 \\approx 0.20265$).",
-            "**(c) Backpropagation Gradient Updates:**",
-            "- Error gradient with respect to output: $\\frac{\\partial E}{\\partial y} = -(t - y) = -(1 - 0.54983) = -0.45017$.",
-            "- Derivative of sigmoid activation: $\\frac{\\partial y}{\\partial z} = y(1 - y) = 0.54983 \\times (1 - 0.54983) = 0.54983 \\times 0.45017 \\approx 0.24751$.",
-            "- Local error gradient: $\\delta = \\frac{\\partial E}{\\partial z} = \\frac{\\partial E}{\\partial y} \\frac{\\partial y}{\\partial z} = -0.45017 \\times 0.24751 \\approx -0.11142$.",
-            "- Weight and bias updates $(\\Delta = -\\eta \\frac{\\partial E}{\\partial w} = -\\eta \\delta x)$:",
-            "  - $\\Delta w_1 = -\\eta \\cdot \\delta \\cdot x_1 = -0.2 \\times (-0.11142) \\times 1.0 = +0.02228$.",
-            "  - $\\Delta w_2 = -\\eta \\cdot \\delta \\cdot x_2 = -0.2 \\times (-0.11142) \\times 0.5 = +0.01114$.",
-            "  - $\\Delta b = -\\eta \\cdot \\delta \\cdot 1 = -0.2 \\times (-0.11142) = +0.02228$.",
-            "- Updated parameters:",
-            "  - $w_1^{\\text{new}} = 0.4 + 0.02228 = \\mathbf{0.42228}$",
-            "  - $w_2^{\\text{new}} = -0.6 + 0.01114 = \\mathbf{-0.58886}$",
-            "  - $b^{\\text{new}} = 0.1 + 0.02228 = \\mathbf{0.12228}$"
-          ],
-          "answer": "Net input z = 0.2, Output y = 0.5498. MSE loss = 0.1013. Updated weights: w1 = 0.4223, w2 = -0.5889, b = 0.1223.",
-          "marking_hint": "2 marks for part (a); 1 mark for part (b); 3 marks for partial derivatives and parameter updates in part (c)."
-        }
+        "question": "Single artificial neuron with inputs x1=1.0, x2=0.5, weights w1=0.4, w2=-0.6, bias b=0.1, sigmoid activation, target t=1, learning rate eta=0.2. (a) Calculate net input and output. (b) Compute prediction error using MSE. (c) Compute weight and bias updates for one training step using backpropagation."
       },
       {
         "id": "cse-4101-term-niter-tt2-q3",
@@ -1727,29 +1518,7 @@
         "topics": [
           "Bayes' Theorem & Probability"
         ],
-        "question": "a) State and explain Bayes' Theorem, describing the roles of prior probability, likelihood, evidence, and posterior probability. b) A standard deck of 52 playing cards contains 12 face cards (Jacks, Queens, Kings), of which 4 are Queens. A randomly drawn card is known to be a face card. Using Bayes' Theorem, calculate P(Queen | Face).",
-        "solution": {
-          "steps": [
-            "**(a) Bayes' Theorem Statement and Components:**",
-            "$$P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$$",
-            "- **Posterior Probability $P(A \\mid B)$:** The revised probability of hypothesis $A$ occurring given that evidence $B$ has been observed.",
-            "- **Prior Probability $P(A)$:** The initial degree of belief in hypothesis $A$ before taking into account new evidence.",
-            "- **Likelihood $P(B \\mid A)$:** The probability of observing evidence $B$ assuming hypothesis $A$ is true.",
-            "- **Evidence (Marginal Probability) $P(B)$:** The total probability of observing evidence $B$ under all possible mutually exclusive hypotheses.",
-            "**(b) Card Probability Calculation:**",
-            "- Event $Q$: The card is a Queen.",
-            "- Event $F$: The card is a Face card.",
-            "- Known quantities:",
-            "  - Total cards = 52, Face cards = 12, Queens = 4.",
-            "  - Prior probability of Queen: $P(Q) = \\frac{4}{52} = \\frac{1}{13}$.",
-            "  - Likelihood of Face given Queen: $P(F \\mid Q) = 1$ (every Queen is inherently a face card).",
-            "  - Evidence probability of Face card: $P(F) = \\frac{12}{52} = \\frac{3}{13}$.",
-            "- Applying Bayes' Theorem:",
-            "$$P(Q \\mid F) = \\frac{P(F \\mid Q) \\cdot P(Q)}{P(F)} = \\frac{1 \\times \\frac{4}{52}}{\\frac{12}{52}} = \\frac{4}{12} = \\frac{1}{3} \\approx 0.3333 \\quad (33.33\\%)$$."
-          ],
-          "answer": "Bayes' formula relates prior to posterior probability. For the card problem: P(Queen | Face) = 4/12 = 1/3 (33.33%).",
-          "marking_hint": "2 marks for Bayes' Theorem definition and component explanation; 2 marks for card probability calculation."
-        }
+        "question": "a) State and explain Bayes' Theorem, describing the roles of prior probability, likelihood, evidence, and posterior probability. b) A standard deck of 52 playing cards contains 12 face cards (Jacks, Queens, Kings), of which 4 are Queens. A randomly drawn card is known to be a face card. Using Bayes' Theorem, calculate P(Queen | Face)."
       },
       {
         "id": "cse-4101-term-niter-tt2-q4",
@@ -1759,23 +1528,7 @@
         "topics": [
           "AI Project Life-Cycle"
         ],
-        "question": "Draw a generalized flowchart illustrating the complete development life-cycle of an AI-based project, starting from problem identification and ending with real-world deployment and continuous improvement, clearly representing stages, sequence, and feedback loops.",
-        "solution": {
-          "steps": [
-            "1. **Core Stages of AI Project Lifecycle:**",
-            "- **Problem Definition & Formulation:** Scoping the objective, business metrics, and AI suitability.",
-            "- **Data Ingestion & Collection:** Sourcing, extracting, and aggregating raw multi-modal data.",
-            "- **Data Preprocessing & EDA:** Handling missing values, cleaning noise, normalization, and feature engineering.",
-            "- **Model Selection & Architecture:** Choosing baseline models (e.g., Tree, Neural Network, Linear).",
-            "- **Model Training & Hyperparameter Tuning:** Optimizing parameters via cross-validation.",
-            "- **Model Evaluation & Validation:** Testing against unseen benchmark test datasets across business metrics (Accuracy, F1, Latency).",
-            "- **Deployment & CI/CD Pipeline:** Serving via REST API / containerized microservices.",
-            "- **Monitoring, Maintenance & Retraining:** Tracking data drift, concept drift, and performance degradation with continuous feedback loops.",
-            "2. **AI Project Lifecycle Flowchart:**"
-          ],
-          "answer": "```mermaid\nflowchart TD\n    A[Problem Scoping & Identification] --> B[Data Collection & Ingestion]\n    B --> C[Data Cleaning & Feature Engineering]\n    C --> D[Model Selection & Architecture Design]\n    D --> E[Model Training & Hyperparameter Tuning]\n    E --> F{Evaluation & Validation}\n    F -- Fails Metric Criteria --> C\n    F -- Passes Metric Criteria --> G[System Deployment & Serving]\n    G --> H[Real-Time Production Monitoring]\n    H -- Data Drift Detected --> B\n    H -- Concept Drift / Performance Drop --> E\n```",
-          "marking_hint": "2 marks for comprehensive life-cycle stage descriptions; 2 marks for clear flowchart diagram featuring required bidirectional feedback loops."
-        }
+        "question": "Draw a generalized flowchart illustrating the complete development life-cycle of an AI-based project, starting from problem identification and ending with real-world deployment and continuous improvement, clearly representing stages, sequence, and feedback loops."
       }
     ]
   },
@@ -1806,26 +1559,7 @@
         "topics": [
           "A* Evaluation Function & Inference Rules"
         ],
-        "question": "a) Explain the components of the evaluation function f(n) = g(n) + h(n). b) Write short notes on i) Modus Ponens ii) Modus Tollens with example.",
-        "solution": {
-          "steps": [
-            "**(a) Components of the A* Evaluation Function $f(n) = g(n) + h(n)$:**",
-            "- **$g(n)$ (Past Path Cost):** The exact, cumulative edge cost accumulated along the best-known path from the initial start node $s$ to the current node $n$.",
-            "- **$h(n)$ (Heuristic Future Estimate):** An estimated cost from node $n$ to the closest goal state based on domain-specific heuristic knowledge.",
-            "- **$f(n)$ (Estimated Total Cost):** Represents the estimated total cost of the cheapest complete solution path that travels through node $n$. A* search prioritizes expanding nodes with the lowest $f(n)$.",
-            "**(b) Logical Inference Rules:**",
-            "- **i. Modus Ponens (Affirming the Antecedent):**",
-            "  $$\\frac{P, \\quad P \\implies Q}{Q}$$",
-            "  *Principle:* If proposition $P$ is true, and the implication 'If $P$ then $Q$' is true, then $Q$ is logically inferred as true.",
-            "  *Example:* $P$ = 'It is raining.' $P \\implies Q$ = 'If it is raining, the street is wet.' Inference: $Q$ = 'The street is wet.'",
-            "- **ii. Modus Tollens (Denying the Consequent):**",
-            "  $$\\frac{\\neg Q, \\quad P \\implies Q}{\\neg P}$$",
-            "  *Principle:* If $Q$ is false ($\neg Q$), and the conditional 'If $P$ then $Q$' holds, then antecedent $P$ must be false ($\neg P$).",
-            "  *Example:* $\neg Q$ = 'The street is not wet.' $P \\implies Q$ = 'If it is raining, the street is wet.' Inference: $\neg P$ = 'It is not raining.'"
-          ],
-          "answer": "f(n) combines accumulated cost g(n) with heuristic estimate h(n). Modus Ponens infers Q from P and P->Q; Modus Tollens infers ~P from ~Q and P->Q.",
-          "marking_hint": "2 marks for explaining g(n), h(n), and f(n); 1.5 marks for Modus Ponens with example; 1.5 marks for Modus Tollens with example."
-        }
+        "question": "a) Explain the components of the evaluation function f(n) = g(n) + h(n). b) Write short notes on i) Modus Ponens ii) Modus Tollens with example."
       },
       {
         "id": "cse-4101-term-fec-tt1-q2",
@@ -1835,20 +1569,7 @@
         "topics": [
           "Heuristic Admissibility & Consistency"
         ],
-        "question": "Explain 'For a heuristic function to search safely and optimally, it must satisfy Admissibility and Consistency'.",
-        "solution": {
-          "steps": [
-            "1. **Admissibility Condition ($h(n) \\le h^*(n)$):**",
-            "- An admissible heuristic **never overestimates** the true minimal cost $h^*(n)$ required to reach a goal from node $n$.",
-            "- *Search Safety & Optimality:* In tree search, admissibility guarantees that A* will never return a suboptimal path, because any suboptimal goal will have $f(G_2) = g(G_2) > C^*$, whereas an optimal goal's ancestor on the frontier will have $f(n) \\le C^*$ and will always be chosen first.",
-            "2. **Consistency (Monotonicity) Condition:**",
-            "- For every node $n$ and every successor $n'$ generated by action $a$: $h(n) \\le c(n, a, n') + h(n')$.",
-            "- This represents the **triangle inequality** in state space.",
-            "- *Search Safety & Efficiency:* Consistency guarantees that the values of $f(n)$ are non-decreasing along any path. Consequently, whenever A* expands a node in graph search, the path to that node is guaranteed to be optimal. This eliminates the expensive requirement to reopen nodes previously expanded in the closed set."
-          ],
-          "answer": "Admissibility prevents cost overestimation, ensuring optimal solutions in tree search. Consistency enforces the triangle inequality, guaranteeing that the first time a node is expanded in graph search, its path is optimal.",
-          "marking_hint": "1.5 marks for mathematical definition and role of Admissibility; 1.5 marks for Consistency and triangle inequality."
-        }
+        "question": "Explain 'For a heuristic function to search safely and optimally, it must satisfy Admissibility and Consistency'."
       },
       {
         "id": "cse-4101-term-fec-tt1-q3",
@@ -1858,37 +1579,7 @@
         "topics": [
           "Greedy Best-First Search on Romania Map"
         ],
-        "question": "Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest.",
-        "solution": {
-          "steps": [
-            "1. **Greedy Best-First Search Principle:**",
-            "Evaluates nodes using $f(n) = h(n)$ exclusively (where $h(n)$ is the straight-line distance heuristic to Bucharest).",
-            "Straight-line distances to Bucharest ($h$): Arad = 366, Sibiu = 253, Timisoara = 329, Zerind = 374, Fagaras = 176, Rimnicu Vilcea = 193, Bucharest = 0.",
-            "2. **Step-by-Step Search Progression:**",
-            "- **Initial State:** Start at `Arad` ($h = 366$).",
-            "- **Step 1:** Expand `Arad`. Generated frontier neighbors:",
-            "  - `Sibiu` ($h = 253$)",
-            "  - `Timisoara` ($h = 329$)",
-            "  - `Zerind` ($h = 374$)",
-            "  - Minimum heuristic is `Sibiu` ($h = 253$). Selected.",
-            "- **Step 2:** Expand `Sibiu`. Generated frontier neighbors:",
-            "  - `Fagaras` ($h = 176$)",
-            "  - `Rimnicu Vilcea` ($h = 193$)",
-            "  - `Oradea` ($h = 380$)",
-            "  - `Arad` (already visited)",
-            "  - Minimum heuristic is `Fagaras` ($h = 176$). Selected.",
-            "- **Step 3:** Expand `Fagaras`. Generated frontier neighbors:",
-            "  - `Bucharest` ($h = 0$)",
-            "  - `Sibiu` (already visited)",
-            "  - Minimum heuristic is `Bucharest` ($h = 0$). Goal reached!",
-            "3. **Path and Cost Calculation:**",
-            "- Resulting Path: **Arad -> Sibiu -> Fagaras -> Bucharest**",
-            "- Step edge costs: $\\text{Cost}(\\text{Arad}, \\text{Sibiu}) = 140$, $\\text{Cost}(\\text{Sibiu}, \\text{Fagaras}) = 99$, $\\text{Cost}(\\text{Fagaras}, \\text{Bucharest}) = 211$.",
-            "- **Total Path Cost:** $g = 140 + 99 + 211 = \\mathbf{450}$."
-          ],
-          "answer": "Greedy Best-First Path: Arad -> Sibiu -> Fagaras -> Bucharest with Total Cost = 450.",
-          "marking_hint": "1 mark for explaining Greedy Best-First Search criterion; 2 marks for step-by-step frontier heuristic evaluations; 1 mark for correct path and total cost."
-        }
+        "question": "Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest."
       },
       {
         "id": "cse-4101-term-fec-tt1-q4",
@@ -1898,27 +1589,7 @@
         "topics": [
           "Hill Climbing Variants & First-Order Logic"
         ],
-        "question": "a) Briefly define the variants of hill climbing search. b) Convert the following statements into First-Order Logic (FOL): i. All birds can fly, ii. Some humans are honest, iii. Everyone is loyal to someone, iv. Marcus tried to assassinate Caesar.",
-        "solution": {
-          "steps": [
-            "**(a) Variants of Hill Climbing Search:**",
-            "- **Simple Hill Climbing:** Evaluates neighboring states one by one and immediately transitions to the first neighbor that improves the evaluation function.",
-            "- **Steepest-Ascent Hill Climbing (Gradient Search):** Evaluates all possible successor states and chooses the single neighbor with the maximum improvement.",
-            "- **Stochastic Hill Climbing:** Randomly selects from among the uphill moves, weighting probabilities proportionally to steepness.",
-            "- **Random-Restart Hill Climbing:** Runs a series of hill climbing searches from randomly generated starting states until a goal is discovered, guaranteeing asymptotic completeness.",
-            "**(b) First-Order Logic (FOL) Translations:**",
-            "- **i. All birds can fly:**",
-            "  $$\\forall x \\, (\\text{Bird}(x) \\implies \\text{CanFly}(x))$$",
-            "- **ii. Some humans are honest:**",
-            "  $$\\exists x \\, (\\text{Human}(x) \\land \\text{Honest}(x))$$",
-            "- **iii. Everyone is loyal to someone:**",
-            "  $$\\forall x \\, (\\text{Person}(x) \\implies \\exists y \\, (\\text{Person}(y) \\land \\text{LoyalTo}(x, y)))$$  (or $\\forall x \\, \\exists y \\, \\text{LoyalTo}(x, y)$)",
-            "- **iv. Marcus tried to assassinate Caesar:**",
-            "  $$\\text{TriedToAssassinate}(\\text{Marcus}, \\text{Caesar})$$"
-          ],
-          "answer": "Defined 4 hill climbing variants. Correctly translated all 4 English statements into standard FOL predicates.",
-          "marking_hint": "2 marks for 4 hill climbing variants; 2 marks (0.5 marks each) for correct FOL statements."
-        }
+        "question": "a) Briefly define the variants of hill climbing search. b) Convert the following statements into First-Order Logic (FOL): i. All birds can fly, ii. Some humans are honest, iii. Everyone is loyal to someone, iv. Marcus tried to assassinate Caesar."
       },
       {
         "id": "cse-4101-term-fec-tt1-q5",
@@ -1928,25 +1599,7 @@
         "topics": [
           "Turing Test & Learning Agents"
         ],
-        "question": "Shortly define 'The Turing Test approach'. How do you evaluate learning agent from other AI agents?",
-        "solution": {
-          "steps": [
-            "1. **The Turing Test Approach (Alan Turing, 1950):**",
-            "- An operational benchmark for determining machine intelligence.",
-            "- A human interrogator communicates through text terminals with an unseen human and machine. If the interrogator cannot reliably tell which entity is the computer after thorough questioning, the machine passes.",
-            "- *Required Capabilities:* Natural Language Processing (NLP), Knowledge Representation, Automated Reasoning, and Machine Learning.",
-            "2. **Learning Agents vs. Other AI Agents:**",
-            "- **Traditional AI Agents (Reflex, Goal-based, Utility-based):** Rely on static, pre-programmed knowledge bases or fixed evaluation functions. They cannot adapt when deployed in unfamiliar or changing environments.",
-            "- **Learning Agent Architecture:** Separates the system into four distinct components:",
-            "  - **Learning Element:** Responsible for making improvements and discovering new knowledge.",
-            "  - **Performance Element:** Responsible for selecting external actions based on percepts (the operational agent).",
-            "  - **Critic:** Evaluates the agent's behavior against an external performance standard and provides feedback to the learning element.",
-            "  - **Problem Generator:** Suggests exploratory actions leading to novel experiences rather than merely repeating known sub-optimal behaviors.",
-            "- *Evaluation:* A learning agent is evaluated by its **learning curve** (rate of performance metric improvement over time) and its capacity to generalize in non-stationary environments."
-          ],
-          "answer": "Turing Test evaluates behavioral indistinguishability from human intelligence. Learning agents distinctly separate performance from a learning element and critic, enabling continuous self-adaptation.",
-          "marking_hint": "2 marks for Turing Test definition and required capabilities; 2 marks for learning agent architecture and comparison with traditional agents."
-        }
+        "question": "Shortly define 'The Turing Test approach'. How do you evaluate learning agent from other AI agents?"
       }
     ]
   },
@@ -1977,25 +1630,7 @@
         "topics": [
           "Constraint Satisfaction Problems (CSP)"
         ],
-        "question": "Define CSP with proper example. Describe varieties of CSP with example.",
-        "solution": {
-          "steps": [
-            "1. **Constraint Satisfaction Problem (CSP) Definition:**",
-            "A problem formulation where state is defined by a set of variables $X = \\{X_1, X_2, \\dots, X_n\\}$, each having a domain of values $D = \\{D_1, D_2, \\dots, D_n\\}$, and a set of constraints $C = \\{C_1, C_2, \\dots, C_m\\}$ specifying allowable combinations of values. A solution is a complete and consistent assignment.",
-            "- *Example:* Map Coloring of Australia: Variables = $\\{\\text{WA, NT, SA, Q, NSW, V, T}\\}$, Domains = $\\{\\text{Red, Green, Blue}\\}$, Constraints = adjacent regions must have different colors (e.g., $\\text{WA} \\ne \\text{NT}$).",
-            "2. **Varieties of CSPs:**",
-            "- **Discrete Variables:**",
-            "  - *Finite Domains:* Variables take values from finite sets (e.g., 8-Queens, Boolean SAT).",
-            "  - *Infinite Domains:* Variables take integer or string values; constraints expressed via constraint language (e.g., job scheduling).",
-            "- **Continuous Variables:** Domains are continuous real numbers $\\mathbb{R}$ (e.g., linear constraints in operations research).",
-            "- **Constraint Arity Varieties:**",
-            "  - *Unary Constraint:* Restricts a single variable (e.g., $\\text{SA} \\ne \\text{Green}$).",
-            "  - *Binary Constraint:* Relates two variables (e.g., $\\text{SA} \\ne \\text{WA}$).",
-            "  - *Higher-Order / Global Constraint:* Involves arbitrary number of variables (e.g., $\\text{Alldiff}(X_1, \\dots, X_9)$ in Sudoku)."
-          ],
-          "answer": "CSP defines states via variables, domains, and constraints. Varieties include discrete/continuous domains and unary, binary, and global constraint arities.",
-          "marking_hint": "2 marks for formal definition and map-coloring example; 2 marks for classification of CSP varieties."
-        }
+        "question": "Define CSP with proper example. Describe varieties of CSP with example."
       },
       {
         "id": "cse-4101-term-fec-tt2-q2",
@@ -2005,26 +1640,7 @@
         "topics": [
           "CSP Formulation & Genetic Algorithm Steps"
         ],
-        "question": "Elaborate standard search formulation in CSP. Describe the steps of genetic algorithm.",
-        "solution": {
-          "steps": [
-            "1. **Standard Search Formulation in CSP:**",
-            "- **Initial State:** Empty assignment $\\{\\}$ where no variables are assigned values.",
-            "- **Successor Function:** Select an unassigned variable $X_i$ and assign a value $v \\in D_i$ that does not conflict with existing assignments.",
-            "- **Goal Test:** The current assignment is **complete** (all variables assigned) and **consistent** (satisfies all constraints $C$).",
-            "- **Path Cost:** Constant step cost (e.g., 0 or 1 per step), because the goal is the final consistent configuration rather than the path taken.",
-            "- *Standard Algorithm:* Backtracking Search (depth-first search with single-variable assignments).",
-            "2. **Steps of a Genetic Algorithm (GA):**",
-            "- **Step 1: Population Initialization:** Randomly generate an initial population of $N$ binary or real-encoded chromosomes.",
-            "- **Step 2: Fitness Evaluation:** Calculate the fitness function value $f(x)$ for each individual.",
-            "- **Step 3: Selection:** Select parent chromosomes based on fitness (e.g., Roulette Wheel, Tournament selection).",
-            "- **Step 4: Crossover (Recombination):** Pair parents and perform crossover at designated split points to create offspring.",
-            "- **Step 5: Mutation:** Randomly flip bits with small mutation probability $p_m$ to preserve genetic diversity.",
-            "- **Step 6: Termination Check:** Repeat until an optimal solution is found or generation limits are exceeded."
-          ],
-          "answer": "CSP search uses incremental variable assignments with backtracking. Genetic algorithms iteratively apply population initialization, fitness evaluation, selection, crossover, and mutation.",
-          "marking_hint": "2 marks for CSP initial state, successor, goal test, and path cost; 2 marks for the 6 steps of genetic algorithms."
-        }
+        "question": "Elaborate standard search formulation in CSP. Describe the steps of genetic algorithm."
       },
       {
         "id": "cse-4101-term-fec-tt2-q3",
@@ -2034,22 +1650,7 @@
         "topics": [
           "Uncertainty in AI & Bayes' Theorem"
         ],
-        "question": "Briefly define the reasons for uncertainty in AI. Write down the equation for conditional probability and Bayes Theorem.",
-        "solution": {
-          "steps": [
-            "1. **Reasons for Uncertainty in AI Systems:**",
-            "- **Partial Observability:** Sensor limitations prevent the agent from observing the entire environment state (e.g., medical diagnostics, card games).",
-            "- **Stochasticity (Non-determinism):** Actions do not produce deterministic outcomes due to random physical factors or external interference.",
-            "- **Adversarial / Multi-agent Dynamics:** Competing agents introduce unpredictable behaviors and decisions.",
-            "- **Laziness & Theoretical Ignorance:** The complete domain theory is either too complex to formulate comprehensively or unknown.",
-            "2. **Conditional Probability Equation:**",
-            "$$P(A \\mid B) = \\frac{P(A \\land B)}{P(B)} \\quad \\text{where } P(B) > 0$$",
-            "3. **Bayes' Theorem Equation:**",
-            "$$P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)} = \\frac{P(B \\mid A) \\cdot P(A)}{\\sum_i P(B \\mid A_i) \\cdot P(A_i)}$$"
-          ],
-          "answer": "Uncertainty stems from partial observability, non-determinism, and domain complexity. Equations: P(A|B) = P(A,B)/P(B) and P(A|B) = [P(B|A)P(A)] / P(B).",
-          "marking_hint": "2 marks for 4 causes of uncertainty; 1 mark for conditional probability; 1 mark for Bayes' Theorem."
-        }
+        "question": "Briefly define the reasons for uncertainty in AI. Write down the equation for conditional probability and Bayes Theorem."
       },
       {
         "id": "cse-4101-term-fec-tt2-q4",
@@ -2059,27 +1660,7 @@
         "topics": [
           "Probability & Penalty Kick Scenario"
         ],
-        "question": "Star Forward takes 25% of team penalties and scores 85% of time. Other players take 75% and score 70%. You notice Star Forward takes the kick. What is the probability that penalty is a goal?",
-        "solution": {
-          "steps": [
-            "1. **Define Events & Given Probabilities:**",
-            "- $S$: Star Forward takes the penalty $\\implies P(S) = 0.25$.",
-            "- $O$: Other Player takes the penalty $\\implies P(O) = 0.75$.",
-            "- $G$: The penalty results in a goal.",
-            "- Conditional goal probabilities:",
-            "  - $P(G \\mid S) = 0.85$ (85% scoring rate for Star Forward).",
-            "  - $P(G \\mid O) = 0.70$ (70% scoring rate for Other Players).",
-            "2. **Evaluation:**",
-            "- The problem states: *'You walk beside the TV and noticed Star Forward will take the kick for a penalty. What is the probability of that penalty is a goal?'*",
-            "- Since the event that Star Forward is taking the kick has **already been observed with certainty** (condition $S$ is given):",
-            "$$P(\\text{Goal} \\mid \\text{Star Forward takes kick}) = P(G \\mid S) = \\mathbf{0.85} \\quad (85\\%)$$",
-            "3. **Additional Perspective (Total Probability):**",
-            "- If instead evaluating the probability of an unknown random penalty being both taken and scored by Star Forward: $P(G \\land S) = P(G \\mid S) \\cdot P(S) = 0.85 \\times 0.25 = 0.2125$ (21.25%).",
-            "- Total probability of a goal across all players: $P(G) = P(G \\mid S)P(S) + P(G \\mid O)P(O) = (0.85)(0.25) + (0.70)(0.75) = 0.2125 + 0.5250 = 0.7375$ (73.75%)."
-          ],
-          "answer": "Given that the Star Forward is taking the kick, the conditional probability of scoring is P(Goal | Star Forward) = 0.85 (85%).",
-          "marking_hint": "4 marks for clear identification of conditional probability P(G|S) = 0.85, with optional total probability formulation."
-        }
+        "question": "Star Forward takes 25% of team penalties and scores 85% of time. Other players take 75% and score 70%. You notice Star Forward takes the kick. What is the probability that penalty is a goal?"
       },
       {
         "id": "cse-4101-term-fec-tt2-q5",
@@ -2089,32 +1670,7 @@
         "topics": [
           "Genetic Algorithm Optimization on f(x) = x^2"
         ],
-        "question": "Maximize f(x) = x^2 over [0, 31] using GA. Population: P1=01101, P2=11000, P3=01000, P4=10011. Find total fitness and average fitness.",
-        "solution": {
-          "steps": [
-            "1. **Decode 5-Bit Binary Chromosomes to Decimal $x$:**",
-            "- $P_1 = 01101_2 = 0(16) + 1(8) + 1(4) + 0(2) + 1(1) = 8 + 4 + 1 = \\mathbf{13}$",
-            "- $P_2 = 11000_2 = 1(16) + 1(8) + 0(4) + 0(2) + 0(1) = 16 + 8 = \\mathbf{24}$",
-            "- $P_3 = 01000_2 = 0(16) + 1(8) + 0(4) + 0(2) + 0(1) = \\mathbf{8}$",
-            "- $P_4 = 10011_2 = 1(16) + 0(8) + 0(4) + 1(2) + 1(1) = 16 + 2 + 1 = \\mathbf{19}$",
-            "2. **Calculate Individual Fitness $f(x) = x^2$:**",
-            "- $f(P_1) = 13^2 = \\mathbf{169}$",
-            "- $f(P_2) = 24^2 = \\mathbf{576}$",
-            "- $f(P_3) = 8^2 = \\mathbf{64}$",
-            "- $f(P_4) = 19^2 = \\mathbf{361}$",
-            "3. **Compute Total Fitness:**",
-            "$$\\text{Total Fitness} = \\sum_{i=1}^4 f(P_i) = 169 + 576 + 64 + 361 = \\mathbf{1170}$$",
-            "4. **Compute Average Fitness:**",
-            "$$\\text{Average Fitness } \\bar{f} = \\frac{\\text{Total Fitness}}{N} = \\frac{1170}{4} = \\mathbf{292.5}$$",
-            "5. **Selection Probability Distribution $p_i = \\frac{f(x_i)}{\\sum f}$:**",
-            "- $p(P_1) = \\frac{169}{1170} \\approx 14.44\\%$",
-            "- $p(P_2) = \\frac{576}{1170} \\approx 49.23\\%$",
-            "- $p(P_3) = \\frac{64}{1170} \\approx 5.47\\%$",
-            "- $p(P_4) = \\frac{361}{1170} \\approx 30.85\\%$"
-          ],
-          "answer": "Individual fitness: P1=169, P2=576, P3=64, P4=361. Total Fitness = 1170. Average Fitness = 292.5.",
-          "marking_hint": "1 mark for decoding binary strings; 1 mark for individual fitness values; 1 mark for Total Fitness = 1170; 1 mark for Average Fitness = 292.5."
-        }
+        "question": "Maximize f(x) = x^2 over [0, 31] using GA. Population: P1=01101, P2=11000, P3=01000, P4=10011. Find total fitness and average fitness."
       }
     ]
   }
