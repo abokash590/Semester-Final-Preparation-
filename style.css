@@ -2682,23 +2682,24 @@ body.is-home-view .app-header,
 .subpart-scribble-divider {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin: 20px 0 16px 0;
+  justify-content: center;
+  margin: 26px auto 22px auto;
   padding: 0;
+  width: 100%;
 }
 
 .subpart-scribble-divider .scribble-svg {
-  width: 190px;
+  width: 220px;
   max-width: 100%;
-  height: 12px;
-  color: var(--accent-primary);
-  opacity: 0.45;
+  height: 14px;
+  color: #104535;
+  opacity: 0.75;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .subpart-scribble-divider:hover .scribble-svg {
-  opacity: 0.8;
-  transform: scaleY(1.1);
+  opacity: 0.95;
+  transform: scaleY(1.15);
 }
 
 /* Card Bottom Action Bar: Done / Weak / Important */
