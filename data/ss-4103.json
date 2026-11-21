@@ -1567,5 +1567,165 @@
         }
       }
     ]
+  },
+  {
+    "id": "ss-4103-term-fec-tt1",
+    "course": "SS-4103",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "Creativity and Innovation Interconnection",
+      "Enhancing Organizational Creativity",
+      "Challenges of Entrepreneurship",
+      "Ethical Concerns in Entrepreneurship"
+    ],
+    "question": "University of Dhaka • Affiliated Engineering College • SS 4103 (Time: 50 Min, Marks: 20)\n\n**Question 1:** **[4+6 = 10]**  \na) How Creativity and Innovation is interconnected with each other? Explain. **[4]**  \nb) How are to enhance the creativity? Briefly Describe. **[6]**\n\n**Question 2:** **[4+6 = 10]**  \na) What are the challenges of entrepreneurship? Shortly Describe. **[4]**  \nb) Briefly Describe the Key concerns of ethical entrepreneurship. **[6]**",
+    "subparts": [
+      {
+        "id": "ss-4103-term-fec-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 10,
+        "topics": [
+          "Creativity and Innovation Interconnection",
+          "Enhancing Organizational Creativity"
+        ],
+        "question": "a) How Creativity and Innovation are interconnected? Explain. b) How to enhance creativity? Briefly describe.",
+        "solution": {
+          "steps": [
+            "**(a) Interconnection Between Creativity and Innovation:**",
+            "- **Creativity:** The cognitive generation of novel, imaginative, and unconventional ideas or concepts.",
+            "- **Innovation:** The practical application, execution, and commercialization of creative ideas to create tangible business value or resolve market needs.",
+            "- *Interconnection:* Creativity is the **necessary seed and starting point**; Innovation is the **harvest and realization**. Without creativity, innovation lacks novel substance; without innovation, creativity remains mere unexploited imagination ('Creativity is thinking up new things; innovation is doing new things').",
+            "**(b) Strategies to Enhance Creativity:**",
+            "1. **Psychological Safety & Open Culture:** Establish a blameless organizational culture where failure is regarded as a natural learning vector, encouraging calculated risk-taking.",
+            "2. **Diverse & Cross-Disciplinary Teams:** Assemble multidisciplinary talent (engineers, designers, marketers) to synthesize contrasting perspectives.",
+            "3. **Structured Brainstorming & Lateral Thinking:** Utilize creative ideation frameworks (SCAMPER, mind-mapping, Edward de Bono's Six Thinking Hats) deferring premature criticism.",
+            "4. **Dedicated Incubation & Hack Time:** Allocate unstructured exploration time (e.g., Google's 20% time policy) allowing subconscious incubation.",
+            "5. **Continuous Exposure to External Stimuli:** Engage in competitor audits, customer ethnography, design sprints, and cross-industry benchmarking."
+          ],
+          "answer": "Creativity is the intellectual catalyst; Innovation is its commercial execution. Creativity is enhanced via psychological safety, diverse teams, structured brainstorming, and dedicated incubation.",
+          "marking_hint": "4 marks for creativity vs innovation synergy; 6 marks for discussing at least 5 distinct creativity enhancement strategies."
+        }
+      },
+      {
+        "id": "ss-4103-term-fec-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 10,
+        "topics": [
+          "Challenges of Entrepreneurship",
+          "Ethical Concerns in Entrepreneurship"
+        ],
+        "question": "a) What are the challenges of entrepreneurship? Shortly describe. b) Briefly describe the key concerns of ethical entrepreneurship.",
+        "solution": {
+          "steps": [
+            "**(a) Core Challenges of Entrepreneurship:**",
+            "1. **Cash Flow & Capital Constraints:** Navigating the early-stage 'Valley of Death' before achieving unit economic profitability.",
+            "2. **Product-Market Fit (PMF) Uncertainty:** Validating customer demand before burning finite financial runway on unwanted features.",
+            "3. **Talent Acquisition & Retention:** Attracting top technical and operational talent to high-risk early ventures competing with high-paying tech giants.",
+            "4. **Founder Burnout & Solitary Burden:** Managing extreme stress, prolonged working hours, and sole accountability for venture survival.",
+            "**(b) Key Concerns of Ethical Entrepreneurship:**",
+            "1. **Consumer Data Privacy & AI Ethics:** Respecting user consent, ensuring robust encryption, and preventing algorithmic bias or deceptive dark patterns.",
+            "2. **Fair Labor Practices & Equity:** Providing fair living wages, safe working environments, and transparent equity sharing without worker exploitation.",
+            "3. **Honest Marketing & Transparency:** Avoiding fraudulent hype, exaggerated product capabilities, or deceptive investor pitches.",
+            "4. **Environmental Sustainability:** Mitigating corporate carbon footprint, electronic waste, and adopting green cloud architectures.",
+            "5. **Fair Competition & Anti-Corruption:** Refraining from predatory price dumping, IP theft, bribery, or monopolistic collusion."
+          ],
+          "answer": "Entrepreneurial challenges center on capital, PMF, hiring, and burnout. Ethical concerns mandate data privacy, fair labor, transparent marketing, environmental care, and fair competition.",
+          "marking_hint": "4 marks for 4 key startup challenges; 6 marks for detailing 5 foundational dimensions of ethical entrepreneurship."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ss-4103-term-fec-tt2",
+    "course": "SS-4103",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "Strategic Management Process",
+      "The Three V's Marketing Approach",
+      "Strategic vs Tactical Planning",
+      "Developing a Strategic Plan",
+      "Key Components of Business Strategic Plan"
+    ],
+    "question": "University of Dhaka • Affiliated Engineering College • SS 4103 (Time: 50 Min, Marks: 20)\n\n**Question 1:** **[7+3 = 10]**  \na) What are the steps of strategic management process? Very shortly describe each step. **[7]**  \nb) What are the three V's approaches of marketing? Write down the core business processes of marketing. **[3]**\n\n**Question 2:** **[3+3+4 = 10]**  \na) What is the difference of strategic Planning and Tactical Planning? **[3]**  \nb) How to Develop a Strategic Plan? **[3]**  \nc) What are the Key Components of a Business Strategic Plan? **[4]**",
+    "subparts": [
+      {
+        "id": "ss-4103-term-fec-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 10,
+        "topics": [
+          "Strategic Management Process",
+          "The Three V's Marketing Approach"
+        ],
+        "question": "a) What are the steps of strategic management process? Very shortly describe each step. b) What are the three V's approaches of marketing? Write down the core business processes of marketing.",
+        "solution": {
+          "steps": [
+            "**(a) Steps of the Strategic Management Process:**",
+            "1. **Environmental Scanning (Analysis):** Gathering internal and external intelligence using SWOT and PESTEL frameworks to identify competitive advantages and threats.",
+            "2. **Strategy Formulation:** Defining long-term vision, mission statements, corporate objectives, and crafting competitive strategies (e.g., Porter's Cost Leadership vs. Differentiation).",
+            "3. **Strategy Implementation:** Translating strategies into actionable initiatives by allocating financial budgets, assigning organizational responsibilities, and establishing agile workflows.",
+            "4. **Strategy Evaluation & Control:** Continuously monitoring performance metrics (KPIs) against targets and initiating corrective pivots when variances emerge.",
+            "**(b) The Three V's Marketing Approach (Nirmalya Kumar):**",
+            "1. **Value Customer:** Defining which customer segments to serve and which to deliberately ignore.",
+            "2. **Value Proposition:** Articulating the distinct, differentiated bundle of benefits that compellingly solves customer pain points.",
+            "3. **Value Network:** Structuring partner networks, suppliers, digital channels, and supply chains to deliver the value proposition profitably.",
+            "- **Core Business Processes of Marketing:** Market Research & Customer Discovery, New Product Development, Lead Generation & Customer Acquisition, Customer Retention & Loyalty Management."
+          ],
+          "answer": "Strategic management spans scanning, formulation, implementation, and evaluation. Marketing's 3 V's are Value Customer, Value Proposition, and Value Network.",
+          "marking_hint": "7 marks for the 4 strategic management steps with explanations; 3 marks for the 3 V's and core marketing processes."
+        }
+      },
+      {
+        "id": "ss-4103-term-fec-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 10,
+        "topics": [
+          "Strategic vs Tactical Planning",
+          "Developing a Strategic Plan",
+          "Key Components of Business Strategic Plan"
+        ],
+        "question": "a) Difference between Strategic Planning and Tactical Planning. b) How to Develop a Strategic Plan? c) Key Components of a Business Strategic Plan.",
+        "solution": {
+          "steps": [
+            "**(a) Strategic Planning vs. Tactical Planning:**",
+            "| Criterion | Strategic Planning | Tactical Planning |",
+            "| :--- | :--- | :--- |",
+            "| **Time Horizon** | Long-term (3 to 5+ years). | Short to medium-term (quarterly to 1 year). |",
+            "| **Organizational Scope** | Entire enterprise / corporate level. | Departmental / functional units. |",
+            "| **Core Focus** | Defines 'What' and 'Why' (direction). | Defines 'How' and 'When' (execution). |",
+            "| **Leadership Level** | Board of Directors, C-suite executives. | Middle management, team leads. |",
+            "**(b) How to Develop a Strategic Plan:**",
+            "1. Identify current organizational baseline, core values, and founding vision.",
+            "2. Perform rigorous external competitive benchmarking and internal capability auditing.",
+            "3. Formulate Specific, Measurable, Achievable, Relevant, Time-bound (SMART) strategic goals.",
+            "4. Construct detailed functional roadmaps, budget allocation, and risk contingency plans.",
+            "5. Establish executive review rhythms and real-time dashboard scorecards (OKRs/KPIs).",
+            "**(c) Key Components of a Business Strategic Plan:**",
+            "1. **Executive Summary & Mission Statement:** Clear definition of organizational purpose and long-term ambition.",
+            "2. **Market & Competitor Analysis:** Thorough audit of target customer personas, TAM/SAM/SOM, and competitive moats.",
+            "3. **Strategic Objectives & Milestones:** Quantifiable quarterly and annual performance targets.",
+            "4. **Go-To-Market & Operational Strategy:** Sales acquisition funnel, pricing strategy, and resource deployment.",
+            "5. **Financial Projections & Risk Matrix:** Pro-forma P&L statements, burn rate, and scenario sensitivity modeling."
+          ],
+          "answer": "Strategic planning sets long-term vision; tactical planning governs short-term execution. Strategic plans integrate executive vision, market analysis, SMART goals, operational roadmaps, and financial forecasts.",
+          "marking_hint": "3 marks for strategic vs tactical comparison; 3 marks for developing a plan; 4 marks for detailing key strategic plan components."
+        }
+      }
+    ]
   }
 ]

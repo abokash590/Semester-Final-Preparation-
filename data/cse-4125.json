@@ -1767,5 +1767,309 @@
         }
       }
     ]
+  },
+  {
+    "id": "cse-4125-term-fec-tt1",
+    "course": "CSE-4125",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "ML Definition, Classification & Regression",
+      "Encoding Techniques & One-Hot Encoding",
+      "Linear Regression & Least Squares Method",
+      "Cross Validation & K-Fold Process"
+    ],
+    "question": "FEC • ML-1 (Answer all questions) **[5 x 4 = 20]**\n\n**Question 1:** Define Machine Learning (ML). Explain the difference between classification and regression. Give two practical examples of applications for each. **[5]**\n\n**Question 2:** Why encoding is necessary in machine learning? Explain one hot encoding technique with proper example. **[5]**\n\n**Question 3:** Explain the concept of linear regression. Given the data points $(1, 2), (2, 3), (3, 5)$, find the best-fit line using the least squares method. **[5]**\n\n**Question 4:** What is Cross Validation? Explain K-Fold Cross Validation. Describe the step-by-step process of performing K-Fold CV. **[5]**",
+    "subparts": [
+      {
+        "id": "cse-4125-term-fec-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 5,
+        "topics": [
+          "ML Definition, Classification & Regression"
+        ],
+        "question": "Define Machine Learning (ML). Explain the difference between classification and regression. Give two practical examples of applications for each.",
+        "solution": {
+          "steps": [
+            "1. **Machine Learning Definition:** Machine Learning is a discipline of artificial intelligence enabling computer algorithms to iteratively learn from data and improve performance on specific tasks without explicit rule-based programming.",
+            "2. **Classification vs. Regression:**",
+            "| Feature | Classification | Regression |",
+            "| :--- | :--- | :--- |",
+            "| **Output Nature** | Discrete categorical class labels. | Continuous numerical quantities. |",
+            "| **Decision Boundary** | Partitioning feature space into class regions. | Fitting a continuous curve or hyperplane. |",
+            "| **Evaluation Metrics**| Accuracy, Precision, Recall, F1, ROC-AUC. | MSE, RMSE, MAE, R-squared ($R^2$). |",
+            "3. **Practical Examples:**",
+            "- **Classification Examples:**",
+            "  1. *Email Spam Detection:* Classifying incoming emails as 'Spam' or 'Not Spam'.",
+            "  2. *Medical Diagnosis:* Classifying tumor biopsy scans as 'Malignant' or 'Benign'.",
+            "- **Regression Examples:**",
+            "  1. *Real Estate Valuation:* Predicting house market prices based on square footage and location.",
+            "  2. *Weather Forecasting:* Predicting tomorrow's exact continuous temperature (°C)."
+          ],
+          "answer": "ML extracts statistical patterns from data. Classification predicts discrete class labels, whereas Regression predicts continuous numerical quantities.",
+          "marking_hint": "1 mark for ML definition; 2 marks for classification vs regression differences; 2 marks for practical examples."
+        }
+      },
+      {
+        "id": "cse-4125-term-fec-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 5,
+        "topics": [
+          "Encoding Techniques & One-Hot Encoding"
+        ],
+        "question": "Why encoding is necessary in machine learning? Explain one hot encoding technique with proper example.",
+        "solution": {
+          "steps": [
+            "1. **Why Encoding is Necessary:**",
+            "- Machine learning algorithms (Linear Models, Neural Networks, SVMs) perform mathematical computations (matrix dot products, gradients, Euclidean distances) that require numerical tensor inputs.",
+            "- Raw categorical strings (e.g., 'Red', 'Green', 'Blue') cannot be mathematically computed directly.",
+            "- Simple label encoding ($0, 1, 2$) unintentionally introduces an artificial ordinal ranking where none exists (e.g., implies $2 > 1 > 0$), misguiding linear algorithms.",
+            "2. **One-Hot Encoding Technique:**",
+            "- Transforms each unique categorical value into a binary vector of length equal to the number of categories.",
+            "- Each category is represented by a dedicated binary column with a $1$ indicating presence and $0$ elsewhere.",
+            "3. **Example Demonstration:**",
+            "Consider feature `Color` with categories: `Red`, `Green`, `Blue`.",
+            "| Original Color | Color_Red | Color_Green | Color_Blue |",
+            "| :--- | :---: | :---: | :---: |",
+            "| Red | 1 | 0 | 0 |",
+            "| Green | 0 | 1 | 0 |",
+            "| Blue | 0 | 0 | 1 |",
+            "| Red | 1 | 0 | 0 |"
+          ],
+          "answer": "Encoding converts non-numeric categorical data into mathematical numbers without imposing false ordinal hierarchies. One-Hot encoding assigns a binary column per category.",
+          "marking_hint": "2.5 marks for explaining the mathematical necessity of encoding; 2.5 marks for One-Hot encoding explanation and tabular example."
+        }
+      },
+      {
+        "id": "cse-4125-term-fec-tt1-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 5,
+        "topics": [
+          "Linear Regression & Least Squares Method"
+        ],
+        "question": "Explain the concept of linear regression. Given data points (1, 2), (2, 3), (3, 5), find the best-fit line using the least squares method.",
+        "solution": {
+          "steps": [
+            "1. **Concept of Linear Regression:**",
+            "Models the linear relationship between an independent variable $x$ and a dependent variable $y$ via $y = mx + c$, minimizing the sum of squared vertical residuals $\\sum (y_i - \\hat{y}_i)^2$.",
+            "2. **Given Data Points ($n = 3$):**",
+            "$(x_1, y_1) = (1, 2), \\quad (x_2, y_2) = (2, 3), \\quad (x_3, y_3) = (3, 5)$.",
+            "3. **Compute Sample Means:**",
+            "- $\\bar{x} = \\frac{1 + 2 + 3}{3} = \\frac{6}{3} = 2$",
+            "- $\\bar{y} = \\frac{2 + 3 + 5}{3} = \\frac{10}{3} \\approx 3.333$",
+            "4. **Compute Slope $m = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum (x_i - \\bar{x})^2}$:**",
+            "- Deviations $(x_i - \\bar{x})$: $-1, 0, 1$",
+            "- Deviations $(y_i - \\bar{y})$: $2 - 10/3 = -4/3$, $3 - 10/3 = -1/3$, $5 - 10/3 = 5/3$",
+            "- Numerator: $\\sum (x_i - \\bar{x})(y_i - \\bar{y}) = (-1)(-4/3) + (0)(-1/3) + (1)(5/3) = \\frac{4}{3} + \\frac{5}{3} = \\frac{9}{3} = 3$",
+            "- Denominator: $\\sum (x_i - \\bar{x})^2 = (-1)^2 + 0^2 + 1^2 = 1 + 0 + 1 = 2$",
+            "- Slope: $m = \\frac{3}{2} = \\mathbf{1.5}$",
+            "5. **Compute Intercept $c = \\bar{y} - m \\bar{x}$:**",
+            "- $c = \\frac{10}{3} - (1.5)(2) = \\frac{10}{3} - 3 = \\frac{10 - 9}{3} = \\frac{1}{3} \\approx \\mathbf{0.333}$",
+            "6. **Best-Fit Regression Line:**",
+            "$$y = 1.5x + \\frac{1}{3} \\quad \\text{or} \\quad y = 1.5x + 0.333$$"
+          ],
+          "answer": "Best-fit line equation: y = 1.5x + 1/3 (or y = 1.5x + 0.333).",
+          "marking_hint": "1.5 marks for linear regression concept; 2 marks for slope m calculation; 1.5 marks for intercept c and final equation."
+        }
+      },
+      {
+        "id": "cse-4125-term-fec-tt1-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 5,
+        "topics": [
+          "Cross Validation & K-Fold Process"
+        ],
+        "question": "What is Cross Validation? Explain K-Fold Cross Validation. Describe the step-by-step process of performing K-Fold CV.",
+        "solution": {
+          "steps": [
+            "1. **Cross Validation (CV) Definition:**",
+            "A statistical resampling procedure used to evaluate the generalization performance of machine learning models on unseen data, preventing overfitting and eliminating train/test split bias.",
+            "2. **K-Fold Cross Validation:**",
+            "- Partitions the dataset into $K$ equal-sized mutually exclusive subsets (folds).",
+            "- In each iteration, $K-1$ folds are used for model training, and the remaining 1 fold is held out for validation.",
+            "- This process repeats $K$ times so that every single fold serves as validation data exactly once.",
+            "3. **Step-by-Step Execution Process:**",
+            "- **Step 1 (Shuffle & Partition):** Randomly shuffle the complete dataset and partition it into $K$ equal folds ($F_1, F_2, \\dots, F_K$).",
+            "- **Step 2 (Iterative Training & Validation):**",
+            "  - *Iteration 1:* Train on $F_2, \\dots, F_K$; validate on $F_1 \\implies$ Score $S_1$.",
+            "  - *Iteration 2:* Train on $F_1, F_3, \\dots, F_K$; validate on $F_2 \\implies$ Score $S_2$.",
+            "  - ...",
+            "  - *Iteration K:* Train on $F_1, \\dots, F_{K-1}$; validate on $F_K \\implies$ Score $S_K$.",
+            "- **Step 3 (Metric Aggregation):** Compute the mean cross-validation score: $S_{\\text{final}} = \\frac{1}{K} \\sum_{i=1}^K S_i$ and its standard error.",
+            "- **Step 4 (Final Model Training):** Once hyperparameters are selected, retrain the final model on the entire dataset."
+          ],
+          "answer": "Cross validation measures model generalization. K-Fold CV partitions data into K subsets, iteratively training on K-1 folds and testing on 1, then averaging the K scores.",
+          "marking_hint": "1.5 marks for CV definition; 1.5 marks for K-Fold concept; 2 marks for step-by-step procedure."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cse-4125-term-fec-tt2",
+    "course": "CSE-4125",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "K-Means Clustering & Optimal K",
+      "Principal Component Analysis (PCA)",
+      "Entropy & Information Gain Decision Tree",
+      "Markov Chain Weather Transition"
+    ],
+    "question": "FEC • ML-2 (Answer all questions) **[5 x 4 = 20]**\n\n**Question 1:** What is clustering in machine learning? Describe the K-Means clustering algorithm. How do you choose the optimal number of clusters (K) for K-means, and what methods can assist in this decision? **[5]**\n\n**Question 2:** Given the following data, compute the principal component vectors and the first principal components: **[5]**\n\n| x | 2 | 3 | 7 |\n| :---: | :---: | :---: | :---: |\n| **y** | 11 | 14 | 26 |\n\n**Question 3:** State the formula of Bayes theorem. Consider the following dataset: **[5]**\n\n| Outlook | Temperature | Humidity | Wind | Play |\n| :--- | :--- | :--- | :--- | :---: |\n| Sunny | Hot | High | Weak | No |\n| Sunny | Hot | High | Strong | No |\n| Overcast | Hot | High | Weak | Yes |\n| Rainy | Mild | High | Weak | Yes |\n| Rainy | Cool | Normal | Weak | Yes |\n| Rainy | Cool | Normal | Strong | No |\n| Overcast | Cool | Normal | Strong | Yes |\n| Sunny | Mild | High | Weak | No |\n\nCalculate entropy and information gain at each step.\n\n**Question 4:** What is a Markov Chain? Consider the following transition matrix representing the weather conditions of a particular region. The possible weather states are Sunny (S), Rainy (R), and Cloudy (C). **[5]**\n\n| Current State | Sunny (S) | Rainy (R) | Cloudy (C) |\n| :--- | :---: | :---: | :---: |\n| **Sunny (S)** | 0.80 | 0.15 | 0.05 |\n| **Rainy (R)** | 0.38 | 0.60 | 0.02 |\n| **Cloudy (C)** | 0.75 | 0.05 | 0.20 |\n\nGiven that today the weather is sunny (S). What is the probability that tomorrow is sunny (S) and day after tomorrow is rainy (R)?",
+    "subparts": [
+      {
+        "id": "cse-4125-term-fec-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 5,
+        "topics": [
+          "K-Means Clustering & Optimal K"
+        ],
+        "question": "What is clustering in machine learning? Describe the K-Means clustering algorithm. How do you choose optimal K, and what methods assist in this decision?",
+        "solution": {
+          "steps": [
+            "1. **Clustering Definition:**",
+            "An unsupervised learning technique that groups unlabeled data points into clusters such that points within the same cluster share high similarity while points in different clusters are distinctly dissimilar.",
+            "2. **K-Means Clustering Algorithm:**",
+            "- **Step 1:** Choose $K$ initial centroids randomly (or via K-Means++).",
+            "- **Step 2 (Assignment):** Assign each data point $x_i$ to its nearest centroid based on Euclidean distance $d(x_i, c_k) = \\|x_i - c_k\\|^2$.",
+            "- **Step 3 (Update):** Recompute each centroid as the mean of all points assigned to that cluster: $c_k = \\frac{1}{|S_k|} \\sum_{x_i \\in S_k} x_i$.",
+            "- **Step 4:** Repeat Steps 2 and 3 until centroids converge or assignments stabilize.",
+            "3. **Methods to Choose Optimal $K$:**",
+            "- **The Elbow Method:** Computes the Within-Cluster Sum of Squares (WCSS / Inertia) across candidate $K$ values. Plotting WCSS against $K$ reveals an 'elbow point' where the rate of WCSS reduction sharply diminishes; this elbow signifies optimal $K$.",
+            "- **Silhouette Analysis:** Measures how similar a point is to its own cluster compared to other clusters ($s \\in [-1, 1]$). The $K$ value yielding the highest average silhouette score is preferred."
+          ],
+          "answer": "Clustering groups unlabeled data. K-Means iterates assignment and centroid recalculation. Optimal K is determined via the Elbow Method (WCSS) and Silhouette Analysis.",
+          "marking_hint": "1.5 marks for clustering definition; 1.5 marks for K-Means steps; 2 marks for Elbow Method and Silhouette Analysis."
+        }
+      },
+      {
+        "id": "cse-4125-term-fec-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 5,
+        "topics": [
+          "Principal Component Analysis (PCA)"
+        ],
+        "question": "Given data points (2, 11), (3, 14), (7, 26), compute the principal component vectors and the first principal components.",
+        "solution": {
+          "steps": [
+            "1. **Compute Sample Means ($n = 3$):**",
+            "- $\\bar{x} = \\frac{2 + 3 + 7}{3} = \\frac{12}{3} = 4$",
+            "- $\\bar{y} = \\frac{11 + 14 + 26}{3} = \\frac{51}{3} = 17$",
+            "2. **Center the Data ($X_c = X - \\mu$):**",
+            "- $x' = [2-4, 3-4, 7-4] = [-2, -1, 3]$",
+            "- $y' = [11-17, 14-17, 26-17] = [-6, -3, 9]$",
+            "- *Notice $y' = 3x'$, showing exact linear collinearity!*",
+            "3. **Compute Sample Covariance Matrix $\\Sigma = \\frac{1}{n-1} X_c^T X_c$:**",
+            "- $\\text{Var}(x) = \\frac{(-2)^2 + (-1)^2 + 3^2}{2} = \\frac{4 + 1 + 9}{2} = 7$",
+            "- $\\text{Var}(y) = \\frac{(-6)^2 + (-3)^2 + 9^2}{2} = \\frac{36 + 9 + 81}{2} = \\frac{126}{2} = 63$",
+            "- $\\text{Cov}(x, y) = \\frac{(-2)(-6) + (-1)(-3) + (3)(9)}{2} = \\frac{12 + 3 + 27}{2} = \\frac{42}{2} = 21$",
+            "$$\\Sigma = \\begin{bmatrix} 7 & 21 \\\\ 21 & 63 \\end{bmatrix}$$",
+            "4. **Eigenvalues Calculation:**",
+            "$$\\det(\\Sigma - \\lambda I) = (7 - \\lambda)(63 - \\lambda) - 21^2 = \\lambda^2 - 70\\lambda = 0 \\implies \\lambda_1 = 70, \\; \\lambda_2 = 0$$",
+            "5. **Principal Component Vectors (Eigenvectors):**",
+            "- For $\\lambda_1 = 70$: $(\\Sigma - 70I)v_1 = 0 \\implies \\begin{bmatrix} -63 & 21 \\\\ 21 & -7 \\end{bmatrix} \\begin{bmatrix} v_x \\\\ v_y \\end{bmatrix} = 0 \\implies v_y = 3v_x$.",
+            "- Normalized First Principal Component Vector: $v_1 = \\frac{1}{\\sqrt{1^2 + 3^2}} \\begin{bmatrix} 1 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{\\sqrt{10}} \\\\ \\frac{3}{\\sqrt{10}} \\end{bmatrix} \\approx \\begin{bmatrix} 0.3162 \\\\ 0.9487 \\end{bmatrix}$.",
+            "- Second Principal Component Vector: $v_2 = \\begin{bmatrix} -\\frac{3}{\\sqrt{10}} \\\\ \\frac{1}{\\sqrt{10}} \\end{bmatrix}$.",
+            "6. **First Principal Component Scores ($z_{i1} = v_1^T [x_i', y_i']^T$):**",
+            "- Point 1: $z_1 = \\frac{1}{\\sqrt{10}}(-2) + \\frac{3}{\\sqrt{10}}(-6) = \\frac{-20}{\\sqrt{10}} \\approx \\mathbf{-6.325}$",
+            "- Point 2: $z_2 = \\frac{1}{\\sqrt{10}}(-1) + \\frac{3}{\\sqrt{10}}(-3) = \\frac{-10}{\\sqrt{10}} \\approx \\mathbf{-3.162}$",
+            "- Point 3: $z_3 = \\frac{1}{\\sqrt{10}}(3) + \\frac{3}{\\sqrt{10}}(9) = \\frac{30}{\\sqrt{10}} \\approx \\mathbf{+9.487}$"
+          ],
+          "answer": "First PC vector v1 = [1/sqrt(10), 3/sqrt(10)]^T. First principal component projections: z = [-6.325, -3.162, 9.487] (captures 100% of variance).",
+          "marking_hint": "1.5 marks for data centering and covariance matrix; 1.5 marks for eigenvalues; 1 mark for eigenvector v1; 1 mark for principal component scores."
+        }
+      },
+      {
+        "id": "cse-4125-term-fec-tt2-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 5,
+        "topics": [
+          "Entropy & Information Gain Decision Tree"
+        ],
+        "question": "State Bayes theorem formula. Calculate entropy and information gain at each step for the given 8-sample dataset.",
+        "solution": {
+          "steps": [
+            "1. **Bayes' Theorem Formula:** $P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$.",
+            "2. **Total Target Entropy $H(S)$:**",
+            "- Total samples $N = 8$: $\\text{Play} = \\text{Yes}$ for 4 samples, $\\text{Play} = \\text{No}$ for 4 samples.",
+            "$$H(S) = -\\left(\\frac{4}{8} \\log_2 \\frac{4}{8} + \\frac{4}{8} \\log_2 \\frac{4}{8}\\right) = -\\left(0.5(-1) + 0.5(-1)\\right) = \\mathbf{1.0 \\text{ bit}}$$",
+            "3. **Entropy & Information Gain for Features:**",
+            "- **Feature 1: Outlook**",
+            "  - *Sunny (3):* 0 Yes, 3 No $\\implies H = 0$",
+            "  - *Overcast (2):* 2 Yes, 0 No $\\implies H = 0$",
+            "  - *Rainy (3):* 2 Yes, 1 No $\\implies H = -\\left(\\frac{2}{3}\\log_2\\frac{2}{3} + \\frac{1}{3}\\log_2\\frac{1}{3}\\right) \\approx 0.918$",
+            "  - $H(S \\mid \\text{Outlook}) = \\frac{3}{8}(0) + \\frac{2}{8}(0) + \\frac{3}{8}(0.918) = 0.344$",
+            "  - $\\mathbf{\\text{Gain}(S, \\text{Outlook})} = 1.0 - 0.344 = \\mathbf{0.656}$",
+            "- **Feature 2: Humidity**",
+            "  - *High (5):* 1 Yes, 4 No $\\implies H = -\\left(\\frac{1}{5}\\log_2\\frac{1}{5} + \\frac{4}{5}\\log_2\\frac{4}{5}\\right) \\approx 0.722$",
+            "  - *Normal (3):* 3 Yes, 0 No $\\implies H = 0$",
+            "  - $H(S \\mid \\text{Humidity}) = \\frac{5}{8}(0.722) + \\frac{3}{8}(0) = 0.451$",
+            "  - $\\mathbf{\\text{Gain}(S, \\text{Humidity})} = 1.0 - 0.451 = \\mathbf{0.549}$",
+            "- **Feature 3: Wind**",
+            "  - *Weak (5):* 3 Yes, 2 No $\\implies H \\approx 0.971$",
+            "  - *Strong (3):* 1 Yes, 2 No $\\implies H \\approx 0.918$",
+            "  - $H(S \\mid \\text{Wind}) = \\frac{5}{8}(0.971) + \\frac{3}{8}(0.918) = 0.951$",
+            "  - $\\mathbf{\\text{Gain}(S, \\text{Wind})} = 1.0 - 0.951 = \\mathbf{0.049}$",
+            "- **Feature 4: Temperature**",
+            "  - *Hot (3):* 1 Yes, 2 No $\\implies H = 0.918$",
+            "  - *Mild (2):* 1 Yes, 1 No $\\implies H = 1.000$",
+            "  - *Cool (3):* 2 Yes, 1 No $\\implies H = 0.918$",
+            "  - $H(S \\mid \\text{Temp}) = \\frac{3}{8}(0.918) + \\frac{2}{8}(1.0) + \\frac{3}{8}(0.918) = 0.939$",
+            "  - $\\mathbf{\\text{Gain}(S, \\text{Temp})} = 1.0 - 0.939 = \\mathbf{0.061}$",
+            "4. **Conclusion:** **Outlook** provides the highest Information Gain ($0.656$) and is selected as root split."
+          ],
+          "answer": "Base Entropy = 1.0. Information Gains: Outlook = 0.656, Humidity = 0.549, Temp = 0.061, Wind = 0.049. Outlook is the optimal splitting attribute.",
+          "marking_hint": "1 mark for Bayes formula and base entropy; 3 marks for step-by-step entropy and gain calculations; 1 mark for selecting Outlook."
+        }
+      },
+      {
+        "id": "cse-4125-term-fec-tt2-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 5,
+        "topics": [
+          "Markov Chain Weather Transition"
+        ],
+        "question": "What is a Markov Chain? Transition matrix P: Sunny, Rainy, Cloudy. Today is Sunny. What is probability tomorrow is Sunny and day after tomorrow is Rainy?",
+        "solution": {
+          "steps": [
+            "1. **Markov Chain Definition:**",
+            "A discrete-time stochastic process that transitions between states in a state space according to transition probabilities satisfying the Markov property (the conditional probability of the future state depends solely on the current present state and not on the preceding past history).",
+            "2. **Transition Probability Matrix $P$:**",
+            "$$P = \\begin{bmatrix} P_{S,S} & P_{S,R} & P_{S,C} \\\\ P_{R,S} & P_{R,R} & P_{R,C} \\\\ P_{C,S} & P_{C,R} & P_{C,C} \\end{bmatrix} = \\begin{bmatrix} 0.80 & 0.15 & 0.05 \\\\ 0.38 & 0.60 & 0.02 \\\\ 0.75 & 0.05 & 0.20 \\end{bmatrix}$$",
+            "3. **Compute Probability for the Sequence:**",
+            "- Given: Today ($t = 0$) is Sunny $\\implies X_0 = S$.",
+            "- Target: Tomorrow ($t = 1$) is Sunny ($X_1 = S$) AND Day after tomorrow ($t = 2$) is Rainy ($X_2 = R$).",
+            "- By the Markov multiplication chain rule:",
+            "$$P(X_1 = S, X_2 = R \\mid X_0 = S) = P(X_1 = S \\mid X_0 = S) \\times P(X_2 = R \\mid X_1 = S)$$",
+            "- From the transition matrix (row 1 for Sunny):",
+            "  - $P(X_1 = S \\mid X_0 = S) = P_{S, S} = 0.80$",
+            "  - $P(X_2 = R \\mid X_1 = S) = P_{S, R} = 0.15$",
+            "- Joint Probability:",
+            "$$P = 0.80 \\times 0.15 = \\mathbf{0.12} \\quad (12\\%)$$",
+            "- *(Note: Weather sequence Sunny -> Sunny -> Rainy occurs with exactly 12% probability).*"
+          ],
+          "answer": "Probability that tomorrow is sunny and day after tomorrow is rainy = 0.80 * 0.15 = 0.12 (12%).",
+          "marking_hint": "2 marks for Markov chain definition; 3 marks for setting up transition probability multiplication and reaching 0.12."
+        }
+      }
+    ]
   }
 ]

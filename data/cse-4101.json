@@ -1778,5 +1778,344 @@
         }
       }
     ]
+  },
+  {
+    "id": "cse-4101-term-fec-tt1",
+    "course": "CSE-4101",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "A* Evaluation Function & Inference Rules",
+      "Heuristic Admissibility & Consistency",
+      "Greedy Best-First Search on Romania Map",
+      "Hill Climbing Variants & First-Order Logic",
+      "Turing Test & Learning Agents"
+    ],
+    "question": "4Y1S 2021-22 • CSE 4101 Incourse 01 (Answer all questions)\n\n**Question 1:** **[2+3 = 5]**  \na) Explain the components of the evaluation function $f(n) = g(n) + h(n)$. **[2]**  \nb) Write short notes on: i) Modus Ponens ii) Modus Tollens with example. **[3]**\n\n**Question 2:** Explain \"For a heuristic function to search safely and optimally, it must satisfy Admissibility and Consistency\". **[3]**\n\n**Question 3:** Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest. **[4]**\n\n```mermaid\ngraph LR\n    Arad((Arad: 366)) ---|140| Sibiu((Sibiu: 253))\n    Arad ---|118| Timisoara((Timisoara: 329))\n    Arad ---|75| Zerind((Zerind: 374))\n    Zerind ---|71| Oradea((Oradea: 380))\n    Oradea ---|151| Sibiu\n    Sibiu ---|99| Fagaras((Fagaras: 176))\n    Sibiu ---|80| RimnicuVilcea((Rimnicu Vilcea: 193))\n    Fagaras ---|211| Bucharest((Bucharest: 0))\n    RimnicuVilcea ---|97| Pitesti((Pitesti: 100))\n    RimnicuVilcea ---|146| Craiova((Craiova: 160))\n    Pitesti ---|101| Bucharest\n    Pitesti ---|138| Craiova\n    Craiova ---|120| Dobreta((Dobreta: 242))\n    Dobreta ---|75| Mehadia((Mehadia: 241))\n    Mehadia ---|70| Lugoj((Lugoj: 244))\n    Lugoj ---|111| Timisoara\n    Bucharest ---|90| Giurgiu((Giurgiu: 77))\n    Bucharest ---|85| Urziceni((Urziceni: 80))\n```\n\n**Question 4:** **[2+2 = 4]**  \na) Briefly define the variants of hill climbing search. **[2]**  \nb) Convert the following statements into First-Order Logic (FOL): **[2]**  \ni. All birds can fly  \nii. Some humans are honest  \niii. Everyone is loyal to someone  \niv. Marcus tried to assassinate Caesar\n\n**Question 5:** Shortly define \"The Turing Test approach\". How do you evaluate learning agent from other AI agents? **[4]**",
+    "subparts": [
+      {
+        "id": "cse-4101-term-fec-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 5,
+        "topics": [
+          "A* Evaluation Function & Inference Rules"
+        ],
+        "question": "a) Explain the components of the evaluation function f(n) = g(n) + h(n). b) Write short notes on i) Modus Ponens ii) Modus Tollens with example.",
+        "solution": {
+          "steps": [
+            "**(a) Components of the A* Evaluation Function $f(n) = g(n) + h(n)$:**",
+            "- **$g(n)$ (Past Path Cost):** The exact, cumulative edge cost accumulated along the best-known path from the initial start node $s$ to the current node $n$.",
+            "- **$h(n)$ (Heuristic Future Estimate):** An estimated cost from node $n$ to the closest goal state based on domain-specific heuristic knowledge.",
+            "- **$f(n)$ (Estimated Total Cost):** Represents the estimated total cost of the cheapest complete solution path that travels through node $n$. A* search prioritizes expanding nodes with the lowest $f(n)$.",
+            "**(b) Logical Inference Rules:**",
+            "- **i. Modus Ponens (Affirming the Antecedent):**",
+            "  $$\\frac{P, \\quad P \\implies Q}{Q}$$",
+            "  *Principle:* If proposition $P$ is true, and the implication 'If $P$ then $Q$' is true, then $Q$ is logically inferred as true.",
+            "  *Example:* $P$ = 'It is raining.' $P \\implies Q$ = 'If it is raining, the street is wet.' Inference: $Q$ = 'The street is wet.'",
+            "- **ii. Modus Tollens (Denying the Consequent):**",
+            "  $$\\frac{\\neg Q, \\quad P \\implies Q}{\\neg P}$$",
+            "  *Principle:* If $Q$ is false ($\neg Q$), and the conditional 'If $P$ then $Q$' holds, then antecedent $P$ must be false ($\neg P$).",
+            "  *Example:* $\neg Q$ = 'The street is not wet.' $P \\implies Q$ = 'If it is raining, the street is wet.' Inference: $\neg P$ = 'It is not raining.'"
+          ],
+          "answer": "f(n) combines accumulated cost g(n) with heuristic estimate h(n). Modus Ponens infers Q from P and P->Q; Modus Tollens infers ~P from ~Q and P->Q.",
+          "marking_hint": "2 marks for explaining g(n), h(n), and f(n); 1.5 marks for Modus Ponens with example; 1.5 marks for Modus Tollens with example."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 3,
+        "topics": [
+          "Heuristic Admissibility & Consistency"
+        ],
+        "question": "Explain 'For a heuristic function to search safely and optimally, it must satisfy Admissibility and Consistency'.",
+        "solution": {
+          "steps": [
+            "1. **Admissibility Condition ($h(n) \\le h^*(n)$):**",
+            "- An admissible heuristic **never overestimates** the true minimal cost $h^*(n)$ required to reach a goal from node $n$.",
+            "- *Search Safety & Optimality:* In tree search, admissibility guarantees that A* will never return a suboptimal path, because any suboptimal goal will have $f(G_2) = g(G_2) > C^*$, whereas an optimal goal's ancestor on the frontier will have $f(n) \\le C^*$ and will always be chosen first.",
+            "2. **Consistency (Monotonicity) Condition:**",
+            "- For every node $n$ and every successor $n'$ generated by action $a$: $h(n) \\le c(n, a, n') + h(n')$.",
+            "- This represents the **triangle inequality** in state space.",
+            "- *Search Safety & Efficiency:* Consistency guarantees that the values of $f(n)$ are non-decreasing along any path. Consequently, whenever A* expands a node in graph search, the path to that node is guaranteed to be optimal. This eliminates the expensive requirement to reopen nodes previously expanded in the closed set."
+          ],
+          "answer": "Admissibility prevents cost overestimation, ensuring optimal solutions in tree search. Consistency enforces the triangle inequality, guaranteeing that the first time a node is expanded in graph search, its path is optimal.",
+          "marking_hint": "1.5 marks for mathematical definition and role of Admissibility; 1.5 marks for Consistency and triangle inequality."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt1-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 4,
+        "topics": [
+          "Greedy Best-First Search on Romania Map"
+        ],
+        "question": "Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest.",
+        "solution": {
+          "steps": [
+            "1. **Greedy Best-First Search Principle:**",
+            "Evaluates nodes using $f(n) = h(n)$ exclusively (where $h(n)$ is the straight-line distance heuristic to Bucharest).",
+            "Straight-line distances to Bucharest ($h$): Arad = 366, Sibiu = 253, Timisoara = 329, Zerind = 374, Fagaras = 176, Rimnicu Vilcea = 193, Bucharest = 0.",
+            "2. **Step-by-Step Search Progression:**",
+            "- **Initial State:** Start at `Arad` ($h = 366$).",
+            "- **Step 1:** Expand `Arad`. Generated frontier neighbors:",
+            "  - `Sibiu` ($h = 253$)",
+            "  - `Timisoara` ($h = 329$)",
+            "  - `Zerind` ($h = 374$)",
+            "  - Minimum heuristic is `Sibiu` ($h = 253$). Selected.",
+            "- **Step 2:** Expand `Sibiu`. Generated frontier neighbors:",
+            "  - `Fagaras` ($h = 176$)",
+            "  - `Rimnicu Vilcea` ($h = 193$)",
+            "  - `Oradea` ($h = 380$)",
+            "  - `Arad` (already visited)",
+            "  - Minimum heuristic is `Fagaras` ($h = 176$). Selected.",
+            "- **Step 3:** Expand `Fagaras`. Generated frontier neighbors:",
+            "  - `Bucharest` ($h = 0$)",
+            "  - `Sibiu` (already visited)",
+            "  - Minimum heuristic is `Bucharest` ($h = 0$). Goal reached!",
+            "3. **Path and Cost Calculation:**",
+            "- Resulting Path: **Arad -> Sibiu -> Fagaras -> Bucharest**",
+            "- Step edge costs: $\\text{Cost}(\\text{Arad}, \\text{Sibiu}) = 140$, $\\text{Cost}(\\text{Sibiu}, \\text{Fagaras}) = 99$, $\\text{Cost}(\\text{Fagaras}, \\text{Bucharest}) = 211$.",
+            "- **Total Path Cost:** $g = 140 + 99 + 211 = \\mathbf{450}$."
+          ],
+          "answer": "Greedy Best-First Path: Arad -> Sibiu -> Fagaras -> Bucharest with Total Cost = 450.",
+          "marking_hint": "1 mark for explaining Greedy Best-First Search criterion; 2 marks for step-by-step frontier heuristic evaluations; 1 mark for correct path and total cost."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt1-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 4,
+        "topics": [
+          "Hill Climbing Variants & First-Order Logic"
+        ],
+        "question": "a) Briefly define the variants of hill climbing search. b) Convert the following statements into First-Order Logic (FOL): i. All birds can fly, ii. Some humans are honest, iii. Everyone is loyal to someone, iv. Marcus tried to assassinate Caesar.",
+        "solution": {
+          "steps": [
+            "**(a) Variants of Hill Climbing Search:**",
+            "- **Simple Hill Climbing:** Evaluates neighboring states one by one and immediately transitions to the first neighbor that improves the evaluation function.",
+            "- **Steepest-Ascent Hill Climbing (Gradient Search):** Evaluates all possible successor states and chooses the single neighbor with the maximum improvement.",
+            "- **Stochastic Hill Climbing:** Randomly selects from among the uphill moves, weighting probabilities proportionally to steepness.",
+            "- **Random-Restart Hill Climbing:** Runs a series of hill climbing searches from randomly generated starting states until a goal is discovered, guaranteeing asymptotic completeness.",
+            "**(b) First-Order Logic (FOL) Translations:**",
+            "- **i. All birds can fly:**",
+            "  $$\\forall x \\, (\\text{Bird}(x) \\implies \\text{CanFly}(x))$$",
+            "- **ii. Some humans are honest:**",
+            "  $$\\exists x \\, (\\text{Human}(x) \\land \\text{Honest}(x))$$",
+            "- **iii. Everyone is loyal to someone:**",
+            "  $$\\forall x \\, (\\text{Person}(x) \\implies \\exists y \\, (\\text{Person}(y) \\land \\text{LoyalTo}(x, y)))$$  (or $\\forall x \\, \\exists y \\, \\text{LoyalTo}(x, y)$)",
+            "- **iv. Marcus tried to assassinate Caesar:**",
+            "  $$\\text{TriedToAssassinate}(\\text{Marcus}, \\text{Caesar})$$"
+          ],
+          "answer": "Defined 4 hill climbing variants. Correctly translated all 4 English statements into standard FOL predicates.",
+          "marking_hint": "2 marks for 4 hill climbing variants; 2 marks (0.5 marks each) for correct FOL statements."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt1-q5",
+        "qno": "Q5",
+        "label": "Question 5",
+        "marks": 4,
+        "topics": [
+          "Turing Test & Learning Agents"
+        ],
+        "question": "Shortly define 'The Turing Test approach'. How do you evaluate learning agent from other AI agents?",
+        "solution": {
+          "steps": [
+            "1. **The Turing Test Approach (Alan Turing, 1950):**",
+            "- An operational benchmark for determining machine intelligence.",
+            "- A human interrogator communicates through text terminals with an unseen human and machine. If the interrogator cannot reliably tell which entity is the computer after thorough questioning, the machine passes.",
+            "- *Required Capabilities:* Natural Language Processing (NLP), Knowledge Representation, Automated Reasoning, and Machine Learning.",
+            "2. **Learning Agents vs. Other AI Agents:**",
+            "- **Traditional AI Agents (Reflex, Goal-based, Utility-based):** Rely on static, pre-programmed knowledge bases or fixed evaluation functions. They cannot adapt when deployed in unfamiliar or changing environments.",
+            "- **Learning Agent Architecture:** Separates the system into four distinct components:",
+            "  - **Learning Element:** Responsible for making improvements and discovering new knowledge.",
+            "  - **Performance Element:** Responsible for selecting external actions based on percepts (the operational agent).",
+            "  - **Critic:** Evaluates the agent's behavior against an external performance standard and provides feedback to the learning element.",
+            "  - **Problem Generator:** Suggests exploratory actions leading to novel experiences rather than merely repeating known sub-optimal behaviors.",
+            "- *Evaluation:* A learning agent is evaluated by its **learning curve** (rate of performance metric improvement over time) and its capacity to generalize in non-stationary environments."
+          ],
+          "answer": "Turing Test evaluates behavioral indistinguishability from human intelligence. Learning agents distinctly separate performance from a learning element and critic, enabling continuous self-adaptation.",
+          "marking_hint": "2 marks for Turing Test definition and required capabilities; 2 marks for learning agent architecture and comparison with traditional agents."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cse-4101-term-fec-tt2",
+    "course": "CSE-4101",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "Constraint Satisfaction Problems (CSP)",
+      "CSP Formulation & Genetic Algorithm Steps",
+      "Uncertainty in AI & Bayes' Theorem",
+      "Probability & Penalty Kick Scenario",
+      "Genetic Algorithm Optimization on f(x) = x^2"
+    ],
+    "question": "4Y1S 2021-22 • CSE 4101 Incourse 02 (Answer all questions)\n\n**Question 1:** Define CSP with proper example. Describe varieties of CSP with example. **[4]**\n\n**Question 2:** Elaborate standard search formulation in CSP. Describe the steps of genetic algorithm. **[4]**\n\n**Question 3:** Briefly define the reasons for uncertainty in AI. Write down the equation for conditional probability and Bayes Theorem. **[4]**\n\n**Question 4:** During a FIFA tournament, a team relies on two types of penalty takers: The Star Forward takes 25% of the team's penalties and scores a goal 85% of the time. Other Players take the remaining 75% of the penalties and score a goal 70% of the time. You walk beside the TV and noticed Star Forward will take the kick for a penalty. What is the probability of that penalty is a goal? **[4]**\n\n**Question 5:** Maximize $f(x) = x^2$ over the integer interval $[0, 31]$ using a simple Genetic Algorithm. Assume an initial population size of 4 chromosomes, each encoded as a 5-bit binary string that enough for the given interval: **[4]**  \n- Population 1 (P1): 01101  \n- Population 2 (P2): 11000  \n- Population 3 (P3): 01000  \n- Population 4 (P4): 10011  \nFind the total fitness and average fitness using genetic algorithm.",
+    "subparts": [
+      {
+        "id": "cse-4101-term-fec-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 4,
+        "topics": [
+          "Constraint Satisfaction Problems (CSP)"
+        ],
+        "question": "Define CSP with proper example. Describe varieties of CSP with example.",
+        "solution": {
+          "steps": [
+            "1. **Constraint Satisfaction Problem (CSP) Definition:**",
+            "A problem formulation where state is defined by a set of variables $X = \\{X_1, X_2, \\dots, X_n\\}$, each having a domain of values $D = \\{D_1, D_2, \\dots, D_n\\}$, and a set of constraints $C = \\{C_1, C_2, \\dots, C_m\\}$ specifying allowable combinations of values. A solution is a complete and consistent assignment.",
+            "- *Example:* Map Coloring of Australia: Variables = $\\{\\text{WA, NT, SA, Q, NSW, V, T}\\}$, Domains = $\\{\\text{Red, Green, Blue}\\}$, Constraints = adjacent regions must have different colors (e.g., $\\text{WA} \\ne \\text{NT}$).",
+            "2. **Varieties of CSPs:**",
+            "- **Discrete Variables:**",
+            "  - *Finite Domains:* Variables take values from finite sets (e.g., 8-Queens, Boolean SAT).",
+            "  - *Infinite Domains:* Variables take integer or string values; constraints expressed via constraint language (e.g., job scheduling).",
+            "- **Continuous Variables:** Domains are continuous real numbers $\\mathbb{R}$ (e.g., linear constraints in operations research).",
+            "- **Constraint Arity Varieties:**",
+            "  - *Unary Constraint:* Restricts a single variable (e.g., $\\text{SA} \\ne \\text{Green}$).",
+            "  - *Binary Constraint:* Relates two variables (e.g., $\\text{SA} \\ne \\text{WA}$).",
+            "  - *Higher-Order / Global Constraint:* Involves arbitrary number of variables (e.g., $\\text{Alldiff}(X_1, \\dots, X_9)$ in Sudoku)."
+          ],
+          "answer": "CSP defines states via variables, domains, and constraints. Varieties include discrete/continuous domains and unary, binary, and global constraint arities.",
+          "marking_hint": "2 marks for formal definition and map-coloring example; 2 marks for classification of CSP varieties."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 4,
+        "topics": [
+          "CSP Formulation & Genetic Algorithm Steps"
+        ],
+        "question": "Elaborate standard search formulation in CSP. Describe the steps of genetic algorithm.",
+        "solution": {
+          "steps": [
+            "1. **Standard Search Formulation in CSP:**",
+            "- **Initial State:** Empty assignment $\\{\\}$ where no variables are assigned values.",
+            "- **Successor Function:** Select an unassigned variable $X_i$ and assign a value $v \\in D_i$ that does not conflict with existing assignments.",
+            "- **Goal Test:** The current assignment is **complete** (all variables assigned) and **consistent** (satisfies all constraints $C$).",
+            "- **Path Cost:** Constant step cost (e.g., 0 or 1 per step), because the goal is the final consistent configuration rather than the path taken.",
+            "- *Standard Algorithm:* Backtracking Search (depth-first search with single-variable assignments).",
+            "2. **Steps of a Genetic Algorithm (GA):**",
+            "- **Step 1: Population Initialization:** Randomly generate an initial population of $N$ binary or real-encoded chromosomes.",
+            "- **Step 2: Fitness Evaluation:** Calculate the fitness function value $f(x)$ for each individual.",
+            "- **Step 3: Selection:** Select parent chromosomes based on fitness (e.g., Roulette Wheel, Tournament selection).",
+            "- **Step 4: Crossover (Recombination):** Pair parents and perform crossover at designated split points to create offspring.",
+            "- **Step 5: Mutation:** Randomly flip bits with small mutation probability $p_m$ to preserve genetic diversity.",
+            "- **Step 6: Termination Check:** Repeat until an optimal solution is found or generation limits are exceeded."
+          ],
+          "answer": "CSP search uses incremental variable assignments with backtracking. Genetic algorithms iteratively apply population initialization, fitness evaluation, selection, crossover, and mutation.",
+          "marking_hint": "2 marks for CSP initial state, successor, goal test, and path cost; 2 marks for the 6 steps of genetic algorithms."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt2-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 4,
+        "topics": [
+          "Uncertainty in AI & Bayes' Theorem"
+        ],
+        "question": "Briefly define the reasons for uncertainty in AI. Write down the equation for conditional probability and Bayes Theorem.",
+        "solution": {
+          "steps": [
+            "1. **Reasons for Uncertainty in AI Systems:**",
+            "- **Partial Observability:** Sensor limitations prevent the agent from observing the entire environment state (e.g., medical diagnostics, card games).",
+            "- **Stochasticity (Non-determinism):** Actions do not produce deterministic outcomes due to random physical factors or external interference.",
+            "- **Adversarial / Multi-agent Dynamics:** Competing agents introduce unpredictable behaviors and decisions.",
+            "- **Laziness & Theoretical Ignorance:** The complete domain theory is either too complex to formulate comprehensively or unknown.",
+            "2. **Conditional Probability Equation:**",
+            "$$P(A \\mid B) = \\frac{P(A \\land B)}{P(B)} \\quad \\text{where } P(B) > 0$$",
+            "3. **Bayes' Theorem Equation:**",
+            "$$P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)} = \\frac{P(B \\mid A) \\cdot P(A)}{\\sum_i P(B \\mid A_i) \\cdot P(A_i)}$$"
+          ],
+          "answer": "Uncertainty stems from partial observability, non-determinism, and domain complexity. Equations: P(A|B) = P(A,B)/P(B) and P(A|B) = [P(B|A)P(A)] / P(B).",
+          "marking_hint": "2 marks for 4 causes of uncertainty; 1 mark for conditional probability; 1 mark for Bayes' Theorem."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt2-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 4,
+        "topics": [
+          "Probability & Penalty Kick Scenario"
+        ],
+        "question": "Star Forward takes 25% of team penalties and scores 85% of time. Other players take 75% and score 70%. You notice Star Forward takes the kick. What is the probability that penalty is a goal?",
+        "solution": {
+          "steps": [
+            "1. **Define Events & Given Probabilities:**",
+            "- $S$: Star Forward takes the penalty $\\implies P(S) = 0.25$.",
+            "- $O$: Other Player takes the penalty $\\implies P(O) = 0.75$.",
+            "- $G$: The penalty results in a goal.",
+            "- Conditional goal probabilities:",
+            "  - $P(G \\mid S) = 0.85$ (85% scoring rate for Star Forward).",
+            "  - $P(G \\mid O) = 0.70$ (70% scoring rate for Other Players).",
+            "2. **Evaluation:**",
+            "- The problem states: *'You walk beside the TV and noticed Star Forward will take the kick for a penalty. What is the probability of that penalty is a goal?'*",
+            "- Since the event that Star Forward is taking the kick has **already been observed with certainty** (condition $S$ is given):",
+            "$$P(\\text{Goal} \\mid \\text{Star Forward takes kick}) = P(G \\mid S) = \\mathbf{0.85} \\quad (85\\%)$$",
+            "3. **Additional Perspective (Total Probability):**",
+            "- If instead evaluating the probability of an unknown random penalty being both taken and scored by Star Forward: $P(G \\land S) = P(G \\mid S) \\cdot P(S) = 0.85 \\times 0.25 = 0.2125$ (21.25%).",
+            "- Total probability of a goal across all players: $P(G) = P(G \\mid S)P(S) + P(G \\mid O)P(O) = (0.85)(0.25) + (0.70)(0.75) = 0.2125 + 0.5250 = 0.7375$ (73.75%)."
+          ],
+          "answer": "Given that the Star Forward is taking the kick, the conditional probability of scoring is P(Goal | Star Forward) = 0.85 (85%).",
+          "marking_hint": "4 marks for clear identification of conditional probability P(G|S) = 0.85, with optional total probability formulation."
+        }
+      },
+      {
+        "id": "cse-4101-term-fec-tt2-q5",
+        "qno": "Q5",
+        "label": "Question 5",
+        "marks": 4,
+        "topics": [
+          "Genetic Algorithm Optimization on f(x) = x^2"
+        ],
+        "question": "Maximize f(x) = x^2 over [0, 31] using GA. Population: P1=01101, P2=11000, P3=01000, P4=10011. Find total fitness and average fitness.",
+        "solution": {
+          "steps": [
+            "1. **Decode 5-Bit Binary Chromosomes to Decimal $x$:**",
+            "- $P_1 = 01101_2 = 0(16) + 1(8) + 1(4) + 0(2) + 1(1) = 8 + 4 + 1 = \\mathbf{13}$",
+            "- $P_2 = 11000_2 = 1(16) + 1(8) + 0(4) + 0(2) + 0(1) = 16 + 8 = \\mathbf{24}$",
+            "- $P_3 = 01000_2 = 0(16) + 1(8) + 0(4) + 0(2) + 0(1) = \\mathbf{8}$",
+            "- $P_4 = 10011_2 = 1(16) + 0(8) + 0(4) + 1(2) + 1(1) = 16 + 2 + 1 = \\mathbf{19}$",
+            "2. **Calculate Individual Fitness $f(x) = x^2$:**",
+            "- $f(P_1) = 13^2 = \\mathbf{169}$",
+            "- $f(P_2) = 24^2 = \\mathbf{576}$",
+            "- $f(P_3) = 8^2 = \\mathbf{64}$",
+            "- $f(P_4) = 19^2 = \\mathbf{361}$",
+            "3. **Compute Total Fitness:**",
+            "$$\\text{Total Fitness} = \\sum_{i=1}^4 f(P_i) = 169 + 576 + 64 + 361 = \\mathbf{1170}$$",
+            "4. **Compute Average Fitness:**",
+            "$$\\text{Average Fitness } \\bar{f} = \\frac{\\text{Total Fitness}}{N} = \\frac{1170}{4} = \\mathbf{292.5}$$",
+            "5. **Selection Probability Distribution $p_i = \\frac{f(x_i)}{\\sum f}$:**",
+            "- $p(P_1) = \\frac{169}{1170} \\approx 14.44\\%$",
+            "- $p(P_2) = \\frac{576}{1170} \\approx 49.23\\%$",
+            "- $p(P_3) = \\frac{64}{1170} \\approx 5.47\\%$",
+            "- $p(P_4) = \\frac{361}{1170} \\approx 30.85\\%$"
+          ],
+          "answer": "Individual fitness: P1=169, P2=576, P3=64, P4=361. Total Fitness = 1170. Average Fitness = 292.5.",
+          "marking_hint": "1 mark for decoding binary strings; 1 mark for individual fitness values; 1 mark for Total Fitness = 1170; 1 mark for Average Fitness = 292.5."
+        }
+      }
+    ]
   }
 ]

@@ -1956,5 +1956,187 @@
         }
       }
     ]
+  },
+  {
+    "id": "cse-4126-term-fec-tt1",
+    "course": "CSE-4126",
+    "exam": "term",
+    "college": "FEC",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "IQR & Outlier Detection",
+      "KNN Missing Value Imputation",
+      "Normalization vs Standardization",
+      "Pearson Correlation Coefficient",
+      "Chi-Square Test of Independence"
+    ],
+    "question": "Faridpur Engineering College • CSE-4126 (1st In-Course Examination) **[20]**\n\n**Question 1:** What is IQR. How we can find out Outliers using IQR? **[3.0]**\n\n**Question 2:** Consider the following dataset containing missing values: **[3.0]**\n\n| X1 | X2 | X3 |\n| :---: | :---: | :---: |\n| 20 | 30 | 40 |\n| 25 | ? | 45 |\n| ? | 40 | 50 |\n\nKNN (K = 2), use KNN Imputation techniques to handle the missing values.\n\n**Question 3:** Describe the difference between normalization and standardization in feature scaling. **[3.0]**\n\n**Question 4:** Calculate the correlation coefficient between Hours Studied and Test Score for 5 students: **[5.0]**\n\n| Student | Hours Studied (X) | Test Score (Y) |\n| :---: | :---: | :---: |\n| 1 | 2 | 50 |\n| 2 | 3 | 60 |\n| 3 | 4 | 65 |\n| 4 | 5 | 75 |\n| 5 | 6 | 85 |\n\n**Question 5:** A researcher wants to investigate whether there is a significant association between students' gender and their preferred learning method. The following data were collected from 100 students. Perform a Chi-Square Test of Independence at a 5% significance level ($\u0007lpha = 0.05$) and determine whether to Reject or Fail to Reject the Null Hypothesis ($H_0$). Justify your decision based on the calculated Chi-Square value and the critical value. **[6.0]**  \n*[Critical Chi-Square value = 5.991 ($df = 2, \u0007lpha = 0.05$)]*\n\n| Gender | Online | Offline | Hybrid | Total |\n| :--- | :---: | :---: | :---: | :---: |\n| **Male** | 30 | 10 | 10 | 50 |\n| **Female** | 10 | 20 | 20 | 50 |\n| **Total** | 40 | 30 | 30 | 100 |",
+    "subparts": [
+      {
+        "id": "cse-4126-term-fec-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 3,
+        "topics": [
+          "IQR & Outlier Detection"
+        ],
+        "question": "What is IQR. How we can find out Outliers using IQR?",
+        "solution": {
+          "steps": [
+            "1. **Interquartile Range (IQR) Definition:**",
+            "The Interquartile Range is a robust measure of statistical dispersion representing the spread of the middle 50% of an ordered dataset: $\\text{IQR} = Q_3 - Q_1$, where $Q_3$ is the 75th percentile and $Q_1$ is the 25th percentile.",
+            "2. **Outlier Detection via Tukey's Fences:**",
+            "- **Step 1:** Calculate first quartile $Q_1$ and third quartile $Q_3$.",
+            "- **Step 2:** Compute $\\text{IQR} = Q_3 - Q_1$.",
+            "- **Step 3:** Establish outlier boundaries (fences):",
+            "  - **Lower Fence:** $\\text{LF} = Q_1 - 1.5 \\times \\text{IQR}$",
+            "  - **Upper Fence:** $\\text{UF} = Q_3 + 1.5 \\times \\text{IQR}$",
+            "- **Step 4:** Any observation $x$ where $x < \\text{LF}$ or $x > \\text{UF}$ is classified as an **outlier**."
+          ],
+          "answer": "IQR = Q3 - Q1 measures middle 50% spread. Values outside [Q1 - 1.5*IQR, Q3 + 1.5*IQR] are identified as outliers.",
+          "marking_hint": "1.5 marks for IQR definition; 1.5 marks for lower/upper fence formulas and identification rule."
+        }
+      },
+      {
+        "id": "cse-4126-term-fec-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 3,
+        "topics": [
+          "KNN Missing Value Imputation"
+        ],
+        "question": "Handle missing values in the 3x3 dataset using KNN Imputation with K = 2.",
+        "solution": {
+          "steps": [
+            "1. **Dataset Review:**",
+            "- Row 1: $(X_1=20, X_2=30, X_3=40)$ [Complete]",
+            "- Row 2: $(X_1=25, X_2=?, X_3=45)$ [Missing $X_2$]",
+            "- Row 3: $(X_1=?, X_2=40, X_3=50)$ [Missing $X_1$]",
+            "2. **Imputing Missing $X_2$ in Row 2 ($K = 2$):**",
+            "- For Row 2, available features are $X_1 = 25$ and $X_3 = 45$.",
+            "- Distance to Row 1 (using available overlapping features $X_1, X_3$):",
+            "  $$d(\\text{R2}, \\text{R1}) = \\sqrt{(25 - 20)^2 + (45 - 40)^2} = \\sqrt{25 + 25} = \\sqrt{50} \\approx 7.07$$",
+            "- Distance to Row 3 (overlapping available feature is $X_3$):",
+            "  $$d(\\text{R2}, \\text{R3}) = |45 - 50| = 5$$",
+            "- Both Row 1 and Row 3 serve as the $K=2$ nearest neighbors.",
+            "- Impute $X_2$ as the average of $X_2$ in Row 1 ($30$) and Row 3 ($40$):",
+            "  $$X_2^{\\text{imputed}} = \\frac{30 + 40}{2} = \\mathbf{35}$$",
+            "3. **Imputing Missing $X_1$ in Row 3 ($K = 2$):**",
+            "- For Row 3, available features are $X_2 = 40$ and $X_3 = 50$.",
+            "- Distance to Row 1: $d(\\text{R3}, \\text{R1}) = \\sqrt{(40 - 30)^2 + (50 - 40)^2} = \\sqrt{100 + 100} = \\sqrt{200} \\approx 14.14$.",
+            "- Distance to Row 2 (using newly imputed $X_2 = 35$): $d(\\text{R3}, \\text{R2}) = \\sqrt{(40 - 35)^2 + (50 - 45)^2} = \\sqrt{25 + 25} = \\sqrt{50} \\approx 7.07$.",
+            "- Impute $X_1$ as the average of $X_1$ in Row 1 ($20$) and Row 2 ($25$):",
+            "  $$X_1^{\\text{imputed}} = \\frac{20 + 25}{2} = \\mathbf{22.5}$$"
+          ],
+          "answer": "Imputed values: X2 for Row 2 = 35, and X1 for Row 3 = 22.5.",
+          "marking_hint": "1.5 marks for distance calculations and imputing X2=35; 1.5 marks for distance calculations and imputing X1=22.5."
+        }
+      },
+      {
+        "id": "cse-4126-term-fec-tt1-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 3,
+        "topics": [
+          "Normalization vs Standardization"
+        ],
+        "question": "Describe the difference between normalization and standardization in feature scaling.",
+        "solution": {
+          "steps": [
+            "1. **Comparative Framework:**",
+            "| Characteristic | Normalization (Min-Max Scaling) | Standardization (Z-Score Scaling) |",
+            "| :--- | :--- | :--- |",
+            "| **Mathematical Formula** | $$x' = \\frac{x - x_{\\min}}{x_{\\max} - x_{\\min}}$$ | $$z = \\frac{x - \\mu}{\\sigma}$$ |",
+            "| **Output Range** | Strictly bounded, usually $[0, 1]$ (or $[-1, 1]$). | Unbounded; centered at mean $\\mu = 0$ with variance $\\sigma^2 = 1$. |",
+            "| **Outlier Sensitivity** | **High** (outliers compress typical values into a narrow range). | **Low / Robust** (outliers do not restrict the scaling of other points). |",
+            "| **Distribution Assumption**| Does not assume any specific probability distribution. | Assumes features roughly follow a Gaussian (normal) distribution. |",
+            "| **Typical Algorithms** | Neural Networks, Image Processing, KNN. | Linear Regression, Logistic Regression, SVM, PCA. |"
+          ],
+          "answer": "Normalization bounds data to [0, 1] and is sensitive to outliers. Standardization centers data at zero mean with unit variance and is robust against outliers.",
+          "marking_hint": "1.5 marks for formulas and value ranges; 1.5 marks for outlier sensitivity and algorithmic use cases."
+        }
+      },
+      {
+        "id": "cse-4126-term-fec-tt1-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 5,
+        "topics": [
+          "Pearson Correlation Coefficient"
+        ],
+        "question": "Calculate the correlation coefficient between Hours Studied (X) and Test Score (Y) for 5 students.",
+        "solution": {
+          "steps": [
+            "1. **Given Data Points ($n = 5$):**",
+            "$(2, 50), \\; (3, 60), \\; (4, 65), \\; (5, 75), \\; (6, 85)$.",
+            "2. **Compute Means:**",
+            "- $\\bar{X} = \\frac{2 + 3 + 4 + 5 + 6}{5} = \\frac{20}{5} = \\mathbf{4.0}$",
+            "- $\\bar{Y} = \\frac{50 + 60 + 65 + 75 + 85}{5} = \\frac{335}{5} = \\mathbf{67.0}$",
+            "3. **Compute Deviations & Products:**",
+            "| Student | $x_i$ | $y_i$ | $x' = x_i - \\bar{X}$ | $y' = y_i - \\bar{Y}$ | $x'^2$ | $y'^2$ | $x' y'$ |",
+            "| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |",
+            "| 1 | 2 | 50 | -2 | -17 | 4 | 289 | +34 |",
+            "| 2 | 3 | 60 | -1 | -7 | 1 | 49 | +7 |",
+            "| 3 | 4 | 65 | 0 | -2 | 0 | 4 | 0 |",
+            "| 4 | 5 | 75 | +1 | +8 | 1 | 64 | +8 |",
+            "| 5 | 6 | 85 | +2 | +18 | 4 | 324 | +36 |",
+            "| **Total** | | | **0** | **0** | **10** | **730** | **85** |",
+            "4. **Compute Pearson Correlation Coefficient $r$:**",
+            "$$r = \\frac{\\sum x' y'}{\\sqrt{\\sum x'^2 \\cdot \\sum y'^2}} = \\frac{85}{\\sqrt{10 \\times 730}} = \\frac{85}{\\sqrt{7300}} = \\frac{85}{85.440} \\approx \\mathbf{+0.9949}$$"
+          ],
+          "answer": "Pearson correlation coefficient r = +0.9949, indicating an almost perfect positive linear relationship between hours studied and test scores.",
+          "marking_hint": "1.5 marks for means and deviations; 2 marks for covariance and variance sums; 1.5 marks for final correlation r = 0.995."
+        }
+      },
+      {
+        "id": "cse-4126-term-fec-tt1-q5",
+        "qno": "Q5",
+        "label": "Question 5",
+        "marks": 6,
+        "topics": [
+          "Chi-Square Test of Independence"
+        ],
+        "question": "Chi-Square Test of Independence on Gender vs Learning Method at alpha = 0.05. Critical value = 5.991 (df=2). Reject or Fail to Reject H0?",
+        "solution": {
+          "steps": [
+            "1. **Observed Frequencies ($O$) & Marginal Totals ($N = 100$):**",
+            "| Gender | Online | Offline | Hybrid | Row Total |",
+            "| :--- | :---: | :---: | :---: | :---: |",
+            "| **Male** | 30 | 10 | 10 | **50** |",
+            "| **Female** | 10 | 20 | 20 | **50** |",
+            "| **Col Total** | **40** | **30** | **30** | **N = 100** |",
+            "2. **Calculate Expected Frequencies ($E = \\frac{\\text{Row Total} \\times \\text{Col Total}}{N}$):**",
+            "- $E(\\text{Male, Online}) = \\frac{50 \\times 40}{100} = 20.0$",
+            "- $E(\\text{Male, Offline}) = \\frac{50 \\times 30}{100} = 15.0$",
+            "- $E(\\text{Male, Hybrid}) = \\frac{50 \\times 30}{100} = 15.0$",
+            "- $E(\\text{Female, Online}) = \\frac{50 \\times 40}{100} = 20.0$",
+            "- $E(\\text{Female, Offline}) = \\frac{50 \\times 30}{100} = 15.0$",
+            "- $E(\\text{Female, Hybrid}) = \\frac{50 \\times 30}{100} = 15.0$",
+            "3. **Compute $\\chi^2 = \\sum \\frac{(O - E)^2}{E}$:**",
+            "- Male cells:",
+            "  - Online: $\\frac{(30 - 20)^2}{20} = \\frac{100}{20} = 5.0$",
+            "  - Offline: $\\frac{(10 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
+            "  - Hybrid: $\\frac{(10 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
+            "- Female cells:",
+            "  - Online: $\\frac{(10 - 20)^2}{20} = \\frac{100}{20} = 5.0$",
+            "  - Offline: $\\frac{(20 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
+            "  - Hybrid: $\\frac{(20 - 15)^2}{15} = \\frac{25}{15} \\approx 1.667$",
+            "$$\\chi^2_{\\text{calc}} = 5.0 + 1.667 + 1.667 + 5.0 + 1.667 + 1.667 = \\mathbf{16.667}$$",
+            "4. **Statistical Decision:**",
+            "- Degrees of freedom: $df = (r - 1)(c - 1) = (2 - 1)(3 - 1) = 2$.",
+            "- Critical value at $\\alpha = 0.05$: $\\chi^2_{\\text{crit}} = 5.991$.",
+            "- Comparison: $\\chi^2_{\\text{calc}} (16.667) > \\chi^2_{\\text{crit}} (5.991)$.",
+            "- Decision: **Reject the Null Hypothesis ($H_0$)**.",
+            "- Conclusion: There is a statistically significant association between students' gender and their preferred learning method."
+          ],
+          "answer": "Calculated Chi-Square = 16.667 > 5.991. Reject H0; there is a significant association between gender and preferred learning method.",
+          "marking_hint": "2 marks for expected frequency matrix; 2.5 marks for chi-square computation; 1.5 marks for comparison with critical value and statistical inference."
+        }
+      }
+    ]
   }
 ]
