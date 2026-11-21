@@ -2071,19 +2071,17 @@ body.is-home-view .app-header,
 }
 
 /* --------------------------------------------------------------------------
-   GENTLE SCROLL REVEAL ANIMATION (Fade & Rise on Scroll)
+   INSTANT CRISP CARD RENDERING (Zero-Lag, No Sluggish Fade-in)
    -------------------------------------------------------------------------- */
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 .reveal-on-scroll.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

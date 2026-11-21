@@ -985,13 +985,13 @@ class CodexApp {
         }
       });
     }, {
-      rootMargin: "-15% 0px -55% 0px",
+      rootMargin: "-10% 0px -75% 0px",
       threshold: 0
     });
 
     sections.forEach(sec => this.scrollspyObserver.observe(sec));
 
-    // Question card observer to highlight active Q dot in left nav
+    // Question card observer: Focuses strictly on the card occupying the primary reading zone (12%-65% from top)
     const cards = document.querySelectorAll(".question-set-card");
     this.qCardObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1003,7 +1003,7 @@ class CodexApp {
         }
       });
     }, {
-      rootMargin: "-25% 0px -50% 0px",
+      rootMargin: "-12% 0px -65% 0px",
       threshold: 0
     });
 
@@ -1011,33 +1011,13 @@ class CodexApp {
   }
 
   /**
-   * Initializes Gentle Scroll Reveal (Fade & Rise on Scroll)
+   * Initializes Instant Card Display (Zero-Lag, No Sluggish Fade-in)
    */
   initScrollReveal() {
     if (this.scrollRevealObserver) {
       this.scrollRevealObserver.disconnect();
     }
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      document.querySelectorAll(".reveal-on-scroll").forEach(el => el.classList.add("is-revealed"));
-      return;
-    }
-
-    this.scrollRevealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-revealed");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      rootMargin: "0px 0px -30px 0px",
-      threshold: 0.05
-    });
-
-    document.querySelectorAll(".reveal-on-scroll").forEach(el => {
-      this.scrollRevealObserver.observe(el);
-    });
+    document.querySelectorAll(".reveal-on-scroll").forEach(el => el.classList.add("is-revealed"));
   }
 
   setActiveScrollspyYear(year) {
