@@ -3296,10 +3296,16 @@ html.direct-course-route #homePortalSection {
   display: none !important;
 }
 
-html.direct-course-route #appLayout {
+html.direct-course-route #appHeader[hidden] {
+  display: block !important;
+}
+
+html.direct-course-route #appLayout[hidden] {
   display: flex !important;
 }
 
-html.direct-course-route #appHeader {
-  display: flex !important;
+@media (min-width: 900px) {
+  html.direct-course-route #appLayout[hidden] {
+    display: grid !important;
+  }
 }
