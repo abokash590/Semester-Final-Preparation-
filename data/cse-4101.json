@@ -592,9 +592,7 @@
           "steps": [
             "1. Definition: The study and construction of agents that perceive their environment and take rational actions that maximize chance of successfully achieving their goals.",
             "2. Five unsolved problems: (1) Human subjective consciousness and emotional empathy, (2) Solving general undecidable problems (e.g. Halting Problem), (3) Fully autonomous moral ethical decision-making in novel legal scenarios, (4) Novel scientific paradigm synthesis without prior training distribution, (5) True common-sense physical reasoning across unstructured open-ended physical environments."
-          ],
-          "answer": "AI models rational computational intelligence. Limitations include subjective phenomenology, formal undecidability, and open-ended human common-sense abstraction.",
-          "marking_hint": "Award 1.5 marks for definition, 2.5 marks for 5 valid limitations."
+          ]
         }
       },
       {
@@ -611,9 +609,7 @@
           "steps": [
             "1. Automated Taxi Driver: P: Safety, speed, comfort, profit. E: Roads, traffic, pedestrians. A: Steering, brakes, accelerator. S: Cameras, LiDAR, GPS. Characterization: Partially observable, multi-agent, stochastic, sequential, dynamic, continuous.",
             "2. Vacuum Cleaner: P: Floor cleanliness, energy. E: Rooms, furniture, dirt. A: Wheels, suction. S: Bump, cliff, dirt sensors. Characterization: Partially observable, single-agent, stochastic, sequential, static, discrete."
-          ],
-          "answer": "PEAS structure defines operational requirements; environmental dimensions guide algorithmic approach.",
-          "marking_hint": "Award 2 marks each for taxi and vacuum cleaner."
+          ]
         }
       },
       {
@@ -631,9 +627,7 @@
             "2. **Depth-First Search (DFS) [LIFO Stack]:** Explores down leftmost path first: A &rarr; B &rarr; E (backtracks to A) &rarr; C &rarr; F (backtracks to C) &rarr; G &rarr; I (Goal reached). Order visited: **A, B, E, C, F, G, I** (7 nodes). Nodes D, H, J, K are never visited.",
             "3. **Uniform Cost Search (UCS) [Priority Queue ordered by path cost g(n)]:**\n   - Step 1: Pop A (g=0). Fringe: {D(3), C(4), B(5)}\n   - Step 2: Pop D (g=3). Add H(7). Fringe: {C(4), B(5), H(7)}\n   - Step 3: Pop C (g=4). Add G(5), F(6). Fringe: {B(5), G(5), F(6), H(7)}\n   - Step 4: Pop B (g=5). Add E(7). Fringe: {G(5), F(6), E(7), H(7)}\n   - Step 5: Pop G (g=5). Add I(8). Fringe: {F(6), E(7), H(7), I(8)}\n   - Step 6: Pop F (g=6). Fringe: {E(7), H(7), I(8)}\n   - Step 7: Pop E (g=7). Fringe: {H(7), I(8)}\n   - Step 8: Pop H (g=7). Add K(9), J(11). Fringe: {I(8), K(9), J(11)}\n   - Step 9: Pop I (g=8). Goal reached!\n   Order of node expansion: **A (0) &rarr; D (3) &rarr; C (4) &rarr; B (5) &rarr; G (5) &rarr; F (6) &rarr; E (7) &rarr; H (7) &rarr; I (8)**.\n   Optimal Path: **A &rarr; C &rarr; G &rarr; I** with minimum cost **8**.",
             "4. **Iterative Deepening Search (IDS):**\n   - Limit 0: [A]\n   - Limit 1: [A, B, C, D]\n   - Limit 2: [A, B, E, C, F, G, D, H]\n   - Limit 3: [A, B, E, C, F, G, I] (Goal I reached at depth 3!)."
-          ],
-          "answer": "BFS visits 9 nodes (A, B, C, D, E, F, G, H, I); DFS visits 7 nodes (A, B, E, C, F, G, I); UCS expands 9 nodes finding optimal path A-C-G-I of cost 8; IDS reaches goal at depth limit 3.",
-          "marking_hint": "Award 1.5 marks each for BFS, DFS, UCS, and IDS sequences."
+          ]
         }
       }
     ],
@@ -675,9 +669,7 @@
           "steps": [
             "1. Genetic Algorithm: A search heuristic inspired by biological natural selection.",
             "2. Principles: Encodes candidate states as strings, evaluates fitness, mates pairs using crossover, and introduces diversity with mutation."
-          ],
-          "answer": "Evolutionary optimization using reproductive operators to explore complex non-differentiable search landscapes.",
-          "marking_hint": "Award 1.5 marks for definition, 1.5 marks for example."
+          ]
         }
       },
       {
@@ -694,9 +686,7 @@
             "1. Formulation components: Initial state $s_0$, $\\text{Player}(s)$, $\\text{Actions}(s)$, Transition model $\\text{Result}(s, a)$, Terminal test, Utility function.",
             "2. Terminal Test: Returns true if game is over (e.g., checkmate, draw), false otherwise.",
             "3. Utility Function (Payoff): Defines numeric value for terminal states (e.g., +1 for win, -1 for loss, 0 for draw)."
-          ],
-          "answer": "Two-player games formulate search over alternating player turns, evaluated at terminal states via a payoff utility function.",
-          "marking_hint": "Award 2 marks for formal game formulation, 1 mark each for terminal test and utility function."
+          ]
         }
       },
       {
@@ -713,9 +703,7 @@
             "1. Minimax recursively evaluates game trees where MAX chooses action with maximum utility and MIN chooses action with minimum utility.",
             "2. $V(s) = \\max_{a} V(\\text{Result}(s, a))$ if Player = MAX; $V(s) = \\min_{a} V(\\text{Result}(s, a))$ if Player = MIN.",
             "3. Backpropagates utility from terminal leaves up to root."
-          ],
-          "answer": "Minimax backs up terminal values to establish the optimal game-theoretic value against an optimal adversary.",
-          "marking_hint": "Award 1.5 marks for algorithm principles, 1.5 marks for game tree diagram."
+          ]
         }
       },
       {
@@ -732,9 +720,7 @@
             "1. Greedy Best-First Search evaluates nodes using only the heuristic function: $f(n) = h(n)$, expanding the node that appears closest to the goal.",
             "2. Why not optimal: It ignores the path cost $g(n)$ accrued so far. A path may look attractive locally because $h(n)$ is small, but the cumulative path cost to reach it could be arbitrarily large.",
             "3. Like DFS, it can also get stuck in loops (incomplete in graph search with infinite paths)."
-          ],
-          "answer": "Greedy Best-First Search minimizes estimated remaining cost $h(n)$, but without $g(n)$, it easily selects sub-optimal paths.",
-          "marking_hint": "Award 2 marks for algorithm mechanism, 2 marks for non-optimality justification."
+          ]
         }
       }
     ],
@@ -777,9 +763,7 @@
             "1. Heuristic functions estimate cost from current state to the goal ($h(n)$).",
             "2. In best-first search, evaluation function $f(n)$ incorporates $h(n)$ to order the priority queue.",
             "3. Relaxed problem intuition: Effective heuristics are often exact costs of solutions to simplified (relaxed) versions of the original problem."
-          ],
-          "answer": "Heuristics assign low estimated values to states that appear close to the goal, biasing the frontier queue towards promising regions and drastically reducing expanded nodes.",
-          "marking_hint": "Award 2 marks for prioritization mechanics, 2 marks for relaxed problem generation."
+          ]
         }
       },
       {
@@ -797,9 +781,7 @@
             "2. Value Ordering: Least Constraining Value (LCV).",
             "3. Inference & Pruning: Forward Checking and Arc Consistency (AC-3 algorithm) to detect dead ends before expanding.",
             "4. Intelligent Backtracking: Conflict-directed backjumping (chronological backtracking jump back to conflict source)."
-          ],
-          "answer": "Backtracking efficiency is enhanced through MRV variable ordering, LCV value ordering, AC-3 constraint propagation, and conflict-directed backjumping.",
-          "marking_hint": "Award 1 mark each for MRV, LCV, Forward Checking/AC-3, and Backjumping."
+          ]
         }
       },
       {
@@ -816,9 +798,7 @@
             "1. Entropy formula: $H(S) = -\\sum p_i \\log_2 p_i$.",
             "2. Information Gain: $IG(S, A) = H(S) - \\sum \\frac{|S_v|}{|S|} H(S_v)$. Selects attribute maximizing reduction in entropy.",
             "3. Gini Index: $\\text{Gini}(S) = 1 - \\sum p_i^2$. Selects attribute minimizing split impurity."
-          ],
-          "answer": "ID3 uses Information Gain (Entropy reduction); CART uses Gini Index impurity to perform recursive greedy splitting.",
-          "marking_hint": "Award 3 marks for Information Gain derivation, 3 marks for Gini Index derivation."
+          ]
         }
       }
     ],
@@ -860,9 +840,7 @@
           "steps": [
             "1. Components: $g(n)$ is the exact known cost from start state to current node $n$; $h(n)$ is estimated cost from $n$ to goal; $f(n)$ is total estimated cost of cheapest solution passing through $n$.",
             "2. Applications: GPS route navigation and mapping (Google Maps), robotic path planning, video game AI pathfinding (NavMesh navigation), VLSI circuit routing, natural language parsing."
-          ],
-          "answer": "f(n) balances path cost so far g(n) with estimated future cost h(n). Widely applied in navigation, robotics, and game pathfinding.",
-          "marking_hint": "Award 2 marks for function breakdown, 2 marks for at least 3 distinct applications."
+          ]
         }
       },
       {
@@ -881,9 +859,7 @@
             "iii. ¬∀s (Student(s) → (Likes(s, Math) ∧ Likes(s, Science)))",
             "iv. ¬∃m (Email(m) ∧ Sent(Mahmud, Abdullah, m))",
             "v. ∀x ∃y Loves(x, y)"
-          ],
-          "answer": "Formal predicate logic sentences using quantifiers and logical connectives.",
-          "marking_hint": "Award 1 mark for each correct translation."
+          ]
         }
       },
       {
@@ -899,9 +875,7 @@
           "steps": [
             "1. Universal Quantifier (∀): 'For all'. Example: ∀x (Human(x) → Mortal(x)).",
             "2. Existential Quantifier (∃): 'There exists'. Example: ∃x (Student(x) ∧ Passed(x))."
-          ],
-          "answer": "Universal (∀) applies across entire domain; Existential (∃) specifies existence of at least one instance.",
-          "marking_hint": "Award 1.5 marks for universal, 1.5 marks for existential."
+          ]
         }
       },
       {
@@ -918,9 +892,7 @@
             "1. Perception & SLAM (Simultaneous Localization and Mapping) using computer vision and sensor fusion.",
             "2. Path planning and motion control (obstacle avoidance using A* or RRT).",
             "3. Manipulation & Grasping using reinforcement learning."
-          ],
-          "answer": "AI empowers robotics with autonomous perception, spatial mapping, trajectory planning, and dexterous manipulation.",
-          "marking_hint": "Award 1 mark for perception/SLAM, 1 mark for path planning."
+          ]
         }
       }
     ],
@@ -966,9 +938,7 @@
             "2. E evaluates first child 8. Since 8 >= beta(6), B will never choose E. Child 10 is PRUNED.",
             "3. B returns 6 to Root A. A gets alpha = 6.",
             "4. C evaluates F: F (Max) gets max(2,1) = 2. C's beta becomes 2. Since beta(2) <= alpha(6), subtree G (14, 16) is PRUNED."
-          ],
-          "answer": "Two pruning cuts are made: Leaf 10 under E is pruned; entire subtree G with leaves 14 and 16 is pruned.",
-          "marking_hint": "Award 2.5 marks for first cut, 2.5 marks for second cut."
+          ]
         }
       },
       {
@@ -985,9 +955,7 @@
             "1. Reinforcement Learning: Agent learns optimal policy through trial-and-error interactions with environment, receiving rewards or penalties (Markov Decision Process).",
             "2. Supervised Learning: Trained on labeled data pairs (input, target).",
             "3. Unsupervised Learning: Learns inherent data patterns, clusters, or distributions without labeled targets."
-          ],
-          "answer": "Supervised uses labels; Unsupervised discovers latent patterns; Reinforcement optimizes reward signals.",
-          "marking_hint": "Award 2 marks for RL, 2 marks for Supervised vs Unsupervised comparison."
+          ]
         }
       },
       {
@@ -1004,9 +972,7 @@
             "1. Computational systems inspired by biological neurons, organized in input, hidden, and output layers.",
             "2. Perceptron model: $y = \\sigma(\\sum w_i x_i + b)$.",
             "3. Training via Backpropagation: Computes gradient of loss function via chain rule to update weights."
-          ],
-          "answer": "Artificial neural networks learn complex non-linear mappings via layered interconnected nodes trained by gradient descent.",
-          "marking_hint": "Award 2 marks for architecture, 3 marks for activation and learning mechanism."
+          ]
         }
       }
     ],
@@ -1049,9 +1015,7 @@
             "2. Accuracy: $P(+|D) = 0.95$, $P(-|\\neg D) = 0.95 \\implies P(+|\\neg D) = 0.05$.",
             "3. Total probability $P(+)$: $P(+) = P(+|D)P(D) + P(+|\\neg D)P(\\neg D) = (0.95)(0.01) + (0.05)(0.99) = 0.0095 + 0.0495 = 0.0590$.",
             "4. Bayes Theorem: $P(D|+) = \\frac{P(+|D)P(D)}{P(+)} = \\frac{0.0095}{0.0590} \\approx 0.1610$ (16.1%)."
-          ],
-          "answer": "The probability that a person who tests positive actually has the disease is approximately 16.1%.",
-          "marking_hint": "Award 1 mark for prior probabilities, 1.5 marks for total probability denominator, 1.5 marks for final posterior."
+          ]
         }
       },
       {
@@ -1067,9 +1031,7 @@
           "steps": [
             "1. Conditional Probability: $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$, for $P(B) > 0$.",
             "2. Bayes Theorem: $P(A|B) = \\frac{P(B|A)P(A)}{P(B)} = \\frac{P(B|A)P(A)}{\\sum_i P(B|A_i)P(A_i)}$."
-          ],
-          "answer": "Formal mathematical definitions of conditional likelihood and Bayesian posterior inversion.",
-          "marking_hint": "Award 1.5 marks for conditional probability, 1.5 marks for Bayes theorem equation."
+          ]
         }
       },
       {
@@ -1089,9 +1051,7 @@
             "3. MSE Error: $E = \\frac{1}{2}(1 - 0.5498)^2 = 0.1013$.",
             "4. Gradient factor: $\\delta = (t - y)y(1 - y) = (0.4502)(0.5498)(0.4502) = 0.1114$.",
             "5. Weight updates: $\\Delta w_1 = 0.2(0.1114)(1.0) = +0.0223$; $\\Delta w_2 = 0.2(0.1114)(0.5) = +0.0111$; $\\Delta b = +0.0223$."
-          ],
-          "answer": "z = 0.20, y = 0.5498, Error = 0.1013, new w1 = 0.4223, new w2 = -0.5889, new b = 0.1223.",
-          "marking_hint": "Award 2 marks for net input/output, 2 marks for error, 3 marks for updates."
+          ]
         }
       }
     ],
@@ -1136,9 +1096,7 @@
             "2. Ridge Problem: A narrow elevated ridge requires zigzag diagonal moves that single-variable generators fail to traverse.",
             "3. Plateaux & Shoulders: Flat surface causes random walk or endless loop.",
             "4. Incompleteness: Does not guarantee finding a solution, let alone an optimal one."
-          ],
-          "answer": "Greedy local search suffers from local maxima, ridges, flat plateaux, and general incompleteness. Mitigated by Random-restart hill climbing or Simulated Annealing.",
-          "marking_hint": "Award 1 mark each for explaining the core limitations and mitigation strategies."
+          ]
         }
       },
       {
@@ -1156,9 +1114,7 @@
             "2. Heuristic $h_1(n)$ (Number of misplaced tiles): Each misplaced tile must move at least once, so $h_1(n) \\le h^*(n)$. Hence admissible.",
             "3. Heuristic $h_2(n)$ (Manhattan distance sum): Sum of horizontal and vertical moves for each tile to reach goal. Since tiles cannot jump over each other, true moves $\\ge h_2(n)$. Hence admissible.",
             "4. Dominance: $h_2(n) \\ge h_1(n)$ for all states; $h_2$ dominates $h_1$ and prunes more search nodes."
-          ],
-          "answer": "Both Misplaced Tiles ($h_1$) and Manhattan Distance ($h_2$) are admissible. Manhattan distance is superior because it dominates $h_1$.",
-          "marking_hint": "Award 1.5 marks for admissibility definition, 1.25 marks each for justifying $h_1$ and $h_2$."
+          ]
         }
       },
       {
@@ -1176,9 +1132,7 @@
             "2. **Depth Limit 1:** Visit A &rarr; B, C. (Goal G not reached).",
             "3. **Depth Limit 2:** Visit A &rarr; B &rarr; D, E &rarr; C &rarr; F, G. (Goal G reached at depth 2!).",
             "4. **Search Behavior:** Iterative Deepening Search (IDS) combines DFS memory efficiency O(bd) with BFS completeness. Since Goal G is located at Depth 2 on node C's right branch, search terminates successfully during iteration Limit = 2 without needing to explore leaves H (under D) or I (under E) at Depth 3."
-          ],
-          "answer": "IDS visits [A] at Limit 0, [A, B, C] at Limit 1, and reaches Goal G at Limit 2 in order [A, B, D, E, C, F, G].",
-          "marking_hint": "Award 1 mark for each depth limit iteration (0, 1, 2) and 1 mark for correct goal termination."
+          ]
         }
       },
       {
@@ -1195,9 +1149,7 @@
             "1. Taxonomy is strictly a hierarchical tree classification (is-a relations only).",
             "2. Database schema defines data structure for storage/retrieval without rich semantic inference logic.",
             "3. Ontology includes complex multi-dimensional relations, axioms, rules, and semantic inference."
-          ],
-          "answer": "Ontology generalizes beyond taxonomic hierarchies and database tables to support automated semantic reasoning.",
-          "marking_hint": "Award 1 mark for definition, 1 mark for distinguishing from taxonomy and database schema."
+          ]
         }
       }
     ],
@@ -1236,7 +1188,12 @@
         "topics": [
           "Informed vs Uninformed Search"
         ],
-        "question": "What is Heuristic Function? What do you understand by Informed search and Uninformed search? [1+4]"
+        "question": "What is Heuristic Function? What do you understand by Informed search and Uninformed search? [1+4]",
+        "solution": {
+          "steps": [
+            "**1. Heuristic Function ($h(n)$) [1 Mark]:**\n* An evaluation function $h(n)$ that estimates the cheapest numerical cost from the current state $n$ to the closest goal state. For any goal state $G$, $h(G) = 0$.\n\n**2. Informed vs Uninformed Search [4 Marks]:**\n| Parameter | Uninformed (Blind) Search | Informed (Heuristic) Search |\n| :--- | :--- | :--- |\n| **Knowledge Source** | Problem specification only (nodes, edges, initial state, goal test). | Domain-specific heuristic evaluation function $h(n)$. |\n| **Search Direction** | Blind systematic traversal across graph topology without goal orientation. | Evaluates and prioritizes states that appear closest to the goal. |\n| **Time Efficiency** | Exponential $O(b^d)$ time complexity; expands unpromising paths. | Highly efficient; heuristic guidance prunes exponential branches. |\n| **Algorithms** | BFS, DFS, Uniform Cost Search (UCS), Iterative Deepening (IDS). | Greedy Best-First Search, $A^*$ Search, RBFS, $IDA^*$. |"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-mec-tt1-qb",
@@ -1246,7 +1203,12 @@
         "topics": [
           "A* Search & Heuristics"
         ],
-        "question": "Consider the search space where S is start and G is goal. Show steps to find G using A* Search algorithm."
+        "question": "Consider the search space where S is start and G is goal. Show steps to find G using A* Search algorithm.",
+        "solution": {
+          "steps": [
+            "**$A^*$ Search Algorithm Execution:**\nThe evaluation function is $f(n) = g(n) + h(n)$:\n* $g(n)$: Cumulative step cost from start state $S$ to current node $n$.\n* $h(n)$: Estimated heuristic cost from $n$ to goal $G$.\n\n**Search Execution Trace:**\n1. **Initialize:** Place start node $S$ into Priority Queue: $g(S) = 0, f(S) = 0 + h(S)$.\n2. **Iteration 1:** Pop $S$. Generate successors $n_i$ connected to $S$. For each successor, compute $g(n_i) = g(S) + c(S, n_i)$ and $f(n_i) = g(n_i) + h(n_i)$. Insert into Priority Queue sorted by ascending $f(n)$.\n3. **Subsequent Iterations:** At each step, pop the node with the minimum $f(n)$ value. Expand its unvisited neighbors, update shortest path costs $g$, and insert into the queue.\n4. **Goal Extraction:** When the goal state $G$ is extracted from the top of the priority queue, terminate search. Return the reconstructed optimal path from $S$ to $G$ with cost $g(G)$."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-mec-tt1-qc",
@@ -1256,7 +1218,12 @@
         "topics": [
           "Adversarial Search & Min-Max"
         ],
-        "question": "Apply MiniMax Algorithm on the given Game Tree assuming first player as maximizing."
+        "question": "Apply MiniMax Algorithm on the given Game Tree assuming first player as maximizing.",
+        "solution": {
+          "steps": [
+            "**MiniMax Algorithm on Game Tree (First Player: MAX):**\n\n1. **Leaf Node Evaluation:** Read the terminal utility values at the leaf level.\n2. **MIN Layer (Opponent Moves):** For each parent node at the MIN level, select the minimum value among its children:\n   $$\\text{Value}(MIN) = \\min(child_1, child_2, \\dots)$$\n3. **MAX Layer (Root / Player Moves):** For each node at the MAX level, select the maximum value among its MIN children:\n   $$\\text{Value}(MAX) = \\max(child_1, child_2, \\dots)$$\n\n* **Backward Induction Result:** Backpropagating values from bottom to top yields the optimal minimax value at the root, ensuring the maximizing player achieves the guaranteed best possible outcome against an optimal opponent."
+          ]
+        }
       }
     ],
     "similar_to": [],
@@ -1287,7 +1254,12 @@
         "topics": [
           "First-Order Logic"
         ],
-        "question": "What are Universal Quantification and Existential Quantification? Write following expression using quantifier: i. Everybody loves CSE, ii. Somebody loves EEE. [2+4]"
+        "question": "What are Universal Quantification and Existential Quantification? Write following expression using quantifier: i. Everybody loves CSE, ii. Somebody loves EEE. [2+4]",
+        "solution": {
+          "steps": [
+            "**1. Universal Quantification ($\\forall$) [1 Mark]:**\n* Asserts that a predicate statement $P(x)$ is true for **every** entity $x$ in the domain of discourse: $\\forall x \\, P(x)$.\n\n**2. Existential Quantification ($\\exists$) [1 Mark]:**\n* Asserts that a predicate statement $P(x)$ is true for **at least one** entity $x$ in the domain of discourse: $\\exists x \\, P(x)$.\n\n**3. First-Order Logic (FOL) Translations [4 Marks]:**\n*(i) Everybody loves CSE:*\n$$\\forall x \\, [\\text{Person}(x) \\implies \\text{Loves}(x, \\text{CSE})]$$\n\n*(ii) Somebody loves EEE:*\n$$\\exists x \\, [\\text{Person}(x) \\land \\text{Loves}(x, \\text{EEE})]$$"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-mec-tt2-qb",
@@ -1297,7 +1269,12 @@
         "topics": [
           "AI Foundations"
         ],
-        "question": "What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. [1+4]"
+        "question": "What is simple reflex agent? Draw a schematic diagram of a simple reflex agent. [1+4]",
+        "solution": {
+          "steps": [
+            "**1. Simple Reflex Agent [1 Mark]:**\n* An autonomous agent that selects actions based **solely on the current percept**, completely ignoring the percept history.\n* Operates via predefined **Condition-Action Rules** (*IF state THEN action*).\n* Works successfully only in **fully observable environments**; otherwise prone to infinite loops.\n\n**2. Schematic Architecture Diagram [4 Marks]:**\n```text\n+-------------------------------------------------------------------+\n|                        ENVIRONMENT                                |\n+-------------------------------------------------------------------+\n           | (Percepts)                          ^ (Actions)         \n           v                                     |                   \n    +-------------+                       +---------------+          \n    |   SENSORS   |                       |   ACTUATORS   |          \n    +-------------+                       +---------------+          \n           |                                     ^                   \n           v                                     |                   \n    [ What the world ]                           |                   \n    [  is like now   ]                           |                   \n           |                                     |                   \n           v                                     |                   \n    +--------------------+                       |                   \n    | CONDITION - ACTION | === (Action Decision) =                   \n    |      RULES         |                                           \n    +--------------------+                                           \n+-------------------------------------------------------------------+\n```"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-mec-tt2-qc",
@@ -1307,7 +1284,12 @@
         "topics": [
           "PEAS & Task Environment"
         ],
-        "question": "Determine Properties of the Environment (PEAS) for: Chess, Online Shopping, Riding bi-cycle, Chat. [4]"
+        "question": "Determine Properties of the Environment (PEAS) for: Chess, Online Shopping, Riding bi-cycle, Chat. [4]",
+        "solution": {
+          "steps": [
+            "**Properties of the Task Environment (PEAS Characterization):**\n\n| Environment | Observability | Determinism | Episodic vs Sequential | Static vs Dynamic | Discrete vs Continuous | Agent Count |\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n| **Chess** | Fully | Deterministic | Sequential | Static | Discrete | Multi-Agent (Competitive) |\n| **Online Shopping** | Partially | Stochastic | Sequential | Dynamic | Discrete | Single-Agent |\n| **Riding Bicycle** | Partially | Stochastic | Sequential | Dynamic | Continuous | Single-Agent |\n| **Chat (Conversational)** | Partially | Stochastic | Sequential | Dynamic | Discrete | Multi-Agent (Collaborative) |"
+          ]
+        }
       }
     ],
     "similar_to": [],
@@ -1339,7 +1321,12 @@
         "topics": [
           "Uniform Cost Search (UCS)"
         ],
-        "question": "Define Uninformed search. Apply Uniform-Cost Search (UCS) to find the minimum cost path from node A to G. Show the cumulative path cost of each expanded node, and determine the least-cost path and its total cost."
+        "question": "Define Uninformed search. Apply Uniform-Cost Search (UCS) to find the minimum cost path from node A to G. Show the cumulative path cost of each expanded node, and determine the least-cost path and its total cost.",
+        "solution": {
+          "steps": [
+            "**1. Uninformed Search Definition:**\nA search strategy that relies solely on problem formulation information (state representation, allowable transitions, initial state, goal test) with no domain-specific heuristic knowledge about distance to the goal.\n\n**2. Uniform-Cost Search (UCS) on Path $A \\to G$:**\n* UCS expands the node $n$ with the **lowest cumulative path cost $g(n)$** from the start node $A$ (using a priority queue).\n* Equivalent to Dijkstra's algorithm on graphs with non-negative edge costs $c(n, a, n') > 0$.\n* **Search Trace:** At each iteration, the frontier node with minimum $g(n)$ is popped. Successor nodes are relaxed with $g(n') = g(n) + c(n, n')$.\n* **Termination:** When destination node $G$ is extracted from the queue, UCS is guaranteed to have found the **least-cost optimal path**."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-niter-tt1-q2",
@@ -1349,7 +1336,12 @@
         "topics": [
           "8-Puzzle & A* Search"
         ],
-        "question": "Define Informed search. Given an initial state of 8 puzzle problem and final state to be reached. Find the most cost-effective path to reach the final state from initial state using A* search algorithm."
+        "question": "Define Informed search. Given an initial state of 8 puzzle problem and final state to be reached. Find the most cost-effective path to reach the final state from initial state using A* search algorithm.",
+        "solution": {
+          "steps": [
+            "**1. Informed Search Definition:**\nA search strategy that leverages domain-specific knowledge through an evaluation heuristic function $h(n)$ to direct node exploration toward promising goal paths.\n\n**2. $A^*$ Search Formulation on 8-Puzzle:**\n$$f(n) = g(n) + h(n)$$\n* $g(n)$: Number of moves made from initial state to state $n$ ($g = \\text{Level}$).\n* $h(n)$: Manhattan distance (sum of horizontal and vertical distances of tiles from their goal positions) or Misplaced tiles count.\n* **Admissibility:** Since $h(n) \\le h^*(n)$ (never overestimates true cost), $A^*$ is guaranteed to find the optimal path with minimal state expansions."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-niter-tt1-q3",
@@ -1359,7 +1351,12 @@
         "topics": [
           "Genetic Algorithms"
         ],
-        "question": "A genetic algorithm maximizes the number of 1s in a 6-bit chromosome. The fitness function is: f(x) = number of 1's in chromosome x. Initial population: P1=101100, P2=011011, P3=110010, P4=001111. (a) Calculate fitness & select best two parents. (b) One-point crossover after 3rd bit. (c) Mutation on 5th bit of first offspring. (d) Determine if mutated offspring is better than parent."
+        "question": "A genetic algorithm maximizes the number of 1s in a 6-bit chromosome. The fitness function is: f(x) = number of 1's in chromosome x. Initial population: P1=101100, P2=011011, P3=110010, P4=001111. (a) Calculate fitness & select best two parents. (b) One-point crossover after 3rd bit. (c) Mutation on 5th bit of first offspring. (d) Determine if mutated offspring is better than parent.",
+        "solution": {
+          "steps": [
+            "**Fitness Function:** $f(x) = \\text{number of 1s in 6-bit chromosome } x$\n\n**(a) Fitness Calculation & Parent Selection:**\n* $P_1 = \\text{`101100`} \\implies f(P_1) = 3$\n* $P_2 = \\text{`011011`} \\implies f(P_2) = 4$\n* $P_3 = \\text{`110010`} \\implies f(P_3) = 3$\n* $P_4 = \\text{`001111`} \\implies f(P_4) = 4$\n\n* **Selected Best Two Parents:** **$P_2$ (`011011`, $f=4$)** and **$P_4$ (`001111`, $f=4$)**.\n\n**(b) One-Point Crossover after 3rd Bit:**\n* $P_2 = \\text{`011 | 011`}$\n* $P_4 = \\text{`001 | 111`}$\n* **Offspring 1 ($O_1$):** `011` + `111` = **`011111`** ($f = 5$)\n* **Offspring 2 ($O_2$):** `001` + `011` = **`001011`** ($f = 3$)\n\n**(c) Mutation on 5th Bit of First Offspring ($O_1$):**\n* Original $O_1 = \\text{`011111`}$ (5th bit is `1`).\n* Mutated $O_1' = \\text{`011101`}$ (5th bit inverted from `1` to `0`).\n\n**(d) Comparison:**\n* Mutated offspring $O_1'$ has fitness $f(O_1') = 4$.\n* Parent fitness was $f(P_2) = 4, f(P_4) = 4$.\n* **Conclusion:** Mutated offspring ($f=4$) is **equal in fitness** to its parents, but inferior to the pre-mutation crossover offspring $O_1$ ($f=5$)."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-niter-tt1-q4",
@@ -1369,7 +1366,12 @@
         "topics": [
           "Machine Learning Terminology"
         ],
-        "question": "Illustrate the following Terms: i. Supervised and Unsupervised Learning, ii. Reinforcement Learning, iii. Overfitting and Underfitting, iv. Regression and Classification."
+        "question": "Illustrate the following Terms: i. Supervised and Unsupervised Learning, ii. Reinforcement Learning, iii. Overfitting and Underfitting, iv. Regression and Classification.",
+        "solution": {
+          "steps": [
+            "**i. Supervised vs. Unsupervised Learning:**\n* **Supervised Learning:** Trains on labeled datasets $(X, Y)$ to learn a mapping function $f: X \\to Y$ (e.g. classification, regression).\n* **Unsupervised Learning:** Discovers hidden patterns, clusters, and intrinsic structures from unlabeled data $X$ without predefined targets (e.g. K-Means, PCA).\n\n**ii. Reinforcement Learning (RL):**\n* An agent learns optimal behavioral policies through trial-and-error interactions with a dynamic environment, receiving numerical **rewards** for desirable actions and **penalties** for mistakes.\n\n**iii. Overfitting vs. Underfitting:**\n* **Overfitting:** Model learns training data noise and idiosyncrasies too closely; achieves high training accuracy but generalizes poorly to unseen test data.\n* **Underfitting:** Model is overly simplistic and fails to capture underlying data relationships; exhibits poor performance on both training and test data.\n\n**iv. Regression vs. Classification:**\n* **Regression:** Predicts a continuous numerical target variable (e.g. predicting house prices, temperature).\n* **Classification:** Predicts a discrete categorical class label (e.g. spam vs non-spam, disease diagnosis)."
+          ]
+        }
       }
     ]
   },
@@ -1399,7 +1401,12 @@
         "topics": [
           "Minimax & Alpha-Beta Pruning"
         ],
-        "question": "a) Explain the limitations of the Minimax algorithm in adversarial search. b) Apply the Alpha-Beta Pruning algorithm to the given game tree. Clearly illustrate the evaluation process, identify pruned branches, and determine the optimal root value."
+        "question": "a) Explain the limitations of the Minimax algorithm in adversarial search. b) Apply the Alpha-Beta Pruning algorithm to the given game tree. Clearly illustrate the evaluation process, identify pruned branches, and determine the optimal root value.",
+        "solution": {
+          "steps": [
+            "**a) Limitations of Minimax Algorithm:**\n* **Exponential Time Complexity:** $O(b^m)$ makes searching to terminal leaf nodes computationally impossible for non-trivial branching factors ($b$) and game depths ($m$).\n* **Strict Rationality Assumption:** Assumes the opponent always plays the optimal counter-move; cannot exploit human mistakes.\n\n**b) Alpha-Beta Pruning Execution:**\n* Maintain $\\alpha$ (highest value for MAX, initial $-\\infty$) and $\\beta$ (lowest value for MIN, initial $+\\infty$).\n* **Pruning Rule:** Prune remaining children of node when **$\\alpha \\ge \\beta$**.\n* Traverses tree in depth-first order, updating $\\alpha$ and $\\beta$ dynamically. Pruned subtrees save exponential computations while guaranteeing mathematically identical root values."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-niter-tt2-q2",
@@ -1409,7 +1416,12 @@
         "topics": [
           "Artificial Neural Networks & Backprop"
         ],
-        "question": "Single artificial neuron with inputs x1=1.0, x2=0.5, weights w1=0.4, w2=-0.6, bias b=0.1, sigmoid activation, target t=1, learning rate eta=0.2. (a) Calculate net input and output. (b) Compute prediction error using MSE. (c) Compute weight and bias updates for one training step using backpropagation."
+        "question": "Single artificial neuron with inputs x1=1.0, x2=0.5, weights w1=0.4, w2=-0.6, bias b=0.1, sigmoid activation, target t=1, learning rate eta=0.2. (a) Calculate net input and output. (b) Compute prediction error using MSE. (c) Compute weight and bias updates for one training step using backpropagation.",
+        "solution": {
+          "steps": [
+            "**Given Parameters:**\n* Inputs: $x_1 = 1.0, x_2 = 0.5$; Weights: $w_1 = 0.4, w_2 = -0.6$; Bias: $b = 0.1$\n* Activation: Sigmoid $\\sigma(z) = \\frac{1}{1 + e^{-z}}$; Target: $t = 1.0$; Learning Rate: $\\eta = 0.2$\n\n**(a) Net Input and Output:**\n* Net Input $z = w_1 x_1 + w_2 x_2 + b = (0.4)(1.0) + (-0.6)(0.5) + 0.1 = 0.4 - 0.3 + 0.1 = \\mathbf{0.20}$\n* Output $y = \\sigma(0.20) = \\frac{1}{1 + e^{-0.20}} \\approx \\frac{1}{1 + 0.8187} = \\mathbf{0.5498}$\n\n**(b) Prediction Error (MSE):**\n* $E = \\frac{1}{2}(t - y)^2 = \\frac{1}{2}(1.0 - 0.5498)^2 = \\frac{1}{2}(0.4502)^2 = \\mathbf{0.1013}$\n\n**(c) Backpropagation Weight and Bias Updates:**\n* Error gradient: $\\delta = (t - y) \\cdot y(1 - y) = (0.4502) \\cdot (0.5498)(1 - 0.5498) = (0.4502)(0.5498)(0.4502) \\approx \\mathbf{0.1114}$\n* $\\Delta w_1 = \\eta \\cdot \\delta \\cdot x_1 = (0.2)(0.1114)(1.0) = +0.0223 \\implies w_1^{new} = 0.4 + 0.0223 = \\mathbf{0.4223}$\n* $\\Delta w_2 = \\eta \\cdot \\delta \\cdot x_2 = (0.2)(0.1114)(0.5) = +0.0111 \\implies w_2^{new} = -0.6 + 0.0111 = \\mathbf{-0.5889}$\n* $\\Delta b = \\eta \\cdot \\delta = (0.2)(0.1114) = +0.0223 \\implies b^{new} = 0.1 + 0.0223 = \\mathbf{0.1223}$"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-niter-tt2-q3",
@@ -1419,7 +1431,12 @@
         "topics": [
           "Bayes' Theorem & Probability"
         ],
-        "question": "a) State and explain Bayes' Theorem, describing the roles of prior probability, likelihood, evidence, and posterior probability. b) A standard deck of 52 playing cards contains 12 face cards (Jacks, Queens, Kings), of which 4 are Queens. A randomly drawn card is known to be a face card. Using Bayes' Theorem, calculate P(Queen | Face)."
+        "question": "a) State and explain Bayes' Theorem, describing the roles of prior probability, likelihood, evidence, and posterior probability. b) A standard deck of 52 playing cards contains 12 face cards (Jacks, Queens, Kings), of which 4 are Queens. A randomly drawn card is known to be a face card. Using Bayes' Theorem, calculate P(Queen | Face).",
+        "solution": {
+          "steps": [
+            "**a) Bayes' Theorem Formulation:**\n$$P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$$\n* **Prior Probability $P(A)$:** Initial probability of hypothesis $A$ before observing evidence.\n* **Likelihood $P(B \\mid A)$:** Probability of observing evidence $B$ given that hypothesis $A$ is true.\n* **Evidence $P(B)$:** Total marginal probability of observing evidence $B$ across all hypotheses.\n* **Posterior Probability $P(A \\mid B)$:** Updated probability of hypothesis $A$ after observing evidence $B$.\n\n**b) Card Problem Calculation:**\n* Total cards = 52; Face cards $F$ = 12 (4 Jacks, 4 Queens, 4 Kings) $\\implies P(F) = \\frac{12}{52}$\n* Queen cards $Q$ = 4 $\\implies P(Q) = \\frac{4}{52}$\n* Since all Queens are Face cards, $P(F \\mid Q) = 1.0$\n* Using Bayes' Theorem:\n  $$P(Q \\mid F) = \\frac{P(F \\mid Q) \\cdot P(Q)}{P(F)} = \\frac{1.0 \\cdot \\frac{4}{52}}{\\frac{12}{52}} = \\frac{4}{12} = \\mathbf{\\frac{1}{3} \\approx 0.3333}$$\n* There is a **33.33%** probability that a known face card is a Queen."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-niter-tt2-q4",
@@ -1429,7 +1446,12 @@
         "topics": [
           "AI Project Life-Cycle"
         ],
-        "question": "Draw a generalized flowchart illustrating the complete development life-cycle of an AI-based project, starting from problem identification and ending with real-world deployment and continuous improvement, clearly representing stages, sequence, and feedback loops."
+        "question": "Draw a generalized flowchart illustrating the complete development life-cycle of an AI-based project, starting from problem identification and ending with real-world deployment and continuous improvement, clearly representing stages, sequence, and feedback loops.",
+        "solution": {
+          "steps": [
+            "**Complete Life-Cycle of an AI-Based Project:**\n\n```text\n[ 1. Problem Identification & Scoping ]\n                  |\n                  v\n[ 2. Data Acquisition & Labeling ]\n                  |\n                  v\n[ 3. Exploratory Data Analysis (EDA) & Preprocessing ]\n                  |\n                  v\n[ 4. Model Selection & Architecture Design ]\n                  |\n                  v\n[ 5. Model Training & Hyperparameter Tuning ]\n                  |\n                  v\n[ 6. Evaluation & Validation (Metrics, Error Analysis) ]\n        |                                    |\n        | (Performance below threshold)      | (Meets benchmark)\n        +-----> [ Re-train / Feature Eng ]   v\n                               [ 7. Deployment & Serving (API / Edge) ]\n                                             |\n                                             v\n                               [ 8. Continuous Monitoring & Maintenance ]\n                                             | (Data drift detection)\n                                             +---> [ Feedback Loop to Data ]\n```\n\n* **Continuous Improvement Loop:** Deployed systems monitor data and concept drift, feeding new production telemetry back into the training pipeline."
+          ]
+        }
       }
     ]
   },
@@ -1460,7 +1482,12 @@
         "topics": [
           "A* Evaluation Function & Inference Rules"
         ],
-        "question": "a) Explain the components of the evaluation function f(n) = g(n) + h(n). b) Write short notes on i) Modus Ponens ii) Modus Tollens with example."
+        "question": "a) Explain the components of the evaluation function f(n) = g(n) + h(n). b) Write short notes on i) Modus Ponens ii) Modus Tollens with example.",
+        "solution": {
+          "steps": [
+            "**a) Evaluation Function $f(n) = g(n) + h(n)$:**\n* $g(n)$: Exact path cost accumulated from initial state to current node $n$.\n* $h(n)$: Heuristic estimate of remaining cheapest cost from $n$ to the goal state.\n* $f(n)$: Estimated total cost of cheapest solution passing through node $n$.\n\n**b) Inference Rules:**\n* **Modus Ponens (Affirming the Antecedent):**\n  $$\\frac{P, \\quad P \\implies Q}{Q}$$\n  * *Example:* Premise 1: *'If it rains, the grass is wet.'* Premise 2: *'It rains.'* Conclusion: *'The grass is wet.'*\n* **Modus Tollens (Denying the Consequent):**\n  $$\\frac{\\neg Q, \\quad P \\implies Q}{\\neg P}$$\n  * *Example:* Premise 1: *'If it rains, the grass is wet.'* Premise 2: *'The grass is not wet.'* Conclusion: *'It is not raining.'*"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt1-q2",
@@ -1470,7 +1497,12 @@
         "topics": [
           "Heuristic Admissibility & Consistency"
         ],
-        "question": "Explain 'For a heuristic function to search safely and optimally, it must satisfy Admissibility and Consistency'."
+        "question": "Explain 'For a heuristic function to search safely and optimally, it must satisfy Admissibility and Consistency'.",
+        "solution": {
+          "steps": [
+            "**Admissibility & Consistency for Safe and Optimal Search:**\n\n1. **Admissibility ($h(n) \\le h^*(n)$):**\n   * An admissible heuristic never overestimates the true remaining cost to the goal (it is optimistic).\n   * **Necessity for Optimality:** If $h(n)$ overestimated, $A^*$ might discard the true optimal path in favor of a suboptimal path whose heuristic seemed artificially smaller.\n\n2. **Consistency / Monotonicity ($h(n) \\le c(n, a, n') + h(n')$):**\n   * Satisfies the triangle inequality across every step transition.\n   * **Necessity for Safe Graph Search:** Ensures $f(n)$ is monotonically non-decreasing along any path, guaranteeing that the first time a node is expanded, its optimal path cost $g^*(n)$ is already found. No nodes ever need to be reopened."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt1-q3",
@@ -1480,7 +1512,12 @@
         "topics": [
           "Greedy Best-First Search on Romania Map"
         ],
-        "question": "Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest."
+        "question": "Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest.",
+        "solution": {
+          "steps": [
+            "**Greedy Best-First Search (GBFS) from Arad to Bucharest:**\n* Evaluation metric: $f(n) = h_{SLD}(n)$ (Straight-line distance to Bucharest).\n\n**Trace Table:**\n| Step | Node Expanded | Successors Generated ($h_{SLD}$) | Minimum $h$ Selected |\n| :---: | :---: | :--- | :--- |\n| **1** | **Arad** ($h=366$) | Sibiu(253), Timisoara(329), Zerind(374) | **Sibiu** ($h=253$) |\n| **2** | **Sibiu** ($h=253$) | Fagaras(176), Rimnicu Vilcea(193), Oradea(380) | **Fagaras** ($h=176$) |\n| **3** | **Fagaras** ($h=176$) | Bucharest(0) | **Bucharest** (Goal reached! $h=0$) |\n\n* **Total Road Cost:** $140\\text{ (Arad-Sibiu)} + 99\\text{ (Sibiu-Fagaras)} + 211\\text{ (Fagaras-Bucharest)} = \\mathbf{450\\text{ km}}$"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt1-q4",
@@ -1490,7 +1527,12 @@
         "topics": [
           "Hill Climbing Variants & First-Order Logic"
         ],
-        "question": "a) Briefly define the variants of hill climbing search. b) Convert the following statements into First-Order Logic (FOL): i. All birds can fly, ii. Some humans are honest, iii. Everyone is loyal to someone, iv. Marcus tried to assassinate Caesar."
+        "question": "a) Briefly define the variants of hill climbing search. b) Convert the following statements into First-Order Logic (FOL): i. All birds can fly, ii. Some humans are honest, iii. Everyone is loyal to someone, iv. Marcus tried to assassinate Caesar.",
+        "solution": {
+          "steps": [
+            "**a) Variants of Hill-Climbing Search:**\n1. **Stochastic Hill-Climbing:** Chooses randomly among the uphill moves, with probability varying based on the steepness of the ascent.\n2. **First-Choice Hill-Climbing:** Implements stochastic search by generating successors randomly until one is found that is better than the current state.\n3. **Random-Restart Hill-Climbing:** Conducts a series of hill-climbing searches from randomly generated initial states until a goal is found.\n\n**b) First-Order Logic (FOL) Translations:**\n* **i. All birds can fly:** $\\forall x \\, [\\text{Bird}(x) \\implies \\text{CanFly}(x)]$\n* **ii. Some humans are honest:** $\\exists x \\, [\\text{Human}(x) \\land \\text{Honest}(x)]$\n* **iii. Everyone is loyal to someone:** $\\forall x \\, \\exists y \\, \\text{LoyalTo}(x, y)$\n* **iv. Marcus tried to assassinate Caesar:** $\\text{TriedToAssassinate}(\\text{Marcus}, \\text{Caesar})$"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt1-q5",
@@ -1500,7 +1542,12 @@
         "topics": [
           "Turing Test & Learning Agents"
         ],
-        "question": "Shortly define 'The Turing Test approach'. How do you evaluate learning agent from other AI agents?"
+        "question": "Shortly define 'The Turing Test approach'. How do you evaluate learning agent from other AI agents?",
+        "solution": {
+          "steps": [
+            "**1. The Turing Test Approach:**\n* Proposed by Alan Turing (1950) as an operational test for intelligence (the *Imitation Game*).\n* A human interrogator communicates via text terminal with two hidden entities (a human and an AI). If the interrogator cannot reliably tell which is the machine, the machine passes.\n\n**2. Learning Agent vs Other AI Agents:**\n* Unlike standard fixed agents that operate solely on predefined rules, a **learning agent** can adapt to unfamiliar environments over time.\n* **Four Conceptual Components:**\n  1. **Critic:** Evaluates agent performance against an external standard.\n  2. **Learning Element:** Responsible for making improvements based on critic feedback.\n  3. **Performance Element:** Responsible for selecting external actions (the entire traditional agent).\n  4. **Problem Generator:** Suggests exploratory actions leading to new informative experiences."
+          ]
+        }
       }
     ]
   },
@@ -1531,7 +1578,12 @@
         "topics": [
           "Constraint Satisfaction Problems (CSP)"
         ],
-        "question": "Define CSP with proper example. Describe varieties of CSP with example."
+        "question": "Define CSP with proper example. Describe varieties of CSP with example.",
+        "solution": {
+          "steps": [
+            "**1. CSP Definition & Example:**\n* A Constraint Satisfaction Problem consists of Variables $X$, Domains $D$, and Constraints $C$.\n* *Example (Sudoku):* Variables = 81 grid cells; Domain = $\\{1, 2, \\dots, 9\\}$; Constraints = unique values in each row, column, and $3 \\times 3$ box.\n\n**2. Varieties of CSPs:**\n| Dimension | Varieties & Description | Example |\n| :--- | :--- | :--- |\n| **Domain Type** | **Discrete Domains:** Finite or countably infinite values. <br> **Continuous Domains:** Real numbers $\\mathbb{R}$. | Map coloring (finite discrete); Telescope scheduling (continuous time). |\n| **Constraint Arity** | **Unary:** Constrains 1 variable ($SA \\ne Green$). <br> **Binary:** Constrains 2 variables ($SA \\ne WA$). <br> **Higher-Order / Global:** Constrains $k \\ge 3$ variables. | Cryptarithmetic puzzle (`Alldiff(F, T, U, W, R, O)`). |"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt2-q2",
@@ -1541,7 +1593,12 @@
         "topics": [
           "CSP Formulation & Genetic Algorithm Steps"
         ],
-        "question": "Elaborate standard search formulation in CSP. Describe the steps of genetic algorithm."
+        "question": "Elaborate standard search formulation in CSP. Describe the steps of genetic algorithm.",
+        "solution": {
+          "steps": [
+            "**1. Standard Search Formulation in CSP:**\n* **Initial State:** Empty assignment $\\{\\}$ where all variables are unassigned.\n* **Successor Function:** Assign a legal value to any unassigned variable that does not conflict with existing assignments.\n* **Goal Test:** The current assignment is complete (all variables assigned) and satisfies all constraints.\n* **Path Cost:** Uniform cost per step (depth $d = n$ at solution).\n\n**2. Steps of Genetic Algorithm (GA):**\n1. **Initialization:** Generate initial population of $N$ candidate chromosomes.\n2. **Fitness Evaluation:** Compute $f(x)$ for each chromosome.\n3. **Selection:** Probabilistic selection favoring higher-fitness individuals (Roulette Wheel / Rank).\n4. **Crossover:** Recombine pairs of parent chromosomes to produce offspring.\n5. **Mutation:** Random bit-flips with small probability $p_m$ to maintain diversity.\n6. **Termination:** Repeat until optimal fitness achieved or generation limit reached."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt2-q3",
@@ -1551,7 +1608,12 @@
         "topics": [
           "Uncertainty in AI & Bayes' Theorem"
         ],
-        "question": "Briefly define the reasons for uncertainty in AI. Write down the equation for conditional probability and Bayes Theorem."
+        "question": "Briefly define the reasons for uncertainty in AI. Write down the equation for conditional probability and Bayes Theorem.",
+        "solution": {
+          "steps": [
+            "**1. Reasons for Uncertainty in AI:**\n1. **Partial Observability:** Sensors cannot perceive the entire environment state (e.g. medical diagnosis with unseen internal factors).\n2. **Non-deterministic Actions:** Actuator outcomes are noisy or uncertain (e.g. driving in icy conditions).\n3. **Noisy / Faulty Sensors:** Sensor readings contain random measurement noise or errors.\n4. **Laziness & Ignorance:** Too voluminous to enumerate all antecedent rules, or theoretical domain laws are incomplete.\n\n**2. Probability Equations:**\n* **Conditional Probability:**\n  $$P(A \\mid B) = \\frac{P(A \\land B)}{P(B)}, \\quad \\text{where } P(B) > 0$$\n* **Bayes' Theorem:**\n  $$P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$$"
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt2-q4",
@@ -1561,7 +1623,12 @@
         "topics": [
           "Probability & Penalty Kick Scenario"
         ],
-        "question": "Star Forward takes 25% of team penalties and scores 85% of time. Other players take 75% and score 70%. You notice Star Forward takes the kick. What is the probability that penalty is a goal?"
+        "question": "Star Forward takes 25% of team penalties and scores 85% of time. Other players take 75% and score 70%. You notice Star Forward takes the kick. What is the probability that penalty is a goal?",
+        "solution": {
+          "steps": [
+            "**Penalty Goal Probability Calculation:**\n\n**Given Data:**\n* Prior probability Star Forward takes kick: $P(\\text{Star}) = 0.25$\n* Prior probability other player takes kick: $P(\\text{Other}) = 0.75$\n* Probability of goal given Star Forward: $P(\\text{Goal} \\mid \\text{Star}) = 0.85$\n* Probability of goal given other player: $P(\\text{Goal} \\mid \\text{Other}) = 0.70$\n\n**Interpretation & Calculation:**\n1. If you **observe that Star Forward takes the kick**, the probability of a goal is directly the conditioned probability:\n   $$P(\\text{Goal} \\mid \\text{Star}) = \\mathbf{0.85 \\text{ (85%)}}$$\n\n2. **Total Law of Probability (Unconditional Goal Probability):**\n   $$\\begin{aligned} P(\\text{Goal}) &= P(\\text{Goal} \\mid \\text{Star}) \\cdot P(\\text{Star}) + P(\\text{Goal} \\mid \\text{Other}) \\cdot P(\\text{Other}) \\\\ &= (0.85)(0.25) + (0.70)(0.75) \\\\ &= 0.2125 + 0.525 = \\mathbf{0.7375 \\text{ (73.75%)}}\n   \\end{aligned}$$\n\n* **Result:** Given Star Forward took the kick, the probability of scoring is **85%**."
+          ]
+        }
       },
       {
         "id": "cse-4101-term-fec-tt2-q5",
@@ -1571,7 +1638,12 @@
         "topics": [
           "Genetic Algorithm Optimization on f(x) = x^2"
         ],
-        "question": "Maximize f(x) = x^2 over [0, 31] using GA. Population: P1=01101, P2=11000, P3=01000, P4=10011. Find total fitness and average fitness."
+        "question": "Maximize f(x) = x^2 over [0, 31] using GA. Population: P1=01101, P2=11000, P3=01000, P4=10011. Find total fitness and average fitness.",
+        "solution": {
+          "steps": [
+            "**Genetic Algorithm Fitness Calculation for $f(x) = x^2$ on $[0, 31]$:**\n\n| Chromosome | Binary String ($L=5$) | Integer Value $x$ | Fitness $f(x) = x^2$ |\n| :---: | :---: | :---: | :---: |\n| $P_1$ | `01101` | $0(16) + 1(8) + 1(4) + 0(2) + 1(1) = 13$ | $13^2 = \\mathbf{169}$ |\n| $P_2$ | `11000` | $1(16) + 1(8) + 0(4) + 0(2) + 0(1) = 24$ | $24^2 = \\mathbf{576}$ |\n| $P_3$ | `01000` | $0(16) + 1(8) + 0(4) + 0(2) + 0(1) = 8$ | $8^2 = \\mathbf{64}$ |\n| $P_4$ | `10011` | $1(16) + 0(8) + 0(4) + 1(2) + 1(1) = 19$ | $19^2 = \\mathbf{361}$ |\n\n**Calculations:**\n* **Total Fitness:**\n  $$\\sum_{i=1}^{4} f(x_i) = 169 + 576 + 64 + 361 = \\mathbf{1170}$$\n* **Average Fitness:**\n  $$\\bar{f} = \\frac{1170}{4} = \\mathbf{292.5}$$"
+          ]
+        }
       }
     ]
   }
