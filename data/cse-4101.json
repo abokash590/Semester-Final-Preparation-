@@ -118,12 +118,8 @@
         "question": "Write down the difference between informed and uninformed search.",
         "solution": {
           "steps": [
-            "1. Uninformed (Blind) Search: Uses only problem formulation information (start state, actions, transition model, goal test). Has no knowledge of how close a state is to the goal. Examples: BFS, DFS, UCS, Depth-Limited, IDS.",
-            "2. Informed (Heuristic) Search: Uses domain-specific knowledge beyond problem specification via a heuristic evaluation function $h(n)$ estimating cost from node $n$ to nearest goal. Examples: Greedy Best-First Search, A*, IDA*.",
-            "3. Comparison points: Efficiency (Informed is generally much faster with smaller search tree expansion), memory utilization, optimality conditions (A* requires admissibility/consistency)."
-          ],
-          "answer": "Uninformed search explores blindly based on graph topology; informed search utilizes heuristic guidance $h(n)$ to steer expansion towards the goal.",
-          "marking_hint": "Award 2 marks for core concepts, 2 marks for comparison table/examples."
+            "| Feature / Dimension | Uninformed Search (Blind Search) | Informed Search (Heuristic Search) |\n| :--- | :--- | :--- |\n| **Knowledge / Guidance** | Uses **no problem-specific knowledge** beyond problem formulation (start state, actions, goal test). Searches blindly based on graph topology. | Uses **domain-specific heuristic guidance** via an evaluation function $h(n)$ estimating remaining cost from node $n$ to goal. |\n| **Evaluation Function** | Depends solely on path cost $g(n)$ or search order (e.g., $f(n) = g(n)$ in UCS, depth in DFS). | Combines path cost and heuristic estimate: $f(n) = g(n) + h(n)$ (A*) or $f(n) = h(n)$ (Greedy Best-First). |\n| **Time & Space Efficiency** | Generally exponential $O(b^d)$ or $O(b^{C^*/\\epsilon})$; expands unpromising subtrees exhaustively. | Highly efficient; heuristic guidance prunes irrelevant search branches, drastically reducing expanded nodes. |\n| **Algorithms (Class Notes)** | **BFS, DFS, Uniform Cost Search (UCS), Depth-Limited Search (DLS), Iterative Deepening (IDS), Bidirectional Search.** | **Greedy Best-First Search, $A^*$ Search, Recursive Best-First Search (RBFS), $IDA^*$, $SMA^*$.** |"
+          ]
         }
       },
       {
@@ -137,11 +133,8 @@
         "question": "What is LCV and MRV in CSP for improving Backtracking? Explain with example.",
         "solution": {
           "steps": [
-            "1. Minimum Remaining Values (MRV): Variable ordering heuristic. Chooses the unassigned variable with the fewest legal values remaining in its domain ('fail-first' principle). Example in map coloring: if WA has only 'Blue' left, assign WA first.",
-            "2. Least Constraining Value (LCV): Value ordering heuristic. Chooses the value that rules out the fewest choices for neighboring unassigned variables ('fail-last' principle). Leaves maximum flexibility for remaining variables."
-          ],
-          "answer": "MRV selects which variable to assign next to detect failure early; LCV selects which value to try first to preserve neighbor options.",
-          "marking_hint": "Award 2 marks for MRV explanation and example, 2 marks for LCV explanation and example."
+            "In Constraint Satisfaction Problems (CSP), **MRV** and **LCV** are two foundational general-purpose heuristics used to optimize standard Backtracking Search:\n\n**1. Minimum Remaining Values (MRV) — Variable Ordering ('Fail-First' Principle):**\n* **Concept:** When choosing which variable to assign next, MRV selects the unassigned variable with the **fewest legal values remaining** in its domain (also called *Most Constrained Variable*).\n* **Objective:** To prune invalid search branches as early as possible. If a variable is on the verge of having an empty domain (dead-end), evaluating it immediately avoids fruitless subtrees.\n* **Example (Map Coloring with {Red, Green, Blue}):** If Western Australia ($WA$) is assigned $Red$ and Northern Territory ($NT$) is assigned $Green$, South Australia ($SA$) has only **1 legal color** left ({$Blue$}), while Queensland ($Q$) has 2 legal colors left ({$Red, Blue$}). MRV forces the algorithm to assign $SA$ next.\n\n**2. Least Constraining Value (LCV) — Value Ordering ('Fail-Last' Principle):**\n* **Concept:** Once a variable has been selected, LCV chooses the value that **rules out the fewest legal choices** for remaining neighboring unassigned variables.\n* **Objective:** To leave maximum flexibility for future assignments, maximizing the probability of finding a valid solution without triggering backtracking.\n* **Example:** If assigning $Q = Red$ leaves 2 legal choices for $NSW$, but assigning $Q = Blue$ leaves only 1 legal choice for $NSW$, LCV will choose **$Red$** first."
+          ]
         }
       },
       {
@@ -155,13 +148,8 @@
         "question": "Given an initial state of 8 puzzle problem and final state to be reached:\n\n**Initial State:**\n| 2 | 5 | 4 |\n|---|---|---|\n| 1 | 6 | 8 |\n| 3 |   | 7 |\n\n**Final State:**\n| 1 | 2 | 3 |\n|---|---|---|\n| 8 |   | 4 |\n| 7 | 6 | 5 |\n\nFind the most cost effective path to reach the final state from initial state using A* search algorithm.",
         "solution": {
           "steps": [
-            "1. Formulate A* evaluation function: f(n) = g(n) + h(n), where g(n) is depth and h(n) is Manhattan distance sum.",
-            "2. Compute initial Manhattan distance for all 8 tiles: h(n0) = 12.",
-            "3. Branch possible legal blank movements: Up (swap 6), Left (swap 3), Right (swap 7). Compute f(n) = 1 + h(n) for each.",
-            "4. Prioritize lowest f(n) at each expansion until reaching goal state with h=0."
-          ],
-          "answer": "A* search guarantees the optimal sequence of tile movements because Manhattan distance is an admissible and consistent heuristic.",
-          "marking_hint": "Award 2 marks for heuristic calculation, 2 marks for branching tree, 2 marks for path."
+            "**A* Search Formulation (Class Notes Page 25):**\nThe evaluation function is defined as:\n$$f(n) = g(n) + h(n)$$\n* $g(n) = \\text{Level / Path cost from root node to current state } n$\n* $h(n) = \\text{Number of mismatched (misplaced) tiles compared to Goal State } G$\n* At each level, the node with the **minimum $f(n)$** is selected and expanded in the priority queue.\n\n**Goal State ($G$):**\n$$\\begin{bmatrix} 1 & 2 & 3 \\\\ 8 & \\_ & 4 \\\\ 7 & 6 & 5 \\end{bmatrix}$$\n\n**Step 0: Initial State ($S$) at Level $0$:**\n$$\\text{State } S = \\begin{bmatrix} 2 & 5 & 4 \\\\ 1 & 6 & 8 \\\\ 3 & \\_ & 7 \\end{bmatrix}$$\n* Comparing with Goal $G$: Tiles $\\{2, 5, 4, 1, 6, 8, 3, 7\\}$ are all mismatched $\\implies h(S) = 8$\n* $g(S) = 0 \\implies \\mathbf{f(S) = 0 + 8 = 8}$\n\n**Step 1: Branching from $S$ (Blank at position $(2, 1)$):**\nThe legal blank moves from $(2, 1)$ are:\n\n1. **Move Up (Swap blank with $6$):**\n   $$\\text{Node } N_1 = \\begin{bmatrix} 2 & 5 & 4 \\\\ 1 & \\_ & 8 \\\\ 3 & 6 & 7 \\end{bmatrix}$$\n   * $g = 1$, $6$ is now in its goal position $(2, 1) \\implies h = 7$\n   * $\\mathbf{f(N_1) = 1 + 7 = 8}$  **(Minimum $f$ — Circled for Next Expansion)**\n\n2. **Move Left (Swap blank with $3$):**\n   $$\\text{Node } N_2 = \\begin{bmatrix} 2 & 5 & 4 \\\\ 1 & 6 & 8 \\\\ \\_ & 3 & 7 \\end{bmatrix}$$\n   * $g = 1$, $h = 8 \\implies f(N_2) = 1 + 8 = 9$\n\n3. **Move Right (Swap blank with $7$):**\n   $$\\text{Node } N_3 = \\begin{bmatrix} 2 & 5 & 4 \\\\ 1 & 6 & 8 \\\\ 3 & 7 & \\_ \\end{bmatrix}$$\n   * $g = 1$, $h = 8 \\implies f(N_3) = 1 + 8 = 9$\n\n**Step 2: Expanding Best Node $N_1$ ($f=8$, blank at center $(1, 1)$):**\nFrom $(1, 1)$, legal moves:\n* **Up (Swap with $5$):** $\\begin{bmatrix} 2 & \\_ & 4 \\\\ 1 & 5 & 8 \\\\ 3 & 6 & 7 \\end{bmatrix} \\implies g = 2, h = 7, \\mathbf{f = 9}$\n* **Left (Swap with $1$):** $\\begin{bmatrix} 2 & 5 & 4 \\\\ \\_ & 1 & 8 \\\\ 3 & 6 & 7 \\end{bmatrix} \\implies g = 2, h = 7, \\mathbf{f = 9}$\n* **Right (Swap with $8$):** $\\begin{bmatrix} 2 & 5 & 4 \\\\ 1 & 8 & \\_ \\\\ 3 & 6 & 7 \\end{bmatrix} \\implies g = 2, h = 8, \\mathbf{f = 10}$\n\n**Conclusion & Search Tree Property:**\nBecause the misplaced tiles heuristic $h(n)$ never overestimates the true number of remaining moves ($h(n) \\le h^*(n)$), it is **admissible**. Therefore, $A^*$ search is guaranteed to find the optimal, most cost-effective path to the goal state $G$ with $h=0$."
+          ]
         }
       }
     ],
