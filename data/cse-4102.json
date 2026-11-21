@@ -23,17 +23,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "What is a bivariate graph? List some bivariate graphs with proper examples.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(a) (2 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is a bivariate graph? List some bivariate graphs with proper examples....",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(a).",
-          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is a bivariate graph? List some bivariate graphs with proper examples."
       },
       {
         "id": "cse-4102-final-2023-q1b",
@@ -43,17 +33,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "What is Cross-correlation? Write the difference between covariance and correlation.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(b) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is Cross-correlation? Write the difference between covariance and correlati...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(b).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is Cross-correlation? Write the difference between covariance and correlation."
       },
       {
         "id": "cse-4102-final-2023-q1c",
@@ -64,17 +44,7 @@
           "Markov Chains & Transition Matrices",
           "Hypothesis Testing & Errors"
         ],
-        "question": "Let us consider a null hypothesis- A man is not guilty of a crime. Now, according to above hypothesis write the statement for Type I error and Type II error. Is a Type I or Type II error worse?",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(c) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Let us consider a null hypothesis- A man is not guilty of a crime. Now, accordin...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(c).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Let us consider a null hypothesis- A man is not guilty of a crime. Now, according to above hypothesis write the statement for Type I error and Type II error. Is a Type I or Type II error worse?"
       },
       {
         "id": "cse-4102-final-2023-q1d",
@@ -84,17 +54,7 @@
         "topics": [
           "Linear & Multiple Regression"
         ],
-        "question": "Multiple Linear Regression is a powerful tool for understanding relationships in data and making predictions. Suppose we want to predict the price of a house based on the following independent variables: Square Footage (in thousands), Number of Bedrooms, Age of the House (in years). Now write the necessary steps with formula for Predicting House Prices.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(d) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Multiple Linear Regression is a powerful tool for understanding relationships in...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(d).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Multiple Linear Regression is a powerful tool for understanding relationships in data and making predictions. Suppose we want to predict the price of a house based on the following independent variables: Square Footage (in thousands), Number of Bedrooms, Age of the House (in years). Now write the necessary steps with formula for Predicting House Prices."
       },
       {
         "id": "cse-4102-final-2023-q1e",
@@ -104,26 +64,9 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "Calculate the coefficient of covariance for the following data: **[3]**  \n\n| X | 2 | 8 | 18 | 20 | 28 | 30 |\n|---|---|---|----|----|----|----|\n| Y | 5 | 12 | 18 | 23 | 45 | 50 |\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(e) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Calculate the coefficient of covariance for the following data: **[3]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(e).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Calculate the coefficient of covariance for the following data: **[3]**  \n\n| X | 2 | 8 | 18 | 20 | 28 | 30 |\n|---|---|---|----|----|----|----|\n| Y | 5 | 12 | 18 | 23 | 45 | 50 |\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 1 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -149,17 +92,7 @@
         "topics": [
           "Laplace Transforms"
         ],
-        "question": "Why is Laplace Transformation important for engineering? Perform the Laplace Transform of function $F(t) = e^{-2t}(3\\cos 6t - 5\\sin 6t)$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(a) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Why is Laplace Transformation important for engineering? Perform the Laplace Tra...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(a).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Why is Laplace Transformation important for engineering? Perform the Laplace Transform of function $F(t) = e^{-2t}(3\\cos 6t - 5\\sin 6t)$"
       },
       {
         "id": "cse-4102-final-2023-q2b",
@@ -169,17 +102,7 @@
         "topics": [
           "Laplace Transforms"
         ],
-        "question": "Find Laplace Transform for the following function using the Table of Laplace Transforms $F(t) = [t(3\\sin 2t - 2\\cos 2t)]$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(b) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Find Laplace Transform for the following function using the Table of Laplace Tra...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(b).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Find Laplace Transform for the following function using the Table of Laplace Transforms $F(t) = [t(3\\sin 2t - 2\\cos 2t)]$"
       },
       {
         "id": "cse-4102-final-2023-q2c",
@@ -189,17 +112,7 @@
         "topics": [
           "Inverse Laplace & ODEs"
         ],
-        "question": "Perform the inverse Laplace transform of the following expression: **[4]**  \n$$F(s) = \\frac{P(s)}{Q(s)} = \\frac{S+2}{S^2 - 4S + 13}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Perform the inverse Laplace transform of the following expression: **[4]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Perform the inverse Laplace transform of the following expression: **[4]**  \n$$F(s) = \\frac{P(s)}{Q(s)} = \\frac{S+2}{S^2 - 4S + 13}$$"
       },
       {
         "id": "cse-4102-final-2023-q2d",
@@ -209,26 +122,9 @@
         "topics": [
           "Laplace Transforms"
         ],
-        "question": "Use Laplace transformation to solve the following initial value problem: **[4]**  \n$$y'' - y' - 2y = 0; \\quad y(0) = 1; \\quad y'(0) = 2$$\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(d) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Use Laplace transformation to solve the following initial value problem: **[4]**...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(d).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Use Laplace transformation to solve the following initial value problem: **[4]**  \n$$y'' - y' - 2y = 0; \\quad y(0) = 1; \\quad y'(0) = 2$$\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 2 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -254,17 +150,7 @@
         "topics": [
           "Stochastic & Stationary Processes"
         ],
-        "question": "What is Stochastic Process? Write about the applications of stochastic processes.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(a) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is Stochastic Process? Write about the applications of stochastic processes...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(a).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is Stochastic Process? Write about the applications of stochastic processes."
       },
       {
         "id": "cse-4102-final-2023-q3b",
@@ -275,17 +161,7 @@
           "Stochastic & Stationary Processes",
           "Correlation & Covariance"
         ],
-        "question": "Define the birth and death process stochastic process? Draw a scatter plot correlation for strong positive correlation, strong negative correlation, weak negative correlation, and no correlation.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(b) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Define the birth and death process stochastic process? Draw a scatter plot corre...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(b).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Define the birth and death process stochastic process? Draw a scatter plot correlation for strong positive correlation, strong negative correlation, weak negative correlation, and no correlation."
       },
       {
         "id": "cse-4102-final-2023-q3c",
@@ -295,17 +171,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "What is statistical inference? Explain fundamental concepts in statistical inference.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is statistical inference? Explain fundamental concepts in statistical infer...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is statistical inference? Explain fundamental concepts in statistical inference."
       },
       {
         "id": "cse-4102-final-2023-q3d",
@@ -315,26 +181,9 @@
         "topics": [
           "Stochastic & Stationary Processes"
         ],
-        "question": "What is meant by stationary process? Describe with formula First Order Stationary Process and Second Order Stationary Process. **[4]**\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(d) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is meant by stationary process? Describe with formula First Order Stationar...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(d).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is meant by stationary process? Describe with formula First Order Stationary Process and Second Order Stationary Process. **[4]**\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 3 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -363,17 +212,7 @@
           "Laplace Transforms",
           "Queueing Theory & Little's Law"
         ],
-        "question": "What is Little's law formula? Describe the features of M/M/1/K Queue model.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 4(a) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is Little's law formula? Describe the features of M/M/1/K Queue model....",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 4(a).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is Little's law formula? Describe the features of M/M/1/K Queue model."
       },
       {
         "id": "cse-4102-final-2023-q4b",
@@ -384,17 +223,7 @@
           "Poisson & Exponential Processes",
           "Queueing Theory & Little's Law"
         ],
-        "question": "In a municipality hospital patients arrival are considered to be Poisson with an arrival interval time of 10 mins. The doctors (examination and dispensing) time may be assumed to be ED with an average of 6 mins. Now find: **[5]**  \n    i) What is the chance that a new patient directly sees the doctor?  \n    ii) For what proportion of the time the doctor is busy?  \n    iii) What is the average number of patients in the system?  \n    iv) What is the average waiting time of the system?  \n    v) Suppose the municipality wants to recruit another doctor, when an average waiting time of an arrival is 30 mins in the queue. Find out how large should be to justify a 2nd doctor?",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 4(b) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: In a municipality hospital patients arrival are considered to be Poisson with an...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 4(b).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "In a municipality hospital patients arrival are considered to be Poisson with an arrival interval time of 10 mins. The doctors (examination and dispensing) time may be assumed to be ED with an average of 6 mins. Now find: **[5]**  \n    i) What is the chance that a new patient directly sees the doctor?  \n    ii) For what proportion of the time the doctor is busy?  \n    iii) What is the average number of patients in the system?  \n    iv) What is the average waiting time of the system?  \n    v) Suppose the municipality wants to recruit another doctor, when an average waiting time of an arrival is 30 mins in the queue. Find out how large should be to justify a 2nd doctor?"
       },
       {
         "id": "cse-4102-final-2023-q4c",
@@ -404,26 +233,9 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "In the classic Gambler's Ruin problem, a gambler starts with an initial fortune of $i$ dollars and on each game, the gambler wins $\\$1$ with probability $p$ or loses $\\$1$ with probability $q = 1 - p$, where $0 \\le p \\le 1$. The gambler will stop playing if either $N$ dollars are accumulated or all money has been lost. Now find: **[6]**  \n    i) John starts with $\\$2$, and $p = 0.6$. What is the probability that John obtains a fortune of $N = 4$ without going broke?  \n    ii) What is the probability that John will become infinitely rich?  \n    iii) If John instead started with $i = \\$1$, what is the probability that he would go broke?\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 4(c) (6 Marks).",
-            "Define core technical terms and theoretical background relevant to: In the classic Gambler's Ruin problem, a gambler starts with an initial fortune ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 4(c).",
-          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "In the classic Gambler's Ruin problem, a gambler starts with an initial fortune of $i$ dollars and on each game, the gambler wins $\\$1$ with probability $p$ or loses $\\$1$ with probability $q = 1 - p$, where $0 \\le p \\le 1$. The gambler will stop playing if either $N$ dollars are accumulated or all money has been lost. Now find: **[6]**  \n    i) John starts with $\\$2$, and $p = 0.6$. What is the probability that John obtains a fortune of $N = 4$ without going broke?  \n    ii) What is the probability that John will become infinitely rich?  \n    iii) If John instead started with $i = \\$1$, what is the probability that he would go broke?\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 4 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -450,17 +262,7 @@
         "topics": [
           "Linear Programming & Optimization"
         ],
-        "question": "What do you mean by linear optimization? What is the use of optimization in Computer Science?",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(a) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: What do you mean by linear optimization? What is the use of optimization in Comp...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(a).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What do you mean by linear optimization? What is the use of optimization in Computer Science?"
       },
       {
         "id": "cse-4102-final-2023-q5b",
@@ -470,17 +272,7 @@
         "topics": [
           "Linear Programming & Optimization"
         ],
-        "question": "Define Z-score. A person wants some belts and wallets. He has total savings of Tk 6500 and wishes to spend all his savings on purchasing belts and wallets so that he can sell it later. The value of the wallet is Tk 25 and the value of the belt is Tk 15. He wants to store them in a cupboard and the maximum capacity of the cupboard is 50 units. He expects a profit of Tk 2.5 on the belt and Tk 3 on the wallet. Find the constraints and the resulting objective function.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(b) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Define Z-score. A person wants some belts and wallets. He has total savings of T...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(b).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Define Z-score. A person wants some belts and wallets. He has total savings of Tk 6500 and wishes to spend all his savings on purchasing belts and wallets so that he can sell it later. The value of the wallet is Tk 25 and the value of the belt is Tk 15. He wants to store them in a cupboard and the maximum capacity of the cupboard is 50 units. He expects a profit of Tk 2.5 on the belt and Tk 3 on the wallet. Find the constraints and the resulting objective function."
       },
       {
         "id": "cse-4102-final-2023-q5c",
@@ -490,17 +282,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "What is a Sensitivity Analysis? Write Sensitivity Analysis Tools and Techniques.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(c) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is a Sensitivity Analysis? Write Sensitivity Analysis Tools and Techniques....",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(c).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is a Sensitivity Analysis? Write Sensitivity Analysis Tools and Techniques."
       },
       {
         "id": "cse-4102-final-2023-q5d",
@@ -510,26 +292,9 @@
         "topics": [
           "Duality Theory & Simplex"
         ],
-        "question": "Convert Primal to the dual of the given problem. **[5]**  \n$$\\text{Max } Z = x_1 + 2x_2 + x_3$$  \n$$\\text{Subject to}$$  \n$$2x_1 + x_2 - x_3 \\le 2$$  \n$$-2x_1 + x_2 - 5x_3 \\ge -6$$  \n$$4x_1 + x_2 + x_3 \\le 6$$  \n$$x_1, x_2, x_3 \\ge 0$$\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(d) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Convert Primal to the dual of the given problem. **[5]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(d).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Convert Primal to the dual of the given problem. **[5]**  \n$$\\text{Max } Z = x_1 + 2x_2 + x_3$$  \n$$\\text{Subject to}$$  \n$$2x_1 + x_2 - x_3 \\le 2$$  \n$$-2x_1 + x_2 - 5x_3 \\ge -6$$  \n$$4x_1 + x_2 + x_3 \\le 6$$  \n$$x_1, x_2, x_3 \\ge 0$$\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 5 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -554,17 +319,7 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Why do we use Fourier transform? Perform the Fourier transform of function find: **[4]**  \n$$F\\left\\{\\frac{1}{2}\\left[H\\left(t + \\frac{1}{2}\\right) - H\\left(t - \\frac{1}{2}\\right)\\right]\\right\\} = ?$$  \n$$\\text{Where } F\\{H(t)\\} = F(\\omega) = \\frac{2i}{\\omega}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 6(a) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Why do we use Fourier transform? Perform the Fourier transform of function find:...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 6(a).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Why do we use Fourier transform? Perform the Fourier transform of function find: **[4]**  \n$$F\\left\\{\\frac{1}{2}\\left[H\\left(t + \\frac{1}{2}\\right) - H\\left(t - \\frac{1}{2}\\right)\\right]\\right\\} = ?$$  \n$$\\text{Where } F\\{H(t)\\} = F(\\omega) = \\frac{2i}{\\omega}$$"
       },
       {
         "id": "cse-4102-final-2023-q6b",
@@ -574,17 +329,7 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Find Fourier Cosine transform of: **[5]**  \n$$f(x) = \\begin{cases} x, & 0 < x < 1 \\\\ 2 - x, & 1 < x < 2 \\\\ 0, & x > 2 \\end{cases}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 6(b) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Find Fourier Cosine transform of: **[5]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 6(b).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Find Fourier Cosine transform of: **[5]**  \n$$f(x) = \\begin{cases} x, & 0 < x < 1 \\\\ 2 - x, & 1 < x < 2 \\\\ 0, & x > 2 \\end{cases}$$"
       },
       {
         "id": "cse-4102-final-2023-q6c",
@@ -594,26 +339,9 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Parseval's identity ensures energy conservation, relating time and frequency domain representations of signals. Using Parseval's identity if: **[5]**  \n$$f(x) = \\begin{cases} 1 & x < |a| \\\\ 0 & x > |a| \\end{cases} \\quad \\text{and} \\quad f(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin sa}{s}$$  \n$$\\text{now find that } \\int_0^\\infty \\left(\\frac{\\sin^2 x}{x^2}\\right) dx = ?$$\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 6(c) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Parseval's identity ensures energy conservation, relating time and frequency dom...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 6(c).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Parseval's identity ensures energy conservation, relating time and frequency domain representations of signals. Using Parseval's identity if: **[5]**  \n$$f(x) = \\begin{cases} 1 & x < |a| \\\\ 0 & x > |a| \\end{cases} \\quad \\text{and} \\quad f(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin sa}{s}$$  \n$$\\text{now find that } \\int_0^\\infty \\left(\\frac{\\sin^2 x}{x^2}\\right) dx = ?$$\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 6 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -639,17 +367,7 @@
         "topics": [
           "Eigenvalues & Eigenvectors"
         ],
-        "question": "Eigenvalues and eigenvectors provide insights into linear transformations, system stability, and dimensionality reduction in data analysis. Find all the Eigenvalues and Eigenvectors of the matrix: **[5]**  \n$$\\begin{bmatrix} 1 & -1 & 4 \\\\ 3 & 2 & -1 \\\\ 2 & 1 & -1 \\end{bmatrix}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(a) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Eigenvalues and eigenvectors provide insights into linear transformations, syste...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(a).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Eigenvalues and eigenvectors provide insights into linear transformations, system stability, and dimensionality reduction in data analysis. Find all the Eigenvalues and Eigenvectors of the matrix: **[5]**  \n$$\\begin{bmatrix} 1 & -1 & 4 \\\\ 3 & 2 & -1 \\\\ 2 & 1 & -1 \\end{bmatrix}$$"
       },
       {
         "id": "cse-4102-final-2023-q7b",
@@ -659,17 +377,7 @@
         "topics": [
           "Markov Chains & Transition Matrices"
         ],
-        "question": "Purpose-flea zooms around the vertices of the transition diagram opposite. Let $X_t$ be Purpose-flea's state at time $t$ ($t = 0, 1, \\dots$). **[5]**\n\n**Transition State Diagram (Mermaid):**\n```mermaid\nstateDiagram-v2\n    state \"1\" as S1\n    state \"2\" as S2\n    state \"3\" as S3\n\n    S1 --> S1: 0.6\n    S1 --> S2: 0.2\n    S1 --> S3: 0.2\n    S2 --> S1: 0.4\n    S2 --> S3: 0.8\n    S3 --> S2: 0.6\n    S3 --> S3: 0.2\n```",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(b) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Purpose-flea zooms around the vertices of the transition diagram opposite. Let $...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(b).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Purpose-flea zooms around the vertices of the transition diagram opposite. Let $X_t$ be Purpose-flea's state at time $t$ ($t = 0, 1, \\dots$). **[5]**\n\n**Transition State Diagram (Mermaid):**\n```mermaid\nstateDiagram-v2\n    state \"1\" as S1\n    state \"2\" as S2\n    state \"3\" as S3\n\n    S1 --> S1: 0.6\n    S1 --> S2: 0.2\n    S1 --> S3: 0.2\n    S2 --> S1: 0.4\n    S2 --> S3: 0.8\n    S3 --> S2: 0.6\n    S3 --> S3: 0.2\n```"
       },
       {
         "id": "cse-4102-final-2023-q7c",
@@ -679,17 +387,7 @@
         "topics": [
           "Markov Chains & Transition Matrices"
         ],
-        "question": "Glee-flea hops around on a triangle. At each step he moves to one of the other two vertices at random. What is the expected time taken for Glee-flea to get from vertex 1 to vertex 2? **[4]**\n\n---\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Glee-flea hops around on a triangle. At each step he moves to one of the other t...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Glee-flea hops around on a triangle. At each step he moves to one of the other two vertices at random. What is the expected time taken for Glee-flea to get from vertex 1 to vertex 2? **[4]**\n\n---\n---"
       },
       {
         "id": "cse-4102-final-2023-q7i",
@@ -700,17 +398,7 @@
           "Markov Chains & Transition Matrices",
           "Eigenvalues & Eigenvectors"
         ],
-        "question": "Find the transition matrix, P.  \nii) Find $P(X_2 = 3 \\mid X_0 = 1)$.  \niii) Suppose that Purpose-flea is equally likely to start on any vertex at time 0. Find the probability distribution of $X_1$.  \niv) Suppose that Purpose-flea begins at vertex 1 at time 0. Find the probability distribution of $X_2$.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(i) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Find the transition matrix, P.  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(i).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Find the transition matrix, P.  \nii) Find $P(X_2 = 3 \\mid X_0 = 1)$.  \niii) Suppose that Purpose-flea is equally likely to start on any vertex at time 0. Find the probability distribution of $X_1$.  \niv) Suppose that Purpose-flea begins at vertex 1 at time 0. Find the probability distribution of $X_2$."
       },
       {
         "id": "cse-4102-final-2023-q7v",
@@ -720,26 +408,9 @@
         "topics": [
           "Markov Chains & Transition Matrices"
         ],
-        "question": "Suppose that Purpose-flea is equally likely to start on any vertex at time 0. Find the probability of obtaining the trajectory $(3, 2, 1, 1, 3)$.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(v) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Suppose that Purpose-flea is equally likely to start on any vertex at time 0. Fi...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(v).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Suppose that Purpose-flea is equally likely to start on any vertex at time 0. Find the probability of obtaining the trajectory $(3, 2, 1, 1, 3)$."
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 7 (22 Marks total).",
-      "marking_hint": "Full marks (22 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -766,17 +437,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "A smart phone app tracks: Battery usage time (hours) and Screen brightness level (0-100 scale). Which variable is ratio-scaled and which is not? Justify.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(a) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: A smart phone app tracks: Battery usage time (hours) and Screen brightness level...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(a).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "A smart phone app tracks: Battery usage time (hours) and Screen brightness level (0-100 scale). Which variable is ratio-scaled and which is not? Justify."
       },
       {
         "id": "cse-4102-final-2024-q1b",
@@ -786,17 +447,7 @@
         "topics": [
           "Hypothesis Testing & Errors"
         ],
-        "question": "A medical test is designed to detect a serious disease. **[3]**  \n    i. What is a Type I error in this context?  \n    ii. What is a Type II error in this context?  \n    iii. Which error is more dangerous and why?",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(b) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: A medical test is designed to detect a serious disease. **[3]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(b).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "A medical test is designed to detect a serious disease. **[3]**  \n    i. What is a Type I error in this context?  \n    ii. What is a Type II error in this context?  \n    iii. Which error is more dangerous and why?"
       },
       {
         "id": "cse-4102-final-2024-q1c",
@@ -806,17 +457,7 @@
         "topics": [
           "Laplace Transforms"
         ],
-        "question": "A city uses a linear model to predict traffic congestion based on number of vehicles, Time of day, Weather conditions. After deployment, predictions are poor during festivals, which linear model assumptions are likely violated, and why?",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: A city uses a linear model to predict traffic congestion based on number of vehi...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "A city uses a linear model to predict traffic congestion based on number of vehicles, Time of day, Weather conditions. After deployment, predictions are poor during festivals, which linear model assumptions are likely violated, and why?"
       },
       {
         "id": "cse-4102-final-2024-q1d",
@@ -826,26 +467,9 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "The table below shows daily temperature (X) and ice-cream sales (Y). **[4]**\n\n| X | 18 | 20 | 22 | 24 | 26 |\n|---|----|----|----|----|----|\n| Y | 50 | 65 | 80 | 95 | 110 |\n\ni. Calculate the coefficient of covariance.  \nii. Explain what the value indicates about their relationship.\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 1(d) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: The table below shows daily temperature (X) and ice-cream sales (Y). **[4]**...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 1(d).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "The table below shows daily temperature (X) and ice-cream sales (Y). **[4]**\n\n| X | 18 | 20 | 22 | 24 | 26 |\n|---|----|----|----|----|----|\n| Y | 50 | 65 | 80 | 95 | 110 |\n\ni. Calculate the coefficient of covariance.  \nii. Explain what the value indicates about their relationship.\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 1 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -872,17 +496,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "If $\\{f(t)\\} = \\bar{F}(s)$ then prove that $\\mathcal{L}\\{u(t-a)f(t-a)\\} = e^{-as}\\bar{F}(s)$.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(a) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: If $\\{f(t)\\} = \\bar{F}(s)$ then prove that $\\mathcal{L}\\{u(t-a)f(t-a)\\} = e^{-as...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(a).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "If $\\{f(t)\\} = \\bar{F}(s)$ then prove that $\\mathcal{L}\\{u(t-a)f(t-a)\\} = e^{-as}\\bar{F}(s)$."
       },
       {
         "id": "cse-4102-final-2024-q2b",
@@ -892,17 +506,7 @@
         "topics": [
           "Laplace Transforms"
         ],
-        "question": "Use Laplace transformation to solve the equation: **[4]**  \n$$(D^3 - 3D^2 + 3D - 1)Y = t^2 e^t \\quad \\text{given that } Y(0) = 1, \\; Y'(0) = 0, \\; Y''(0) = -2$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(b) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Use Laplace transformation to solve the equation: **[4]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(b).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Use Laplace transformation to solve the equation: **[4]**  \n$$(D^3 - 3D^2 + 3D - 1)Y = t^2 e^t \\quad \\text{given that } Y(0) = 1, \\; Y'(0) = 0, \\; Y''(0) = -2$$"
       },
       {
         "id": "cse-4102-final-2024-q2c",
@@ -912,17 +516,7 @@
         "topics": [
           "Inverse Laplace & ODEs"
         ],
-        "question": "Perform the inverse Laplace transform of the following expression: **[4]**  \n$$\\log\\left\\{\\left(1 + \\frac{1}{s^2}\\right)^\\frac{1}{2}\\right\\}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Perform the inverse Laplace transform of the following expression: **[4]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Perform the inverse Laplace transform of the following expression: **[4]**  \n$$\\log\\left\\{\\left(1 + \\frac{1}{s^2}\\right)^\\frac{1}{2}\\right\\}$$"
       },
       {
         "id": "cse-4102-final-2024-q2d",
@@ -932,26 +526,9 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "Define sampling distribution. What happens to the sampling distribution of the mean as sample size increases? **[2]**\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 2(d) (2 Marks).",
-            "Define core technical terms and theoretical background relevant to: Define sampling distribution. What happens to the sampling distribution of the m...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 2(d).",
-          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Define sampling distribution. What happens to the sampling distribution of the mean as sample size increases? **[2]**\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 2 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -976,17 +553,7 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Explain how Fourier Transform is used in filter design and frequency analysis of signals.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(a) (2 Marks).",
-            "Define core technical terms and theoretical background relevant to: Explain how Fourier Transform is used in filter design and frequency analysis of...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(a).",
-          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Explain how Fourier Transform is used in filter design and frequency analysis of signals."
       },
       {
         "id": "cse-4102-final-2024-q3b",
@@ -996,17 +563,7 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Perform the Fourier transform of function find $f(x) = e^{-ax^2}$ where $a > 0$.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(b) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Perform the Fourier transform of function find $f(x) = e^{-ax^2}$ where $a > 0$....",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(b).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Perform the Fourier transform of function find $f(x) = e^{-ax^2}$ where $a > 0$."
       },
       {
         "id": "cse-4102-final-2024-q3c",
@@ -1016,17 +573,7 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Find Fourier Cosine transform of: **[4]**  \n$$f(x) = \\begin{cases} x, & 0 < x < 1 \\\\ 2 - x, & 1 < x < 2 \\\\ 0, & x > 2 \\end{cases}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Find Fourier Cosine transform of: **[4]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Find Fourier Cosine transform of: **[4]**  \n$$f(x) = \\begin{cases} x, & 0 < x < 1 \\\\ 2 - x, & 1 < x < 2 \\\\ 0, & x > 2 \\end{cases}$$"
       },
       {
         "id": "cse-4102-final-2024-q3d",
@@ -1036,26 +583,9 @@
         "topics": [
           "Fourier Transforms & Parseval Identity"
         ],
-        "question": "Parseval's identity ensures energy conservation, relating time and frequency domain representations of signals. Using Perseval's identity if: **[4]**  \n$$f(x) = \\begin{cases} 1 & x < |a| \\\\ 0 & x > |a| \\end{cases} \\quad \\text{and} \\quad f(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin sa}{s}$$  \n$$\\text{now find that } \\int_0^\\infty \\left(\\frac{\\sin^2 x}{x^2}\\right) dx = ?$$\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 3(d) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Parseval's identity ensures energy conservation, relating time and frequency dom...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 3(d).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Parseval's identity ensures energy conservation, relating time and frequency domain representations of signals. Using Perseval's identity if: **[4]**  \n$$f(x) = \\begin{cases} 1 & x < |a| \\\\ 0 & x > |a| \\end{cases} \\quad \\text{and} \\quad f(s) = \\sqrt{\\frac{2}{\\pi}} \\frac{\\sin sa}{s}$$  \n$$\\text{now find that } \\int_0^\\infty \\left(\\frac{\\sin^2 x}{x^2}\\right) dx = ?$$\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 3 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1082,17 +612,7 @@
         "topics": [
           "Poisson & Exponential Processes"
         ],
-        "question": "Explain Poisson process and Exponential process with applications.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 4(a) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Explain Poisson process and Exponential process with applications....",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 4(a).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Explain Poisson process and Exponential process with applications."
       },
       {
         "id": "cse-4102-final-2024-q4b",
@@ -1102,17 +622,7 @@
         "topics": [
           "Poisson & Exponential Processes"
         ],
-        "question": "Suppose that customers arrive at a bank according to a poisson process with mean rate of 3 per minute. Find the probability during the time interval of 2 minute: **[4]**  \n    I. Exactly 4 customers arrive  \n    II. More than 4 customers arrive",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 4(b) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Suppose that customers arrive at a bank according to a poisson process with mean...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 4(b).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Suppose that customers arrive at a bank according to a poisson process with mean rate of 3 per minute. Find the probability during the time interval of 2 minute: **[4]**  \n    I. Exactly 4 customers arrive  \n    II. More than 4 customers arrive"
       },
       {
         "id": "cse-4102-final-2024-q4c",
@@ -1123,26 +633,9 @@
           "Markov Chains & Transition Matrices",
           "Eigenvalues & Eigenvectors"
         ],
-        "question": "Three boys A, B and C are throwing a ball to each other. A always throws the ball to B and B always throws the ball to C, but C is as likely to throw the ball to B as to A. If the initial probability distribution of three states A, B, C is 0.3, 0.4 and 0.3 respectively, Find: **[6]**  \n    I. The transition matrix.  \n    II. $P(X_2 = B)$  \n    III. $P(X_3 = B, X_2 = C, X_1 = B, X_0 = A)$ and  \n    IV. The distribution of the ball after two rounds.\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 4(c) (6 Marks).",
-            "Define core technical terms and theoretical background relevant to: Three boys A, B and C are throwing a ball to each other. A always throws the bal...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 4(c).",
-          "marking_hint": "Full marks (6 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Three boys A, B and C are throwing a ball to each other. A always throws the ball to B and B always throws the ball to C, but C is as likely to throw the ball to B as to A. If the initial probability distribution of three states A, B, C is 0.3, 0.4 and 0.3 respectively, Find: **[6]**  \n    I. The transition matrix.  \n    II. $P(X_2 = B)$  \n    III. $P(X_3 = B, X_2 = C, X_1 = B, X_0 = A)$ and  \n    IV. The distribution of the ball after two rounds.\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 4 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1170,17 +663,7 @@
         "topics": [
           "Linear Programming & Optimization"
         ],
-        "question": "A toy store wants to buy teddy bears and toy cars to sell during a festival. **[2]**  \nLet $T = \\text{number of teddy bears}$, $C = \\text{number of toy cars}$.  \nCost per teddy bear: Tk 35, Cost per toy car: Tk 25.  \nBudget: Tk 4500; Maximum storage capacity: 50 toys.  \nProfit: Tk 5 per teddy bear, Tk 3 per toy.  \nFormulate a linear programming problem by:  \ni. Write the constraints  \nii. Write the objective function to maximize total profit",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(a) (2 Marks).",
-            "Define core technical terms and theoretical background relevant to: A toy store wants to buy teddy bears and toy cars to sell during a festival. **[...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(a).",
-          "marking_hint": "Full marks (2 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "A toy store wants to buy teddy bears and toy cars to sell during a festival. **[2]**  \nLet $T = \\text{number of teddy bears}$, $C = \\text{number of toy cars}$.  \nCost per teddy bear: Tk 35, Cost per toy car: Tk 25.  \nBudget: Tk 4500; Maximum storage capacity: 50 toys.  \nProfit: Tk 5 per teddy bear, Tk 3 per toy.  \nFormulate a linear programming problem by:  \ni. Write the constraints  \nii. Write the objective function to maximize total profit"
       },
       {
         "id": "cse-4102-final-2024-q5b",
@@ -1191,17 +674,7 @@
           "Linear Programming & Optimization",
           "Duality Theory & Simplex"
         ],
-        "question": "What is Monte Carlo Simulation? Define the Graphical Method and the Simplex Method in linear programming.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(b) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is Monte Carlo Simulation? Define the Graphical Method and the Simplex Meth...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(b).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is Monte Carlo Simulation? Define the Graphical Method and the Simplex Method in linear programming."
       },
       {
         "id": "cse-4102-final-2024-q5c",
@@ -1213,17 +686,7 @@
           "Linear Programming & Optimization",
           "Duality Theory & Simplex"
         ],
-        "question": "State the Weak Duality Theorem and Strong Duality Theorem. Explain their importance/application of LP in optimization.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(c) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: State the Weak Duality Theorem and Strong Duality Theorem. Explain their importa...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(c).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "State the Weak Duality Theorem and Strong Duality Theorem. Explain their importance/application of LP in optimization."
       },
       {
         "id": "cse-4102-final-2024-q5d",
@@ -1233,26 +696,9 @@
         "topics": [
           "Stochastic & Stationary Processes"
         ],
-        "question": "What is meant by stationary process? Describe with formula First Order Stationary Process and Second Order Stationary Process. **[5]**\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 5(d) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: What is meant by stationary process? Describe with formula First Order Stationar...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 5(d).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "What is meant by stationary process? Describe with formula First Order Stationary Process and Second Order Stationary Process. **[5]**\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 5 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1279,17 +725,7 @@
         "topics": [
           "Eigenvalues & Eigenvectors"
         ],
-        "question": "Eigen values and eigenvectors provide insights into linear transformations, system stability. and dimensionality reduction in data analysis. Find all the Eigen values and Eigenvectors of the matrix: **[5]**  \n$$\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & -2 & 6 \\\\ 0 & 0 & -3 \\end{bmatrix}$$",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 6(a) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Eigen values and eigenvectors provide insights into linear transformations, syst...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 6(a).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Eigen values and eigenvectors provide insights into linear transformations, system stability. and dimensionality reduction in data analysis. Find all the Eigen values and Eigenvectors of the matrix: **[5]**  \n$$\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & -2 & 6 \\\\ 0 & 0 & -3 \\end{bmatrix}$$"
       },
       {
         "id": "cse-4102-final-2024-q6b",
@@ -1299,17 +735,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "Define cross-correlation function between two random processes $X(t)$ and $Y(t)$. How does it differ from autocorrelation?",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 6(b) (4 Marks).",
-            "Define core technical terms and theoretical background relevant to: Define cross-correlation function between two random processes $X(t)$ and $Y(t)$...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 6(b).",
-          "marking_hint": "Full marks (4 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Define cross-correlation function between two random processes $X(t)$ and $Y(t)$. How does it differ from autocorrelation?"
       },
       {
         "id": "cse-4102-final-2024-q6c",
@@ -1319,26 +745,9 @@
         "topics": [
           "Duality Theory & Simplex"
         ],
-        "question": "Convert Primal to the dual of the given problem. **[5]**  \n$$\\text{Max } Z = 3x_1 + 5x_2 + 4x_3$$  \n$$\\text{Subject to}$$  \n$$2x_1 + 3x_2 \\le 8$$  \n$$2x_2 + 5x_3 \\le 10$$  \n$$3x_1 + 2x_2 + 4x_3 \\le 15$$  \n$$x_1, x_2, x_3 \\ge 0$$\n\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 6(c) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: Convert Primal to the dual of the given problem. **[5]**  ...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 6(c).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Convert Primal to the dual of the given problem. **[5]**  \n$$\\text{Max } Z = 3x_1 + 5x_2 + 4x_3$$  \n$$\\text{Subject to}$$  \n$$2x_1 + 3x_2 \\le 8$$  \n$$2x_2 + 5x_3 \\le 10$$  \n$$3x_1 + 2x_2 + 4x_3 \\le 15$$  \n$$x_1, x_2, x_3 \\ge 0$$\n\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 6 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },
@@ -1366,17 +775,7 @@
         "topics": [
           "Linear Programming & Optimization"
         ],
-        "question": "Define linear optimization. Explain why optimization is important in engineering.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(a) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Define linear optimization. Explain why optimization is important in engineering...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(a).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Define linear optimization. Explain why optimization is important in engineering."
       },
       {
         "id": "cse-4102-final-2024-q7b",
@@ -1386,17 +785,7 @@
         "topics": [
           "Markov Chains & Transition Matrices"
         ],
-        "question": "A birth-death process has birth rate $\\lambda_n = \\lambda$ and death rate $\\mu_n = n\\mu, \\; n \\ge 1$. **[5]**  \n    (a) Derive the steady-state probability distribution.  \n    (b) State the condition for positive recurrence.  \n    (c) Compute the mean number of customers in the system.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(b) (5 Marks).",
-            "Define core technical terms and theoretical background relevant to: A birth-death process has birth rate $\\lambda_n = \\lambda$ and death rate $\\mu_n...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(b).",
-          "marking_hint": "Full marks (5 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "A birth-death process has birth rate $\\lambda_n = \\lambda$ and death rate $\\mu_n = n\\mu, \\; n \\ge 1$. **[5]**  \n    (a) Derive the steady-state probability distribution.  \n    (b) State the condition for positive recurrence.  \n    (c) Compute the mean number of customers in the system."
       },
       {
         "id": "cse-4102-final-2024-q7c",
@@ -1406,17 +795,7 @@
         "topics": [
           "Correlation & Covariance"
         ],
-        "question": "Explain how equality constraints affect the feasible region of an LP problem.",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(c) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Explain how equality constraints affect the feasible region of an LP problem....",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(c).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Explain how equality constraints affect the feasible region of an LP problem."
       },
       {
         "id": "cse-4102-final-2024-q7d",
@@ -1427,26 +806,9 @@
           "Markov Chains & Transition Matrices",
           "Eigenvalues & Eigenvectors"
         ],
-        "question": "Explain how the probability distribution after k trials is obtained using the state transition matrix. **[3]**\n\n---\n---",
-        "solution": {
-          "steps": [
-            "Understand the requirements of question 7(d) (3 Marks).",
-            "Define core technical terms and theoretical background relevant to: Explain how the probability distribution after k trials is obtained using the st...",
-            "Derive required formulas, solve mathematical models, or outline complete architectural diagrams.",
-            "Summarize the final solution clearly with relevant engineering examples."
-          ],
-          "answer": "Complete detailed answer and derivations for question 7(d).",
-          "marking_hint": "Full marks (3 M) require precise definitions, complete derivations/diagrams, and correct numerical solutions."
-        }
+        "question": "Explain how the probability distribution after k trials is obtained using the state transition matrix. **[3]**\n\n---\n---"
       }
     ],
-    "solution": {
-      "steps": [
-        "See detailed solution breakdowns for sub-questions below."
-      ],
-      "answer": "Complete solutions for Question 7 (14 Marks total).",
-      "marking_hint": "Full marks (14 M): Answer all sub-parts completely."
-    },
     "similar_to": [],
     "verified": false
   },

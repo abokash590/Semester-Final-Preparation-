@@ -1627,8 +1627,9 @@ class CodexApp {
       </div>
     `;
 
-    const hasValidSolution = (Array.isArray(q.subparts) && q.subparts.some(s => s.solution?.steps?.length > 0)) ||
-                             (q.solution?.steps?.length > 0);
+    const isAICourse = this.activeCourse && this.activeCourse.code === 'CSE-4101';
+    const hasValidSolution = isAICourse && ((Array.isArray(q.subparts) && q.subparts.some(s => s.solution?.steps?.length > 0)) ||
+                             (q.solution?.steps?.length > 0));
 
     const solutionContentHtml = hasValidSolution
       ? `<div class="subparts-solutions-wrapper">${subpartsSolutionsHtml}${endMarkerHtml}</div>`
