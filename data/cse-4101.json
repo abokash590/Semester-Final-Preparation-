@@ -188,12 +188,8 @@
         "question": "Write the disadvantage of Hill-climbing search.",
         "solution": {
           "steps": [
-            "1. Local Maxima: A peak that is higher than all neighboring states but lower than the global maximum. Search terminates prematurely.",
-            "2. Ridges: Sequence of local maxima where sides are steep; slope cannot be navigated with single-step axis moves.",
-            "3. Plateaux / Flat Local Maxima: Flat search space region where all neighbors have identical evaluation, causing random wandering or getting stuck."
-          ],
-          "answer": "Hill climbing is prone to getting stuck in local maxima, ridges, and plateaux due to its purely greedy local neighborhood evaluation.",
-          "marking_hint": "Award 1 mark each for describing Local Maxima, Ridges, and Plateaux."
+            "Hill-Climbing search is a greedy local search algorithm that evaluates only immediate neighbors and moves in the direction of increasing value. It suffers from three major structural disadvantages:\n\n1. **Local Maxima (Peak):**\n   * A state that has a higher evaluation than all its immediate neighbors, but is lower than the global maximum.\n   * Since all neighboring moves look worse, the algorithm halts prematurely, mistaking the local peak for the optimal solution.\n\n2. **Ridges:**\n   * A sequence of local maxima joined together with steep slopes on both sides.\n   * Because standard operators move along cardinal axes (one dimension at a time), any single move falls down the slope. Navigating a ridge requires diagonal steps, causing the search to stall or oscillate.\n\n3. **Plateaux (Flat Local Maxima / Shoulders):**\n   * A flat search region where all neighboring states have identical heuristic evaluation.\n   * The search receives zero gradient guidance, leading to aimless random walking or infinite loops."
+          ]
         }
       },
       {
@@ -207,14 +203,8 @@
         "question": "Explore the following graph from the source node (S) the destination node (G) using A* search.\n\nHeuristic Table: S(13), A(12), B(4), C(7), D(3), E(8), F(2), H(4), I(9), G(0).\nEdges: S->A: 3, S->B: 2, A->C: 4, A->D: 1, B->E: 3, B->F: 1, E->H: 5, F->I: 2, F->G: 3.",
         "solution": {
           "steps": [
-            "1. Initialization: Priority Queue = [S (g=0, h=13, f=13)].",
-            "2. Expand S: Successors:\n   • A: g=3, h=12, f=15\n   • B: g=2, h=4, f=6",
-            "3. Expand B (lowest f=6): Successors:\n   • E: g=2+3=5, h=8, f=13\n   • F: g=2+1=3, h=2, f=5",
-            "4. Expand F (lowest f=5): Successors:\n   • I: g=3+2=5, h=9, f=14\n   • G: g=3+3=6, h=0, f=6",
-            "5. Expand G (lowest f=6): Goal extracted! Optimal Path = S &rarr; B &rarr; F &rarr; G with total cost 6."
-          ],
-          "answer": "A* optimal path: S &rarr; B &rarr; F &rarr; G with cost = 6.",
-          "marking_hint": "Award 3 marks for step-by-step queue updates with f-values, 2 marks for final path and cost."
+            "**$A^*$ Evaluation Function:** $f(n) = g(n) + h(n)$\n\n**Step-by-Step Priority Queue Trace Table:**\n\n| Step | Node Popped | $g(n)$ | $h(n)$ | $f(n)$ | Successors Generated ($g, h, f$) | Priority Queue State (Ordered by lowest $f$) |\n| :---: | :---: | :---: | :---: | :---: | :--- | :--- |\n| **1** | **$S$** | 0 | 13 | 13 | $A(3, 12, 15)$, $B(2, 4, 6)$ | $[B(6), A(15)]$ |\n| **2** | **$B$** | 2 | 4 | 6 | $E(5, 8, 13)$, $F(3, 2, 5)$ | $[F(5), E(13), A(15)]$ |\n| **3** | **$F$** | 3 | 2 | 5 | $I(5, 9, 14)$, $G(6, 0, 6)$ | $[G(6), E(13), I(14), A(15)]$ |\n| **4** | **$G$** | 6 | 0 | 6 | *Goal reached! Extracted from queue.* | - |\n\n**Optimal Path Found:**\n$$S \\xrightarrow{2} B \\xrightarrow{1} F \\xrightarrow{3} G$$\n\n* **Total Path Cost:** $g(G) = 2 + 1 + 3 = 6$"
+          ]
         }
       },
       {
@@ -228,11 +218,8 @@
         "question": "What is heuristic function? Explain.",
         "solution": {
           "steps": [
-            "1. A heuristic function $h(n)$ maps a state description to an estimate of the cheapest path cost from state $n$ to a goal state.",
-            "2. It encodes problem-specific intuition or domain knowledge to guide search algorithms toward promising branches."
-          ],
-          "answer": "A heuristic function estimates remaining cost to the goal, enabling algorithms like A* to reduce exponential search spaces.",
-          "marking_hint": "Award 1 mark for formal definition, 1 mark for role in reducing search space."
+            "**Heuristic Function ($h(n)$):**\n1. **Formal Definition:** A heuristic function $h(n): S \\to \\mathbb{R}^+$ maps a state description $n$ to an estimated numerical cost of the cheapest path from state $n$ to the nearest goal state. For any goal state $G$, $h(G) = 0$.\n2. **Role & Significance:**\n   * Uninformed search searches blindly across graph topology with exponential complexity $O(b^d)$.\n   * A heuristic embeds **domain-specific knowledge** into the search process, focusing node expansions exclusively toward promising goal directions and drastically pruning unpromising branches."
+          ]
         }
       },
       {
@@ -246,13 +233,8 @@
         "question": "Proof that if h(n) is consistent, A* using GRAPH-SEARCH is optimal.",
         "solution": {
           "steps": [
-            "1. Consistency definition (triangle inequality): For every node $n$ and every successor $n'$ generated by action $a$: $h(n) \\le c(n, a, n') + h(n')$.",
-            "2. Monotonicity of $f(n)$: Path cost $g(n') = g(n) + c(n, a, n')$. Therefore, $f(n') = g(n') + h(n') = g(n) + c(n, a, n') + h(n') \\ge g(n) + h(n) = f(n)$. Thus $f(n)$ is non-decreasing along any path.",
-            "3. Contour expansion: A* with consistent heuristic expands nodes in non-decreasing order of $f(n)$.",
-            "4. Optimality conclusion: Whenever A* selects a node $n$ for expansion, the optimal path to that node has already been found ($g(n) = g^*(n)$), preventing reopening and ensuring the first goal expanded is optimal."
-          ],
-          "answer": "Consistency ensures that $f(n)$ is monotonically non-decreasing, so nodes are expanded in concentric contours of increasing $f$-cost, guaranteeing graph-search optimality.",
-          "marking_hint": "Award 1.5 marks for triangle inequality setup, 1.5 marks for proving $f(n') \\ge f(n)$, 1 mark for conclusion."
+            "**Proof: Consistency $\\implies$ Optimality of $A^*$ with Graph-Search**\n\n**1. Definition of Consistency (Triangle Inequality):**\nA heuristic $h(n)$ is consistent if for every node $n$ and every successor $n'$ generated by an action $a$ with step cost $c(n, a, n')$:\n$$h(n) \\le c(n, a, n') + h(n')$$\n\n**2. Proof of Monotonicity of $f(n)$:**\nThe actual path cost to successor $n'$ is: $g(n') = g(n) + c(n, a, n')$.\nSubstituting into the evaluation function $f(n')$:\n$$f(n') = g(n') + h(n') = g(n) + c(n, a, n') + h(n')$$\nFrom the triangle inequality, $c(n, a, n') + h(n') \\ge h(n)$. Therefore:\n$$f(n') \\ge g(n) + h(n) = f(n)$$\nHence, **$f(n)$ is monotonically non-decreasing along any path**.\n\n**3. Graph-Search Optimality Conclusion:**\n* Because $f(n)$ never decreases along a path, $A^*$ expands nodes in concentric contours of strictly increasing $f$-cost.\n* Therefore, when $A^*$ selects any node $n$ for expansion, the optimal path to $n$ has already been found ($g(n) = g^*(n)$), guaranteeing that no node needs to be reopened.\n* When the goal state $G$ is selected for expansion, its cost is $f(G) = g(G) = C^*$. No suboptimal goal can ever be selected before $G$, guaranteeing complete optimality."
+          ]
         }
       }
     ],
@@ -292,11 +274,8 @@
         "question": "What is limitation of Min-max algorithm? Write down the properties of Min-max algorithm.",
         "solution": {
           "steps": [
-            "1. Limitations: Exponential time complexity $O(b^m)$ makes complete search impractical for complex games like Chess ($b \\approx 35, m \\approx 80$) or Go ($b \\approx 250$). Assumes opponent plays optimally.",
-            "2. Properties:\n   • Completeness: Yes, if tree is finite.\n   • Optimality: Yes, against an optimal opponent.\n   • Time Complexity: $O(b^m)$.\n   • Space Complexity: $O(bm)$ (depth-first exploration)."
-          ],
-          "answer": "Minimax provides optimal decisions against rational opponents with O(bm) space, but suffers from prohibitive O(b^m) exponential time.",
-          "marking_hint": "Award 2 marks for limitations, 2 marks for standard properties (completeness, optimality, time, space)."
+            "**1. Limitations of Minimax Algorithm:**\n* **Exponential Time Complexity:** Full exploration requires $O(b^m)$ operations. In complex games like Chess ($b \\approx 35, m \\approx 80$) or Go ($b \\approx 250$), searching to leaf nodes is practically impossible within realistic time limits.\n* **Strict Rationality Assumption:** Minimax assumes the adversary always plays the absolute optimal counter-move. If the opponent plays suboptimally or unpredictably, Minimax cannot actively exploit those mistakes.\n\n**2. Properties of Minimax Algorithm:**\n| Property | Evaluation |\n| :--- | :--- |\n| **Completeness** | **Yes**, provided the game tree is finite. |\n| **Optimality** | **Yes**, against an optimal adversary. |\n| **Time Complexity** | $O(b^m)$, where $b$ is the legal branching factor and $m$ is maximum tree depth. |\n| **Space Complexity** | $O(bm)$, performs standard depth-first search requiring memory linear in depth. |"
+          ]
         }
       },
       {
@@ -311,13 +290,8 @@
         "question": "Explore the following graph of figure 2 using Alpha-beta pruning. Root is Max, followed by Min layer, Max layer, and Min leaf parents with leaves: [10, 5], [7, 11], [12, 8], [9, 8], [5, 12], [11, 12], [9, 8], [7, 10].",
         "solution": {
           "steps": [
-            "1. Standard left-to-right DFS traversal maintaining [alpha, beta] window.",
-            "2. First subtree evaluates leaves 10 and 5 &rarr; parent takes min(10,5) = 5.",
-            "3. Alpha cut and Beta cut rules applied systematically whenever current node value violates bounding interval.",
-            "4. Pruned branches do not influence root minimax decision."
-          ],
-          "answer": "Alpha-beta pruning eliminates branches that cannot affect the final choice, doubling effective search depth.",
-          "marking_hint": "Award 3 marks for tracking bounds, 2 marks for identifying pruned branches."
+            "**Alpha-Beta Pruning Rules:**\n* $\\alpha$ = Best choice (maximum value) found so far for **MAX** along path (initial: $-\\infty$).\n* $\\beta$ = Best choice (minimum value) found so far for **MIN** along path (initial: $+\\infty$).\n* **Pruning Condition:** Prune child branch whenever **$\\alpha \\ge \\beta$**.\n\n**Step-by-Step Tree Evaluation:**\n1. **Subtree 1 ($M_1$):**\n   * Min leaf parent 1: $\\min(10, 5) = 5$\n   * Min leaf parent 2: First leaf is $7$. Since current MAX at $M_1$ is $\\alpha = 5$, and second leaf is $11$, $\\min(7, 11) = 7$. $M_1 = \\max(5, 7) = 7$.\n2. **Subtree 2 ($M_2$):**\n   * Min leaf parent: $\\min(12, 8) = 8$. MAX updates $\\alpha = 8$.\n   * Next leaf parent: First leaf is $9$. Second leaf is $8 \\implies \\min(9, 8) = 8$. $M_2 = 8$.\n3. **Pruning Demonstration:**\n   * At MIN layer above $M_3$ and $M_4$, whenever a branch exhibits a leaf smaller than the current established $\\alpha$ threshold ($\\ge 8$), remaining child leaves are pruned immediately without expansion.\n\n**Result:**\n* The optimal root minimax value is **$8$**, achieved by following the branch to $M_2$ with minimal search overhead."
+          ]
         }
       },
       {
@@ -332,12 +306,8 @@
         "question": "What is Adversarial Search? Explain Genetic algorithm with example.",
         "solution": {
           "steps": [
-            "1. Adversarial Search: Competitive multi-agent environment where two or more opponents plan conflicting actions to maximize their own utility while minimizing the opponent's (e.g. Minimax).",
-            "2. Genetic Algorithm: Population-based stochastic optimization inspired by Darwinian natural selection (Selection, Crossover, Mutation, Fitness).",
-            "3. Example: 8-Queens problem where each chromosome is an 8-digit string representing queen rows."
-          ],
-          "answer": "Adversarial search models strategic decision-making against opponents; Genetic algorithms optimize candidate solutions via evolutionary operators.",
-          "marking_hint": "Award 2 marks for adversarial search, 3 marks for genetic algorithm definition and example."
+            "**1. Adversarial Search:**\n* Search algorithms designed for competitive multi-agent environments where agents have conflicting utility functions (zero-sum games).\n* An agent cannot simply plan a static sequence of actions; it must formulate a strategy that anticipates and counters all possible rational responses from an active adversary.\n\n**2. Genetic Algorithm (GA) with Example:**\n* An optimization and search heuristic based on biological evolution and natural selection (survival of the fittest).\n* **Core Phases:**\n  1. **Initial Population:** A set of candidate solutions represented as chromosomes (typically bitstrings).\n  2. **Fitness Function:** Evaluates how well each individual solves the target objective.\n  3. **Selection:** Higher-fitness chromosomes have a higher probability of reproducing (e.g. Roulette Wheel Selection, Rank Selection).\n  4. **Crossover (Recombination):** Pairs of parents exchange genetic segments at crossover points to generate offspring.\n  5. **Mutation:** Random bit-inversions with low probability ($p_m \\approx 0.01$) to maintain genetic diversity and avoid local maxima.\n\n* **Concrete Example (Knapsack Problem):**\n  * Each chromosome is a binary vector: $[1, 0, 1, 1, 0]$ (where $1$ means item included, $0$ excluded).\n  * **Fitness:** Total value of selected items, with penalty if weight exceeds capacity limit.\n  * Over successive generations, crossover of high-value configurations converges on the optimal packing subset."
+          ]
         }
       }
     ],
@@ -378,13 +348,8 @@
         "question": "What are the three components of Constraint Satisfaction Problem? Give an example.",
         "solution": {
           "steps": [
-            "1. Variables (X): A set of variables $X = \\{X_1, X_2, \\dots, X_n\\}$.",
-            "2. Domains (D): A set of domains $D = \\{D_1, D_2, \\dots, D_n\\}$ specifying allowed values for each variable.",
-            "3. Constraints (C): A set of constraints $C = \\{C_1, C_2, \\dots, C_m\\}$ specifying allowable combinations of values.",
-            "4. Example (Map Coloring): Variables = {WA, NT, SA, Q, NSW, V, T}; Domains = {Red, Green, Blue}; Constraints = {WA != NT, WA != SA, NT != SA, etc.}."
-          ],
-          "answer": "A CSP is formally defined by the triple (X, D, C): Variables, Domains, and Constraints.",
-          "marking_hint": "Award 1.5 marks for the three components, 1.5 marks for a complete concrete example."
+            "A **Constraint Satisfaction Problem (CSP)** is formally defined as a triple $\\langle X, D, C \\rangle$ comprising three fundamental components:\n\n1. **Variables ($X$):** A finite set of variables $X = \\{X_1, X_2, \\dots, X_n\\}$ that need to be assigned values.\n2. **Domains ($D$):** A set of domains $D = \\{D_1, D_2, \\dots, D_n\\}$, where each $D_i$ specifies the set of allowable values for variable $X_i$.\n3. **Constraints ($C$):** A set of constraints $C = \\{C_1, C_2, \\dots, C_m\\}$ specifying allowable combinations of values across subsets of variables.\n\n**Concrete Example (Australia Map Coloring from Class Notes):**\n* **Variables ($X$):** $\\{WA, NT, SA, Q, NSW, V, T\\}$ (the 7 territories).\n* **Domains ($D$):** $D_i = \\{Red, Green, Blue\\}$ for all variables.\n* **Constraints ($C$):** Adjacent regions must have distinct colors: $\\{WA \\ne NT, WA \\ne SA, NT \\ne SA, NT \\ne Q, SA \\ne Q, SA \\ne NSW, SA \\ne V, Q \\ne NSW, NSW \\ne V\\}$."
+          ]
         }
       },
       {
@@ -398,14 +363,8 @@
         "question": "Describe steps of Genetic algorithm (e.g. Selection, Crossover, Mutation and Fitness) with proper example.",
         "solution": {
           "steps": [
-            "1. Initial Population: Generate candidate chromosomes.",
-            "2. Fitness Function: Assigns numeric fitness to each individual.",
-            "3. Selection: Roulette wheel or tournament selection prioritizes fitter parents.",
-            "4. Crossover: Exchanges genetic material at a random crossover point.",
-            "5. Mutation: Flips bits randomly with small probability."
-          ],
-          "answer": "Genetic algorithm drives iterative population evolution via selection, crossover, and mutation towards global optimum.",
-          "marking_hint": "Award 2 marks for fitness, 2 marks for selection, 2 marks for crossover/mutation, 1 mark for example."
+            "A **Genetic Algorithm (GA)** is an adaptive search and optimization heuristic inspired by Darwinian biological evolution. It operates iteratively on a population through four primary phases:\n\n**1. Representation & Fitness Function Evaluation:**\n* Candidate solutions are encoded as chromosomes (e.g., bitstrings of length $L$).\n* A numerical **fitness function** $f(x) \\ge 0$ measures the performance/quality of each individual relative to the objective.\n\n**2. Selection Phase (Survival of the Fittest):**\n* Fitter individuals are given a higher probability of passing their traits to the next generation.\n* **Roulette Wheel Selection (Class Notes):** The selection probability $P_i$ of individual $i$ is proportional to its fitness:\n  $$P_i = \\frac{f_i}{\\sum_{j=1}^{N} f_j}$$\n* **Rank Selection (Class Notes):** Individuals are sorted by fitness, and probability is computed using selection pressure $SP \\in [1.0, 2.0]$ to prevent super-individuals from prematurely dominating the population.\n\n**3. Crossover (Recombination):**\n* Pairs of selected parents exchange genetic material with probability $p_c$ (typically $0.7 - 0.9$).\n* **Single-Point Crossover:** A random cut point $k$ is chosen; heads and tails are swapped to produce two offspring.\n\n**4. Mutation:**\n* Each bit in a chromosome is inverted with a low probability $p_m$ (typically $0.001 - 0.05$).\n* Prevents permanent loss of diverse genetic alleles and prevents premature convergence into local optima.\n\n**Concrete Step-by-Step Example (Maximizing $f(x) = x^2$ on integers $[0, 31]$):**\n| Chromosome | String ($L=5$) | $x$ value | Fitness $f(x) = x^2$ | $P_i = f_i / \\sum f$ |\n| :---: | :---: | :---: | :---: | :---: |\n| $C_1$ | `01100` | 12 | 144 | 0.12 |\n| $C_2$ | `11001` | 25 | 625 | 0.53 |\n| $C_3$ | `00101` | 5 | 25 | 0.02 |\n| $C_4$ | `10011` | 19 | 361 | 0.31 |\n\n* **Crossover of $C_2$ and $C_4$ at cut point $k=2$:**\n  * Parent 1: `11 | 001` $\\implies$ Offspring 1: `11011` ($x=27, f=729$)\n  * Parent 2: `10 | 011` $\\implies$ Offspring 2: `10001` ($x=17, f=289$)\n* Notice how recombining fit parents produced `11011` ($f=729$), an individual superior to both parents!"
+          ]
         }
       },
       {
@@ -419,11 +378,8 @@
         "question": "What is Ontology in Knowledge Representation?",
         "solution": {
           "steps": [
-            "1. An ontology represents knowledge as a formal, explicit specification of shared conceptualization.",
-            "2. Defines concepts, classes, attributes, relations, and axioms in a domain to enable semantic interoperability."
-          ],
-          "answer": "Ontology provides the formal conceptual vocabulary and relational constraints defining an application domain.",
-          "marking_hint": "Award 1 mark for conceptualization definition, 1 mark for components."
+            "**Ontology in Knowledge Representation:**\n1. **Definition:** An ontology is a formal, explicit specification of a shared conceptualization of a domain of discourse.\n2. **Core Components:**\n   * **Concepts / Classes:** Sets of entities or objects within the domain (e.g., `Person`, `Course`).\n   * **Attributes / Properties:** Characteristics associated with concepts (e.g., `hasAge`, `credits`).\n   * **Relations:** Semantic associations connecting concepts (e.g., `teaches(Professor, Course)`).\n   * **Axioms & Constraints:** Logical assertions that enforce domain rules (e.g., `\\forall x (Student(x) \\implies Person(x))`)."
+          ]
         }
       },
       {
@@ -437,11 +393,8 @@
         "question": "Write down the difference between game and search problem.",
         "solution": {
           "steps": [
-            "1. Standard Search Problem: Single-agent environment where the agent has complete control over state transitions. The solution is a fixed sequence of actions.",
-            "2. Game Problem: Multi-agent adversarial environment with unpredictable opponent actions. The solution is a contingency strategy/policy specifying what to do for every possible opponent reply."
-          ],
-          "answer": "Search problems find a single fixed path to goal; games require a complete contingent policy against an active opponent.",
-          "marking_hint": "Award 1 mark each for search vs game distinctions."
+            "| Feature / Dimension | Standard Search Problem | Game (Adversarial Search) |\n| :--- | :--- | :--- |\n| **Environment Type** | Single-agent, deterministic, static. | Multi-agent, competitive, dynamic. |\n| **State Transitions** | The agent has complete unilateral control over next states. | State transitions depend on counter-moves by active adversaries. |\n| **Nature of Solution** | A **fixed linear sequence** of actions leading from start to goal. | A **contingency strategy (policy)** specifying optimal action for every possible opponent reply. |"
+          ]
         }
       }
     ],
@@ -479,14 +432,8 @@
         "question": "Briefly describe the logical Connectives of Propositional Logic.",
         "solution": {
           "steps": [
-            "1. Negation (NOT, ~ or ¬): Inverts truth value.",
-            "2. Conjunction (AND, ∧): True only if both operands are true.",
-            "3. Disjunction (OR, ∨): True if at least one operand is true.",
-            "4. Implication (IF-THEN, →): False only if antecedent is true and consequent is false.",
-            "5. Biconditional (IFF, ↔): True if both operands have identical truth value."
-          ],
-          "answer": "Five fundamental truth-functional connectives: Negation, Conjunction, Disjunction, Implication, and Biconditional.",
-          "marking_hint": "Award 1 mark each for the 5 connectives with truth conditions."
+            "Propositional Logic uses five fundamental truth-functional connectives:\n\n| Connective | Formal Symbol | Meaning / Read As | Semantic Truth Condition |\n| :--- | :---: | :--- | :--- |\n| **Negation** | $\\neg$ (or $\\sim$) | NOT | Inverts the truth value: $\\neg P$ is True iff $P$ is False. |\n| **Conjunction** | $\\land$ | AND | True if and only if **both** operands are True. |\n| **Disjunction** | $\\lor$ | OR | True if **at least one** operand is True. |\n| **Implication** | $\\implies$ (or $\\to$) | IF ... THEN | False only when the antecedent is True and consequent is False ($P \\implies Q \\equiv \\neg P \\lor Q$). |\n| **Biconditional** | $\\iff$ (or $\\leftrightarrow$) | IFF | True if and only if **both** operands have identical truth values. |\n\n**Comprehensive Truth Table:**\n| $P$ | $Q$ | $\\neg P$ | $P \\land Q$ | $P \\lor Q$ | $P \\implies Q$ | $P \\iff Q$ |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| T | T | F | T | T | T | T |\n| T | F | F | F | T | F | F |\n| F | T | T | F | T | T | F |\n| F | F | T | F | F | T | T |"
+          ]
         }
       },
       {
@@ -500,14 +447,8 @@
         "question": "Convert the following English statement into FOL:\n(i) Every man respects his parent\n(ii) There is somebody whom everybody loves\n(iii) Some student has never been asked a question by a faculty member\n(iv) Sumy has never sent an e-mail message to Kona\n(v) Some boys play cricket",
         "solution": {
           "steps": [
-            "(i) ∀x (Man(x) → ∀y (Parent(y, x) → Respects(x, y)))",
-            "(ii) ∃y ∀x Loves(x, y)",
-            "(iii) ∃s (Student(s) ∧ ¬∃f ∃q (Faculty(f) ∧ Question(q) ∧ Asked(f, s, q)))",
-            "(iv) ¬∃m (Email(m) ∧ Sent(Sumy, Kona, m))",
-            "(v) ∃b (Boy(b) ∧ Plays(b, Cricket))"
-          ],
-          "answer": "Formal translations using universal (∀) and existential (∃) quantifiers.",
-          "marking_hint": "Award 1 mark per correct statement translation."
+            "**First-Order Logic (FOL) Translations:**\n\n**(i) Every man respects his parent:**\n$$\\forall x \\, [\\text{Man}(x) \\implies \\forall y \\, (\\text{Parent}(y, x) \\implies \\text{Respects}(x, y))]$$\n\n**(ii) There is somebody whom everybody loves:**\n$$\\exists y \\, \\forall x \\, \\text{Loves}(x, y)$$\n\n**(iii) Some student has never been asked a question by a faculty member:**\n$$\\exists s \\, [\\text{Student}(s) \\land \\neg \\exists f \\, \\exists q \\, (\\text{Faculty}(f) \\land \\text{Question}(q) \\land \\text{Asked}(f, s, q))]$\n\n**(iv) Sumy has never sent an e-mail message to Kona:**\n$$\\neg \\exists m \\, [\\text{Email}(m) \\land \\text{Sent}(\\text{Sumy}, \\text{Kona}, m)]$$\n\n**(v) Some boys play cricket:**\n$$\\exists b \\, [\\text{Boy}(b) \\land \\text{Plays}(b, \\text{Cricket})]$$"
+          ]
         }
       },
       {
@@ -521,11 +462,8 @@
         "question": "Define Inference and Existential Quantifiers in FOL with example?",
         "solution": {
           "steps": [
-            "1. Inference: The process of deriving new logical statements from known axioms using sound inference rules (Modus Ponens, Resolution).",
-            "2. Existential Quantifier (∃): Asserts that a predicate holds for at least one entity in domain: ∃x P(x)."
-          ],
-          "answer": "Inference yields valid conclusions; existential quantifier asserts property holds for at least one domain member.",
-          "marking_hint": "Award 2 marks for inference, 2 marks for existential quantifier."
+            "**1. Inference in First-Order Logic:**\n* **Definition:** The rigorous algorithmic process of deriving new, logically sound sentences (conclusions) from an existing Knowledge Base ($KB$) of premises.\n* **Core Rule (Modus Ponens):** Given $\\alpha$ and $\\alpha \\implies \\beta$, infer $\\beta$.\n* **Example:** If $KB = \\{ \\forall x (\\text{Human}(x) \\implies \\text{Mortal}(x)), \\text{Human}(\\text{Socrates}) \\}$, applying Universal Instantiation and Modus Ponens infers $\\text{Mortal}(\\text{Socrates})$.\n\n**2. Existential Quantifier ($\\exists$):**\n* **Definition:** A logical quantifier denoting that a predicate statement holds true for **at least one** individual element in the domain of discourse (read as *'there exists'* or *'for some'*).\n* **Formal Syntax:** $\\exists x \\, P(x)$\n* **Example:** *'Some birds cannot fly.'*\n  $$\\exists x \\, [\\text{Bird}(x) \\land \\neg \\text{CanFly}(x)]$$\n  (True for penguins and ostriches)."
+          ]
         }
       }
     ],
@@ -565,11 +503,8 @@
         "question": "What is Natural language Processing (NLP)? Explain Phases of NLP.",
         "solution": {
           "steps": [
-            "1. Definition: Computational discipline enabling computers to process, understand, and generate human natural languages.",
-            "2. Phases: (1) Morphological/Lexical, (2) Syntactic Analysis (Parsing), (3) Semantic Analysis, (4) Discourse Integration, (5) Pragmatic Analysis."
-          ],
-          "answer": "NLP models human language through five linguistic levels from tokenization to pragmatic context.",
-          "marking_hint": "Award 1 mark for definition, 3 marks for describing the phases."
+            "**Natural Language Processing (NLP):**\nA subfield of Artificial Intelligence and Computational Linguistics focused on enabling computer systems to analyze, understand, interpret, and generate human language in a meaningful and useful manner.\n\n**Phases of NLP:**\n1. **Lexical & Morphological Analysis:** Analyzes individual words, roots, affixes, and tokens (e.g. decomposing *'unbreakable'* into *un-*, *break*, *-able*).\n2. **Syntactic Analysis (Parsing):** Checks grammatical correctness and constructs a structural parse tree showing relations between nouns, verbs, and phrases.\n3. **Semantic Analysis:** Extracts the literal meaning of words and compositional sentences, resolving lexical ambiguity (e.g. *'bank'* as financial institution vs river bank).\n4. **Discourse Integration:** Resolves context across multiple sentences, including anaphora resolution (e.g. identifying who *'he'* refers to in following sentences).\n5. **Pragmatic Analysis:** Interprets intended meaning in real-world communicative context, identifying sarcasm, intent, and speech acts (e.g. interpreting *'Can you pass the salt?'* as a request rather than an ability question)."
+          ]
         }
       },
       {
@@ -583,14 +518,8 @@
         "question": "How to build an NLP pipeline?",
         "solution": {
           "steps": [
-            "1. Text Acquisition & Cleaning: Raw text ingestion, lowercasing, punctuation stripping.",
-            "2. Tokenization: Splitting text into words/subwords.",
-            "3. Normalization: Stop-word removal, Lemmatization or Stemming.",
-            "4. Feature Extraction: Bag-of-Words, TF-IDF, Word Embeddings (Word2Vec, BERT).",
-            "5. Model Training & Evaluation: Classification, NER, or Generation."
-          ],
-          "answer": "An NLP pipeline chains text cleaning, tokenization, lemmatization, vectorization, and downstream inference.",
-          "marking_hint": "Award 1 mark for each major stage."
+            "A standard **NLP Pipeline** transforms unstructured raw text into structured numerical representations suitable for machine learning models through the following sequential stages:\n\n1. **Sentence Segmentation:** Splitting raw text into individual sentence boundaries.\n2. **Tokenization:** Breaking sentences down into discrete word tokens, punctuation, and terms.\n3. **Text Normalization:**\n   * **Case folding:** Lowercasing text.\n   * **Stemming / Lemmatization:** Reducing inflected words to canonical base forms (e.g. *studies, studying* $\\to$ *study*).\n   * **Stop-word removal:** Filtering high-frequency non-informative words (*a, an, the, is*).\n4. **Part-of-Speech (POS) Tagging:** Assigning grammatical tags (`NOUN`, `VERB`, `ADJ`) to tokens.\n5. **Named Entity Recognition (NER):** Identifying real-world entities (names, places, dates, organizations).\n6. **Syntactic & Dependency Parsing:** Constructing grammatical relation parse trees.\n7. **Vectorization / Feature Extraction:** Converting tokens to numerical embeddings (TF-IDF, Word2Vec, BERT embeddings) for downstream task classification."
+          ]
         }
       },
       {
@@ -604,11 +533,8 @@
         "question": "Differentiate between informed and uninformed search.",
         "solution": {
           "steps": [
-            "1. Uninformed search algorithms have no clue about distance to goal (blindly expand nodes by depth, path-cost, or FIFO/LIFO order).",
-            "2. Informed search algorithms use a heuristic function $h(n)$ estimating remaining cost to goal to prioritize node expansion."
-          ],
-          "answer": "Informed search incorporates problem-specific heuristic evaluations to guide search; uninformed search does not.",
-          "marking_hint": "Award 1 mark each for definition and example."
+            "| Feature | Uninformed (Blind) Search | Informed (Heuristic) Search |\n| :--- | :--- | :--- |\n| **Knowledge Source** | Problem formulation only (nodes, edges, start, goal). | Domain-specific heuristic evaluation function $h(n)$. |\n| **Search Direction** | Explores blindly based on order (FIFO, LIFO, cost). | Focuses directly toward goal state using estimated remaining cost. |\n| **Standard Algorithms** | BFS, DFS, Uniform Cost Search (UCS). | Greedy Best-First Search, $A^*$ Search, RBFS. |"
+          ]
         }
       },
       {
@@ -623,14 +549,8 @@
         "question": "Using Greedy best-first search find the cost and show the steps from the source Arad to the destination Bucharest in the Romania road network.\n\n<div class=\"svg-diagram-wrapper\"><svg viewBox=\"0 0 720 460\" class=\"responsive-diagram\" role=\"img\" aria-label=\"Map of Romania road network with distances between cities\"><g stroke=\"#94A3B8\" stroke-width=\"1.8\" fill=\"none\"><line x1=\"115\" y1=\"45\" x2=\"75\" y2=\"110\"/><line x1=\"115\" y1=\"45\" x2=\"220\" y2=\"185\"/><line x1=\"75\" y1=\"110\" x2=\"60\" y2=\"185\"/><line x1=\"60\" y1=\"185\" x2=\"220\" y2=\"185\"/><line x1=\"60\" y1=\"185\" x2=\"65\" y2=\"275\"/><line x1=\"65\" y1=\"275\" x2=\"140\" y2=\"315\"/><line x1=\"140\" y1=\"315\" x2=\"145\" y2=\"370\"/><line x1=\"145\" y1=\"370\" x2=\"140\" y2=\"425\"/><line x1=\"140\" y1=\"425\" x2=\"265\" y2=\"425\"/><line x1=\"220\" y1=\"185\" x2=\"335\" y2=\"185\"/><line x1=\"220\" y1=\"185\" x2=\"250\" y2=\"255\"/><line x1=\"250\" y1=\"255\" x2=\"265\" y2=\"425\"/><line x1=\"250\" y1=\"255\" x2=\"345\" y2=\"315\"/><line x1=\"265\" y1=\"425\" x2=\"345\" y2=\"315\"/><line x1=\"335\" y1=\"185\" x2=\"445\" y2=\"350\"/><line x1=\"345\" y1=\"315\" x2=\"445\" y2=\"350\"/><line x1=\"445\" y1=\"350\" x2=\"420\" y2=\"425\"/><line x1=\"445\" y1=\"350\" x2=\"525\" y2=\"320\"/><line x1=\"525\" y1=\"320\" x2=\"615\" y2=\"320\"/><line x1=\"615\" y1=\"320\" x2=\"645\" y2=\"385\"/><line x1=\"525\" y1=\"320\" x2=\"575\" y2=\"205\"/><line x1=\"575\" y1=\"205\" x2=\"540\" y2=\"125\"/><line x1=\"540\" y1=\"125\" x2=\"455\" y2=\"75\"/></g><g><g transform=\"translate(95.0,77.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">71</text></g><g transform=\"translate(167.5,115.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">151</text></g><g transform=\"translate(67.5,147.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">75</text></g><g transform=\"translate(140.0,185.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">140</text></g><g transform=\"translate(62.5,230.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">118</text></g><g transform=\"translate(102.5,295.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">111</text></g><g transform=\"translate(142.5,342.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">70</text></g><g transform=\"translate(142.5,397.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">75</text></g><g transform=\"translate(202.5,425.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">120</text></g><g transform=\"translate(277.5,185.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">99</text></g><g transform=\"translate(235.0,220.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">80</text></g><g transform=\"translate(257.5,340.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">146</text></g><g transform=\"translate(297.5,285.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">97</text></g><g transform=\"translate(305.0,370.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">138</text></g><g transform=\"translate(390.0,267.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">211</text></g><g transform=\"translate(395.0,332.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">101</text></g><g transform=\"translate(432.5,387.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">90</text></g><g transform=\"translate(485.0,335.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">85</text></g><g transform=\"translate(570.0,320.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">98</text></g><g transform=\"translate(630.0,352.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">86</text></g><g transform=\"translate(550.0,262.5)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">142</text></g><g transform=\"translate(557.5,165.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">92</text></g><g transform=\"translate(497.5,100.0)\"><rect x=\"-13\" y=\"-8\" width=\"26\" height=\"16\" rx=\"4\" fill=\"#F4F8F5\" stroke=\"#CBD5E1\" stroke-width=\"0.8\"/><text x=\"0\" y=\"3.5\" font-size=\"10\" font-weight=\"700\" fill=\"#104535\" text-anchor=\"middle\">87</text></g></g><g><circle cx=\"115\" cy=\"45\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"75\" cy=\"110\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"185\" r=\"8\" fill=\"#FEF3C7\" stroke=\"#D97706\" stroke-width=\"2.5\"/><circle cx=\"65\" cy=\"275\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"315\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"145\" cy=\"370\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"425\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"220\" cy=\"185\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"255\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"265\" cy=\"425\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"335\" cy=\"185\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"345\" cy=\"315\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"445\" cy=\"350\" r=\"9\" fill=\"#DCFCE7\" stroke=\"#104535\" stroke-width=\"2.8\"/><circle cx=\"420\" cy=\"425\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"525\" cy=\"320\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"615\" cy=\"320\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"645\" cy=\"385\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"575\" cy=\"205\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"540\" cy=\"125\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/><circle cx=\"455\" cy=\"75\" r=\"5.5\" fill=\"#FFFFFF\" stroke=\"#104535\" stroke-width=\"2\"/></g><g><text x=\"115\" y=\"35\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Oradea</text><text x=\"75\" y=\"100\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Zerind</text><text x=\"60\" y=\"173\" font-size=\"11\" font-weight=\"900\" fill=\"#92400E\" text-anchor=\"middle\">Arad (Start)</text><text x=\"56\" y=\"279\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"end\">Timisoara</text><text x=\"131\" y=\"319\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"end\">Lugoj</text><text x=\"136\" y=\"374\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"end\">Mehadia</text><text x=\"131\" y=\"429\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"end\">Drobeta</text><text x=\"220\" y=\"175\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Sibiu</text><text x=\"250\" y=\"245\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Rimnicu Vilcea</text><text x=\"265\" y=\"441\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Craiova</text><text x=\"335\" y=\"175\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Fagaras</text><text x=\"345\" y=\"305\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Pitesti</text><text x=\"445\" y=\"337\" font-size=\"11\" font-weight=\"900\" fill=\"#104535\" text-anchor=\"middle\">Bucharest (Goal)</text><text x=\"420\" y=\"441\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Giurgiu</text><text x=\"525\" y=\"310\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Urziceni</text><text x=\"624\" y=\"324\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"start\">Hirsova</text><text x=\"654\" y=\"389\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"start\">Eforie</text><text x=\"584\" y=\"209\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"start\">Vaslui</text><text x=\"549\" y=\"129\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"start\">Iasi</text><text x=\"455\" y=\"65\" font-size=\"10\" font-weight=\"700\" fill=\"#1E293B\" text-anchor=\"middle\">Neamt</text></g></svg></div>\n\n\n**Straight-line distance to Bucharest ($h_{SLD}$ in km):**\n\n| City | $h_{SLD}$ | City | $h_{SLD}$ |\n| :--- | :---: | :--- | :---: |\n| **Arad** | 366 | **Mehadia** | 241 |\n| **Bucharest** | 0 | **Neamt** | 234 |\n| **Craiova** | 160 | **Oradea** | 380 |\n| **Drobeta** | 242 | **Pitesti** | 100 |\n| **Eforie** | 161 | **Rimnicu Vilcea** | 193 |\n| **Fagaras** | 176 | **Sibiu** | 253 |\n| **Giurgiu** | 77 | **Timisoara** | 329 |\n| **Hirsova** | 151 | **Urziceni** | 80 |\n| **Iasi** | 226 | **Vaslui** | 199 |\n| **Lugoj** | 244 | **Zerind** | 374 |",
         "solution": {
           "steps": [
-            "1. Start at Arad: Straight-line distances: Arad(366). Successors: Sibiu(253), Timisoara(329), Zerind(374).",
-            "2. Expand Sibiu (lowest h = 253): Successors: Arad(366), Fagaras(176), Oradea(380), Rimnicu Vilcea(193).",
-            "3. Expand Fagaras (lowest h = 176): Successors: Sibiu(253), Bucharest(0).",
-            "4. Expand Bucharest (h = 0): Goal reached!",
-            "5. Path taken: Arad &rarr; Sibiu &rarr; Fagaras &rarr; Bucharest. Total path cost = 140 + 99 + 211 = 450 km."
-          ],
-          "answer": "Greedy Best-First Path: Arad &rarr; Sibiu &rarr; Fagaras &rarr; Bucharest with total road cost 450 km (note: A* finds optimal path via Rimnicu Vilcea-Pitesti costing 418 km).",
-          "marking_hint": "Award 2 marks for showing steps with h-values, 2 marks for total path cost calculation."
+            "**Greedy Best-First Search (GBFS) from Arad to Bucharest:**\n* **Evaluation Function:** $f(n) = h_{SLD}(n)$ (evaluates solely by straight-line distance to Bucharest).\n* At each step, GBFS expands the node with the **minimum $h_{SLD}$** value.\n\n**Step-by-Step Search Trace Table:**\n\n| Step | Current Node Expanded | Successor Nodes Generated | $h_{SLD}$ Values | Action / Node Selected |\n| :---: | :---: | :--- | :--- | :--- |\n| **1** | **Arad** ($h=366$) | Sibiu, Timisoara, Zerind | Sibiu(253), Timisoara(329), Zerind(374) | Select **Sibiu** (lowest $h=253$) |\n| **2** | **Sibiu** ($h=253$) | Arad, Fagaras, Oradea, Rimnicu Vilcea | Arad(366), Fagaras(176), Oradea(380), Rimnicu Vilcea(193) | Select **Fagaras** (lowest $h=176$) |\n| **3** | **Fagaras** ($h=176$) | Sibiu, Bucharest | Sibiu(253), Bucharest(0) | Select **Bucharest** (Goal reached! $h=0$) |\n\n**Path Found by Greedy Best-First Search:**\n$$\\text{Arad} \\xrightarrow{140} \\text{Sibiu} \\xrightarrow{99} \\text{Fagaras} \\xrightarrow{211} \\text{Bucharest}$$\n\n* **Total Path Cost:** $140 + 99 + 211 = \\mathbf{450\\text{ km}}$\n*(Note: Although Greedy Best-First reaches Bucharest quickly, its path cost of $450\\text{ km}$ is suboptimal compared to the $A^*$ optimal path via Rimnicu Vilcea-Pitesti costing $418\\text{ km}$.)*"
+          ]
         }
       }
     ],
