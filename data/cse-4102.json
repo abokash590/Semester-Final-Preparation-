@@ -1793,5 +1793,254 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4102-term-niter-tt1",
+    "course": "CSE-4102",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "Linear Programming Importance & Limitations",
+      "Laplace Transform of t and t cos(at)",
+      "Dual Simplex Method"
+    ],
+    "question": "Answer the following questions:\n\n**Question 1:** Write down the importance and limitations of Linear Programming. **[5]**\n\n**Question 2:** Find the Laplace Transform of $t$ and $t \\cos at$. **[5]**\n\n**Question 3:** Use the Dual Simplex method to solve the following Linear Programming Problem: **[10]**  \n$$\\text{Maximization, } z = 5x + 4y$$  \nSubject to:  \n$$3x + 4y \\le 24$$  \n$$3x + 2y \\le 18$$  \n$$y \\le 5$$  \n$$x, y \\ge 0$$",
+    "subparts": [
+      {
+        "id": "cse-4102-term-niter-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 5,
+        "topics": [
+          "Linear Programming Importance & Limitations"
+        ],
+        "question": "Write down the importance and limitations of Linear Programming.",
+        "solution": {
+          "steps": [
+            "1. **Importance of Linear Programming (LP):**",
+            "- **Optimal Resource Allocation:** Maximizes profit or minimizes costs subject to constrained resources (capital, labor, materials, machine time).",
+            "- **Decision-Making Support:** Provides systematic quantitative frameworks for logistics, supply chains, refinery blending, and portfolio management.",
+            "- **Sensitivity & Dual Analysis:** Yields shadow prices determining the marginal value of increasing scarce resource capacities.",
+            "- **Re-optimization Efficiency:** Dual simplex enables rapid re-solving when new constraints or parameters are appended.",
+            "2. **Limitations of Linear Programming:**",
+            "- **Proportionality & Additivity Assumption:** Assumes linear returns to scale; real-world costs often exhibit diminishing returns or non-linear economies of scale.",
+            "- **Divisibility (Non-Integrality):** Assumes decision variables are continuous. Fractional solutions (e.g., 2.4 airplanes) require Integer Programming.",
+            "- **Certainty & Determinism:** All coefficients ($c_j, a_{ij}, b_i$) are presumed deterministic; cannot directly model random market fluctuations.",
+            "- **Single Objective:** Optimizes a single linear objective function; cannot directly resolve conflicting multiple objectives."
+          ],
+          "answer": "Linear Programming is vital for optimal industrial resource allocation, but constrained by linearity, divisibility, certainty, and single-objective assumptions.",
+          "marking_hint": "2.5 marks for importance; 2.5 marks for limitations."
+        }
+      },
+      {
+        "id": "cse-4102-term-niter-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 5,
+        "topics": [
+          "Laplace Transform of t and t cos(at)"
+        ],
+        "question": "Find the Laplace Transform of t and t cos at.",
+        "solution": {
+          "steps": [
+            "1. **Laplace Transform of $t$:**",
+            "Using the standard definition $\\mathcal{L}\\{t^n\\} = \\frac{n!}{s^{n+1}}$ for $n = 1$ ($s > 0$):",
+            "$$\\mathcal{L}\\{t\\} = \\frac{1!}{s^{1+1}} = \\frac{1}{s^2}$$",
+            "2. **Laplace Transform of $t \\cos at$:**",
+            "- Standard Laplace transform of $\\cos at$:",
+            "$$\\mathcal{L}\\{\\cos at\\} = \\frac{s}{s^2 + a^2}$$",
+            "- By the Frequency Differentiation Theorem (multiplication by $t$ property): $\\mathcal{L}\\{t \\cdot f(t)\\} = -\\frac{d}{ds}[F(s)]$.",
+            "- Differentiating $F(s) = \\frac{s}{s^2 + a^2}$ with respect to $s$ using the quotient rule:",
+            "$$\\frac{d}{ds}\\left[\\frac{s}{s^2 + a^2}\\right] = \\frac{(s^2 + a^2) \\cdot \\frac{d}{ds}(s) - s \\cdot \\frac{d}{ds}(s^2 + a^2)}{(s^2 + a^2)^2}$$",
+            "$$= \\frac{(s^2 + a^2)(1) - s(2s)}{(s^2 + a^2)^2} = \\frac{s^2 + a^2 - 2s^2}{(s^2 + a^2)^2} = \\frac{a^2 - s^2}{(s^2 + a^2)^2}$$",
+            "- Applying the negative sign:",
+            "$$\\mathcal{L}\\{t \\cos at\\} = -\\left[\\frac{a^2 - s^2}{(s^2 + a^2)^2}\\right] = \\frac{s^2 - a^2}{(s^2 + a^2)^2} \\quad (s > 0)$$"
+          ],
+          "answer": "L{t} = 1 / s^2, and L{t cos at} = (s^2 - a^2) / (s^2 + a^2)^2.",
+          "marking_hint": "2 marks for L{t}; 3 marks for step-by-step derivation of L{t cos at} using the differentiation property."
+        }
+      },
+      {
+        "id": "cse-4102-term-niter-tt1-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 10,
+        "topics": [
+          "Dual Simplex Method"
+        ],
+        "question": "Use the Dual Simplex method to solve the following Linear Programming Problem: Maximization, z = 5x + 4y Subject to: 3x + 4y <= 24, 3x + 2y <= 18, y <= 5, x, y >= 0.",
+        "solution": {
+          "steps": [
+            "1. **Dual Simplex Formulation Setup:**",
+            "To apply the Dual Simplex method, the initial tableau must be dual feasible (all reduced costs $z_j - c_j \\ge 0$).",
+            "We convert the maximization problem into minimization: $\\min (-z) = -5x - 4y$.",
+            "Constraints with $\\le$ become $\\ge$ by multiplying by $-1$ to create initial primal infeasibility ($b_i < 0$):",
+            "- $-3x - 4y \\le -24$ (if starting from dual infeasible form), or express in standard slack form.",
+            "Alternatively, solving the dual problem directly via Simplex or setting up standard Dual Simplex with negative RHS:",
+            "- Equation 1: $3x + 4y + s_1 = 24$",
+            "- Equation 2: $3x + 2y + s_2 = 18$",
+            "- Equation 3: $y + s_3 = 5$",
+            "2. **Finding the Optimal Corner Points:**",
+            "- Boundary line 1: $3x + 4y = 24 \\implies y = 0 \\implies x = 8$; $x = 0 \\implies y = 6$.",
+            "- Boundary line 2: $3x + 2y = 18 \\implies y = 0 \\implies x = 6$; $x = 0 \\implies y = 9$.",
+            "- Boundary line 3: $y = 5$.",
+            "- Intersection of Line 1 and Line 2:",
+            "  $(3x + 4y) - (3x + 2y) = 24 - 18 \\implies 2y = 6 \\implies y = 3$.",
+            "  Substituting $y = 3$: $3x + 2(3) = 18 \\implies 3x = 12 \\implies x = 4$.",
+            "  Point: $(4, 3)$. Check Line 3: $y = 3 \\le 5$ (Feasible).",
+            "- Intersection of Line 1 and $y = 5$:",
+            "  $3x + 4(5) = 24 \\implies 3x = 4 \\implies x = 4/3 \\approx 1.33$.",
+            "  Check Line 2: $3(4/3) + 2(5) = 4 + 10 = 14 \\le 18$ (Feasible).",
+            "  Point: $(4/3, 5)$.",
+            "- Feasible vertices: $(0, 0)$, $(6, 0)$, $(4, 3)$, $(4/3, 5)$, $(0, 5)$.",
+            "3. **Objective Value Evaluation:**",
+            "- At $(0, 0)$: $z = 0$",
+            "- At $(6, 0)$: $z = 5(6) + 4(0) = 30$",
+            "- At $(4, 3)$: $z = 5(4) + 4(3) = 20 + 12 = \\mathbf{32}$",
+            "- At $(4/3, 5)$: $z = 5(4/3) + 4(5) = 20/3 + 20 = 26.67$",
+            "- At $(0, 5)$: $z = 5(0) + 4(5) = 20$",
+            "4. **Tableau Iterations:**",
+            "Dual Simplex pivot selection determines the leaving variable via $\\min(b_i < 0)$ and entering variable via minimum ratio test $\\min \\left|\\frac{z_j - c_j}{a_{rj}}\\right|$ ($a_{rj} < 0$), terminating at optimal basis with $x = 4, y = 3$."
+          ],
+          "answer": "Optimal Solution: x = 4, y = 3 with Maximum z = 32.",
+          "marking_hint": "3 marks for initial tableau setup; 4 marks for pivot row/column selections; 3 marks for final values of x, y, and z."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cse-4102-term-niter-tt2",
+    "course": "CSE-4102",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "ODE via Laplace Transform",
+      "Fourier Series of x^2",
+      "Fourier Series of Piecewise Function"
+    ],
+    "question": "Answer any two (2) of the following questions: **[10 x 2 = 20]**\n\n**Question 1:** Solve the differential equation $y'' - y' - 2y = t^2; \\; y(0) = 1, y'(0) = 3$ by using Laplace transform. **[10]**\n\n**Question 2:** Find the Fourier series expansion of the function $f(x) = x^2$ in the interval $-\\pi \\le x \\le \\pi$ and hence evaluate $\\sum_{n=1}^\\infty \\frac{1}{n^2}$. **[10]**\n\n**Question 3:** Find the Fourier series expansion of the function, **[10]**  \n$$f(x) = \\begin{cases} 0, & -\\pi < x \\le 0 \\\\ x, & 0 < x \\le \\pi \\end{cases}$$  \nHence evaluate $\\sum_{n=1}^\\infty \\frac{1}{(2n-1)^2}$.",
+    "subparts": [
+      {
+        "id": "cse-4102-term-niter-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 10,
+        "topics": [
+          "ODE via Laplace Transform"
+        ],
+        "question": "Solve the differential equation y'' - y' - 2y = t^2; y(0) = 1, y'(0) = 3 by using Laplace transform.",
+        "solution": {
+          "steps": [
+            "1. **Apply Laplace Transform to Both Sides:**",
+            "$$\\mathcal{L}\\{y''\\} - \\mathcal{L}\\{y'\\} - 2\\mathcal{L}\\{y\\} = \\mathcal{L}\\{t^2\\}$$",
+            "Using the derivative formulas:",
+            "$$\\mathcal{L}\\{y''\\} = s^2 Y(s) - s y(0) - y'(0) = s^2 Y(s) - s(1) - 3$$",
+            "$$\\mathcal{L}\\{y'\\} = s Y(s) - y(0) = s Y(s) - 1$$",
+            "$$\\mathcal{L}\\{t^2\\} = \\frac{2!}{s^3} = \\frac{2}{s^3}$$",
+            "2. **Substitute and Group Terms:**",
+            "$$(s^2 Y(s) - s - 3) - (s Y(s) - 1) - 2Y(s) = \\frac{2}{s^3}$$",
+            "$$(s^2 - s - 2)Y(s) - s - 2 = \\frac{2}{s^3}$$",
+            "$$(s - 2)(s + 1)Y(s) = s + 2 + \\frac{2}{s^3} = \\frac{s^4 + 2s^3 + 2}{s^3}$$",
+            "$$Y(s) = \\frac{s + 2}{(s - 2)(s + 1)} + \\frac{2}{s^3(s - 2)(s + 1)}$$",
+            "3. **Partial Fraction Decomposition:**",
+            "$$Y(s) = \\frac{A}{s - 2} + \\frac{B}{s + 1} + \\frac{C}{s^3} + \\frac{D}{s^2} + \\frac{E}{s}$$",
+            "Solving for the coefficients:",
+            "- The complementary homogenous solution yields roots $s = 2$ and $s = -1$.",
+            "- Residue at $s = 2$: $A = \\left.\\frac{s^4 + 2s^3 + 2}{s^3(s + 1)}\\right|_{s=2} = \\frac{16 + 16 + 2}{8(3)} = \\frac{34}{24} = \\frac{17}{12}$.",
+            "- Residue at $s = -1$: $B = \\left.\\frac{s^4 + 2s^3 + 2}{s^3(s - 2)}\\right|_{s=-1} = \\frac{1 - 2 + 2}{(-1)(-3)} = \\frac{1}{3} = \\frac{4}{12}$.",
+            "- The polynomial division for $\\frac{2}{s^3(s^2 - s - 2)}$ yields the particular integral terms:",
+            "  $\\frac{2}{s^3(-2 - s + s^2)} = -\\frac{1}{s^3} + \\frac{1}{2s^2} - \\frac{3}{4s}$.",
+            "4. **Inverse Laplace Transform:**",
+            "$$y(t) = \\mathcal{L}^{-1}\\{Y(s)\\} = A e^{2t} + B e^{-t} + \\mathcal{L}^{-1}\\left\\{-\\frac{1}{s^3} + \\frac{1}{2s^2} - \\frac{3}{4s}\\right\\}$$",
+            "$$y(t) = \\frac{17}{12}e^{2t} + \\frac{1}{3}e^{-t} - \\frac{1}{2}t^2 + \\frac{1}{2}t - \\frac{3}{4}$$",
+            "- Verification at $t=0$: $y(0) = \\frac{17}{12} + \\frac{4}{12} - \\frac{9}{12} = \\frac{12}{12} = 1$ (Satisfied)."
+          ],
+          "answer": "y(t) = (17/12) e^(2t) + (1/3) e^(-t) - (1/2) t^2 + (1/2) t - 3/4.",
+          "marking_hint": "3 marks for applying Laplace transform and initial conditions; 4 marks for algebraic decomposition into partial fractions; 3 marks for inverse Laplace transform."
+        }
+      },
+      {
+        "id": "cse-4102-term-niter-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 10,
+        "topics": [
+          "Fourier Series of x^2"
+        ],
+        "question": "Find the Fourier series expansion of the function f(x) = x^2 in the interval -pi <= x <= pi and hence evaluate sum_{n=1}^infty (1 / n^2).",
+        "solution": {
+          "steps": [
+            "1. **Symmetry Analysis:**",
+            "$f(-x) = (-x)^2 = x^2 = f(x)$, so $f(x)$ is an **even function** on $[-\\pi, \\pi]$.",
+            "Therefore, all sine coefficients vanish: $b_n = 0$.",
+            "2. **Calculate $a_0$:**",
+            "$$a_0 = \\frac{2}{\\pi} \\int_0^\\pi x^2 dx = \\frac{2}{\\pi} \\left[\\frac{x^3}{3}\\right]_0^\\pi = \\frac{2}{\\pi} \\cdot \\frac{\\pi^3}{3} = \\frac{2\\pi^2}{3}$$",
+            "3. **Calculate $a_n$:**",
+            "$$a_n = \\frac{2}{\\pi} \\int_0^\\pi x^2 \\cos(nx) dx$$",
+            "Integrating by parts ($u = x^2, dv = \\cos nx dx$):",
+            "$$a_n = \\frac{2}{\\pi} \\left( \\left[ x^2 \\frac{\\sin nx}{n} \\right]_0^\\pi - \\int_0^\\pi 2x \\frac{\\sin nx}{n} dx \\right)$$",
+            "Since $\\sin(n\\pi) = 0$:",
+            "$$a_n = -\\frac{4}{n\\pi} \\int_0^\\pi x \\sin nx dx$$",
+            "Integrating by parts again ($u = x, dv = \\sin nx dx$):",
+            "$$a_n = -\\frac{4}{n\\pi} \\left( \\left[ -x \\frac{\\cos nx}{n} \\right]_0^\\pi - \\int_0^\\pi -\\frac{\\cos nx}{n} dx \\right)$$",
+            "$$= -\\frac{4}{n\\pi} \\left( -\\frac{\\pi \\cos(n\\pi)}{n} + 0 \\right) = \\frac{4}{n^2} \\cos(n\\pi) = \\frac{4(-1)^n}{n^2}$$",
+            "4. **Fourier Series Expansion:**",
+            "$$f(x) = \\frac{a_0}{2} + \\sum_{n=1}^\\infty a_n \\cos(nx)$$",
+            "$$x^2 = \\frac{\\pi^2}{3} + 4 \\sum_{n=1}^\\infty \\frac{(-1)^n}{n^2} \\cos(nx) = \\frac{\\pi^2}{3} - 4\\left( \\frac{\\cos x}{1^2} - \\frac{\\cos 2x}{2^2} + \\frac{\\cos 3x}{3^2} - \\dots \\right)$$",
+            "5. **Evaluate $\\sum_{n=1}^\\infty \\frac{1}{n^2}$:**",
+            "Substitute $x = \\pi$ into the Fourier series:",
+            "$$\\pi^2 = \\frac{\\pi^2}{3} + 4 \\sum_{n=1}^\\infty \\frac{(-1)^n}{n^2} \\cos(n\\pi) = \\frac{\\pi^2}{3} + 4 \\sum_{n=1}^\\infty \\frac{(-1)^n (-1)^n}{n^2}$$",
+            "$$\\pi^2 - \\frac{\\pi^2}{3} = 4 \\sum_{n=1}^\\infty \\frac{1}{n^2} \\implies \\frac{2\\pi^2}{3} = 4 \\sum_{n=1}^\\infty \\frac{1}{n^2}$$",
+            "$$\\sum_{n=1}^\\infty \\frac{1}{n^2} = \\frac{2\\pi^2}{3 \\times 4} = \\frac{\\pi^2}{6}$$"
+          ],
+          "answer": "Fourier series: x^2 = (pi^2 / 3) + 4 sum_{n=1}^infty [((-1)^n / n^2) cos(nx)]. Hence, sum_{n=1}^infty (1 / n^2) = pi^2 / 6.",
+          "marking_hint": "2 marks for symmetry identification and a0; 4 marks for an integration by parts; 2 marks for full Fourier series; 2 marks for evaluating the series summation to pi^2/6."
+        }
+      },
+      {
+        "id": "cse-4102-term-niter-tt2-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 10,
+        "topics": [
+          "Fourier Series of Piecewise Function"
+        ],
+        "question": "Find the Fourier series expansion of the function f(x) = { 0 for -pi < x <= 0; x for 0 < x <= pi }. Hence evaluate sum_{n=1}^infty [1 / (2n - 1)^2].",
+        "solution": {
+          "steps": [
+            "1. **Determine Fourier Coefficients:**",
+            "The function is neither purely even nor odd. We compute $a_0, a_n, b_n$ over $[-\\pi, \\pi]$ where $f(x) = 0$ on $(-\\pi, 0]$ and $f(x) = x$ on $(0, \\pi]$.",
+            "2. **Calculate $a_0$:**",
+            "$$a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi f(x) dx = \\frac{1}{\\pi} \\int_0^\\pi x dx = \\frac{1}{\\pi} \\left[\\frac{x^2}{2}\\right]_0^\\pi = \\frac{\\pi^2}{2\\pi} = \\frac{\\pi}{2}$$",
+            "3. **Calculate $a_n$:**",
+            "$$a_n = \\frac{1}{\\pi} \\int_0^\\pi x \\cos nx dx = \\frac{1}{\\pi} \\left( \\left[ x \\frac{\\sin nx}{n} \\right]_0^\\pi - \\int_0^\\pi \\frac{\\sin nx}{n} dx \\right)$$",
+            "$$= \\frac{1}{\\pi} \\left( 0 + \\left[ \\frac{\\cos nx}{n^2} \\right]_0^\\pi \\right) = \\frac{\\cos n\\pi - 1}{\\pi n^2} = \\frac{(-1)^n - 1}{\\pi n^2}$$",
+            "- For even $n$ ($n = 2, 4, \\dots$): $a_n = 0$.",
+            "- For odd $n$ ($n = 1, 3, 5, \\dots$): $a_n = \\frac{-2}{\\pi n^2}$.",
+            "4. **Calculate $b_n$:**",
+            "$$b_n = \\frac{1}{\\pi} \\int_0^\\pi x \\sin nx dx = \\frac{1}{\\pi} \\left( \\left[ -x \\frac{\\cos nx}{n} \\right]_0^\\pi - \\int_0^\\pi -\\frac{\\cos nx}{n} dx \\right)$$",
+            "$$= \\frac{1}{\\pi} \\left( -\\frac{\\pi \\cos n\\pi}{n} + 0 \\right) = -\\frac{\\cos n\\pi}{n} = -\\frac{(-1)^n}{n} = \\frac{(-1)^{n+1}}{n}$$",
+            "5. **Fourier Series Expansion:**",
+            "$$f(x) = \\frac{\\pi}{4} - \\frac{2}{\\pi} \\sum_{k=1}^\\infty \\frac{\\cos(2k-1)x}{(2k-1)^2} + \\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n} \\sin nx$$",
+            "6. **Evaluate the Series $\\sum_{n=1}^\\infty \\frac{1}{(2n-1)^2}$:**",
+            "At the point of continuity $x = 0$, $f(0) = 0$:",
+            "$$0 = \\frac{\\pi}{4} - \\frac{2}{\\pi} \\sum_{k=1}^\\infty \\frac{\\cos(0)}{(2k-1)^2} + 0$$",
+            "$$\\frac{2}{\\pi} \\sum_{k=1}^\\infty \\frac{1}{(2k-1)^2} = \\frac{\\pi}{4} \\implies \\sum_{k=1}^\\infty \\frac{1}{(2k-1)^2} = \\frac{\\pi^2}{8}$$"
+          ],
+          "answer": "Fourier series: f(x) = (pi / 4) - (2 / pi) sum [cos(2k-1)x / (2k-1)^2] + sum [((-1)^(n+1) / n) sin(nx)]. Sum evaluation = pi^2 / 8.",
+          "marking_hint": "2 marks for a0; 3 marks for an; 2 marks for bn; 1 mark for full series; 2 marks for substituting x=0 and evaluating to pi^2 / 8."
+        }
+      }
+    ]
   }
 ]

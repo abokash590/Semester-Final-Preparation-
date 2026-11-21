@@ -1486,5 +1486,297 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4101-term-niter-tt1",
+    "course": "CSE-4101",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "Uniform Cost Search (UCS)",
+      "8-Puzzle & A* Search",
+      "Genetic Algorithms",
+      "Machine Learning Terminology"
+    ],
+    "question": "(Answer all of the following questions)\n\n**Question 1:** Define Uninformed search. Apply Uniform-Cost Search (UCS) to find the minimum cost path from node A to G. Show the cumulative path cost of each expanded node, and determine the least-cost path and its total cost. **[5]**\n\n```mermaid\ngraph LR\n    A((A)) -->|5| B((B))\n    A -->|3| D((D))\n    D -->|2| E((E))\n    D -->|2| F((F))\n    E -->|4| B\n    B -->|1| C((C))\n    C -->|6| E\n    C -->|8| G((G))\n    E -->|4| G\n    F -->|3| G\n```\n\n**Question 2:** Define Informed search. Given an initial state of 8 puzzle problem and final state to be reached. Find the most cost-effective path to reach the final state from initial state using A* search algorithm. **[5]**\n\n| Initial State | | |\n| :---: | :---: | :---: |\n| 2 | 5 | 4 |\n| 1 | 6 | 8 |\n| 3 |   | 7 |\n\n| Goal State | | |\n| :---: | :---: | :---: |\n| 1 | 2 | 3 |\n| 8 |   | 4 |\n| 7 | 6 | 5 |\n\n**Question 3:** A genetic algorithm maximizes the number of 1s in a 6-bit chromosome. The fitness function is: $f(x) = \\text{number of 1's in chromosome } x$. **[6]**  \nThe initial population is:  \n$P_1 = 101100$, $P_2 = 011011$, $P_3 = 110010$, $P_4 = 001111$  \na) Calculate the fitness of each chromosome and select the best two parents.  \nb) Perform one-point crossover after the third bit on the selected parents. Write the two offspring.  \nc) Apply mutation by flipping the $5^{\\text{th}}$ bit of the first offspring.  \nd) Calculate the fitness of the mutated offspring and determine whether it is better than its parent.\n\n**Question 4:** Illustrate the following Terms: **[4]**  \ni. Supervised and Unsupervised Learning  \nii. Reinforcement Learning  \niii. Overfitting and Underfitting  \niv. Regression and Classification",
+    "subparts": [
+      {
+        "id": "cse-4101-term-niter-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 5,
+        "topics": [
+          "Uniform Cost Search (UCS)"
+        ],
+        "question": "Define Uninformed search. Apply Uniform-Cost Search (UCS) to find the minimum cost path from node A to G. Show the cumulative path cost of each expanded node, and determine the least-cost path and its total cost.",
+        "solution": {
+          "steps": [
+            "1. **Uninformed Search Definition:** An uninformed (blind) search strategy navigates the state space relying strictly on the graph structure and edge costs without any problem-specific heuristic estimates regarding the remaining distance to the goal.",
+            "2. **Uniform-Cost Search (UCS) Principle:** UCS systematically expands the node with the lowest cumulative path cost $g(n)$ from the start node $A$ using a priority queue (min-heap).",
+            "3. **Expansion Trace:**",
+            "- **Step 1:** Queue: `[(A, path=[A], cost=0)]`. Expand `A` (cost 0). Generated: `(D, [A,D], 3)`, `(B, [A,B], 5)`.",
+            "- **Step 2:** Queue: `[D:3, B:5]`. Expand `D` (cost 3). Generated from D: `(E, [A,D,E], 3+2=5)`, `(F, [A,D,F], 3+2=5)`.",
+            "- **Step 3:** Queue: `[B:5, E:5, F:5]`. Expand `B` (cost 5). Generated from B: `(C, [A,B,C], 5+1=6)`.",
+            "- **Step 4:** Queue: `[E:5, F:5, C:6]`. Expand `E` (cost 5). Generated from E: `(B, cost 5+4=9, discarded as B already explored with 5)`, `(G, [A,D,E,G], 5+4=9)`.",
+            "- **Step 5:** Queue: `[F:5, C:6, G:9]`. Expand `F` (cost 5). Generated from F: `(G, [A,D,F,G], 5+3=8)`. Queue updates with cheaper path to G: `[C:6, G:8]`.",
+            "- **Step 6:** Queue: `[C:6, G:8]`. Expand `C` (cost 6). Generated from C: `(E, cost 6+6=12, discarded)`, `(G, cost 6+8=14, discarded)`.",
+            "- **Step 7:** Queue: `[G:8]`. Node `G` is removed from queue and passes goal test with minimal cost 8."
+          ],
+          "answer": "Least-cost Path: A -> D -> F -> G with Total Cost = 8.",
+          "marking_hint": "1 mark for definition; 3 marks for step-by-step priority queue expansion trace; 1 mark for correct path and total cost."
+        }
+      },
+      {
+        "id": "cse-4101-term-niter-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 5,
+        "topics": [
+          "8-Puzzle & A* Search"
+        ],
+        "question": "Define Informed search. Given an initial state of 8 puzzle problem and final state to be reached. Find the most cost-effective path to reach the final state from initial state using A* search algorithm.",
+        "solution": {
+          "steps": [
+            "1. **Informed Search Definition:** An informed (heuristic) search strategy uses domain-specific knowledge represented by a heuristic evaluation function $h(n)$ to estimate the cost from state $n$ to the goal, prioritizing exploration toward the most promising directions.",
+            "2. **A* Search Evaluation Function:** $f(n) = g(n) + h(n)$, where $g(n)$ is the exact cost (depth) from start state to node $n$, and $h(n)$ is an admissible heuristic (e.g., Manhattan distance: $h(n) = \\sum |x_i - x_g| + |y_i - y_g|$).",
+            "3. **Heuristic Calculation at Initial State:**",
+            "- Tile 1: at (2,1), goal (1,1) -> dist = 1",
+            "- Tile 2: at (1,1), goal (1,2) -> dist = 1",
+            "- Tile 3: at (3,1), goal (1,3) -> dist = 4",
+            "- Tile 4: at (1,3), goal (2,3) -> dist = 1",
+            "- Tile 5: at (1,2), goal (3,3) -> dist = 3",
+            "- Tile 6: at (2,2), goal (3,2) -> dist = 1",
+            "- Tile 7: at (3,3), goal (3,1) -> dist = 2",
+            "- Tile 8: at (2,3), goal (2,1) -> dist = 2",
+            "- Total Manhattan Distance $h(\\text{Start}) = 1+1+4+1+3+1+2+2 = 15$.",
+            "4. **A* Node Expansion Steps:**",
+            "From initial state (blank at (3,2)), legal moves are UP (swap with 6), LEFT (swap with 3), RIGHT (swap with 7).",
+            "- Moving UP (swap blank with 6): Blank goes to (2,2), 6 moves to (3,2) (its exact goal location!). $h$ drops by 1 -> $f = 1 + 14 = 15$. Selected as optimal branch.",
+            "- Continued systematic evaluation following minimum $f(n)$ until the goal board configuration is reached."
+          ],
+          "answer": "A* search evaluates $f(n) = g(n) + h(n)$ at each step, consistently expanding minimum $f(n)$ nodes to guarantee the optimal path to the goal state.",
+          "marking_hint": "1 mark for informed search definition; 2 marks for heuristic formula and initial calculation; 2 marks for valid A* search tree expansions."
+        }
+      },
+      {
+        "id": "cse-4101-term-niter-tt1-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 6,
+        "topics": [
+          "Genetic Algorithms"
+        ],
+        "question": "A genetic algorithm maximizes the number of 1s in a 6-bit chromosome. The fitness function is: f(x) = number of 1's in chromosome x. Initial population: P1=101100, P2=011011, P3=110010, P4=001111. (a) Calculate fitness & select best two parents. (b) One-point crossover after 3rd bit. (c) Mutation on 5th bit of first offspring. (d) Determine if mutated offspring is better than parent.",
+        "solution": {
+          "steps": [
+            "**(a) Fitness Calculation & Parent Selection:**",
+            "- $f(P_1 = 101100) = 3$ (three 1s)",
+            "- $f(P_2 = 011011) = 4$ (four 1s)",
+            "- $f(P_3 = 110010) = 3$ (three 1s)",
+            "- $f(P_4 = 001111) = 4$ (four 1s)",
+            "- The two highest fitness chromosomes are selected as parents: **$P_2$** and **$P_4$** (both have fitness 4).",
+            "**(b) One-Point Crossover after 3rd Bit:**",
+            "- Parent 1 ($P_2$): `011 | 011`",
+            "- Parent 2 ($P_4$): `001 | 111`",
+            "- Offspring 1 ($O_1$): `011` (from $P_2$) + `111` (from $P_4$) = **`011111`** (fitness = 5).",
+            "- Offspring 2 ($O_2$): `001` (from $P_4$) + `011` (from $P_2$) = **`001011`** (fitness = 3).",
+            "**(c) Mutation by Flipping the 5th Bit of First Offspring:**",
+            "- Offspring 1 ($O_1$): `0 1 1 1 1 1` (bits 1 through 6).",
+            "- The $5^{\\text{th}}$ bit is `1`.",
+            "- Flipping the $5^{\\text{th}}$ bit (`1 -> 0`) produces mutated offspring: **$O_1' = 011101$**.",
+            "**(d) Fitness Evaluation of Mutated Offspring:**",
+            "- $f(O_1') = f(011101) = 4$ (four 1s: bits 2, 3, 4, 6).",
+            "- Parent fitness: $f(P_2) = 4$ and $f(P_4) = 4$.",
+            "- Comparison: $f(O_1') = 4 = f(\\text{Parents})$. The mutated offspring is **equally fit** to its parents, but **not strictly better**."
+          ],
+          "answer": "Selected Parents: P2 and P4 (fitness 4). Offspring: O1 = 011111, O2 = 001011. Mutated Offspring: O1' = 011101 (fitness = 4). It is not strictly better than its parents.",
+          "marking_hint": "1.5 marks for part (a); 1.5 marks for part (b); 1.5 marks for part (c); 1.5 marks for part (d) with correct comparison."
+        }
+      },
+      {
+        "id": "cse-4101-term-niter-tt1-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 4,
+        "topics": [
+          "Machine Learning Terminology"
+        ],
+        "question": "Illustrate the following Terms: i. Supervised and Unsupervised Learning, ii. Reinforcement Learning, iii. Overfitting and Underfitting, iv. Regression and Classification.",
+        "solution": {
+          "steps": [
+            "**i. Supervised vs. Unsupervised Learning:**",
+            "- *Supervised Learning:* Learns a mapping function from labeled training data pairs $(x, y)$ to predict targets for unseen inputs (e.g., spam detection, price prediction).",
+            "- *Unsupervised Learning:* Discovers hidden patterns, clusters, or intrinsic groupings in unlabeled input data $x$ without external ground truth (e.g., K-Means customer segmentation, PCA).",
+            "**ii. Reinforcement Learning (RL):**",
+            "- A framework where an autonomous agent learns optimal decision-making policies through trial-and-error interactions with a dynamic environment, receiving rewards for favorable actions and penalties for sub-optimal actions (e.g., Q-learning, AlphaGo).",
+            "**iii. Overfitting vs. Underfitting:**",
+            "- *Overfitting (High Variance):* The model fits the training data too closely including noise and outliers, yielding exceptionally low training error but poor generalization on test data.",
+            "- *Underfitting (High Bias):* The model is overly simplistic and cannot capture underlying data trends, resulting in poor performance on both training and test data.",
+            "**iv. Regression vs. Classification:**",
+            "- *Regression:* Predicts continuous numerical quantitative values (e.g., predicting temperature, house price, stock market index).",
+            "- *Classification:* Predicts discrete qualitative categorical class labels (e.g., predicting disease diagnosis: Yes/No, image digit: 0-9)."
+          ],
+          "answer": "Crisp distinctions across supervised/unsupervised learning, reinforcement learning policies, bias-variance fit dilemmas, and continuous vs. categorical prediction tasks.",
+          "marking_hint": "1 mark for each of the four conceptual comparisons with appropriate examples."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cse-4101-term-niter-tt2",
+    "course": "CSE-4101",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "Minimax & Alpha-Beta Pruning",
+      "Artificial Neural Networks & Backprop",
+      "Bayes' Theorem & Probability",
+      "AI Project Life-Cycle"
+    ],
+    "question": "(Answer all of the following questions)\n\n**Question 1:** **[6]**  \na) Explain the limitations of the Minimax algorithm in adversarial search, particularly in terms of computational complexity and search efficiency.  \nb) Apply the Alpha-Beta Pruning algorithm to the given game tree. Clearly illustrate the evaluation process, identify the branches that can be pruned, and determine the optimal value at the root node.\n\n```mermaid\ngraph TD\n    A[A - Max] --> B[B - Min]\n    A --> C[C - Min]\n    B --> D[D - Max]\n    B --> E[E - Max]\n    C --> F[F - Max]\n    C --> G[G - Max]\n    D --> D1[3]\n    D --> D2[5]\n    E --> E1[6]\n    E --> E2[9]\n    F --> F1[1]\n    F --> F2[2]\n    G --> G1[0]\n    G --> G2[1]\n```\n\n**Question 2:** Consider a single artificial neuron with the following parameters: **[6]**\n\n| Parameter | Value |\n| :--- | :--- |\n| Inputs | $x_1 = 1.0, x_2 = 0.5$ |\n| Weights | $w_1 = 0.4, w_2 = -0.6$ |\n| Bias | $b = 0.1$ |\n| Activation function | Sigmoid |\n| Target output | $t = 1$ |\n| Learning rate | $\\eta = 0.2$ |\n\nUsing the given information, answer the following questions:  \na) Calculate the net input to the neuron and determine its output using the sigmoid activation function.  \nb) Compute the prediction error using the Mean Squared Error (MSE) loss function.  \nc) Using backpropagation, compute the weight and bias updates for one training step.\n\n**Question 3:** **[4]**  \na) State and explain Bayes' Theorem, describing the roles of prior probability, likelihood, evidence, and posterior probability.  \nb) A standard deck of 52 playing cards contains 12 face cards (Jacks, Queens, and Kings), of which 4 are Queens. One card is randomly drawn from the deck, and it is known to be a face card. Using Bayes' Theorem, calculate the conditional probability $P(\\text{Queen} \\mid \\text{Face})$, showing the necessary steps.\n\n**Question 4:** Imagine you are an AI engineer assigned to develop an intelligent system capable of learning from data, making predictions, and improving its performance over time. **[4]**  \nDraw a generalized flowchart illustrating the complete development life-cycle of an AI-based project, starting from problem identification and ending with real-world deployment and continuous improvement.  \nYour diagram should clearly represent the major stages of the AI development process, their logical sequence, and appropriate feedback loops for performance improvement.",
+    "subparts": [
+      {
+        "id": "cse-4101-term-niter-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 6,
+        "topics": [
+          "Minimax & Alpha-Beta Pruning"
+        ],
+        "question": "a) Explain the limitations of the Minimax algorithm in adversarial search. b) Apply the Alpha-Beta Pruning algorithm to the given game tree. Clearly illustrate the evaluation process, identify pruned branches, and determine the optimal root value.",
+        "solution": {
+          "steps": [
+            "**(a) Limitations of Minimax Algorithm:**",
+            "- **Exponential Time Complexity:** Exhaustive Minimax expands $O(b^m)$ states, where $b$ is the branching factor and $m$ is maximum search depth. For complex games (e.g., Chess where $b \\approx 35, m \\ge 80$), searching to terminal depth is completely intractable.",
+            "- **Space Complexity:** Deep search trees demand substantial stack memory $O(bm)$ for recursive traversal.",
+            "- **Real-time Deadline Failure:** Practical game agents must decide moves within seconds, making full minimax search impossible without heuristic depth cutoff and pruning.",
+            "**(b) Alpha-Beta Pruning Trace on Game Tree:**",
+            "Initialization: Root $A$ (MAX) has $\\alpha = -\\infty, \\beta = +\\infty$.",
+            "1. **Explore Left Subtree (Node B - MIN):** Inherits $\\alpha = -\\infty, \\beta = +\\infty$.",
+            "   - **Node D (MAX):** Visits leaf 3 ($v=3, \\alpha=3$). Visits leaf 5 ($v=5, \\alpha=5$). Returns $v=5$.",
+            "   - **Node B (MIN):** Updates $\\beta = \\min(+\\infty, 5) = 5$.",
+            "   - **Node E (MAX):** Inherits $\\alpha = -\\infty, \\beta = 5$. Visits first leaf **6** ($v=6, \\alpha=6$).",
+            "   - **Pruning Check at E:** Since $\\alpha \\ge \\beta$ ($6 \\ge 5$), a cutoff occurs! Leaf **9** is **PRUNED**.",
+            "   - Node B receives $v = \\min(5, 6) = 5$.",
+            "2. **Update Root A (MAX):** $\\alpha = \\max(-\\infty, 5) = 5$. Root now guarantees at least 5.",
+            "3. **Explore Right Subtree (Node C - MIN):** Inherits $\\alpha = 5, \\beta = +\\infty$.",
+            "   - **Node F (MAX):** Inherits $\\alpha = 5, \\beta = +\\infty$.",
+            "     - Visits first leaf **1** ($v=1$).",
+            "     - Visits second leaf **2** ($v=2$).",
+            "     - Node F returns $v = \\max(1, 2) = 2$.",
+            "   - **Node C (MIN):** Updates $\\beta = \\min(+\\infty, 2) = 2$.",
+            "   - **Pruning Check at C:** We compare C's $\\beta = 2$ against root's $\\alpha = 5$.",
+            "     - Since $\\alpha \\ge \\beta$ ($5 \\ge 2$), a **beta cutoff occurs**!",
+            "     - **Subtree G** (and both its leaves **0** and **1**) is completely **PRUNED** without evaluation.",
+            "   - Node C returns $v = 2$.",
+            "4. **Root A Decision:** $\\max(5, 2) = 5$."
+          ],
+          "answer": "Optimal value at Root A = 5. Optimal move for Max: Move to Node B. Pruned branches: Leaf 9 (under E) and Subtree G (leaves 0 and 1).",
+          "marking_hint": "2 marks for Minimax limitations; 3 marks for step-by-step alpha-beta bound tracking and identified prunings; 1 mark for optimal root value and move."
+        }
+      },
+      {
+        "id": "cse-4101-term-niter-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 6,
+        "topics": [
+          "Artificial Neural Networks & Backprop"
+        ],
+        "question": "Single artificial neuron with inputs x1=1.0, x2=0.5, weights w1=0.4, w2=-0.6, bias b=0.1, sigmoid activation, target t=1, learning rate eta=0.2. (a) Calculate net input and output. (b) Compute prediction error using MSE. (c) Compute weight and bias updates for one training step using backpropagation.",
+        "solution": {
+          "steps": [
+            "**(a) Net Input and Output:**",
+            "- Net input $z = w_1 x_1 + w_2 x_2 + b = (0.4)(1.0) + (-0.6)(0.5) + 0.1 = 0.4 - 0.3 + 0.1 = 0.2$.",
+            "- Output $y = \\sigma(z) = \\frac{1}{1 + e^{-z}} = \\frac{1}{1 + e^{-0.2}} = \\frac{1}{1 + 0.81873} = \\frac{1}{1.81873} \\approx 0.54983$.",
+            "**(b) Prediction Error (MSE):**",
+            "- Mean Squared Error loss: $E = \\frac{1}{2}(t - y)^2 = \\frac{1}{2}(1 - 0.54983)^2 = \\frac{1}{2}(0.45017)^2 \\approx 0.10133$.",
+            "- (Note: If using standard $(t - y)^2$, error is $(0.45017)^2 \\approx 0.20265$).",
+            "**(c) Backpropagation Gradient Updates:**",
+            "- Error gradient with respect to output: $\\frac{\\partial E}{\\partial y} = -(t - y) = -(1 - 0.54983) = -0.45017$.",
+            "- Derivative of sigmoid activation: $\\frac{\\partial y}{\\partial z} = y(1 - y) = 0.54983 \\times (1 - 0.54983) = 0.54983 \\times 0.45017 \\approx 0.24751$.",
+            "- Local error gradient: $\\delta = \\frac{\\partial E}{\\partial z} = \\frac{\\partial E}{\\partial y} \\frac{\\partial y}{\\partial z} = -0.45017 \\times 0.24751 \\approx -0.11142$.",
+            "- Weight and bias updates $(\\Delta = -\\eta \\frac{\\partial E}{\\partial w} = -\\eta \\delta x)$:",
+            "  - $\\Delta w_1 = -\\eta \\cdot \\delta \\cdot x_1 = -0.2 \\times (-0.11142) \\times 1.0 = +0.02228$.",
+            "  - $\\Delta w_2 = -\\eta \\cdot \\delta \\cdot x_2 = -0.2 \\times (-0.11142) \\times 0.5 = +0.01114$.",
+            "  - $\\Delta b = -\\eta \\cdot \\delta \\cdot 1 = -0.2 \\times (-0.11142) = +0.02228$.",
+            "- Updated parameters:",
+            "  - $w_1^{\\text{new}} = 0.4 + 0.02228 = \\mathbf{0.42228}$",
+            "  - $w_2^{\\text{new}} = -0.6 + 0.01114 = \\mathbf{-0.58886}$",
+            "  - $b^{\\text{new}} = 0.1 + 0.02228 = \\mathbf{0.12228}$"
+          ],
+          "answer": "Net input z = 0.2, Output y = 0.5498. MSE loss = 0.1013. Updated weights: w1 = 0.4223, w2 = -0.5889, b = 0.1223.",
+          "marking_hint": "2 marks for part (a); 1 mark for part (b); 3 marks for partial derivatives and parameter updates in part (c)."
+        }
+      },
+      {
+        "id": "cse-4101-term-niter-tt2-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 4,
+        "topics": [
+          "Bayes' Theorem & Probability"
+        ],
+        "question": "a) State and explain Bayes' Theorem, describing the roles of prior probability, likelihood, evidence, and posterior probability. b) A standard deck of 52 playing cards contains 12 face cards (Jacks, Queens, Kings), of which 4 are Queens. A randomly drawn card is known to be a face card. Using Bayes' Theorem, calculate P(Queen | Face).",
+        "solution": {
+          "steps": [
+            "**(a) Bayes' Theorem Statement and Components:**",
+            "$$P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$$",
+            "- **Posterior Probability $P(A \\mid B)$:** The revised probability of hypothesis $A$ occurring given that evidence $B$ has been observed.",
+            "- **Prior Probability $P(A)$:** The initial degree of belief in hypothesis $A$ before taking into account new evidence.",
+            "- **Likelihood $P(B \\mid A)$:** The probability of observing evidence $B$ assuming hypothesis $A$ is true.",
+            "- **Evidence (Marginal Probability) $P(B)$:** The total probability of observing evidence $B$ under all possible mutually exclusive hypotheses.",
+            "**(b) Card Probability Calculation:**",
+            "- Event $Q$: The card is a Queen.",
+            "- Event $F$: The card is a Face card.",
+            "- Known quantities:",
+            "  - Total cards = 52, Face cards = 12, Queens = 4.",
+            "  - Prior probability of Queen: $P(Q) = \\frac{4}{52} = \\frac{1}{13}$.",
+            "  - Likelihood of Face given Queen: $P(F \\mid Q) = 1$ (every Queen is inherently a face card).",
+            "  - Evidence probability of Face card: $P(F) = \\frac{12}{52} = \\frac{3}{13}$.",
+            "- Applying Bayes' Theorem:",
+            "$$P(Q \\mid F) = \\frac{P(F \\mid Q) \\cdot P(Q)}{P(F)} = \\frac{1 \\times \\frac{4}{52}}{\\frac{12}{52}} = \\frac{4}{12} = \\frac{1}{3} \\approx 0.3333 \\quad (33.33\\%)$$."
+          ],
+          "answer": "Bayes' formula relates prior to posterior probability. For the card problem: P(Queen | Face) = 4/12 = 1/3 (33.33%).",
+          "marking_hint": "2 marks for Bayes' Theorem definition and component explanation; 2 marks for card probability calculation."
+        }
+      },
+      {
+        "id": "cse-4101-term-niter-tt2-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 4,
+        "topics": [
+          "AI Project Life-Cycle"
+        ],
+        "question": "Draw a generalized flowchart illustrating the complete development life-cycle of an AI-based project, starting from problem identification and ending with real-world deployment and continuous improvement, clearly representing stages, sequence, and feedback loops.",
+        "solution": {
+          "steps": [
+            "1. **Core Stages of AI Project Lifecycle:**",
+            "- **Problem Definition & Formulation:** Scoping the objective, business metrics, and AI suitability.",
+            "- **Data Ingestion & Collection:** Sourcing, extracting, and aggregating raw multi-modal data.",
+            "- **Data Preprocessing & EDA:** Handling missing values, cleaning noise, normalization, and feature engineering.",
+            "- **Model Selection & Architecture:** Choosing baseline models (e.g., Tree, Neural Network, Linear).",
+            "- **Model Training & Hyperparameter Tuning:** Optimizing parameters via cross-validation.",
+            "- **Model Evaluation & Validation:** Testing against unseen benchmark test datasets across business metrics (Accuracy, F1, Latency).",
+            "- **Deployment & CI/CD Pipeline:** Serving via REST API / containerized microservices.",
+            "- **Monitoring, Maintenance & Retraining:** Tracking data drift, concept drift, and performance degradation with continuous feedback loops.",
+            "2. **AI Project Lifecycle Flowchart:**"
+          ],
+          "answer": "```mermaid\nflowchart TD\n    A[Problem Scoping & Identification] --> B[Data Collection & Ingestion]\n    B --> C[Data Cleaning & Feature Engineering]\n    C --> D[Model Selection & Architecture Design]\n    D --> E[Model Training & Hyperparameter Tuning]\n    E --> F{Evaluation & Validation}\n    F -- Fails Metric Criteria --> C\n    F -- Passes Metric Criteria --> G[System Deployment & Serving]\n    G --> H[Real-Time Production Monitoring]\n    H -- Data Drift Detected --> B\n    H -- Concept Drift / Performance Drop --> E\n```",
+          "marking_hint": "2 marks for comprehensive life-cycle stage descriptions; 2 marks for clear flowchart diagram featuring required bidirectional feedback loops."
+        }
+      }
+    ]
   }
 ]

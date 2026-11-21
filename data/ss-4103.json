@@ -1411,5 +1411,161 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "ss-4103-term-niter-tt2",
+    "course": "SS-4103",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "Economic & Social Factors in Entrepreneurship",
+      "Schumpeter's Theory of Entrepreneurship",
+      "SWOT Analysis for IT Venture",
+      "Starting from Scratch Considerations",
+      "Business Plan Importance"
+    ],
+    "question": "Answer all questions: **[5 x 4 = 20, or 5 marks each]**\n\n**Question 1:** Discuss Economic and Social factors affecting entrepreneurship development. **[5]**\n\n**Question 2:** Elaborate Schumpeter Theory of Entrepreneurship. **[5]**\n\n**Question 3:** Discuss with an example how SWOT analysis is conducted? **[5]**\n\n**Question 4:** Explain the key considerations to start from the scratch. **[5]**\n\n**Question 5:** Discuss the importance of business plan for any entrepreneurial initiative. **[5]**",
+    "subparts": [
+      {
+        "id": "ss-4103-term-niter-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 5,
+        "topics": [
+          "Economic & Social Factors in Entrepreneurship"
+        ],
+        "question": "Discuss Economic and Social factors affecting entrepreneurship development.",
+        "solution": {
+          "steps": [
+            "1. **Economic Factors Affecting Entrepreneurship:**",
+            "- **Capital Availability:** Access to seed funding, venture capital, angel investors, and favorable bank credit drives venture birth and expansion.",
+            "- **Market Demand & Purchasing Power:** Growing disposable income and expanding digital markets create commercial viability for innovative IT products.",
+            "- **Infrastructure & Connectivity:** High-speed internet, reliable cloud hosting, electricity, and transportation lower operational costs.",
+            "- **Labor & Technical Talent:** Availability of skilled software engineers, data analysts, and agile managers at competitive wage rates.",
+            "2. **Social and Cultural Factors Affecting Entrepreneurship:**",
+            "- **Cultural Attitude Toward Risk & Failure:** Societies celebrating risk-taking and viewing failure as learning cultivate higher startup density compared to risk-averse cultures.",
+            "- **Social Support & Recognition:** Societal respect and family backing for founders as prestigious career paths motivate youth toward venture creation.",
+            "- **Education & Entrepreneurial Training:** University curricula incorporating startup incubators, coding hackathons, and IP commercialization.",
+            "- **Role Models & Networking:** Thriving tech ecosystems and mentorship networks providing aspiring founders with accessible playbooks."
+          ],
+          "answer": "Economic factors supply capital, market demand, and infrastructure; social factors foster risk tolerance, societal backing, and an entrepreneurial innovation culture.",
+          "marking_hint": "2.5 marks for economic factors; 2.5 marks for social factors."
+        }
+      },
+      {
+        "id": "ss-4103-term-niter-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 5,
+        "topics": [
+          "Schumpeter's Theory of Entrepreneurship"
+        ],
+        "question": "Elaborate Schumpeter Theory of Entrepreneurship.",
+        "solution": {
+          "steps": [
+            "1. **Core Premise of Schumpeterian Theory:**",
+            "- Formulated by economist Joseph Schumpeter, this theory asserts that the entrepreneur is the central dynamic driver of economic development through **innovation**.",
+            "- Economic progress is not a gradual circular flow, but a discontinuous disruptive process termed **Creative Destruction** (*gale of creative destruction*), where innovative products replace antiquated industrial models.",
+            "2. **Five Types of Schumpeterian Innovations (New Combinations):**",
+            "- **Introduction of a New Good:** Launching a product consumers are unfamiliar with or of superior qualitative utility (e.g., Apple iPhone).",
+            "- **Introduction of a New Method of Production:** Developing novel manufacturing or software deployment techniques (e.g., Cloud SaaS pipelines).",
+            "- **Opening of a New Market:** Entering an untapped geographic or consumer segment.",
+            "- **Conquest of a New Source of Supply:** Securing novel raw materials or components.",
+            "- **Carrying out New Organization of an Industry:** Creating a monopoly position or disrupting established industry structures (e.g., Uber disrupting taxis).",
+            "3. **Distinction Between Manager and Entrepreneur:**",
+            "- A manager merely allocates resources within existing operational routines.",
+            "- An entrepreneur undertakes proactive risk, initiates new combinations, and transforms economic equilibria."
+          ],
+          "answer": "Schumpeter posits the entrepreneur as the prime innovator driving economic growth through 'Creative Destruction' by introducing five new industrial combinations.",
+          "marking_hint": "2 marks for core innovation & creative destruction concept; 2.5 marks for detailing the 5 types of innovation; 0.5 mark for manager vs. entrepreneur distinction."
+        }
+      },
+      {
+        "id": "ss-4103-term-niter-tt2-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 5,
+        "topics": [
+          "SWOT Analysis for IT Venture"
+        ],
+        "question": "Discuss with an example how SWOT analysis is conducted?",
+        "solution": {
+          "steps": [
+            "1. **SWOT Analysis Framework:**",
+            "A strategic planning tool that evaluates Internal factors (**Strengths, Weaknesses**) and External factors (**Opportunities, Threats**) to align business capabilities with competitive market conditions.",
+            "2. **Real-World IT Example: AI-Powered Telehealth SaaS Startup:**",
+            "| Category | Internal Factors | Strategic Action |",
+            "| :--- | :--- | :--- |",
+            "| **Strengths (S)** | Proprietary low-latency diagnostic AI, HIPAA-compliant cloud architecture, experienced engineering team. | Leverage technical superiority to secure hospital enterprise contracts. |",
+            "| **Weaknesses (W)** | Limited brand awareness, modest marketing budget, reliance on third-party cloud GPUs. | Outsource digital marketing and partner with established medical clinics. |",
+            "| **Category** | **External Factors** | **Strategic Action** |",
+            "| **Opportunities (O)** | Surging demand for remote patient consultations, government digital health subsidies, underserved rural areas. | Expand product to bilingual rural clinics and capture subsidized tenders. |",
+            "| **Threats (T)** | Stringent healthcare data privacy regulations, aggressive competition from big tech, cybersecurity ransomware risks. | Implement end-to-end zero-trust encryption and retain specialized healthcare legal counsel. |",
+            "3. **Strategic Synthesis:** Combine Strengths with Opportunities (SO strategies) to drive market penetration while mitigating Weaknesses and Threats (WT strategies)."
+          ],
+          "answer": "SWOT evaluates internal Strengths/Weaknesses and external Opportunities/Threats. Illustrated via an AI Telehealth SaaS matrix driving targeted strategic actions.",
+          "marking_hint": "2 marks for explaining the SWOT methodology; 3 marks for a detailed, realistic IT business example matrix."
+        }
+      },
+      {
+        "id": "ss-4103-term-niter-tt2-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 5,
+        "topics": [
+          "Starting from Scratch Considerations"
+        ],
+        "question": "Explain the key considerations to start from the scratch.",
+        "solution": {
+          "steps": [
+            "1. **Problem Validation & Product-Market Fit (PMF):**",
+            "- Identify a genuine, high-friction pain point that customers are actively willing to pay to solve.",
+            "- Conduct customer interviews and build a Minimum Viable Product (MVP) to validate core hypotheses before investing capital.",
+            "2. **Founding Team & Skill Complementarity:**",
+            "- Assemble a core team balancing technical execution, product design, and business/sales development (Hacker, Hipster, Hustler).",
+            "3. **Financial Runway & Unit Economics:**",
+            "- Calculate the initial burn rate, customer acquisition cost (CAC), and customer lifetime value (LTV).",
+            "- Ensure at least 12–18 months of financial runway through bootstrapping, personal savings, or angel investment.",
+            "4. **Legal, Regulatory & Intellectual Property Foundation:**",
+            "- Choose appropriate corporate registration (Pvt. Ltd. / LLC), founder equity vesting schedules, trademark protection, and regulatory licenses.",
+            "5. **Go-To-Market (GTM) Strategy & Distribution:**",
+            "- Define clear customer acquisition channels (SEO, content, direct B2B sales, viral referral loops) rather than relying solely on product novelty."
+          ],
+          "answer": "Starting from scratch requires customer-validated PMF, a complementary founding team, clear unit economics/runway, a sound legal foundation, and an effective GTM strategy.",
+          "marking_hint": "1 mark each for discussing five fundamental pillars: validation/MVP, team, finance/runway, legal/IP, and GTM."
+        }
+      },
+      {
+        "id": "ss-4103-term-niter-tt2-q5",
+        "qno": "Q5",
+        "label": "Question 5",
+        "marks": 5,
+        "topics": [
+          "Business Plan Importance"
+        ],
+        "question": "Discuss the importance of business plan for any entrepreneurial initiative.",
+        "solution": {
+          "steps": [
+            "1. **Strategic Roadmap & Vision Alignment:**",
+            "- Serves as an operational blueprint translating abstract entrepreneurial ideas into concrete milestones, resource schedules, and quarterly objectives.",
+            "2. **Fundraising & Investor Confidence:**",
+            "- Venture capitalists, angel investors, and banks demand a rigorous business plan demonstrating market size (TAM/SAM/SOM), revenue models, and projected ROI before committing capital.",
+            "3. **Risk Identification & Mitigation:**",
+            "- Forces founders to perform thorough competitor benchmarking, regulatory risk assessments, and financial sensitivity analyses before encountering critical failures.",
+            "4. **Resource Allocation & Budgetary Discipline:**",
+            "- Provides structured oversight on cash flow projections, operational expenditures, hiring timelines, and working capital needs.",
+            "5. **Performance Measurement Benchmark:**",
+            "- Establishes Key Performance Indicators (KPIs) against which real progress, customer traction, and product timelines are objectively evaluated."
+          ],
+          "answer": "A business plan is indispensable as an operational roadmap, an essential investor fundraising tool, a proactive risk mitigation instrument, and a KPI performance benchmark.",
+          "marking_hint": "1 mark each for discussing five core benefits: operational roadmap, fundraising, risk mitigation, resource discipline, and progress benchmarking."
+        }
+      }
+    ]
   }
 ]

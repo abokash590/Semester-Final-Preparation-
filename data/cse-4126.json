@@ -1598,5 +1598,363 @@
     },
     "similar_to": [],
     "verified": false
+  },
+  {
+    "id": "cse-4126-term-niter-tt1",
+    "course": "CSE-4126",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 1,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 1",
+    "marks": 20,
+    "topics": [
+      "Data Science Challenges",
+      "Data Collection Methodology",
+      "Salaries & Skewness Analysis",
+      "Five Number Summary & Quantile Plot",
+      "Frequency Table & Histogram",
+      "Mean, Variance & Correlation"
+    ],
+    "question": "Answer all questions: **[20]**\n\n**Question 1:** Define Data Science. What are the common challenges in Data collection, briefly describe. **[3]**\n\n**Question 2:** Suppose, you need to collect data whether your customers are satisfied with your product or not. Which method will you apply to collect the data? Explain with proper justification. **[3]**\n\n**Question 3:** The monthly salaries (in thousand taka) of 11 employees are: 25, 28, 30, 32, 35, 36, 38, 40, 42, 45, 180. Calculate the mean, and mode of the dataset and determine whether the dataset is likely to be Symmetric, Positively or Negatively skewed. **[3]**\n\n**Question 4:** Given dataset: **[3]**\n\n| Age | 1 | 2 | 3 | 4 | 5 | 6 |\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n| **Frequency** | 2 | 2 | 1 | 3 | 2 | 3 |\n\na) Find the Quartile for the given dataset and represent it with Five number summary.  \nb) Calculate Interquartile Range (IQR), and determine if there are any outliers?  \nc) Finally draw a Quantile plot for the given dataset.\n\n**Question 5:** The following are examination scores: **[4]**  \n$$42, 45, 47, 48, 51, 53, 55, 56, 57, 61, 63, 65, 66, 68, 72, 75, 78, 81, 85, 90$$  \nConsidering intervals: $[40-49], [50-59], [60-69], [70-79], [80-89], [90-99]$  \na) Construct a frequency table.  \nb) Draw a histogram using the frequency table.  \nc) Identify the interval with the highest frequency.  \nd) Describe the overall distribution of the scores based on the histogram.\n\n**Question 6:** The study hours and examination marks obtained by seven students as follows: **[4]**\n\n| Study Hour (X) | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| **Marks (Y)** | 45 | 50 | 56 | 62 | 67 | 73 | 80 |\n\na) Calculate the Mean, Variance, and Standard Deviation of the examination marks and explain your observation based on the result.  \nb) Construct a scatter plot along X and Y axis and determine the type of correlation between study hours and examination marks.",
+    "subparts": [
+      {
+        "id": "cse-4126-term-niter-tt1-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 3,
+        "topics": [
+          "Data Science Challenges"
+        ],
+        "question": "Define Data Science. What are the common challenges in Data collection, briefly describe.",
+        "solution": {
+          "steps": [
+            "1. **Data Science Definition:** Data Science is an interdisciplinary field integrating statistics, computer science, domain knowledge, and machine learning to extract actionable insights and meaningful knowledge from structured and unstructured data.",
+            "2. **Common Challenges in Data Collection:**",
+            "- **Missing & Incomplete Data:** Unrecorded values, non-response bias, or communication dropouts during logging.",
+            "- **Data Quality & Noise:** Transcription typos, duplicate records, sensor drift, and transmission errors.",
+            "- **Sampling Bias:** Non-representative sample distributions skewing predictive validity.",
+            "- **Privacy & Regulatory Compliance:** Navigating GDPR, ethical consent, and sensitive PII anonymization."
+          ],
+          "answer": "Data Science extracts knowledge from data. Key collection bottlenecks include missing data, noisy records, sampling bias, and regulatory privacy constraints.",
+          "marking_hint": "1 mark for definition; 2 marks for discussing at least 3 distinct collection challenges."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt1-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 3,
+        "topics": [
+          "Data Collection Methodology"
+        ],
+        "question": "Which method will you apply to collect customer satisfaction data? Explain with proper justification.",
+        "solution": {
+          "steps": [
+            "1. **Recommended Method:** A hybrid approach combining **In-App Automated Micro-Surveys (CSAT / Net Promoter Score - NPS)** immediately post-purchase or post-service with optional free-form feedback.",
+            "2. **Justification:**",
+            "- **High Response Rate & Immediate Context:** Capturing sentiment right after key user interactions yields authentic, high-fidelity feedback before memory fades.",
+            "- **Quantifiable & Standardized:** Standard 1-5 star CSAT or 0-10 NPS scales enable clear statistical tracking over time.",
+            "- **Minimal Friction:** Takes less than 10 seconds, avoiding respondent fatigue associated with lengthy email forms."
+          ],
+          "answer": "In-app CSAT / NPS micro-surveys offer minimal user friction, immediate contextual validity, and clean standardized quantitative metrics.",
+          "marking_hint": "1.5 marks for selecting an appropriate method; 1.5 marks for justified reasoning."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt1-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 3,
+        "topics": [
+          "Salaries & Skewness Analysis"
+        ],
+        "question": "Salaries of 11 employees: 25, 28, 30, 32, 35, 36, 38, 40, 42, 45, 180 (thousand taka). Calculate mean, mode, and skewness.",
+        "solution": {
+          "steps": [
+            "1. **Calculate Mean:**",
+            "$$\\text{Sum} = 25 + 28 + 30 + 32 + 35 + 36 + 38 + 40 + 42 + 45 + 180 = 531$$",
+            "$$\\text{Mean } \\bar{x} = \\frac{531}{11} \\approx \\mathbf{48.27} \\text{ thousand taka}$$",
+            "2. **Calculate Mode:**",
+            "All 11 salary values appear exactly once. Hence, there is **no unique mode** (multimodal / uniform frequency).",
+            "3. **Calculate Median & Determine Skewness:**",
+            "- Sorted dataset ($N = 11$): 25, 28, 30, 32, 35, **36**, 38, 40, 42, 45, 180.",
+            "- Median is the 6th value: **36 thousand taka**.",
+            "- Comparison: $\\text{Mean } (48.27) > \\text{Median } (36.00)$.",
+            "- Because the mean is substantially pulled to the right by the extreme outlier salary of 180k, the distribution is **Positively Skewed (Right-Skewed)**."
+          ],
+          "answer": "Mean = 48.27k, Mode = None (no repeating values), Median = 36k. The dataset is Positively Skewed.",
+          "marking_hint": "1 mark for mean; 1 mark for mode; 1 mark for median comparison and correct skewness deduction."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt1-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 3,
+        "topics": [
+          "Five Number Summary & Quantile Plot"
+        ],
+        "question": "Age dataset with frequencies: 1(2), 2(2), 3(1), 4(3), 5(2), 6(3). a) Quartiles & Five-number summary. b) IQR and outliers. c) Quantile plot description.",
+        "solution": {
+          "steps": [
+            "1. **Expanded Ordered Data ($N = 13$):**",
+            "$$1, \\; 1, \\; 2, \\; 2, \\; 3, \\; 4, \\; 4, \\; 4, \\; 5, \\; 5, \\; 6, \\; 6, \\; 6$$",
+            "2. **Five-Number Summary:**",
+            "- **Minimum:** 1",
+            "- **Q1 (First Quartile):** Position $0.25 \\times (13 + 1) = 3.5$ -> average of 3rd (2) and 4th (2) value = **2**",
+            "- **Median (Q2):** Position $\\frac{13+1}{2} = 7^{\\text{th}}$ value = **4**",
+            "- **Q3 (Third Quartile):** Position $0.75 \\times (13 + 1) = 10.5$ -> average of 10th (5) and 11th (6) value = **5.5**",
+            "- **Maximum:** 6",
+            "- Five-number summary: **[1, 2, 4, 5.5, 6]**",
+            "3. **Interquartile Range (IQR) & Outlier Detection:**",
+            "- $\\text{IQR} = Q_3 - Q_1 = 5.5 - 2 = \\mathbf{3.5}$",
+            "- Lower Outer Fence: $Q_1 - 1.5 \\times \\text{IQR} = 2 - 1.5(3.5) = 2 - 5.25 = -3.25$",
+            "- Upper Outer Fence: $Q_3 + 1.5 \\times \\text{IQR} = 5.5 + 1.5(3.5) = 5.5 + 5.25 = 10.75$",
+            "- Since all observations lie well within $[-3.25, 10.75]$, there are **no outliers**.",
+            "4. **Quantile Plot:**",
+            "Pairs each ordered value $x_{(i)}$ against its percentile fraction $f_i = \\frac{i - 0.5}{N}$, plotting points $(f_i, x_{(i)})$."
+          ],
+          "answer": "Five Number Summary: Min=1, Q1=2, Median=4, Q3=5.5, Max=6. IQR = 3.5. Outliers: None detected.",
+          "marking_hint": "1 mark for five-number summary; 1 mark for IQR and outlier boundaries; 1 mark for quantile plot."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt1-q5",
+        "qno": "Q5",
+        "label": "Question 5",
+        "marks": 4,
+        "topics": [
+          "Frequency Table & Histogram"
+        ],
+        "question": "20 exam scores. Intervals: [40-49], [50-59], [60-69], [70-79], [80-89], [90-99]. a) Frequency table. b) Histogram. c) Highest frequency interval. d) Distribution description.",
+        "solution": {
+          "steps": [
+            "**(a) Frequency Table Construction:**",
+            "Scores: 42, 45, 47, 48, 51, 53, 55, 56, 57, 61, 63, 65, 66, 68, 72, 75, 78, 81, 85, 90 ($N = 20$).",
+            "| Interval | Tally | Frequency | Relative Frequency |",
+            "| :---: | :---: | :---: | :---: |",
+            "| [40–49] | 42, 45, 47, 48 | 4 | 20% |",
+            "| [50–59] | 51, 53, 55, 56, 57 | 5 | 25% |",
+            "| [60–69] | 61, 63, 65, 66, 68 | 5 | 25% |",
+            "| [70–79] | 72, 75, 78 | 3 | 15% |",
+            "| [80–89] | 81, 85 | 2 | 10% |",
+            "| [90–99] | 90 | 1 | 5% |",
+            "| **Total** | | **20** | **100%** |",
+            "**(b) Histogram Visualization:**",
+            "Bar heights corresponding to frequencies: [40-49]: 4, [50-59]: 5, [60-69]: 5, [70-79]: 3, [80-89]: 2, [90-99]: 1.",
+            "**(c) Interval with Highest Frequency:**",
+            "The intervals **[50–59]** and **[60–69]** share the highest frequency of **5 students each**.",
+            "**(d) Overall Distribution Description:**",
+            "The histogram exhibits a unimodal/bimodal center around 50–69 marks, tapering off smoothly toward higher score ranges with a mild **positive skew**."
+          ],
+          "answer": "Constructed frequency distribution table; highest frequency intervals are [50-59] and [60-69] (5 each); distribution is mildly right-skewed.",
+          "marking_hint": "1.5 marks for frequency table; 1 mark for histogram description; 0.5 mark for modal intervals; 1 mark for distribution analysis."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt1-q6",
+        "qno": "Q6",
+        "label": "Question 6",
+        "marks": 4,
+        "topics": [
+          "Mean, Variance & Correlation"
+        ],
+        "question": "Study hours X and marks Y of 7 students. a) Calculate Mean, Variance, Standard Deviation of marks Y. b) Scatter plot and correlation type.",
+        "solution": {
+          "steps": [
+            "**(a) Mean, Variance, and Standard Deviation of Marks (Y):**",
+            "Marks $Y$: 45, 50, 56, 62, 67, 73, 80 ($n = 7$).",
+            "- Sum $\\sum Y = 45 + 50 + 56 + 62 + 67 + 73 + 80 = 433$.",
+            "- Mean: $\\bar{Y} = \\frac{433}{7} \\approx \\mathbf{61.857}$.",
+            "- Deviations $(Y_i - \\bar{Y})$: -16.857, -11.857, -5.857, 0.143, 5.143, 11.143, 18.143.",
+            "- Squared deviations $\\sum (Y_i - \\bar{Y})^2 = 284.16 + 140.59 + 34.30 + 0.02 + 26.45 + 124.17 + 329.17 = 898.86$.",
+            "- Sample Variance: $s^2 = \\frac{898.86}{n - 1} = \\frac{898.86}{6} \\approx \\mathbf{149.81}$. (Population variance $\\sigma^2 \\approx 128.41$).",
+            "- Sample Standard Deviation: $s = \\sqrt{149.81} \\approx \\mathbf{12.24}$.",
+            "- *Observation:* The marks are spread around an average of ~62 marks with a standard deviation of ~12.2 marks.",
+            "**(b) Scatter Plot & Correlation:**",
+            "- For every 1-hour increase in study time $X$, marks $Y$ increase steadily by roughly 5.8 marks.",
+            "- Pearson correlation $r \\approx +0.999$, indicating an **exceptionally strong positive linear correlation**."
+          ],
+          "answer": "Mean Marks = 61.86, Sample Variance = 149.81, Standard Deviation = 12.24. Strong positive linear correlation exists between study hours and marks.",
+          "marking_hint": "2 marks for mean, variance, and standard deviation calculations; 2 marks for scatter plot and correlation determination."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cse-4126-term-niter-tt2",
+    "course": "CSE-4126",
+    "exam": "term",
+    "college": "NITER",
+    "term_no": 2,
+    "set_no": 1,
+    "year": 2025,
+    "qno": "Term Test 2",
+    "marks": 20,
+    "topics": [
+      "Exploratory Data Analysis (EDA)",
+      "Pandas Data Preprocessing",
+      "Chi-Square Test of Independence",
+      "Pearson Correlation Coefficient Matrix"
+    ],
+    "question": "Answer all questions: **[20]**\n\n**Question 1:** Define Exploratory Data Analysis (EDA) with its variant. Select the most appropriate visualization technique from Histogram, Box Plot, and Bar Chart for the given dataset with proper justification. **[6]**\n\n| Student | Marks | Study Hours | Language |\n| :---: | :---: | :---: | :---: |\n| S1 | 45 | 2 | C++ |\n| S2 | 60 | 3 | PYTHON |\n| S3 | 75 | 4 | C |\n| S4 | 85 | 5 | JAVA |\n| S5 | 98 | 8 | PYTHON |\n\n**Question 2:** Perform the following Data Preprocessing operations on the following datasets using pandas (pd). **[4]**\n\n*Customer Table:*\n\n| Customer_ID | Age | Name |\n| :---: | :---: | :---: |\n| 101 | 24 | John |\n| 102 | '22' | Alex |\n| 102 | 23 | None |\n\n*Order Table:*\n\n| Order_ID | Cust_ID | Amount |\n| :---: | :---: | :---: |\n| 1 | 101 | np.nan |\n| 2 | 102 | 7000 |\n| 2 | 102 | 7000 |\n\nA) Delete NULL values from the Customer table and show output.  \nB) Replace NULL with the Mean Values of the Order table and show output.  \nC) Remove Duplicates from both tables and show output.  \nD) Perform an Inner Join between Customer and Order Table and show output.\n\n**Question 3:** A retail shop wants to know does the customer's occupation affects whether they buy or not buy a premium membership. Find out this relationship for the following table using the chi-square method on critical value ($\\chi^2_{0.05, 2} = 5.991$). **[4]**\n\n| Occupation | Bought | Not Bought |\n| :--- | :---: | :---: |\n| **Student** | 18 | 22 |\n| **Employee** | 31 | 9 |\n| **Business** | 17 | 23 |\n\n**Question 4:** Find the Pearson Correlation Coefficient matrix for the given dataset and answer the following questions: **[6]**\n\n| Person | Height(cm) | Weight(kg) | Exercise (H) |\n| :---: | :---: | :---: | :---: |\n| A | 160 | 55 | 3 |\n| B | 170 | 68 | 5 |\n| C | 180 | 72 | 2 |\n\nA) Which pair has the strongest Positive relationship?  \nB) Which pair has a Negative relationship?  \nC) Which pair is weakly correlated or almost uncorrelated?",
+    "subparts": [
+      {
+        "id": "cse-4126-term-niter-tt2-q1",
+        "qno": "Q1",
+        "label": "Question 1",
+        "marks": 6,
+        "topics": [
+          "Exploratory Data Analysis (EDA)"
+        ],
+        "question": "Define Exploratory Data Analysis (EDA) with its variants. Select the most appropriate visualization technique from Histogram, Box Plot, and Bar Chart for the given dataset with proper justification.",
+        "solution": {
+          "steps": [
+            "1. **Exploratory Data Analysis (EDA) Definition:**",
+            "An analytical approach invented by John Tukey to analyze and summarize datasets' main characteristics, often with visual methods, before applying formal statistical modeling or machine learning.",
+            "2. **Variants of EDA:**",
+            "- **Univariate EDA:** Examines one variable at a time (e.g., summary statistics, histogram of Marks).",
+            "- **Bivariate EDA:** Explores pairwise relationships between two variables (e.g., scatter plot of Study Hours vs. Marks).",
+            "- **Multivariate EDA:** Evaluates interactions among three or more variables simultaneously (e.g., correlation heatmaps, pairplots).",
+            "3. **Visualization Technique Selection for Dataset:**",
+            "- **Bar Chart:** *Best for the categorical variable `Language`.* Compares frequencies of programming languages (Python: 2, C++: 1, C: 1, Java: 1).",
+            "- **Histogram:** *Best for continuous variables with large samples.* Given the small sample ($N=5$), a histogram provides limited density resolution, but displays score distribution.",
+            "- **Box Plot:** *Best for displaying median, quartiles, and detecting outliers in `Marks` or `Study Hours`.* Summarizes range ($45$ to $98$) and median ($75$) cleanly without sample size distortion."
+          ],
+          "answer": "EDA explores datasets visually and statistically. For this dataset, a Bar Chart is optimal for categorical Language, while a Box Plot effectively captures Marks and Study Hours distribution.",
+          "marking_hint": "3 marks for EDA definition and univariate/bivariate/multivariate variants; 3 marks for evaluating and justifying Histogram, Box Plot, and Bar Chart."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt2-q2",
+        "qno": "Q2",
+        "label": "Question 2",
+        "marks": 4,
+        "topics": [
+          "Pandas Data Preprocessing"
+        ],
+        "question": "Perform pandas data preprocessing: A) Delete NULL from Customer. B) Replace NULL with Mean in Order. C) Remove Duplicates. D) Inner Join Customer and Order tables.",
+        "solution": {
+          "steps": [
+            "**A) Delete NULL values from Customer table:**",
+            "```python",
+            "df_cust_clean = df_customer.dropna()",
+            "```",
+            "Row with Customer_ID 102 (Name: None) is dropped:",
+            "| Customer_ID | Age | Name |",
+            "| :---: | :---: | :---: |",
+            "| 101 | 24 | John |",
+            "| 102 | '22' | Alex |",
+            "**B) Replace NULL with Mean Values in Order table:**",
+            "Existing non-null amounts are 7000 and 7000, so Mean = 7000.0.",
+            "```python",
+            "df_order['Amount'] = df_order['Amount'].fillna(df_order['Amount'].mean())",
+            "```",
+            "| Order_ID | Cust_ID | Amount |",
+            "| :---: | :---: | :---: |",
+            "| 1 | 101 | 7000.0 |",
+            "| 2 | 102 | 7000.0 |",
+            "| 2 | 102 | 7000.0 |",
+            "**C) Remove Duplicates from both tables:**",
+            "```python",
+            "df_cust_dedup = df_customer.drop_duplicates()",
+            "df_order_dedup = df_order.drop_duplicates()",
+            "```",
+            "Order table drops duplicate row 2 (leaving 2 unique orders).",
+            "**D) Inner Join between Customer and Order Table:**",
+            "```python",
+            "merged_df = pd.merge(df_cust_clean, df_order_dedup, left_on='Customer_ID', right_on='Cust_ID', how='inner')",
+            "```",
+            "| Customer_ID | Age | Name | Order_ID | Cust_ID | Amount |",
+            "| :---: | :---: | :---: | :---: | :---: | :---: |",
+            "| 101 | 24 | John | 1 | 101 | 7000.0 |",
+            "| 102 | '22' | Alex | 2 | 102 | 7000.0 |"
+          ],
+          "answer": "Accurately demonstrated pandas commands and tabular outputs for dropna(), fillna(mean), drop_duplicates(), and pd.merge() inner join.",
+          "marking_hint": "1 mark each for parts A, B, C, and D with python code and resultant table."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt2-q3",
+        "qno": "Q3",
+        "label": "Question 3",
+        "marks": 4,
+        "topics": [
+          "Chi-Square Test of Independence"
+        ],
+        "question": "Retail shop customer occupation vs buying premium membership. Perform Chi-square test on critical value chi^2_{0.05, 2} = 5.991.",
+        "solution": {
+          "steps": [
+            "1. **Observed Frequencies ($O$) & Marginals:**",
+            "| Occupation | Bought | Not Bought | Total |",
+            "| :--- | :---: | :---: | :---: |",
+            "| **Student** | 18 | 22 | **40** |",
+            "| **Employee** | 31 | 9 | **40** |",
+            "| **Business** | 17 | 23 | **40** |",
+            "| **Total** | **66** | **54** | **N = 120** |",
+            "2. **Calculate Expected Frequencies ($E = \\frac{\\text{Row Total} \\times \\text{Col Total}}{N}$):**",
+            "- $E(\\text{Student, Bought}) = \\frac{40 \\times 66}{120} = 22.0$",
+            "- $E(\\text{Student, Not Bought}) = \\frac{40 \\times 54}{120} = 18.0$",
+            "- $E(\\text{Employee, Bought}) = \\frac{40 \\times 66}{120} = 22.0$",
+            "- $E(\\text{Employee, Not Bought}) = \\frac{40 \\times 54}{120} = 18.0$",
+            "- $E(\\text{Business, Bought}) = \\frac{40 \\times 66}{120} = 22.0$",
+            "- $E(\\text{Business, Not Bought}) = \\frac{40 \\times 54}{120} = 18.0$",
+            "3. **Compute $\\chi^2 = \\sum \\frac{(O - E)^2}{E}$:**",
+            "- Student: $\\frac{(18-22)^2}{22} + \\frac{(22-18)^2}{18} = \\frac{16}{22} + \\frac{16}{18} \\approx 0.727 + 0.889 = 1.616$",
+            "- Employee: $\\frac{(31-22)^2}{22} + \\frac{(9-18)^2}{18} = \\frac{81}{22} + \\frac{81}{18} \\approx 3.682 + 4.500 = 8.182$",
+            "- Business: $\\frac{(17-22)^2}{22} + \\frac{(23-18)^2}{18} = \\frac{25}{22} + \\frac{25}{18} \\approx 1.136 + 1.389 = 2.525$",
+            "$$\\chi^2_{\\text{calc}} = 1.616 + 8.182 + 2.525 = \\mathbf{12.323}$$",
+            "4. **Statistical Decision:**",
+            "- Degrees of freedom: $df = (r - 1)(c - 1) = (3 - 1)(2 - 1) = 2$.",
+            "- Critical value at $\\alpha = 0.05$: $\\chi^2_{\\text{crit}} = 5.991$.",
+            "- Since $\\chi^2_{\\text{calc}} (12.323) > \\chi^2_{\\text{crit}} (5.991)$, we **reject the null hypothesis ($H_0$)**."
+          ],
+          "answer": "Calculated Chi-Square = 12.323 > 5.991. We reject H0, concluding customer occupation significantly affects whether they buy premium membership.",
+          "marking_hint": "1 mark for expected frequency matrix; 2 marks for chi-square computation; 1 mark for critical value comparison and statistical inference."
+        }
+      },
+      {
+        "id": "cse-4126-term-niter-tt2-q4",
+        "qno": "Q4",
+        "label": "Question 4",
+        "marks": 6,
+        "topics": [
+          "Pearson Correlation Coefficient Matrix"
+        ],
+        "question": "Find the Pearson Correlation Coefficient matrix for Height(cm), Weight(kg), and Exercise(H) for Persons A, B, C. Answer: A) Strongest positive relationship. B) Negative relationship. C) Weakly correlated pair.",
+        "solution": {
+          "steps": [
+            "1. **Summary Statistics ($N = 3$):**",
+            "- Height $H = [160, 170, 180] \\implies \\bar{H} = 170$, $h' = H - \\bar{H} = [-10, 0, 10]$, $\\sum h'^2 = 100 + 0 + 100 = 200$.",
+            "- Weight $W = [55, 68, 72] \\implies \\bar{W} = \\frac{195}{3} = 65$, $w' = W - \\bar{W} = [-10, 3, 7]$, $\\sum w'^2 = 100 + 9 + 49 = 158$.",
+            "- Exercise $E = [3, 5, 2] \\implies \\bar{E} = \\frac{10}{3} \\approx 3.333$, $e' = E - \\bar{E} = [-0.333, 1.667, -1.333]$, $\\sum e'^2 = 0.111 + 2.778 + 1.778 = 4.667$.",
+            "2. **Calculate Pairwise Pearson Correlation $r = \\frac{\\sum x' y'}{\\sqrt{\\sum x'^2 \\sum y'^2}}$:**",
+            "- **Height and Weight ($r_{H, W}$):**",
+            "  $\\sum h' w' = (-10)(-10) + (0)(3) + (10)(7) = 100 + 0 + 70 = 170$.",
+            "  $$r_{H, W} = \\frac{170}{\\sqrt{200 \\times 158}} = \\frac{170}{\\sqrt{31600}} = \\frac{170}{177.76} \\approx \\mathbf{+0.9563}$$",
+            "- **Height and Exercise ($r_{H, E}$):**",
+            "  $\\sum h' e' = (-10)(-0.333) + (0)(1.667) + (10)(-1.333) = 3.333 - 13.333 = -10.0$.",
+            "  $$r_{H, E} = \\frac{-10.0}{\\sqrt{200 \\times 4.667}} = \\frac{-10.0}{\\sqrt{933.33}} = \\frac{-10.0}{30.55} \\approx \\mathbf{-0.3273}$$",
+            "- **Weight and Exercise ($r_{W, E}$):**",
+            "  $\\sum w' e' = (-10)(-0.333) + (3)(1.667) + (7)(-1.333) = 3.333 + 5.001 - 9.331 = -0.997 \\approx -1.0$.",
+            "  $$r_{W, E} = \\frac{-1.0}{\\sqrt{158 \\times 4.667}} = \\frac{-1.0}{\\sqrt{737.33}} = \\frac{-1.0}{27.15} \\approx \\mathbf{-0.0368}$$",
+            "3. **Pearson Correlation Coefficient Matrix:**",
+            "| | Height | Weight | Exercise |",
+            "| :--- | :---: | :---: | :---: |",
+            "| **Height** | 1.000 | 0.956 | -0.327 |",
+            "| **Weight** | 0.956 | 1.000 | -0.037 |",
+            "| **Exercise** | -0.327 | -0.037 | 1.000 |",
+            "4. **Question Answers:**",
+            "- **A) Strongest Positive Relationship:** **Height and Weight** ($r = +0.956$).",
+            "- **B) Negative Relationship:** **Height and Exercise** ($r = -0.327$).",
+            "- **C) Weakly Correlated / Almost Uncorrelated:** **Weight and Exercise** ($r = -0.037 \\approx 0$)."
+          ],
+          "answer": "Correlation Matrix computed. Height & Weight is strongest positive (0.956); Height & Exercise is negative (-0.327); Weight & Exercise is almost uncorrelated (-0.037).",
+          "marking_hint": "3 marks for computing pairwise correlation coefficients and matrix; 1 mark each for answering A, B, and C."
+        }
+      }
+    ]
   }
 ]

@@ -1600,25 +1600,12 @@ class CodexApp {
       `;
     }
 
-    card.innerHTML = `
-      <div class="card-header-row">
-        <div class="card-title-group">
-          <span class="q-label">${q.qno}</span>
-          <span class="marks-badge">${q.marks} Marks Total</span>
-          <span class="exam-year-badge">${q.exam === 'term' ? `${q.college || 'MEC'} • TERM TEST ${q.term_no || ''}` : `${q.exam.toUpperCase()} • ${q.year}`}</span>
-        </div>
-      </div>
+    const hasValidSolution = (Array.isArray(q.subparts) && q.subparts.some(s => s.solution?.steps?.length > 0)) ||
+                             (q.solution?.steps?.length > 0);
 
-      <!-- Question Set Content: All subquestions (a, b, c, d) and diagrams together -->
-      <div class="q-body-text question-set-body">${this.formatMarkdownText(q.question)}</div>
-
-      <!-- Solution Drawer for this entire Set (Hidden by default) -->
-      <div class="solution-section">
-        <button type="button" class="solution-toggle-btn" aria-expanded="false" onclick="app.toggleSolution('${q.id}')">
-          <svg class="toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          <span>Reveal Solution</span>
-        </button>
-        <div class="solution-drawer-body" id="sol-${q.id}">
+    const solutionContentHtml = hasValidSolution
+      ? `<div class="subparts-solutions-wrapper">${subpartsSolutionsHtml}</div>`
+      : `
           <div class="solution-chat-bubble-container">
             <div class="chat-avatar-wrapper">
               <img src="assets/avatar_clean.png" alt="Abokash" class="chat-sender-avatar">
@@ -1643,6 +1630,28 @@ class CodexApp {
               </div>
             </div>
           </div>
+      `;
+
+    card.innerHTML = `
+      <div class="card-header-row">
+        <div class="card-title-group">
+          <span class="q-label">${q.qno}</span>
+          <span class="marks-badge">${q.marks} Marks Total</span>
+          <span class="exam-year-badge">${q.exam === 'term' ? `${q.college || 'MEC'} • TERM TEST ${q.term_no || ''}` : `${q.exam.toUpperCase()} • ${q.year}`}</span>
+        </div>
+      </div>
+
+      <!-- Question Set Content: All subquestions (a, b, c, d) and diagrams together -->
+      <div class="q-body-text question-set-body">${this.formatMarkdownText(q.question)}</div>
+
+      <!-- Solution Drawer for this entire Set (Hidden by default) -->
+      <div class="solution-section">
+        <button type="button" class="solution-toggle-btn" aria-expanded="false" onclick="app.toggleSolution('${q.id}')">
+          <svg class="toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span>Reveal Solution</span>
+        </button>
+        <div class="solution-drawer-body" id="sol-${q.id}">
+          ${solutionContentHtml}
         </div>
       </div>
     `;
