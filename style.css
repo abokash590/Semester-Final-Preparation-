@@ -68,13 +68,19 @@
 
   /* Signature Accents: Forest Green #104535 & Black #18181B */
   --accent-primary: #104535;
-  --accent-primary-hover: #0c3629;
-  --accent-primary-dark: #07221a;
+  --accent-hover: #0c3629;
+  --accent-dark: #07221a;
+  --accent-primary-hover: var(--accent-hover);
+  --accent-primary-dark: var(--accent-dark);
 
-  --accent-orange: #104535;
-  --accent-orange-hover: #0c3629;
-  --accent-orange-bg: #EAF4F0;
-  --accent-orange-border: #BCE2D3;
+  --mint-bg: #EAF4F0;
+  --mint-soft: #F4F9F6;
+  --mint-border: #BCE2D3;
+
+  --accent-orange: var(--accent-primary);
+  --accent-orange-hover: var(--accent-hover);
+  --accent-orange-bg: var(--mint-bg);
+  --accent-orange-border: var(--mint-border);
 
   --accent-black: #18181B;
   --accent-black-hover: #27272A;
@@ -2162,22 +2168,24 @@ body.is-home-view .app-header,
   margin-top: 0.25rem !important;
 }
 
-/* Table Container with Crisp Outer Border */
+/* Table Container ("Clean Paper & Forest Emerald" Design System) */
+.table-wrap,
 .table-scroll-wrapper {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
   overflow-x: auto;
   margin: var(--space-md) 0;
-  border: 1px solid #D4D4D8;
-  border-radius: 8px;
-  background: #FFFFFF;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
 }
 
 .data-table,
 .q-body-text table {
   width: 100%;
+  min-width: 640px;
   border-collapse: collapse;
   font-size: var(--text-sm);
-  background-color: #FFFFFF;
+  background: var(--bg-surface);
   border: none;
   margin: 0;
 }
@@ -2186,10 +2194,10 @@ body.is-home-view .app-header,
 .data-table td,
 .q-body-text table th,
 .q-body-text table td {
-  padding: 11px 16px;
-  border-bottom: 1px solid #E4E4E7;
-  border-right: 1px solid #E4E4E7;
-  text-align: center;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
 }
 
 .data-table th:last-child,
@@ -2200,53 +2208,73 @@ body.is-home-view .app-header,
 }
 
 .data-table tbody tr:last-child td,
-.data-table tr:last-child td,
-.q-body-text table tbody tr:last-child td,
-.q-body-text table tr:last-child td {
+.q-body-text table tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* 1st Row (Header): Green Accent Tune */
+/* Header Cells */
 .data-table thead th,
-.data-table th,
-.q-body-text table thead th,
-.q-body-text table th {
-  background-color: #EBF4F0;
-  color: #104535;
-  font-weight: 800;
-  font-size: 0.82rem;
-  letter-spacing: 0.03em;
-  border-bottom: 2px solid rgba(16, 69, 53, 0.25);
+.q-body-text table thead th {
+  background: var(--mint-bg);
+  color: var(--accent-primary);
+  font-weight: 700;
+  border-bottom: 2px solid var(--mint-border);
 }
 
-/* Alternate Rows: 1st White, 2nd Ash (Chai color) */
-.data-table tbody tr:nth-child(odd),
-.data-table tr:nth-child(odd),
-.q-body-text table tbody tr:nth-child(odd),
-.q-body-text table tr:nth-child(odd) {
-  background-color: #FFFFFF;
+/* Body Cells */
+.data-table tbody td,
+.q-body-text table tbody td {
+  vertical-align: top;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
-.data-table tbody tr:nth-child(even),
-.data-table tr:nth-child(even),
-.q-body-text table tbody tr:nth-child(even),
-.q-body-text table tr:nth-child(even) {
-  background-color: #F1F3F5;
+/* Zebra Rows (Neutral Zinc Only) */
+.data-table tbody tr:nth-child(even) td,
+.q-body-text table tbody tr:nth-child(even) td {
+  background: var(--bg-app);
 }
 
-/* Row Hovering Effect */
-.data-table tbody tr,
-.data-table tr,
-.q-body-text table tbody tr,
-.q-body-text table tr {
-  transition: background-color 0.15s ease;
+/* First Column Emphasis */
+.data-table tbody td:first-child,
+.q-body-text table tbody td:first-child {
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-subtle);
 }
 
-.data-table tbody tr:hover,
-.data-table tr:hover:not(:first-child),
-.q-body-text table tbody tr:hover,
-.q-body-text table tr:hover:not(:first-child) {
-  background-color: #E2EFE9 !important;
+/* Row Hover State */
+.data-table tbody tr:hover td,
+.q-body-text table tbody tr:hover td {
+  background: var(--mint-soft);
+}
+
+.data-table tbody tr:hover td:first-child,
+.q-body-text table tbody tr:hover td:first-child {
+  background: var(--mint-bg);
+  color: var(--accent-primary);
+}
+
+/* Optional Table Modifiers */
+.data-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table .center {
+  text-align: center;
+}
+
+.data-table .badge {
+  display: inline-block;
+  background: var(--accent-primary);
+  color: var(--text-inverse);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 /* --------------------------------------------------------------------------
@@ -2331,7 +2359,13 @@ body.is-home-view .app-header,
 }
 
 .puzzle-states-horizontal .data-table th,
-.puzzle-states-horizontal .data-table td {
+.puzzle-states-horizontal .data-table td,
+.puzzle-states-horizontal .data-table thead th,
+.puzzle-states-horizontal .data-table tbody td,
+.puzzle-states-horizontal .data-table tbody td:first-child,
+.puzzle-states-horizontal .data-table tbody tr:nth-child(even) td,
+.puzzle-states-horizontal .data-table tbody tr:hover td,
+.puzzle-states-horizontal .data-table tbody tr:hover td:first-child {
   width: 42px;
   height: 42px;
   min-width: 42px;
@@ -2342,9 +2376,9 @@ body.is-home-view .app-header,
   font-family: var(--font-mono);
   font-size: 1.15rem;
   font-weight: 800;
-  color: #104535;
-  background: #FFFFFF;
-  border: 1.5px solid rgba(16, 69, 53, 0.25);
+  color: var(--accent-primary);
+  background: var(--bg-surface);
+  border: 1.5px solid var(--mint-border);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(16, 69, 53, 0.08);
   box-sizing: border-box;
@@ -2352,9 +2386,13 @@ body.is-home-view .app-header,
 
 /* Empty tile in 8-puzzle */
 .puzzle-states-horizontal .data-table td:empty,
-.puzzle-states-horizontal .data-table th:empty {
-  background: rgba(16, 69, 53, 0.04);
-  border: 1.5px dashed rgba(16, 69, 53, 0.2);
+.puzzle-states-horizontal .data-table th:empty,
+.puzzle-states-horizontal .data-table tbody td:first-child:empty,
+.puzzle-states-horizontal .data-table tbody tr:nth-child(even) td:empty,
+.puzzle-states-horizontal .data-table tbody tr:hover td:empty,
+.puzzle-states-horizontal .data-table tbody tr:hover td:first-child:empty {
+  background: var(--mint-soft);
+  border: 1.5px dashed var(--mint-border);
   box-shadow: none;
 }
 
