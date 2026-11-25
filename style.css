@@ -478,7 +478,11 @@ body.is-home-view .app-header,
 @media (prefers-reduced-motion: reduce) {
   .exam-countdown-btn::before,
   .exam-countdown-btn::after,
-  .exam-pulse-dot {
+  .exam-pulse-dot,
+  .popover-schedule-item.is-next::before,
+  .popover-schedule-item.is-next::after,
+  .popover-schedule-item.is-next .item-rem-badge,
+  .popover-schedule-item.is-next .item-rem-badge::before {
     animation: none !important;
   }
 }
@@ -632,8 +636,66 @@ body.is-home-view .app-header,
 }
 
 .popover-schedule-item.is-next {
-  background: rgba(16, 69, 53, 0.06);
-  border: 1.5px solid #104535;
+  position: relative;
+  background: #F4F9F6;
+  border: 1px solid transparent;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Matching Continuous Emerald Clock-Trace Border on Active Next Exam Card */
+.popover-schedule-item.is-next::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.6px;
+  background: conic-gradient(
+    from var(--exam-orbit-angle),
+    rgba(16, 69, 53, 0.16) 0deg,
+    rgba(16, 69, 53, 0.16) 235deg,
+    #22C55E 295deg,
+    #c8d94d 330deg,
+    #104535 352deg,
+    rgba(16, 69, 53, 0.16) 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+  animation: examOrbitSpin 4.2s linear infinite;
+}
+
+/* Matching Subtle Diagonal Light Sweep on Active Next Exam Card */
+.popover-schedule-item.is-next::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -65%;
+  width: 45%;
+  height: 140%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.65) 45%,
+    rgba(200, 217, 77, 0.22) 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 1;
+  animation: examSheenSweep 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.popover-schedule-item.is-next > * {
+  position: relative;
+  z-index: 2;
+}
+
+.popover-schedule-item.is-next:hover {
+  background: #EAF4EE;
 }
 
 .item-left {
@@ -695,9 +757,39 @@ body.is-home-view .app-header,
   font-weight: 700;
   color: #c8d94d;
   background: #104535;
-  padding: 1px 5px;
+  padding: 2px 6px;
   border-radius: 4px;
   margin-top: 2px;
+}
+
+.popover-schedule-item.is-next .item-rem-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 9999px;
+  padding: 2px 7px 2px 6px;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45);
+  animation: nextExamBadgePulse 2.4s ease-in-out infinite;
+}
+
+.popover-schedule-item.is-next .item-rem-badge::before {
+  content: "";
+  width: 5.5px;
+  height: 5.5px;
+  border-radius: 50%;
+  background: #22C55E;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: examPulse 2s infinite;
+}
+
+@keyframes nextExamBadgePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0);
+  }
 }
 
 /* Responsive Header */
