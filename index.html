@@ -112,7 +112,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@600;700&family=Space+Grotesk:wght@700;800&family=MedievalSharp&family=Carter+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@600;700&family=Sacramento&family=Space+Grotesk:wght@700;800&family=MedievalSharp&family=Carter+One&display=swap"
     rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/88ab5e9510bcfe27031d652730e5952f?family=Quanta+Grotesk+Pro"
     rel="stylesheet">
@@ -253,7 +253,32 @@
           aria-label="Visit Abokash on Facebook">
           <div class="avatar-glow-ring"></div>
           <img src="assets/avatar_clean.png" alt="Abokash" class="portal-core-avatar-img">
-          <div class="core-avatar-badge">Abokash</div>
+          <div class="core-avatar-badge" aria-label="Abokash">
+            <svg class="signature-svg" viewBox="0 0 180 46" width="100" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <mask id="abokashSignMask" maskUnits="userSpaceOnUse">
+                  <!-- Stroke 1: Capital A main sweep (left curve up to apex, down to baseline) -->
+                  <path class="sig-mask-a" pathLength="100"
+                    d="M 27 30 C 37 35, 50 25, 64 7 L 67 34"
+                    fill="none" stroke="#FFFFFF" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <!-- Stroke 2: Capital A horizontal crossbar loop -->
+                  <path class="sig-mask-a-bar" pathLength="100"
+                    d="M 32 19 C 34 25, 55 24, 72 21"
+                    fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <!-- Stroke 3: Connected cursive 'b -> o -> k -> a -> s -> h' -->
+                  <path class="sig-mask-body" pathLength="100"
+                    d="M 70 30 C 74 20, 80 12, 79 7 C 77 16, 75 29, 80 33 C 83 34, 86 27, 92 26 C 97 26, 97 34, 91 34 C 87 34, 95 31, 100 24 C 105 16, 107 10, 105 7 C 103 16, 101 28, 101 34 C 103 28, 108 24, 111 26 C 109 30, 107 32, 112 33 C 117 33, 121 25, 117 25 C 113 25, 112 33, 117 34 C 121 34, 125 27, 128 22 C 130 27, 132 33, 127 34 C 131 33, 137 22, 141 7 C 139 17, 137 28, 137 34 C 139 27, 145 24, 147 28 C 148 32, 149 34, 155 29"
+                    fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+                </mask>
+              </defs>
+              <g class="sig-ink-group">
+                <text x="90" y="32" text-anchor="middle" class="sig-text" mask="url(#abokashSignMask)">Abokash</text>
+                <path class="sig-flourish" pathLength="100"
+                  d="M 28 40 Q 86 35, 153 38"
+                  fill="none" stroke-width="1.6" stroke-linecap="round" />
+              </g>
+            </svg>
+          </div>
         </a>
 
         <!-- 5 Orbital Satellite Course Cards (Angles: -90°, -18°, 54°, 126°, 198°) -->

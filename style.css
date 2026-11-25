@@ -1109,17 +1109,105 @@ body.is-home-view .app-header,
   position: absolute;
   bottom: -18px;
   z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #104535;
   color: #FFFFFF;
-  font-family: 'Caveat', cursive, var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 700;
-  padding: 1px 12px 3px 12px;
+  padding: 2px 9px;
   border-radius: var(--radius-pill);
-  letter-spacing: 0.03em;
   box-shadow: 0 4px 10px rgba(16, 69, 53, 0.32);
   border: 1px solid rgba(200, 217, 77, 0.45);
   transition: all 0.2s ease;
+}
+
+.signature-svg {
+  display: block;
+  overflow: visible;
+  transform: rotate(-1.5deg);
+}
+
+.sig-text {
+  font-family: 'Sacramento', 'Caveat', cursive;
+  font-size: 37px;
+  font-weight: 400;
+  fill: currentColor;
+  letter-spacing: 0.01em;
+}
+
+.sig-flourish {
+  stroke: #c8d94d;
+  opacity: 0;
+  stroke-dasharray: 102;
+  stroke-dashoffset: 102;
+  animation: sigDrawFlourish 5.6s linear infinite;
+}
+
+.sig-ink-group {
+  animation: sigCycleFade 5.6s linear infinite;
+}
+
+.sig-mask-a,
+.sig-mask-a-bar,
+.sig-mask-body {
+  stroke-dasharray: 102;
+  stroke-dashoffset: 102;
+  opacity: 0;
+}
+
+/* 5.6s continuous live-signing sequence: A -> crossbar -> bokash -> flourish -> rest -> gentle fade */
+.sig-mask-a {
+  animation: sigDrawA 5.6s linear infinite;
+}
+
+.sig-mask-a-bar {
+  animation: sigDrawABar 5.6s linear infinite;
+}
+
+.sig-mask-body {
+  animation: sigDrawBody 5.6s linear infinite;
+}
+
+@keyframes sigDrawA {
+  0%, 3% { stroke-dashoffset: 102; opacity: 0; }
+  3.5% { opacity: 1; }
+  14%, 100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes sigDrawABar {
+  0%, 13.5% { stroke-dashoffset: 102; opacity: 0; }
+  14.2% { opacity: 1; }
+  22%, 100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes sigDrawBody {
+  0%, 21.5% { stroke-dashoffset: 102; opacity: 0; }
+  22.2% { opacity: 1; }
+  58%, 100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes sigDrawFlourish {
+  0%, 56.5% { stroke-dashoffset: 102; opacity: 0; }
+  57.5% { opacity: 0.92; }
+  68%, 100% { stroke-dashoffset: 0; opacity: 0.92; }
+}
+
+@keyframes sigCycleFade {
+  0%, 2% { opacity: 0; }
+  4%, 90% { opacity: 1; }
+  97%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sig-mask-a,
+  .sig-mask-a-bar,
+  .sig-mask-body,
+  .sig-flourish,
+  .sig-ink-group {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+  }
 }
 
 .portal-avatar-core:hover .core-avatar-badge {
