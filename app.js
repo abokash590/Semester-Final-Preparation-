@@ -1589,7 +1589,8 @@ class CodexApp {
       }).join(`
         <div class="subpart-scribble-divider" aria-hidden="true">
           <svg class="scribble-svg" viewBox="0 0 260 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 8C28 2.5 52 13 78 7.5C104 2 128 12.5 154 7C180 1.5 204 12 230 6.5C242 4 252 6 257 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="scribble-base-path" d="M3 8C28 2.5 52 13 78 7.5C104 2 128 12.5 154 7C180 1.5 204 12 230 6.5C242 4 252 6 257 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+            <path class="scribble-shimmer-path" d="M3 8C28 2.5 52 13 78 7.5C104 2 128 12.5 154 7C180 1.5 204 12 230 6.5C242 4 252 6 257 8" stroke="var(--mint-border)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
           </svg>
         </div>
       `);

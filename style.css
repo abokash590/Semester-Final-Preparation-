@@ -3001,14 +3001,74 @@ body.is-home-view .app-header,
   width: 220px;
   max-width: 100%;
   height: 14px;
-  color: #104535;
-  opacity: 0.75;
+  color: var(--accent-primary);
+  opacity: 0.78;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  overflow: visible;
+}
+
+.subpart-scribble-divider .scribble-base-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.subpart-scribble-divider .scribble-shimmer-path {
+  stroke-dasharray: 0.18 1.2;
+  stroke-dashoffset: 0.22;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.solution-drawer-body.expanded .subpart-scribble-divider .scribble-base-path {
+  animation: scribbleDrawIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
+}
+
+.solution-drawer-body.expanded .subpart-scribble-divider .scribble-shimmer-path {
+  animation: scribbleEmeraldShimmer 4.6s cubic-bezier(0.4, 0, 0.2, 1) 1.05s infinite;
 }
 
 .subpart-scribble-divider:hover .scribble-svg {
-  opacity: 0.95;
-  transform: scaleY(1.15);
+  opacity: 0.98;
+  transform: scaleY(1.12);
+}
+
+@keyframes scribbleDrawIn {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0.35;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes scribbleEmeraldShimmer {
+  0% {
+    stroke-dashoffset: 0.22;
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.92;
+  }
+  36% {
+    stroke-dashoffset: -1.05;
+    opacity: 0.92;
+  }
+  44%, 100% {
+    stroke-dashoffset: -1.05;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subpart-scribble-divider .scribble-base-path {
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+  .subpart-scribble-divider .scribble-shimmer-path {
+    display: none;
+  }
 }
 
 /* Card Bottom Action Bar: Done / Weak / Important */
