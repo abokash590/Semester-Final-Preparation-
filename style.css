@@ -1230,6 +1230,8 @@ body.is-home-view .app-header,
   cursor: pointer;
   user-select: none;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  backface-visibility: hidden;
   z-index: 26;
   outline: none;
 }
@@ -1252,6 +1254,8 @@ body.is-home-view .app-header,
   justify-content: center;
   filter: drop-shadow(0 8px 16px rgba(43, 27, 16, 0.24));
   transition: filter 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .orbital-satellite-node:hover .nest-wrapper {
@@ -1265,6 +1269,8 @@ body.is-home-view .app-header,
   height: 100%;
   object-fit: contain;
   pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Subtle cozy depth in the center nest bowl */

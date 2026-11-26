@@ -101,9 +101,18 @@ class CodexApp {
           await this.loadCourse(matchedCourse.code);
           this.enterCourse(matchedCourse.code, false);
         } else {
-          const initialCourse = this.manifest.courses[0];
-          await this.loadCourse(initialCourse.code);
           this.showHomePortal(false);
+          const initialCourse = this.manifest.courses[0];
+          const prefetchInitial = () => {
+            if (this.isHomeActive && !this.activeCourse) {
+              this.loadCourse(initialCourse.code);
+            }
+          };
+          if ("requestIdleCallback" in window) {
+            requestIdleCallback(prefetchInitial, { timeout: 1200 });
+          } else {
+            setTimeout(prefetchInitial, 150);
+          }
         }
       }
     } catch (err) {
@@ -404,7 +413,7 @@ class CodexApp {
              aria-label="${c.code}: ${c.name}"
              title="${c.name} (${c.code}) • Press key [${slotNum}]">
           <div class="nest-wrapper">
-            <img src="assets/bird_nest.png" alt="" class="nest-graphic-img">
+            <img src="assets/bird_nest.webp" alt="" class="nest-graphic-img" width="120" height="120" decoding="async" fetchpriority="high">
             <div class="nest-bowl-shadow"></div>
             <div class="nest-direct-label">
               <span class="nest-slot-num">${slotNum}</span>
@@ -1616,7 +1625,7 @@ class CodexApp {
       : `
           <div class="solution-chat-bubble-container">
             <div class="chat-avatar-wrapper">
-              <img src="assets/avatar_clean.png" alt="Abokash" class="chat-sender-avatar">
+              <img src="assets/avatar_clean.webp" alt="Abokash" class="chat-sender-avatar" width="38" height="38" decoding="async">
               <span class="chat-online-badge" title="Active now"></span>
             </div>
             <div class="chat-speech-bubble">

@@ -106,6 +106,8 @@
   <!-- Preconnect and Resource Hints -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preload" as="image" href="assets/avatar_clean.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/bird_nest.webp" type="image/webp" fetchpriority="high">
 
   <!-- Inter & JetBrains Mono Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,8 +115,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@600;700&family=Sacramento&family=Space+Grotesk:wght@700;800&family=MedievalSharp&family=Carter+One&display=swap"
-    rel="stylesheet">
-  <link href="https://db.onlinewebfonts.com/c/88ab5e9510bcfe27031d652730e5952f?family=Quanta+Grotesk+Pro"
     rel="stylesheet">
 
   <!-- KaTeX for High-Performance Math Equations (CDN with defer) -->
@@ -151,7 +151,7 @@
       <div class="brand-group" onclick="app.showHomePortal()" style="cursor: pointer;"
         title="Back to Home Hub (Press [H] or [Esc])">
         <div class="brand-mark" aria-hidden="true">
-          <img src="assets/avatar_clean.png" alt="Semester Final" class="brand-avatar-img" width="38" height="38">
+          <img src="assets/avatar_clean.webp" alt="Semester Final" class="brand-avatar-img" width="38" height="38" decoding="async">
         </div>
         <div class="brand-text">
           <h1 class="brand-title">Semester Final</h1>
@@ -204,15 +204,15 @@
        Surrounding Circular Course Orbit (AI, MSA, ENT, ML, DS)
        ========================================================================= -->
   <section class="home-portal-section" id="homePortalSection" aria-label="Course Selector Hub">
-    <!-- Botanical Foliage Framing Overlays (Fully visible true alpha foliage) -->
+    <!-- Botanical Foliage Framing Overlays (Optimized WebP Alpha Cutouts) -->
     <div class="foliage-frame foliage-tl" aria-hidden="true">
-      <img src="assets/tree_top_left_clean.png" alt="" class="foliage-img">
+      <img src="assets/tree_top_left_clean.webp" alt="" class="foliage-img" decoding="async">
     </div>
     <div class="foliage-frame foliage-tr" aria-hidden="true">
-      <img src="assets/tree_top_right_clean.png" alt="" class="foliage-img">
+      <img src="assets/tree_top_right_clean.webp" alt="" class="foliage-img" decoding="async">
     </div>
     <div class="foliage-frame foliage-bottom" aria-hidden="true">
-      <img src="assets/bushes_bottom_clean.png?v=3.0" alt="" class="foliage-img">
+      <img src="assets/bushes_bottom_clean.webp" alt="" class="foliage-img" decoding="async">
     </div>
 
     <!-- Center Stage with Radial Orbit -->
@@ -252,7 +252,7 @@
           class="portal-avatar-core" title="Visit Abokash on Facebook (Opens in new tab)"
           aria-label="Visit Abokash on Facebook">
           <div class="avatar-glow-ring"></div>
-          <img src="assets/avatar_clean.png" alt="Abokash" class="portal-core-avatar-img">
+          <img src="assets/avatar_clean.webp" alt="Abokash" class="portal-core-avatar-img" width="78" height="78" decoding="async" fetchpriority="high">
           <div class="core-avatar-badge" aria-label="Abokash">
             <svg class="signature-svg" viewBox="0 0 180 46" width="100" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
